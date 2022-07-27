@@ -1,0 +1,1434 @@
+domain_id,parent_concept,concept_name,concept_id,vocabulary_id,concept_code
+Condition,Asthma,Acute asthma,4125022,SNOMED,304527002
+Condition,Asthma,Acute exacerbation of allergic asthma,45769441,SNOMED,708093000
+Condition,Asthma,Acute exacerbation of asthma,45771045,SNOMED,708038006
+Condition,Asthma,Acute exacerbation of asthma co-occurrent with allergic rhinitis,46273452,SNOMED,99031000119107
+Condition,Asthma,Acute exacerbation of chronic asthmatic bronchitis,40481763,SNOMED,442025000
+Condition,Asthma,Acute exacerbation of chronic obstructive airways disease with asthma,43530693,SNOMED,1751000119100
+Condition,Asthma,Acute exacerbation of intrinsic asthma,45773005,SNOMED,708094006
+Condition,Asthma,Acute exacerbation of mild persistent asthma,46270082,SNOMED,135181000119109
+Condition,Asthma,Acute exacerbation of moderate persistent asthma,46273487,SNOMED,135171000119106
+Condition,Asthma,Acute severe exacerbation of allergic asthma,36684328,SNOMED,782513000
+Condition,Asthma,Acute severe exacerbation of asthma,45769438,SNOMED,708090002
+Condition,Asthma,Acute severe exacerbation of asthma co-occurrent with allergic rhinitis,46269767,SNOMED,10674711000119105
+Condition,Asthma,Acute severe exacerbation of immunoglobin E-mediated allergic asthma,45769442,SNOMED,708095007
+Condition,Asthma,Acute severe exacerbation of intrinsic asthma,45769443,SNOMED,708096008
+Condition,Asthma,Acute severe exacerbation of mild persistent allergic asthma,46274124,SNOMED,10675911000119109
+Condition,Asthma,Acute severe exacerbation of mild persistent allergic asthma co-occurrent with allergic rhinitis,46269777,SNOMED,10675991000119100
+Condition,Asthma,Acute severe exacerbation of mild persistent asthma,45769352,SNOMED,707981009
+Condition,Asthma,Acute severe exacerbation of moderate persistent allergic asthma,46273462,SNOMED,10676431000119103
+Condition,Asthma,Acute severe exacerbation of moderate persistent asthma,45769351,SNOMED,707980005
+Condition,Asthma,Acute severe exacerbation of moderate persistent asthma co-occurrent with allergic rhinitis,46269785,SNOMED,10676511000119109
+Condition,Asthma,Acute severe exacerbation of severe persistent allergic asthma,46274059,SNOMED,10675471000119109
+Condition,Asthma,Acute severe exacerbation of severe persistent asthma,45769350,SNOMED,707979007
+Condition,Asthma,Acute severe exacerbation of severe persistent asthma co-occurrent with allergic rhinitis,46269771,SNOMED,10675551000119104
+Condition,Asthma,Acute severe refractory exacerbation of asthma,37116845,SNOMED,733858005
+Condition,Asthma,Allergic asthma,4191479,SNOMED,389145006
+Condition,Asthma,Allergic asthma due to Dermatophagoides farinae,45766728,SNOMED,703954005
+Condition,Asthma,Allergic asthma due to Dermatophagoides pteronyssinus,45766727,SNOMED,703953004
+Condition,Asthma,Allergic asthma without status asthmaticus,4271333,SNOMED,63088003
+Condition,Asthma,Allergic bronchopulmonary aspergillosis,257583,SNOMED,37981002
+Condition,Asthma,Allergic bronchopulmonary mycosis,45757063,SNOMED,103781000119103
+Condition,Asthma,Aspirin-induced asthma,4250128,SNOMED,407674008
+Condition,Asthma,Aspirin exacerbated respiratory disease,46269801,SNOMED,10692681000119108
+Condition,Asthma,Asthma,317009,SNOMED,195967001
+Condition,Asthma,Asthma-chronic obstructive pulmonary disease overlap syndrome,46274062,SNOMED,10692761000119107
+Condition,Asthma,Asthma caused by wood dust,4211530,SNOMED,56968009
+Condition,Asthma,Asthma in mother complicating childbirth,45772073,SNOMED,10742121000119104
+Condition,Asthma,Asthma in pregnancy,42535716,SNOMED,72301000119103
+Condition,Asthma,Asthma with irreversible airway obstruction,43530745,SNOMED,401000119107
+Condition,Asthma,Asthma without status asthmaticus,4206340,SNOMED,55570000
+Condition,Asthma,Asthmatic bronchitis,4233784,SNOMED,405944004
+Condition,Asthma,Bakers' asthma,4143474,SNOMED,34015007
+Condition,Asthma,Brittle asthma,4075237,SNOMED,225057002
+Condition,Asthma,Cheese-makers' asthma,4225553,SNOMED,404806001
+Condition,Asthma,Chemical-induced asthma,4245676,SNOMED,92807009
+Condition,Asthma,Childhood asthma,4051466,SNOMED,233678006
+Condition,Asthma,Chronic asthma with fixed airflow obstruction,44810117,SNOMED,866881000000101
+Condition,Asthma,Chronic asthmatic bronchitis,256448,SNOMED,195949008
+Condition,Asthma,Chronic obstructive asthma co-occurrent with acute exacerbation of asthma,46269802,SNOMED,10692721000119102
+Condition,Asthma,Colophony asthma,4119300,SNOMED,233687002
+Condition,Asthma,Cough variant asthma,313236,SNOMED,409663006
+Condition,Asthma,Detergent asthma,4217558,SNOMED,41553006
+Condition,Asthma,Exacerbation of allergic asthma,42538744,SNOMED,762521001
+Condition,Asthma,Exacerbation of allergic asthma due to infection,36684335,SNOMED,782520007
+Condition,Asthma,Exacerbation of asthma,257581,SNOMED,281239006
+Condition,Asthma,Exacerbation of intermittent asthma,4138760,SNOMED,425969006
+Condition,Asthma,Exacerbation of mild persistent asthma,45768911,SNOMED,707445000
+Condition,Asthma,Exacerbation of moderate persistent asthma,45772937,SNOMED,707446004
+Condition,Asthma,Exacerbation of severe persistent asthma,45768912,SNOMED,707447008
+Condition,Asthma,Exercise-induced asthma,443801,SNOMED,31387002
+Condition,Asthma,Hay fever with asthma,4123253,SNOMED,233683003
+Condition,Asthma,IgE-mediated allergic asthma,312950,SNOMED,424643009
+Condition,Asthma,Inhaled steroid-dependent asthma,761844,SNOMED,16055311000119107
+Condition,Asthma,Intermittent allergic asthma,37310241,SNOMED,10674991000119104
+Condition,Asthma,Intermittent asthma,4141978,SNOMED,427603009
+Condition,Asthma,Intermittent asthma co-occurrent with allergic rhinitis,46270030,SNOMED,125021000119107
+Condition,Asthma,Intermittent asthma uncontrolled,46270322,SNOMED,1741000119102
+Condition,Asthma,Intrinsic asthma,4145497,SNOMED,266361008
+Condition,Asthma,Intrinsic asthma without status asthmaticus,252658,SNOMED,12428000
+Condition,Asthma,Isocyanate induced asthma,4225554,SNOMED,404808000
+Condition,Asthma,Late onset asthma,4119298,SNOMED,233679003
+Condition,Asthma,Life threatening acute exacerbation of allergic asthma,35609846,SNOMED,1086701000000102
+Condition,Asthma,Life threatening acute exacerbation of asthma,42536207,SNOMED,734904007
+Condition,Asthma,Life threatening acute exacerbation of intrinsic asthma,35609847,SNOMED,1086711000000100
+Condition,Asthma,Meat-wrappers' asthma,4057952,SNOMED,19849005
+Condition,Asthma,Mild asthma,4155468,SNOMED,370218001
+Condition,Asthma,Mild intermittent asthma,4146581,SNOMED,427679007
+Condition,Asthma,Mild persistent allergic asthma,46269776,SNOMED,10675871000119106
+Condition,Asthma,Mild persistent asthma,4143828,SNOMED,426979002
+Condition,Asthma,Mild persistent asthma co-occurrent with allergic rhinitis,46270029,SNOMED,125011000119100
+Condition,Asthma,Millers' asthma,4022592,SNOMED,11641008
+Condition,Asthma,Mixed asthma,4110051,SNOMED,195977004
+Condition,Asthma,Moderate acute exacerbation of asthma,42536208,SNOMED,734905008
+Condition,Asthma,Moderate asthma,4155469,SNOMED,370219009
+Condition,Asthma,Moderate persistent allergic asthma,46269784,SNOMED,10676391000119108
+Condition,Asthma,Moderate persistent asthma,4142738,SNOMED,427295004
+Condition,Asthma,Moderate persistent asthma co-occurrent with allergic rhinitis,46273454,SNOMED,125001000119103
+Condition,Asthma,Near fatal asthma,37206717,SNOMED,786836003
+Condition,Asthma,Non-IgE mediated allergic asthma,4309833,SNOMED,423889005
+Condition,Asthma,Occasional asthma,4155470,SNOMED,370220003
+Condition,Asthma,Occupational asthma,4212099,SNOMED,57607007
+Condition,Asthma,Oral steroid-dependent asthma,37109103,SNOMED,16584951000119101
+Condition,Asthma,Persistent asthma,764677,SNOMED,5281000124103
+Condition,Asthma,"Persistent asthma, well controlled",764949,SNOMED,901000119100
+Condition,Asthma,Platinum asthma,4232595,SNOMED,404804003
+Condition,Asthma,Printers' asthma,4080516,SNOMED,18041002
+Condition,Asthma,Seasonal asthma,40483397,SNOMED,445427006
+Condition,Asthma,Severe asthma,4152913,SNOMED,370221004
+Condition,Asthma,Severe asthma with fungal sensitisation,37208352,SNOMED,1103911000000103
+Condition,Asthma,Severe controlled persistent asthma,37108580,SNOMED,10675391000119101
+Condition,Asthma,Severe persistent allergic asthma,46269770,SNOMED,10675431000119106
+Condition,Asthma,Severe persistent asthma,4145356,SNOMED,426656000
+Condition,Asthma,Severe persistent asthma co-occurrent with allergic rhinitis,46270028,SNOMED,124991000119109
+Condition,Asthma,Severe uncontrolled persistent asthma,37108581,SNOMED,10675751000119107
+Condition,Asthma,Steroid dependent asthma,46273635,SNOMED,2360001000004109
+Condition,Asthma,Substance induced asthma,4312524,SNOMED,424199006
+Condition,Asthma,Sulfite-induced asthma,4120261,SNOMED,233688007
+Condition,Asthma,Tea-makers' asthma,4301938,SNOMED,418395004
+Condition,Asthma,Thunderstorm asthma,3661412,SNOMED,829976001
+Condition,Asthma,Uncomplicated allergic asthma,42539549,SNOMED,735588005
+Condition,Asthma,Uncomplicated asthma,45768910,SNOMED,707444001
+Condition,Asthma,Uncomplicated mild persistent asthma,45768963,SNOMED,707511009
+Condition,Asthma,Uncomplicated moderate persistent asthma,45768964,SNOMED,707512002
+Condition,Asthma,Uncomplicated non-allergic asthma,42536649,SNOMED,735589002
+Condition,Asthma,Uncomplicated severe persistent asthma,45768965,SNOMED,707513007
+Condition,Asthma,Weavers' cough,4245292,SNOMED,59786004
+Condition,Chronic disease of cardiovascular system,Abdominal angina,4345926,SNOMED,241154007
+Condition,Chronic disease of cardiovascular system,ABri amyloidosis,37204495,SNOMED,783161005
+Condition,Chronic disease of cardiovascular system,Acute exacerbation of chronic congestive heart failure,44782655,SNOMED,698296002
+Condition,Chronic disease of cardiovascular system,Acute on chronic combined systolic and diastolic heart failure,44782733,SNOMED,153951000119103
+Condition,Chronic disease of cardiovascular system,Acute on chronic diastolic heart failure,40481043,SNOMED,443344007
+Condition,Chronic disease of cardiovascular system,Acute on chronic heart failure co-occurrent with normal ejection fraction,764874,SNOMED,7401000175100
+Condition,Chronic disease of cardiovascular system,Acute on chronic right-sided congestive heart failure,37309625,SNOMED,16838951000119100
+Condition,Chronic disease of cardiovascular system,Acute on chronic systolic heart failure,40480602,SNOMED,443253003
+Condition,Chronic disease of cardiovascular system,Atherosclerosis of bypass graft of bilateral lower limbs with intermittent claudication,761828,SNOMED,16014071000119107
+Condition,Chronic disease of cardiovascular system,Atherosclerosis of bypass graft of left lower limb with intermittent claudication,761827,SNOMED,16014031000119109
+Condition,Chronic disease of cardiovascular system,Atherosclerosis of bypass graft of right lower limb with intermittent claudication,761826,SNOMED,16013711000119104
+Condition,Chronic disease of cardiovascular system,Behçet's disease affecting oral mucosa,4293711,SNOMED,403443000
+Condition,Chronic disease of cardiovascular system,Behcet's disease with multisystem involvement,4343930,SNOMED,239922003
+Condition,Chronic disease of cardiovascular system,Behcet's disease with organ/system involvement,4347061,SNOMED,239921005
+Condition,Chronic disease of cardiovascular system,Behcet's syndrome,436642,SNOMED,310701003
+Condition,Chronic disease of cardiovascular system,"Behcet's syndrome, complete type",4211990,SNOMED,57484009
+Condition,Chronic disease of cardiovascular system,"Behcet's syndrome, incomplete type",4203452,SNOMED,53485006
+Condition,Chronic disease of cardiovascular system,"Behcet's syndrome, intestinal type",4202809,SNOMED,54034003
+Condition,Chronic disease of cardiovascular system,"Behcet's syndrome, neurologic type",4070155,SNOMED,21542005
+Condition,Chronic disease of cardiovascular system,"Behcet's syndrome, vascular type",4138971,SNOMED,3275009
+Condition,Chronic disease of cardiovascular system,Benign hypertensive heart disease and chronic renal disease,764011,SNOMED,449631000124102
+Condition,Chronic disease of cardiovascular system,Benign hypertensive heart disease and chronic renal disease stage 1,765535,SNOMED,285041000119107
+Condition,Chronic disease of cardiovascular system,Benign hypertensive heart disease and chronic renal disease stage 2,762000,SNOMED,285061000119106
+Condition,Chronic disease of cardiovascular system,Benign hypertensive heart disease and chronic renal disease stage 3,762001,SNOMED,285081000119102
+Condition,Chronic disease of cardiovascular system,Benign hypertensive heart disease and chronic renal disease stage 4,765536,SNOMED,285101000119109
+Condition,Chronic disease of cardiovascular system,Benign hypertensive heart disease and chronic renal disease stage 5,760850,SNOMED,120261000119101
+Condition,Chronic disease of cardiovascular system,Bilateral chronic deep venous thrombosis of lower extremities,762420,SNOMED,350321000119108
+Condition,Chronic disease of cardiovascular system,"Brachydactyly, mesomelia, intellectual disability, heart defect syndrome",35623289,SNOMED,765761009
+Condition,Chronic disease of cardiovascular system,Chronic adhesive pericarditis,4181182,SNOMED,42999000
+Condition,Chronic disease of cardiovascular system,Chronic aneurysm of left internal jugular vein,761837,SNOMED,16025671000119105
+Condition,Chronic disease of cardiovascular system,Chronic aneurysm of left popliteal vein,765302,SNOMED,16025791000119100
+Condition,Chronic disease of cardiovascular system,Chronic aneurysm of right internal jugular vein,761839,SNOMED,16025871000119109
+Condition,Chronic disease of cardiovascular system,Chronic aneurysm of right popliteal vein,761838,SNOMED,16025751000119105
+Condition,Chronic disease of cardiovascular system,Chronic antral gastritis with hemorrhage,44784282,SNOMED,698352000
+Condition,Chronic disease of cardiovascular system,Chronic atrial and intestinal dysrhythmia,36715042,SNOMED,720507006
+Condition,Chronic disease of cardiovascular system,Chronic atrial fibrillation,4141360,SNOMED,426749004
+Condition,Chronic disease of cardiovascular system,Chronic atrial flutter,4137382,SNOMED,425615007
+Condition,Chronic disease of cardiovascular system,Chronic bacterial endocarditis,4330696,SNOMED,22462001
+Condition,Chronic disease of cardiovascular system,Chronic cerebral ischemia,4006976,SNOMED,111298007
+Condition,Chronic disease of cardiovascular system,Chronic cerebrovascular accident,765568,SNOMED,434141000124103
+Condition,Chronic disease of cardiovascular system,Chronic Chagas disease with heart involvement,36716727,SNOMED,722890004
+Condition,Chronic disease of cardiovascular system,Chronic cholesterol pericardial effusion,4119596,SNOMED,233887004
+Condition,Chronic disease of cardiovascular system,Chronic combined systolic and diastolic heart failure,44782719,SNOMED,153941000119100
+Condition,Chronic disease of cardiovascular system,Chronic congestive heart failure,4229440,SNOMED,88805009
+Condition,Chronic disease of cardiovascular system,Chronic constrictive pericarditis,4203625,SNOMED,52535005
+Condition,Chronic disease of cardiovascular system,Chronic cor pulmonale,4195892,SNOMED,79955004
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thromboses,3174315,Nebraska Lexicon,30950001000004102
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of bilateral iliac veins,765152,SNOMED,293441000119104
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of left iliac vein,35616026,SNOMED,293461000119100
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of left pelvic vein,761439,SNOMED,15711001000119104
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of left upper limb following procedure,761418,SNOMED,15708521000119108
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of pelvic vein,46271548,SNOMED,709687000
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of right axillary vein,765539,SNOMED,285371000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of right iliac vein,35616025,SNOMED,293451000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of right pelvic vein,761441,SNOMED,15711081000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of right upper extremity,762007,SNOMED,285311000119105
+Condition,Chronic disease of cardiovascular system,Chronic deep vein thrombosis of right upper limb following procedure,761417,SNOMED,15708481000119108
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis,36712971,SNOMED,15760351000119105
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of axillary vein,761026,SNOMED,134971000119105
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral axillary veins,762011,SNOMED,285351000119106
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral calves,761445,SNOMED,15711441000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral ileofemoral veins,765542,SNOMED,285471000119109
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral internal jugular veins,762019,SNOMED,285531000119105
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral pelvic veins,761440,SNOMED,15711041000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral popliteal veins,762023,SNOMED,285591000119109
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of bilateral thighs,761449,SNOMED,15711601000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of both upper extremities,762006,SNOMED,285291000119106
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of calf,44782734,SNOMED,132131000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of femoral vein,44782739,SNOMED,132191000119103
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of femoral vein of left lower extremity,765153,SNOMED,285421000119108
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of femoral vein of right lower extremity,765154,SNOMED,285431000119106
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of femoral veins of both lower extremities,762014,SNOMED,285411000119101
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of iliofemoral vein,44782740,SNOMED,132201000119100
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of internal jugular vein,44782755,SNOMED,135011000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left axillary vein,762012,SNOMED,285361000119108
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left calf,761447,SNOMED,15711521000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left ileofemoral vein,765543,SNOMED,285481000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left internal jugular vein,765544,SNOMED,285541000119101
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left lower extremity,762421,SNOMED,350331000119106
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left thigh,761446,SNOMED,15711481000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of left upper extremity,765538,SNOMED,285301000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of lower extremity,44782735,SNOMED,132141000119106
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of lower limb due to coronary artery bypass grafting,46270070,SNOMED,132091000119104
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of popliteal vein,44782736,SNOMED,132151000119108
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of popliteal vein of left leg,762024,SNOMED,285601000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of popliteal vein of right leg,762025,SNOMED,285611000119104
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of right calf,761450,SNOMED,15711641000119109
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of right ileofemoral vein,762016,SNOMED,285491000119105
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of right internal jugular vein,765545,SNOMED,285551000119104
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of right lower extremity,762422,SNOMED,350341000119102
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of right thigh,761448,SNOMED,15711561000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of thigh,44782738,SNOMED,132171000119104
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of tibial vein,44782737,SNOMED,132161000119105
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of tibial vein of bilateral lower extremities,762027,SNOMED,285651000119103
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of tibial vein of left leg,762028,SNOMED,285661000119101
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of tibial vein of right leg,762029,SNOMED,285671000119107
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of upper extremity,44782741,SNOMED,132221000119109
+Condition,Chronic disease of cardiovascular system,Chronic deep venous thrombosis of upper extremity as complication of procedure,44782765,SNOMED,136751000119108
+Condition,Chronic disease of cardiovascular system,Chronic degenerative aortic valve disease,4242036,SNOMED,92808004
+Condition,Chronic disease of cardiovascular system,Chronic diastolic heart failure,40479576,SNOMED,441530006
+Condition,Chronic disease of cardiovascular system,Chronic disease of cardiovascular system,4028244,SNOMED,128292002
+Condition,Chronic disease of cardiovascular system,Chronic dissection of thoracic aorta,37016883,SNOMED,713030005
+Condition,Chronic disease of cardiovascular system,Chronic ectopic atrial tachycardia,4098133,SNOMED,26950008
+Condition,Chronic disease of cardiovascular system,Chronic effusive pericarditis,4097815,SNOMED,27017003
+Condition,Chronic disease of cardiovascular system,Chronic endocarditis,4168162,SNOMED,4851007
+Condition,Chronic disease of cardiovascular system,Chronic gastric ulcer with hemorrhage,4211001,SNOMED,57246001
+Condition,Chronic disease of cardiovascular system,Chronic gastric ulcer with hemorrhage and with obstruction,201885,SNOMED,85859006
+Condition,Chronic disease of cardiovascular system,Chronic gastric ulcer with hemorrhage and with perforation,4294973,SNOMED,76181002
+Condition,Chronic disease of cardiovascular system,Chronic gastric ulcer with hemorrhage AND with perforation but without obstruction,196442,SNOMED,74341002
+Condition,Chronic disease of cardiovascular system,Chronic gastric ulcer with hemorrhage but without obstruction,197018,SNOMED,76078009
+Condition,Chronic disease of cardiovascular system,"Chronic gastric ulcer with hemorrhage, with perforation and with obstruction",198801,SNOMED,85787009
+Condition,Chronic disease of cardiovascular system,Chronic gastrointestinal tract vascular insufficiency,4148257,SNOMED,266520007
+Condition,Chronic disease of cardiovascular system,Chronic gastrojejunal ulcer with hemorrhage,433515,SNOMED,62838000
+Condition,Chronic disease of cardiovascular system,Chronic gastrojejunal ulcer with hemorrhage and obstruction,436729,SNOMED,90257004
+Condition,Chronic disease of cardiovascular system,Chronic gastrojejunal ulcer with hemorrhage and perforation,4164920,SNOMED,45640006
+Condition,Chronic disease of cardiovascular system,Chronic gastrojejunal ulcer with hemorrhage and with perforation but without obstruction,437326,SNOMED,46523000
+Condition,Chronic disease of cardiovascular system,Chronic gastrojejunal ulcer with hemorrhage but without perforation,4244406,SNOMED,59356009
+Condition,Chronic disease of cardiovascular system,"Chronic gastrojejunal ulcer with hemorrhage, with perforation and with obstruction",443779,SNOMED,24001002
+Condition,Chronic disease of cardiovascular system,Chronic heart disease,4134586,SNOMED,128238001
+Condition,Chronic disease of cardiovascular system,Chronic heart failure,444031,SNOMED,48447003
+Condition,Chronic disease of cardiovascular system,Chronic heart failure co-occurrent with normal ejection fraction,764876,SNOMED,7411000175102
+Condition,Chronic disease of cardiovascular system,Chronic hypertension complicating AND/OR reason for care during childbirth,4304837,SNOMED,8218002
+Condition,Chronic disease of cardiovascular system,Chronic hypertension complicating AND/OR reason for care during pregnancy,4291933,SNOMED,37618003
+Condition,Chronic disease of cardiovascular system,Chronic hypertension complicating AND/OR reason for care during puerperium,4080325,SNOMED,24042004
+Condition,Chronic disease of cardiovascular system,Chronic hypertension in obstetric context,4227607,SNOMED,8762007
+Condition,Chronic disease of cardiovascular system,Chronic hypotension,316447,SNOMED,77545000
+Condition,Chronic disease of cardiovascular system,Chronic hypotension - idiopathic,4117864,SNOMED,286963007
+Condition,Chronic disease of cardiovascular system,Chronic inactive rheumatic heart disease,4006165,SNOMED,111284004
+Condition,Chronic disease of cardiovascular system,Chronic infective pericarditis,4119595,SNOMED,233886008
+Condition,Chronic disease of cardiovascular system,Chronic interstitial myocarditis,4264536,SNOMED,45093008
+Condition,Chronic disease of cardiovascular system,Chronic intractable migraine without aura,43530652,SNOMED,124171000119105
+Condition,Chronic disease of cardiovascular system,Chronic ischemic heart disease,315286,SNOMED,413838009
+Condition,Chronic disease of cardiovascular system,Chronic left-sided congestive heart failure,4206009,SNOMED,5375005
+Condition,Chronic disease of cardiovascular system,Chronic left-sided heart failure,4009047,SNOMED,111283005
+Condition,Chronic disease of cardiovascular system,Chronic lichenoid pityriasis,4001578,SNOMED,10057001
+Condition,Chronic disease of cardiovascular system,Chronic migraine without aura,762769,SNOMED,431601000124105
+Condition,Chronic disease of cardiovascular system,Chronic migraine without aura with status migrainosus,760968,SNOMED,124161000119104
+Condition,Chronic disease of cardiovascular system,"Chronic migraine without aura, non-refractory",765701,SNOMED,437931000124100
+Condition,Chronic disease of cardiovascular system,Chronic migratory panniculitis,46272972,SNOMED,711435001
+Condition,Chronic disease of cardiovascular system,Chronic mixed headache syndrome,4318560,SNOMED,95657009
+Condition,Chronic disease of cardiovascular system,Chronic myocardial disorder due to chemical or external agent,4119593,SNOMED,233880002
+Condition,Chronic disease of cardiovascular system,Chronic myocardial ischemia,4185302,SNOMED,413844008
+Condition,Chronic disease of cardiovascular system,Chronic myocarditis,764141,SNOMED,451241000124108
+Condition,Chronic disease of cardiovascular system,"Chronic nephritic syndrome, diffuse endocapillary proliferative glomerulonephritis",4059463,SNOMED,197712008
+Condition,Chronic disease of cardiovascular system,Chronic nontraumatic dissection of thoracic aorta,4137219,SNOMED,425453009
+Condition,Chronic disease of cardiovascular system,Chronic occlusion of artery of extremity,44782819,SNOMED,698816006
+Condition,Chronic disease of cardiovascular system,Chronic orthostatic hypotension,4327471,SNOMED,75181005
+Condition,Chronic disease of cardiovascular system,Chronic passive congestion of liver,200451,SNOMED,34736002
+Condition,Chronic disease of cardiovascular system,Chronic pericarditis,4053008,SNOMED,23627006
+Condition,Chronic disease of cardiovascular system,Chronic peripheral venous hypertension,4313767,SNOMED,423674003
+Condition,Chronic disease of cardiovascular system,Chronic peripheral venous hypertension with lower extremity complication,44782715,SNOMED,153811000119105
+Condition,Chronic disease of cardiovascular system,Chronic posterior tibial vein thrombosis,3172731,Nebraska Lexicon,8130001000004100
+Condition,Chronic disease of cardiovascular system,Chronic pulmonary embolism,44782732,SNOMED,133971000119108
+Condition,Chronic disease of cardiovascular system,Chronic pulmonary heart disease,315831,SNOMED,87837008
+Condition,Chronic disease of cardiovascular system,Chronic pulmonary thromboembolism,45768887,SNOMED,707412000
+Condition,Chronic disease of cardiovascular system,Chronic pulmonary thromboembolism without pulmonary hypertension,45771016,SNOMED,707413005
+Condition,Chronic disease of cardiovascular system,Chronic rejection of cardiac transplant,4332085,SNOMED,431896008
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic aortic valve disease,4122085,SNOMED,286950001
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic endocarditis,4263730,SNOMED,46165000
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic heart disease,4227150,SNOMED,87648004
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic heart disease with myocarditis,4264740,SNOMED,61012002
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic mediastinopericarditis,4235735,SNOMED,90453003
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic mitral valve,4117862,SNOMED,286947004
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic myopericarditis,4192358,SNOMED,756003
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic pericarditis,321307,SNOMED,78069008
+Condition,Chronic disease of cardiovascular system,Chronic rheumatic valvulitis,4231452,SNOMED,89456004
+Condition,Chronic disease of cardiovascular system,Chronic right-sided congestive heart failure,4284562,SNOMED,66989003
+Condition,Chronic disease of cardiovascular system,Chronic right-sided heart failure,4014159,SNOMED,10335000
+Condition,Chronic disease of cardiovascular system,Chronic systolic dysfunction of left ventricle,4325525,SNOMED,430396006
+Condition,Chronic disease of cardiovascular system,Chronic systolic heart failure,40479192,SNOMED,441481004
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of bilateral subclavian veins,762050,SNOMED,286441000119107
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of inferior vena cava,46270157,SNOMED,15712441000119103
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of left subclavian vein,762051,SNOMED,286451000119109
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of mesenteric vein,45757409,SNOMED,133411000119108
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of right subclavian vein,762046,SNOMED,286381000119105
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of splenic vein,36712891,SNOMED,143551000119106
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of subclavian vein,44782759,SNOMED,132551000119104
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of bilateral upper limbs,761460,SNOMED,15712121000119101
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of left leg,763926,SNOMED,448661000124102
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of left upper extremity,761459,SNOMED,15712081000119103
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of lower limb,46271475,SNOMED,709602009
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of right leg,761451,SNOMED,15711681000119104
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of right upper extremity,761458,SNOMED,15712041000119108
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial vein of upper extremity,44782754,SNOMED,132531000119105
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superficial veins of both lower extremities,765228,SNOMED,15711721000119105
+Condition,Chronic disease of cardiovascular system,Chronic thrombosis of superior vena cava,44782756,SNOMED,135061000119104
+Condition,Chronic disease of cardiovascular system,Chronic total occlusion of coronary artery,36712779,SNOMED,117051000119103
+Condition,Chronic disease of cardiovascular system,Chronic valvulitis,4164798,SNOMED,40964007
+Condition,Chronic disease of cardiovascular system,Chronic vascular insufficiency,4196809,SNOMED,51147005
+Condition,Chronic disease of cardiovascular system,Chronic vascular insufficiency of intestine,199064,SNOMED,111354009
+Condition,Chronic disease of cardiovascular system,Chronic venous infarction of spinal cord,36717599,SNOMED,722986000
+Condition,Chronic disease of cardiovascular system,Chronic venous thrombosis,35615125,SNOMED,16026431000119101
+Condition,Chronic disease of cardiovascular system,Chronic viral carditis,37312010,SNOMED,788887009
+Condition,Chronic disease of cardiovascular system,Cirrhotic cardiomyopathy,37110890,SNOMED,725416005
+Condition,Chronic disease of cardiovascular system,Concato's disease,4242231,SNOMED,37980001
+Condition,Chronic disease of cardiovascular system,Cruveilhier-Baumgarten syndrome,4163687,SNOMED,45256007
+Condition,Chronic disease of cardiovascular system,Decompensated chronic heart failure,4311437,SNOMED,424404003
+Condition,Chronic disease of cardiovascular system,Demyelination of central nervous system co-occurrent and due to Behcet disease,37110519,SNOMED,724783000
+Condition,Chronic disease of cardiovascular system,Eisenmenger's syndrome,40493243,SNOMED,445928005
+Condition,Chronic disease of cardiovascular system,Hemicrania continua,40480082,SNOMED,443095000
+Condition,Chronic disease of cardiovascular system,"Hereditary cerebral amyloid angiopathy, Dutch type",4208824,SNOMED,56453003
+Condition,Chronic disease of cardiovascular system,"Hereditary cerebral amyloid angiopathy, Icelandic type",4164289,SNOMED,45639009
+Condition,Chronic disease of cardiovascular system,Hereditary cerebral hemorrhage with amyloidosis,37119072,SNOMED,724357007
+Condition,Chronic disease of cardiovascular system,Hypertension in chronic kidney disease due to type 1 diabetes mellitus,45771067,SNOMED,71701000119105
+Condition,Chronic disease of cardiovascular system,Hypertension in chronic kidney disease due to type 2 diabetes mellitus,45771064,SNOMED,71421000119105
+Condition,Chronic disease of cardiovascular system,Hypertension in chronic kidney disease stage 2 due to type 2 diabetes mellitus,45757447,SNOMED,140131000119102
+Condition,Chronic disease of cardiovascular system,Hypertension in chronic kidney disease stage 3 due to type 2 diabetes mellitus,45757446,SNOMED,140121000119100
+Condition,Chronic disease of cardiovascular system,Hypertension in chronic kidney disease stage 4 due to type 2 diabetes mellitus,45757445,SNOMED,140111000119107
+Condition,Chronic disease of cardiovascular system,Hypertension in chronic kidney disease stage 5 due to type 2 diabetes mellitus,45757444,SNOMED,140101000119109
+Condition,Chronic disease of cardiovascular system,Hypertensive heart and chronic kidney disease,44784621,SNOMED,8501000119104
+Condition,Chronic disease of cardiovascular system,Hypertensive heart AND chronic kidney disease on dialysis,44784637,SNOMED,96701000119107
+Condition,Chronic disease of cardiovascular system,Hypertensive heart AND chronic kidney disease stage 1,44784640,SNOMED,96751000119106
+Condition,Chronic disease of cardiovascular system,Hypertensive heart AND chronic kidney disease stage 2,43021836,SNOMED,96741000119109
+Condition,Chronic disease of cardiovascular system,Hypertensive heart AND chronic kidney disease stage 3,43021835,SNOMED,96731000119100
+Condition,Chronic disease of cardiovascular system,Hypertensive heart AND chronic kidney disease stage 4,44784639,SNOMED,96721000119103
+Condition,Chronic disease of cardiovascular system,Hypertensive heart AND chronic kidney disease stage 5,44784638,SNOMED,96711000119105
+Condition,Chronic disease of cardiovascular system,"Hyperuricemia, pulmonary hypertension, renal failure, alkalosis syndrome",36679002,SNOMED,776416004
+Condition,Chronic disease of cardiovascular system,Idiopathic recurrent pericarditis,35624116,SNOMED,766704005
+Condition,Chronic disease of cardiovascular system,Intermittent cerebral ischemia,4112021,SNOMED,195206000
+Condition,Chronic disease of cardiovascular system,Intermittent second degree atrioventricular block,4088332,SNOMED,251114004
+Condition,Chronic disease of cardiovascular system,Kartagener syndrome,4173466,SNOMED,42402006
+Condition,Chronic disease of cardiovascular system,Large plaque parapsoriasis,4284682,SNOMED,67081008
+Condition,Chronic disease of cardiovascular system,Larsen-like syndrome B3GAT3 type,35622345,SNOMED,763778003
+Condition,Chronic disease of cardiovascular system,Malignant hypertensive heart disease and chronic renal disease stage 3,762033,SNOMED,285911000119109
+Condition,Chronic disease of cardiovascular system,Malignant hypertensive heart disease and chronic renal disease stage 4,762034,SNOMED,285921000119102
+Condition,Chronic disease of cardiovascular system,Multiple progressive hemangiomata,4112769,SNOMED,254782003
+Condition,Chronic disease of cardiovascular system,Myocarditis due to Chaga disease,3656065,SNOMED,871587002
+Condition,Chronic disease of cardiovascular system,Non-atherosclerotic chronic arterial occlusive disease,37110251,SNOMED,724441006
+Condition,Chronic disease of cardiovascular system,Parapsoriasis en plaques,4209301,SNOMED,56253000
+Condition,Chronic disease of cardiovascular system,Pelvic congestion syndrome,201347,SNOMED,39402007
+Condition,Chronic disease of cardiovascular system,Pericarditis secondary to myxedema,4214249,SNOMED,39244004
+Condition,Chronic disease of cardiovascular system,Persistent pulmonary hypertension,3174548,Nebraska Lexicon,10090001000004100
+Condition,Chronic disease of cardiovascular system,Pre-existing hypertensive chronic kidney disease in mother complicating pregnancy,45757356,SNOMED,118781000119108
+Condition,Chronic disease of cardiovascular system,Pre-existing hypertensive heart and chronic kidney disease in mother complicating childbirth,45757137,SNOMED,10757401000119104
+Condition,Chronic disease of cardiovascular system,Pre-existing hypertensive heart and chronic kidney disease in mother complicating pregnancy,45757139,SNOMED,10757481000119107
+Condition,Chronic disease of cardiovascular system,Progression of fetal left ventricular outflow tract obstruction,43020511,SNOMED,470753008
+Condition,Chronic disease of cardiovascular system,Progression of fetal right ventricular outflow tract obstruction,43021871,SNOMED,470752003
+Condition,Chronic disease of cardiovascular system,Progressive angina,4161973,SNOMED,371806006
+Condition,Chronic disease of cardiovascular system,Progressive pigmentary dermatosis of Schamberg,4271703,SNOMED,64146000
+Condition,Chronic disease of cardiovascular system,Pure autonomic failure,4309357,SNOMED,84438001
+Condition,Chronic disease of cardiovascular system,Recurrent abdominal aortic aneurysm,4201941,SNOMED,315295003
+Condition,Chronic disease of cardiovascular system,Recurrent coronary arteriosclerosis after percutaneous transluminal coronary angioplasty,4178622,SNOMED,429245005
+Condition,Chronic disease of cardiovascular system,Recurrent deep vein thrombosis,46271900,SNOMED,710167004
+Condition,Chronic disease of cardiovascular system,Recurrent hematuria co-occurrent and due to diffuse endocapillary proliferative glomerulonephritis,37018345,SNOMED,714817004
+Condition,Chronic disease of cardiovascular system,Recurrent idiopathic thrombophlebitis,4120115,SNOMED,234048005
+Condition,Chronic disease of cardiovascular system,Recurrent pulmonary embolism,4236271,SNOMED,438773007
+Condition,Chronic disease of cardiovascular system,Recurrent rheumatic heart disease,4062117,SNOMED,20005002
+Condition,Chronic disease of cardiovascular system,Recurrent varicose vein of lower leg,42709778,SNOMED,449650002
+Condition,Chronic disease of cardiovascular system,Recurrent varicose vein of lower limb,42709779,SNOMED,449651003
+Condition,Chronic disease of cardiovascular system,Recurrent ventricular tachycardia,45771051,SNOMED,708124001
+Condition,Chronic disease of cardiovascular system,Retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations,37204863,SNOMED,783787000
+Condition,Chronic disease of cardiovascular system,Severe scapuloperoneal muscular dystrophy with cardiomyopathy,4345565,SNOMED,240077004
+Condition,Chronic disease of cardiovascular system,Small plaque parapsoriasis,4031011,SNOMED,23854007
+Condition,Chronic disease of cardiovascular system,Stable angina,4119942,SNOMED,233819005
+Condition,Chronic disease of cardiovascular system,Stable angina due to coronary arteriosclerosis,37209632,SNOMED,16754391000119100
+Condition,Chronic disease of cardiovascular system,Telangiectasia macularis eruptiva perstans,4219464,SNOMED,8214000
+Condition,Chronic disease of cardiovascular system,Transformed migraine,4141827,SNOMED,427419006
+Condition,Chronic disease of cardiovascular system,"Urticarial vasculitis with monoclonal IgM component, Schnitzler",4297648,SNOMED,402416000
+Condition,Chronic disease of respiratory system,Acute-on-chronic respiratory failure,312940,SNOMED,67905004
+Condition,Chronic disease of respiratory system,Acute-on-chronic respiratory failure following trauma,765888,SNOMED,10762071000119109
+Condition,Chronic disease of respiratory system,Acute exacerbation of chronic asthmatic bronchitis,40481763,SNOMED,442025000
+Condition,Chronic disease of respiratory system,Acute exacerbation of chronic bronchitis,4137525,SNOMED,425748003
+Condition,Chronic disease of respiratory system,Acute exacerbation of chronic obstructive airways disease,257004,SNOMED,195951007
+Condition,Chronic disease of respiratory system,Acute exacerbation of chronic obstructive airways disease with asthma,43530693,SNOMED,1751000119100
+Condition,Chronic disease of respiratory system,Acute exacerbation of chronic obstructive bronchitis,46270376,SNOMED,293241000119100
+Condition,Chronic disease of respiratory system,Acute exacerbation of idiopathic pulmonary fibrosis,37312199,SNOMED,789574002
+Condition,Chronic disease of respiratory system,Acute infective exacerbation of chronic obstructive airways disease,4115044,SNOMED,285381006
+Condition,Chronic disease of respiratory system,Acute non-infective exacerbation of chronic obstructive pulmonary disease,44807895,SNOMED,847091000000104
+Condition,Chronic disease of respiratory system,Acute on chronic hypercapnic respiratory failure,36716978,SNOMED,7361000175106
+Condition,Chronic disease of respiratory system,Acute on chronic hypoxemic and hypercapnic respiratory failure,35615340,SNOMED,20091000175107
+Condition,Chronic disease of respiratory system,Acute on chronic hypoxemic respiratory failure,37016114,SNOMED,10672271000119100
+Condition,Chronic disease of respiratory system,Adult bronchiectasis,4199450,SNOMED,51068008
+Condition,Chronic disease of respiratory system,Allergic rhinitis due to grass pollen,4241525,SNOMED,91926002
+Condition,Chronic disease of respiratory system,Allergic rhinitis due to pollen,256439,SNOMED,21719001
+Condition,Chronic disease of respiratory system,Allergic rhinitis due to tree pollen,4241526,SNOMED,91927006
+Condition,Chronic disease of respiratory system,Allergic rhinitis due to weed pollen,4240899,SNOMED,91928001
+Condition,Chronic disease of respiratory system,Asthma-chronic obstructive pulmonary disease overlap syndrome,46274062,SNOMED,10692761000119107
+Condition,Chronic disease of respiratory system,Atrophic (senile) emphysema,4148124,SNOMED,266356006
+Condition,Chronic disease of respiratory system,Atrophic pharyngitis,4273688,SNOMED,63866002
+Condition,Chronic disease of respiratory system,Bronchial atresia with segmental pulmonary emphysema,4321845,SNOMED,70756004
+Condition,Chronic disease of respiratory system,Bronchiectasis due to toxic aspiration,4052553,SNOMED,233632003
+Condition,Chronic disease of respiratory system,Bronchiectasis due to toxic inhalation,4050877,SNOMED,233633008
+Condition,Chronic disease of respiratory system,Bronchiectasis with acute exacerbation,3185549,Nebraska Lexicon,19370001000004105
+Condition,Chronic disease of respiratory system,Bullous emphysema with collapse,4145496,SNOMED,266355005
+Condition,Chronic disease of respiratory system,Centriacinar emphysema,4286497,SNOMED,68328006
+Condition,Chronic disease of respiratory system,Childhood bronchiectasis,4049259,SNOMED,12310001
+Condition,Chronic disease of respiratory system,Chronic adenoiditis,439851,SNOMED,232420002
+Condition,Chronic disease of respiratory system,Chronic adenotonsillitis,24978,SNOMED,195798007
+Condition,Chronic disease of respiratory system,Chronic allergic bronchitis,4230358,SNOMED,89099002
+Condition,Chronic disease of respiratory system,Chronic anterior ethmoidal sinusitis,4048184,SNOMED,232393006
+Condition,Chronic disease of respiratory system,Chronic aspergillosis of paranasal sinus,37116455,SNOMED,733170007
+Condition,Chronic disease of respiratory system,Chronic asthmatic bronchitis,256448,SNOMED,195949008
+Condition,Chronic disease of respiratory system,Chronic atelectasis,4048081,SNOMED,123713005
+Condition,Chronic disease of respiratory system,Chronic atrophic rhinitis,4110489,SNOMED,195769008
+Condition,Chronic disease of respiratory system,Chronic berylliosis,4111455,SNOMED,18121009
+Condition,Chronic disease of respiratory system,Chronic bilateral maxillary sinusitis,761761,SNOMED,15981911000119105
+Condition,Chronic disease of respiratory system,Chronic bronchiolitis,42539089,SNOMED,737180005
+Condition,Chronic disease of respiratory system,Chronic bronchitis,255841,SNOMED,63480004
+Condition,Chronic disease of respiratory system,Chronic bronchitis co-occurrent with wheeze,37206130,SNOMED,785736001
+Condition,Chronic disease of respiratory system,Chronic bullous emphysema,4110048,SNOMED,195957006
+Condition,Chronic disease of respiratory system,Chronic catarrhal laryngitis,4110498,SNOMED,195812001
+Condition,Chronic disease of respiratory system,Chronic catarrhal rhinitis,4145495,SNOMED,266342009
+Condition,Chronic disease of respiratory system,Chronic chemical respiratory disease,4144107,SNOMED,266404004
+Condition,Chronic disease of respiratory system,Chronic coccidioidomycotic pneumonia,45757644,SNOMED,28791000119105
+Condition,Chronic disease of respiratory system,Chronic disease of respiratory system,4063381,SNOMED,17097001
+Condition,Chronic disease of respiratory system,Chronic disease of tonsils AND/OR adenoids,432347,SNOMED,16358007
+Condition,Chronic disease of respiratory system,Chronic emphysema due to chemical fumes,4112836,SNOMED,196026004
+Condition,Chronic disease of respiratory system,Chronic emphysema due to vapor,3654571,SNOMED,836477007
+Condition,Chronic disease of respiratory system,Chronic epiglottitis,759819,SNOMED,103021000119104
+Condition,Chronic disease of respiratory system,Chronic ethmoidal sinusitis,132932,SNOMED,73237007
+Condition,Chronic disease of respiratory system,Chronic exogenous lipoid pneumonia,45768998,SNOMED,707553005
+Condition,Chronic disease of respiratory system,Chronic fibrinous rhinitis,4110490,SNOMED,195773006
+Condition,Chronic disease of respiratory system,Chronic fibrosis of lung,4275496,SNOMED,36599006
+Condition,Chronic disease of respiratory system,Chronic follicular pharyngitis,4112500,SNOMED,195782000
+Condition,Chronic disease of respiratory system,Chronic frontal sinusitis,139841,SNOMED,60130002
+Condition,Chronic disease of respiratory system,Chronic frontoethmoidal sinusitis,4051488,SNOMED,232397007
+Condition,Chronic disease of respiratory system,Chronic fungal laryngitis,4049243,SNOMED,232434002
+Condition,Chronic disease of respiratory system,Chronic granular pharyngitis,4126438,SNOMED,2365002
+Condition,Chronic disease of respiratory system,Chronic hiccup,37396824,SNOMED,716771000
+Condition,Chronic disease of respiratory system,Chronic hypercapnic respiratory failure,4140438,SNOMED,426896000
+Condition,Chronic disease of respiratory system,Chronic hyperplastic laryngitis,4112509,SNOMED,195813006
+Condition,Chronic disease of respiratory system,Chronic hypertrophic rhinitis,4112497,SNOMED,195768000
+Condition,Chronic disease of respiratory system,Chronic hypoxemic respiratory failure,4177862,SNOMED,428173007
+Condition,Chronic disease of respiratory system,Chronic induration of lung,4084689,SNOMED,18354001
+Condition,Chronic disease of respiratory system,Chronic infective rhinitis,4110027,SNOMED,195770009
+Condition,Chronic disease of respiratory system,Chronic interstitial lung disease,762964,SNOMED,434301000124102
+Condition,Chronic disease of respiratory system,Chronic interstitial pneumonia,45767051,SNOMED,704345008
+Condition,Chronic disease of respiratory system,Chronic laryngitis,24970,SNOMED,29951006
+Condition,Chronic disease of respiratory system,Chronic laryngitis and laryngotracheitis,4112534,SNOMED,195810009
+Condition,Chronic disease of respiratory system,Chronic laryngotracheitis,26719,SNOMED,83271005
+Condition,Chronic disease of respiratory system,Chronic left maxillary sinusitis,761762,SNOMED,15981991000119101
+Condition,Chronic disease of respiratory system,Chronic lung disease,4186898,SNOMED,413839001
+Condition,Chronic disease of respiratory system,Chronic lung disease due to surfactant disorder,45768981,SNOMED,707534000
+Condition,Chronic disease of respiratory system,Chronic maxillary sinusitis,134668,SNOMED,35923002
+Condition,Chronic disease of respiratory system,Chronic membranous rhinitis,4112498,SNOMED,195772001
+Condition,Chronic disease of respiratory system,Chronic nasopharyngitis,441321,SNOMED,47841006
+Condition,Chronic disease of respiratory system,Chronic nonspecific lung disease,4289844,SNOMED,37180002
+Condition,Chronic disease of respiratory system,Chronic obliterative bronchiolitis,4166517,SNOMED,47938003
+Condition,Chronic disease of respiratory system,Chronic obliterative bronchiolitis due to chemical fumes,3654836,SNOMED,840350008
+Condition,Chronic disease of respiratory system,Chronic obliterative bronchiolitis due to vapor,3654837,SNOMED,840351007
+Condition,Chronic disease of respiratory system,Chronic obstructive asthma co-occurrent with acute exacerbation of asthma,46269802,SNOMED,10692721000119102
+Condition,Chronic disease of respiratory system,Chronic obstructive lung disease,255573,SNOMED,13645005
+Condition,Chronic disease of respiratory system,Chronic obstructive lung disease co-occurrent with acute bronchitis,46269701,SNOMED,106001000119101
+Condition,Chronic disease of respiratory system,Chronic obstructive pulmonary disease with acute lower respiratory infection,4110056,SNOMED,196001008
+Condition,Chronic disease of respiratory system,Chronic osteomeatal disease,4048185,SNOMED,232396003
+Condition,Chronic disease of respiratory system,Chronic panethmoidal sinusitis,4051487,SNOMED,232395004
+Condition,Chronic disease of respiratory system,Chronic pansinusitis,4230641,SNOMED,88850006
+Condition,Chronic disease of respiratory system,Chronic pharyngeal candidiasis,4048188,SNOMED,232406009
+Condition,Chronic disease of respiratory system,Chronic pharyngitis,26711,SNOMED,140004
+Condition,Chronic disease of respiratory system,Chronic pharyngolaryngitis,46270074,SNOMED,133171000119105
+Condition,Chronic disease of respiratory system,Chronic pneumonia,46269693,SNOMED,102361000119104
+Condition,Chronic disease of respiratory system,Chronic pneumothorax,4243667,SNOMED,599006
+Condition,Chronic disease of respiratory system,Chronic posterior ethmoidal sinusitis,4051486,SNOMED,232394000
+Condition,Chronic disease of respiratory system,Chronic progressive coccidioidal pneumonia,4221767,SNOMED,417688002
+Condition,Chronic disease of respiratory system,Chronic pulmonary African histoplasmosis,4084973,SNOMED,240742009
+Condition,Chronic disease of respiratory system,Chronic pulmonary aspergillosis,37118654,SNOMED,733171006
+Condition,Chronic disease of respiratory system,Chronic pulmonary blastomycosis,4080753,SNOMED,240747003
+Condition,Chronic disease of respiratory system,Chronic pulmonary coccidioidomycosis,260034,SNOMED,233615002
+Condition,Chronic disease of respiratory system,Chronic pulmonary congestion,4274468,SNOMED,63841001
+Condition,Chronic disease of respiratory system,Chronic pulmonary edema,4188331,SNOMED,46847001
+Condition,Chronic disease of respiratory system,Chronic pulmonary fibrosis caused by chemical vapors,3655115,SNOMED,846637007
+Condition,Chronic disease of respiratory system,Chronic pulmonary histoplasmosis,4096917,SNOMED,26427008
+Condition,Chronic disease of respiratory system,Chronic pulmonary radiation disease,252348,SNOMED,196049002
+Condition,Chronic disease of respiratory system,Chronic recurrent sinusitis,4179673,SNOMED,427909005
+Condition,Chronic disease of respiratory system,Chronic rejection of lung transplant,4333202,SNOMED,432958009
+Condition,Chronic disease of respiratory system,Chronic respiratory condition caused by chemical fumes,3655114,SNOMED,846636003
+Condition,Chronic disease of respiratory system,Chronic respiratory condition caused by fumes,3655112,SNOMED,846634000
+Condition,Chronic disease of respiratory system,Chronic respiratory condition caused by vapors,3655113,SNOMED,846635004
+Condition,Chronic disease of respiratory system,Chronic respiratory distress with surfactant metabolism deficiency,37204512,SNOMED,783182004
+Condition,Chronic disease of respiratory system,Chronic respiratory failure,314971,SNOMED,39871006
+Condition,Chronic disease of respiratory system,Chronic respiratory insufficiency,4179670,SNOMED,427896006
+Condition,Chronic disease of respiratory system,Chronic rhinitis,259848,SNOMED,86094006
+Condition,Chronic disease of respiratory system,Chronic right maxillary sinusitis,765276,SNOMED,15981951000119106
+Condition,Chronic disease of respiratory system,Chronic silicosis,4119447,SNOMED,233762004
+Condition,Chronic disease of respiratory system,Chronic simple laryngitis,4112508,SNOMED,195811008
+Condition,Chronic disease of respiratory system,Chronic simple rhinitis,4112367,SNOMED,195765002
+Condition,Chronic disease of respiratory system,Chronic sinusitis,257012,SNOMED,40055000
+Condition,Chronic disease of respiratory system,Chronic sphenoidal sinusitis,134661,SNOMED,38961000
+Condition,Chronic disease of respiratory system,Chronic tonsillitis,23220,SNOMED,90979004
+Condition,Chronic disease of respiratory system,Chronic tracheitis,4254103,SNOMED,7457009
+Condition,Chronic disease of respiratory system,Chronic tracheobronchitis,4200851,SNOMED,52571006
+Condition,Chronic disease of respiratory system,Chronic ulcerative pharyngitis,4051493,SNOMED,232405008
+Condition,Chronic disease of respiratory system,Chronic ulcerative rhinitis,4112529,SNOMED,195771008
+Condition,Chronic disease of respiratory system,Compensatory emphysema,261895,SNOMED,33325001
+Condition,Chronic disease of respiratory system,Congenital emphysema,4166508,SNOMED,47895001
+Condition,Chronic disease of respiratory system,Congenital lobar emphysema,4281815,SNOMED,66987001
+Condition,Chronic disease of respiratory system,Congenital syphilitic chronic coryza,4167920,SNOMED,275376007
+Condition,Chronic disease of respiratory system,Cystic-bullous disease of the lung,4104506,SNOMED,2912004
+Condition,Chronic disease of respiratory system,Cystic fibrosis exacerbation,3189821,Nebraska Lexicon,18770001000004108
+Condition,Chronic disease of respiratory system,Diffuse panbronchiolitis,4328679,SNOMED,430476004
+Condition,Chronic disease of respiratory system,Distal hereditary motor neuropathy type 7,36674977,SNOMED,771081007
+Condition,Chronic disease of respiratory system,Distal myopathy 2,45765445,SNOMED,702383005
+Condition,Chronic disease of respiratory system,Emphysematous bleb of lung,259043,SNOMED,57686001
+Condition,Chronic disease of respiratory system,Emphysematous bronchitis,258780,SNOMED,185086009
+Condition,Chronic disease of respiratory system,End stage chronic obstructive airways disease,4046986,SNOMED,135836000
+Condition,Chronic disease of respiratory system,Eosinophilic bronchitis,765431,SNOMED,451981000124108
+Condition,Chronic disease of respiratory system,Eosinophilic nonallergic rhinitis,4247588,SNOMED,93447004
+Condition,Chronic disease of respiratory system,Exacerbation of chronic bronchiolitis,3187037,Nebraska Lexicon,26070001000004103
+Condition,Chronic disease of respiratory system,Familial idiopathic pulmonary fibrosis,4140134,SNOMED,426437004
+Condition,Chronic disease of respiratory system,Fetid chronic bronchitis,4309350,SNOMED,84409004
+Condition,Chronic disease of respiratory system,Gangosa of yaws,443775,SNOMED,24078009
+Condition,Chronic disease of respiratory system,Giant bullous emphysema,4050961,SNOMED,16003001
+Condition,Chronic disease of respiratory system,Hay fever with asthma,4123253,SNOMED,233683003
+Condition,Chronic disease of respiratory system,Hemolytic anemia with emphysema AND cutis laxa,4246105,SNOMED,60805002
+Condition,Chronic disease of respiratory system,"Hereditary fibrosing poikiloderma, tendon contractures, myopathy, pulmonary fibrosis syndrome",36675042,SNOMED,771306007
+Condition,Chronic disease of respiratory system,Idiopathic chronic eosinophilic pneumonia,37110292,SNOMED,724500003
+Condition,Chronic disease of respiratory system,Idiopathic pulmonary fibrosis,45763750,SNOMED,700250006
+Condition,Chronic disease of respiratory system,Interstitial emphysema of lung,440748,SNOMED,77690003
+Condition,Chronic disease of respiratory system,Intractable diarrhea with choanal atresia and eye anomaly syndrome,36714681,SNOMED,720009004
+Condition,Chronic disease of respiratory system,Kartagener syndrome,4173466,SNOMED,42402006
+Condition,Chronic disease of respiratory system,Laryngeal pachydermia,4112518,SNOMED,195866009
+Condition,Chronic disease of respiratory system,Laryngeal papillomatosis,4048501,SNOMED,232457008
+Condition,Chronic disease of respiratory system,Laryngitis sicca,4241326,SNOMED,59454008
+Condition,Chronic disease of respiratory system,Laryngotracheal papillomatosis,4112737,SNOMED,254621001
+Condition,Chronic disease of respiratory system,Local recurrence of malignant tumor of lung,4198434,SNOMED,314954002
+Condition,Chronic disease of respiratory system,Mild chronic obstructive pulmonary disease,4196712,SNOMED,313296004
+Condition,Chronic disease of respiratory system,Mixed simple and mucopurulent chronic bronchitis,4112826,SNOMED,195953005
+Condition,Chronic disease of respiratory system,Moderate chronic obstructive pulmonary disease,4193588,SNOMED,313297008
+Condition,Chronic disease of respiratory system,Mucopurulent chronic bronchitis,257905,SNOMED,74417001
+Condition,Chronic disease of respiratory system,O/E - granular pharyngitis,4040469,SNOMED,164260005
+Condition,Chronic disease of respiratory system,Obstructive bronchiectasis,4050876,SNOMED,233630006
+Condition,Chronic disease of respiratory system,Obstructive emphysema,4056405,SNOMED,16846004
+Condition,Chronic disease of respiratory system,Occupational bronchitis,4172303,SNOMED,49691004
+Condition,Chronic disease of respiratory system,Oculopharyngeal muscular dystrophy,4297463,SNOMED,77097004
+Condition,Chronic disease of respiratory system,Oculopharyngodistal myopathy,35622370,SNOMED,763829004
+Condition,Chronic disease of respiratory system,Ozena,4288156,SNOMED,69646003
+Condition,Chronic disease of respiratory system,Ozena laryngis,4181738,SNOMED,54287007
+Condition,Chronic disease of respiratory system,Panacinar emphysema,4177944,SNOMED,4981000
+Condition,Chronic disease of respiratory system,Paraseptal emphysema,4136683,SNOMED,31898008
+Condition,Chronic disease of respiratory system,Persistent pulmonary hypertension,3174548,Nebraska Lexicon,10090001000004100
+Condition,Chronic disease of respiratory system,PF-ILD-progressive fibrosing interstitial lung disease,37208102,SNOMED,460561000124109
+Condition,Chronic disease of respiratory system,PFAPA syndrome,37397178,SNOMED,717231003
+Condition,Chronic disease of respiratory system,Pharyngitis keratosa,4112530,SNOMED,195779005
+Condition,Chronic disease of respiratory system,Pharyngitis sicca,4112499,SNOMED,195780008
+Condition,Chronic disease of respiratory system,Protracted bronchitis caused by bacterium,42536541,SNOMED,735465007
+Condition,Chronic disease of respiratory system,Pulmonary emphysema,261325,SNOMED,87433001
+Condition,Chronic disease of respiratory system,Pulmonary emphysema co-occurrent with fibrosis of lung,45769389,SNOMED,708030004
+Condition,Chronic disease of respiratory system,Pulmonary emphysema in alpha-1 PI deficiency,4050732,SNOMED,233674008
+Condition,Chronic disease of respiratory system,Pulmonary exacerbation cystic fibrosis,3183290,Nebraska Lexicon,13840001000004105
+Condition,Chronic disease of respiratory system,Recurrent acute sinusitis,4048489,SNOMED,232391008
+Condition,Chronic disease of respiratory system,Recurrent acute streptococcal tonsillitis,42534820,SNOMED,10629231000119109
+Condition,Chronic disease of respiratory system,Recurrent acute tonsillitis,4110362,SNOMED,195677001
+Condition,Chronic disease of respiratory system,Recurrent allergic croup,4049242,SNOMED,232430006
+Condition,Chronic disease of respiratory system,Recurrent aspiration pneumonia,4334649,SNOMED,430969000
+Condition,Chronic disease of respiratory system,Recurrent bacterial pneumonia,37017277,SNOMED,713525001
+Condition,Chronic disease of respiratory system,Recurrent bacterial pneumonia co-occurrent with human immunodeficiency virus infection,37017278,SNOMED,713526000
+Condition,Chronic disease of respiratory system,Recurrent bronchiectasis,4110637,SNOMED,195984007
+Condition,Chronic disease of respiratory system,Recurrent croup,46270340,SNOMED,22951000119104
+Condition,Chronic disease of respiratory system,Recurrent glottic respiratory papillomatosis,3188190,Nebraska Lexicon,32110001000004103
+Condition,Chronic disease of respiratory system,Recurrent lower respiratory tract infection,40491473,SNOMED,448739000
+Condition,Chronic disease of respiratory system,Recurrent pneumonia,44782989,SNOMED,699014000
+Condition,Chronic disease of respiratory system,Recurrent respiratory papillomatosis,43021940,SNOMED,472827002
+Condition,Chronic disease of respiratory system,Recurrent right pleural effusion,3184237,Nebraska Lexicon,12240001000004108
+Condition,Chronic disease of respiratory system,Recurrent sinusitis,4110492,SNOMED,195788001
+Condition,Chronic disease of respiratory system,Recurrent upper respiratory tract infection,4110479,SNOMED,195708003
+Condition,Chronic disease of respiratory system,Relapsing polychondritis of larynx,4049245,SNOMED,232439007
+Condition,Chronic disease of respiratory system,Rhinitis caseosa,4051475,SNOMED,232344001
+Condition,Chronic disease of respiratory system,Rhinitis medicamentosa,4316066,SNOMED,95239003
+Condition,Chronic disease of respiratory system,Rhinitis sicca,4316067,SNOMED,95240001
+Condition,Chronic disease of respiratory system,Ruptured emphysematous bleb of lung,4315386,SNOMED,86680006
+Condition,Chronic disease of respiratory system,Scar emphysema,4050734,SNOMED,233677001
+Condition,Chronic disease of respiratory system,Seasonal allergic rhinitis,4280726,SNOMED,367498001
+Condition,Chronic disease of respiratory system,Seasonal asthma,40483397,SNOMED,445427006
+Condition,Chronic disease of respiratory system,Seasonal cryptogenic organizing pneumonia with biochemical cholestasis,4119431,SNOMED,233713004
+Condition,Chronic disease of respiratory system,Segmental bullous emphysema,4110635,SNOMED,195958001
+Condition,Chronic disease of respiratory system,Severe chronic obstructive pulmonary disease,4209097,SNOMED,313299006
+Condition,Chronic disease of respiratory system,Siegler Brewer Carey syndrome,36715408,SNOMED,721076000
+Condition,Chronic disease of respiratory system,Simple chronic bronchitis,261889,SNOMED,61937009
+Condition,Chronic disease of respiratory system,Thunderstorm asthma,3661412,SNOMED,829976001
+Condition,Chronic disease of respiratory system,Toxic emphysema,4050733,SNOMED,233675009
+Condition,Chronic disease of respiratory system,Toxin-induced bronchiectasis,4052552,SNOMED,233631005
+Condition,Chronic disease of respiratory system,Traction bronchiectasis,4078695,SNOMED,19325002
+Condition,Chronic disease of respiratory system,Vanishing lung,4083395,SNOMED,23958009
+Condition,Chronic disease of respiratory system,Very severe chronic obstructive pulmonary disease,44791725,SNOMED,293991000000106
+Condition,Chronic disease of respiratory system,Woakes' ethmoiditis,4112365,SNOMED,195756009
+Condition,Chronic disease of respiratory system,Zonal bullous emphysema,4112828,SNOMED,195959009
+Condition,Chronic obstructive lung disease,Acute exacerbation of chronic obstructive airways disease,257004,SNOMED,195951007
+Condition,Chronic obstructive lung disease,Acute exacerbation of chronic obstructive airways disease with asthma,43530693,SNOMED,1751000119100
+Condition,Chronic obstructive lung disease,Acute infective exacerbation of chronic obstructive airways disease,4115044,SNOMED,285381006
+Condition,Chronic obstructive lung disease,Acute non-infective exacerbation of chronic obstructive pulmonary disease,44807895,SNOMED,847091000000104
+Condition,Chronic obstructive lung disease,Asthma-chronic obstructive pulmonary disease overlap syndrome,46274062,SNOMED,10692761000119107
+Condition,Chronic obstructive lung disease,Atrophic (senile) emphysema,4148124,SNOMED,266356006
+Condition,Chronic obstructive lung disease,Bronchial atresia with segmental pulmonary emphysema,4321845,SNOMED,70756004
+Condition,Chronic obstructive lung disease,Bronchiectasis with acute exacerbation,3185549,Nebraska Lexicon,19370001000004105
+Condition,Chronic obstructive lung disease,Bullous emphysema with collapse,4145496,SNOMED,266355005
+Condition,Chronic obstructive lung disease,Centriacinar emphysema,4286497,SNOMED,68328006
+Condition,Chronic obstructive lung disease,Chronic bullous emphysema,4110048,SNOMED,195957006
+Condition,Chronic obstructive lung disease,Chronic emphysema due to chemical fumes,4112836,SNOMED,196026004
+Condition,Chronic obstructive lung disease,Chronic emphysema due to vapor,3654571,SNOMED,836477007
+Condition,Chronic obstructive lung disease,Chronic obliterative bronchiolitis,4166517,SNOMED,47938003
+Condition,Chronic obstructive lung disease,Chronic obliterative bronchiolitis due to chemical fumes,3654836,SNOMED,840350008
+Condition,Chronic obstructive lung disease,Chronic obliterative bronchiolitis due to vapor,3654837,SNOMED,840351007
+Condition,Chronic obstructive lung disease,Chronic obstructive lung disease,255573,SNOMED,13645005
+Condition,Chronic obstructive lung disease,Chronic obstructive lung disease co-occurrent with acute bronchitis,46269701,SNOMED,106001000119101
+Condition,Chronic obstructive lung disease,Chronic obstructive pulmonary disease with acute lower respiratory infection,4110056,SNOMED,196001008
+Condition,Chronic obstructive lung disease,Compensatory emphysema,261895,SNOMED,33325001
+Condition,Chronic obstructive lung disease,Congenital emphysema,4166508,SNOMED,47895001
+Condition,Chronic obstructive lung disease,Congenital lobar emphysema,4281815,SNOMED,66987001
+Condition,Chronic obstructive lung disease,Emphysematous bleb of lung,259043,SNOMED,57686001
+Condition,Chronic obstructive lung disease,End stage chronic obstructive airways disease,4046986,SNOMED,135836000
+Condition,Chronic obstructive lung disease,Giant bullous emphysema,4050961,SNOMED,16003001
+Condition,Chronic obstructive lung disease,Hemolytic anemia with emphysema AND cutis laxa,4246105,SNOMED,60805002
+Condition,Chronic obstructive lung disease,Interstitial emphysema of lung,440748,SNOMED,77690003
+Condition,Chronic obstructive lung disease,Mild chronic obstructive pulmonary disease,4196712,SNOMED,313296004
+Condition,Chronic obstructive lung disease,Moderate chronic obstructive pulmonary disease,4193588,SNOMED,313297008
+Condition,Chronic obstructive lung disease,Obstructive emphysema,4056405,SNOMED,16846004
+Condition,Chronic obstructive lung disease,Panacinar emphysema,4177944,SNOMED,4981000
+Condition,Chronic obstructive lung disease,Paraseptal emphysema,4136683,SNOMED,31898008
+Condition,Chronic obstructive lung disease,Pulmonary emphysema,261325,SNOMED,87433001
+Condition,Chronic obstructive lung disease,Pulmonary emphysema co-occurrent with fibrosis of lung,45769389,SNOMED,708030004
+Condition,Chronic obstructive lung disease,Pulmonary emphysema in alpha-1 PI deficiency,4050732,SNOMED,233674008
+Condition,Chronic obstructive lung disease,Ruptured emphysematous bleb of lung,4315386,SNOMED,86680006
+Condition,Chronic obstructive lung disease,Scar emphysema,4050734,SNOMED,233677001
+Condition,Chronic obstructive lung disease,Segmental bullous emphysema,4110635,SNOMED,195958001
+Condition,Chronic obstructive lung disease,Severe chronic obstructive pulmonary disease,4209097,SNOMED,313299006
+Condition,Chronic obstructive lung disease,Toxic emphysema,4050733,SNOMED,233675009
+Condition,Chronic obstructive lung disease,Vanishing lung,4083395,SNOMED,23958009
+Condition,Chronic obstructive lung disease,Very severe chronic obstructive pulmonary disease,44791725,SNOMED,293991000000106
+Condition,Chronic obstructive lung disease,Zonal bullous emphysema,4112828,SNOMED,195959009
+Condition,Diabetes mellitus,"Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome",36715051,SNOMED,720519003
+Condition,Diabetes mellitus,Atypical diabetes mellitus,36713275,SNOMED,530558861000132104
+Condition,Diabetes mellitus,DEND syndrome,36715417,SNOMED,721088003
+Condition,Diabetes mellitus,Diabetes-deafness syndrome maternally transmitted,4129516,SNOMED,237619009
+Condition,Diabetes mellitus,Diabetes mellitus,201820,SNOMED,73211009
+Condition,Diabetes mellitus,Diabetes mellitus AND insipidus with optic atrophy AND deafness,4322638,SNOMED,70694009
+Condition,Diabetes mellitus,Diabetes mellitus associated with cystic fibrosis,4143529,SNOMED,426705001
+Condition,Diabetes mellitus,Diabetes mellitus associated with genetic syndrome,4245270,SNOMED,5969009
+Condition,Diabetes mellitus,Diabetes mellitus associated with hormonal etiology,4240589,SNOMED,59079001
+Condition,Diabetes mellitus,Diabetes mellitus associated with pancreatic disease,4178452,SNOMED,51002006
+Condition,Diabetes mellitus,Diabetes mellitus associated with receptor abnormality,4178790,SNOMED,42954008
+Condition,Diabetes mellitus,Diabetes mellitus caused by chemical,42537681,SNOMED,737212004
+Condition,Diabetes mellitus,Diabetes mellitus caused by drug without complication,765478,SNOMED,367391000119102
+Condition,Diabetes mellitus,Diabetes mellitus complicating Cystic fibrosis,3178281,Nebraska Lexicon,2350001000004101
+Condition,Diabetes mellitus,Diabetes mellitus due to cystic fibrosis,4144583,SNOMED,427089005
+Condition,Diabetes mellitus,Diabetes mellitus due to genetic defect in beta cell function,43531011,SNOMED,609568004
+Condition,Diabetes mellitus,Diabetes mellitus due to genetic defect in insulin action,43531642,SNOMED,609569007
+Condition,Diabetes mellitus,Diabetes mellitus due to insulin receptor antibodies,4192852,SNOMED,75682002
+Condition,Diabetes mellitus,Diabetes mellitus due to pancreatic injury,45757077,SNOMED,105401000119101
+Condition,Diabetes mellitus,Diabetes mellitus due to structurally abnormal insulin,4237068,SNOMED,91352004
+Condition,Diabetes mellitus,Diabetes mellitus during pregnancy - baby delivered,443012,SNOMED,199225007
+Condition,Diabetes mellitus,Diabetes mellitus during pregnancy - baby not yet delivered,192691,SNOMED,199227004
+Condition,Diabetes mellitus,"Diabetes mellitus during pregnancy, childbirth and the puerperium",4058243,SNOMED,199223000
+Condition,Diabetes mellitus,Diabetes mellitus in mother complicating childbirth,45757129,SNOMED,10754881000119104
+Condition,Diabetes mellitus,"Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium",194700,SNOMED,76751001
+Condition,Diabetes mellitus,Diabetes mellitus in neonate small for gestational age,4079850,SNOMED,276560009
+Condition,Diabetes mellitus,Diabetes mellitus in remission,45766050,SNOMED,703136005
+Condition,Diabetes mellitus,Diabetes mellitus in the puerperium - baby delivered during current episode of care,4062685,SNOMED,199226008
+Condition,Diabetes mellitus,Diabetes mellitus in the puerperium - baby delivered during previous episode of care,4062686,SNOMED,199228009
+Condition,Diabetes mellitus,Diabetes mellitus induced by non-steroid drugs,4235410,SNOMED,408540003
+Condition,Diabetes mellitus,Diabetes mellitus induced by non-steroid drugs without complication,4136889,SNOMED,413183008
+Condition,Diabetes mellitus,Diabetes mellitus type 1 without retinopathy,45757674,SNOMED,31321000119102
+Condition,Diabetes mellitus,Diabetes mellitus type 2 with periodontal disease,36684827,SNOMED,368101000119109
+Condition,Diabetes mellitus,Diabetes mellitus type 2 without retinopathy,45757474,SNOMED,1481000119100
+Condition,Diabetes mellitus,Diabetes mellitus with multiple complications,44793113,SNOMED,385041000000108
+Condition,Diabetes mellitus,Diabetes mellitus without complication,4008576,SNOMED,111552007
+Condition,Diabetes mellitus,"Diabetes mellitus, transient neonatal 1",43531645,SNOMED,609579009
+Condition,Diabetes mellitus,"Diabetes mellitus, transient neonatal 2",43531019,SNOMED,609580007
+Condition,Diabetes mellitus,"Diabetes mellitus, transient neonatal 3",43531020,SNOMED,609581006
+Condition,Diabetes mellitus,Disorder of nerve co-occurrent and due to type 1 diabetes mellitus,42535539,SNOMED,368521000119107
+Condition,Diabetes mellitus,Drug-induced diabetes mellitus,4202383,SNOMED,5368009
+Condition,Diabetes mellitus,"Extreme insulin resistance with acanthosis nigricans, hirsutism AND abnormal insulin receptors",4084643,SNOMED,24203005
+Condition,Diabetes mellitus,Fibrocalculous pancreatic diabetes,4099741,SNOMED,2751001
+Condition,Diabetes mellitus,Gestational diabetes during pregnancy,3183244,Nebraska Lexicon,5620001000004106
+Condition,Diabetes mellitus,Gestational diabetes mellitus,4024659,SNOMED,11687002
+Condition,Diabetes mellitus,Gestational diabetes mellitus complicating pregnancy,37018765,SNOMED,40801000119106
+Condition,Diabetes mellitus,Gestational diabetes mellitus in childbirth,45757124,SNOMED,10753491000119101
+Condition,Diabetes mellitus,"Gestational diabetes mellitus, class A>1<",4326434,SNOMED,75022004
+Condition,Diabetes mellitus,"Gestational diabetes mellitus, class A>2<",4263902,SNOMED,46894009
+Condition,Diabetes mellitus,Gingival disease co-occurrent with diabetes mellitus,37396524,SNOMED,716362006
+Condition,Diabetes mellitus,Gingivitis co-occurrent with diabetes mellitus,46274096,SNOMED,709147009
+Condition,Diabetes mellitus,Houssay's syndrome,4048202,SNOMED,123763000
+Condition,Diabetes mellitus,Hyperproinsulinemia,4034962,SNOMED,237613005
+Condition,Diabetes mellitus,Insulin autoimmune syndrome,4252384,SNOMED,408539000
+Condition,Diabetes mellitus,Insulin dependent diabetes mellitus type 1A,4047906,SNOMED,23045005
+Condition,Diabetes mellitus,Insulin dependent diabetes mellitus type 1B,4102018,SNOMED,28032008
+Condition,Diabetes mellitus,Insulin resistance - type A,4129524,SNOMED,237651005
+Condition,Diabetes mellitus,Insulin resistance - type B,4129525,SNOMED,237652003
+Condition,Diabetes mellitus,Insulin treated type 2 diabetes mellitus,4130162,SNOMED,237599002
+Condition,Diabetes mellitus,"Intellectual disability, craniofacial dysmorphism, hypogonadism, diabetes mellitus syndrome",36717215,SNOMED,722454003
+Condition,Diabetes mellitus,Ketosis-prone diabetes mellitus,36685758,SNOMED,1102351000000105
+Condition,Diabetes mellitus,Latent autoimmune diabetes mellitus in adult,4145827,SNOMED,426875007
+Condition,Diabetes mellitus,Leprechaunism syndrome,4006979,SNOMED,111307005
+Condition,Diabetes mellitus,Lipoatrophic diabetes,4131907,SNOMED,127012008
+Condition,Diabetes mellitus,Lipoatrophic diabetes mellitus without complication,44787902,SNOMED,112991000000101
+Condition,Diabetes mellitus,Malnutrition-related diabetes mellitus - fibrocalculous,4030061,SNOMED,237600004
+Condition,Diabetes mellitus,Malnutrition-related diabetes mellitus with peripheral circulatory complications,4096671,SNOMED,190410002
+Condition,Diabetes mellitus,Malnutrition-related diabetes mellitus with renal complications,4096670,SNOMED,190407009
+Condition,Diabetes mellitus,Malnutrition-related diabetes mellitus without complications,4096042,SNOMED,190412005
+Condition,Diabetes mellitus,Malnutrition related diabetes mellitus,4327944,SNOMED,75524006
+Condition,Diabetes mellitus,Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn,4166381,SNOMED,4783006
+Condition,Diabetes mellitus,Maternally inherited diabetes mellitus,44792134,SNOMED,335621000000101
+Condition,Diabetes mellitus,Maturity-onset diabetes of the young,43531640,SNOMED,609561005
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 10",43531017,SNOMED,609577006
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 11",43531018,SNOMED,609578001
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 3",43531012,SNOMED,609570008
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 4",43531013,SNOMED,609571007
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 5",43531014,SNOMED,609572000
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 6",43531643,SNOMED,609573005
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 7",43531015,SNOMED,609574004
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 8",43531644,SNOMED,609575003
+Condition,Diabetes mellitus,"Maturity-onset diabetes of the young, type 9",43531016,SNOMED,609576002
+Condition,Diabetes mellitus,"Maturity onset diabetes of the young, type 1",43531006,SNOMED,609562003
+Condition,Diabetes mellitus,"Maturity onset diabetes of the young, type 2",4130164,SNOMED,237604008
+Condition,Diabetes mellitus,"Megaloblastic anemia, thiamine-responsive, with diabetes mellitus and sensorineural deafness",4034963,SNOMED,237617006
+Condition,Diabetes mellitus,Myopathy and diabetes mellitus,37204818,SNOMED,783722008
+Condition,Diabetes mellitus,Neonatal diabetes mellitus,193323,SNOMED,49817004
+Condition,Diabetes mellitus,"Pancreatic hypoplasia, diabetes mellitus, congenital heart disease syndrome",36716258,SNOMED,722206009
+Condition,Diabetes mellitus,Permanent neonatal diabetes mellitus,43531641,SNOMED,609565001
+Condition,Diabetes mellitus,Permanent neonatal diabetes mellitus with cerebellar agenesis syndrome,37110041,SNOMED,724067006
+Condition,Diabetes mellitus,"Photomyoclonus, diabetes mellitus, deafness, nephropathy and cerebral dysfunction",4030066,SNOMED,237612000
+Condition,Diabetes mellitus,Poorly controlled diabetes mellitus,3198118,Nebraska Lexicon,29770001000004105
+Condition,Diabetes mellitus,Poorly controlled type 1 diabetes,3194119,Nebraska Lexicon,29680001000004109
+Condition,Diabetes mellitus,Poorly controlled type 2 diabetes,3193274,Nebraska Lexicon,29690001000004108
+Condition,Diabetes mellitus,Poorly controlled type II diabetes with circulatory disease,3192767,Nebraska Lexicon,10140001000004100
+Condition,Diabetes mellitus,Poorly controlled type II diabetes with complications,3194082,Nebraska Lexicon,10150001000004102
+Condition,Diabetes mellitus,Poorly controlled type II diabetes with neuropathy,3191208,Nebraska Lexicon,10170001000004104
+Condition,Diabetes mellitus,Poorly controlled type II diabetes with renal complications,3194332,Nebraska Lexicon,10160001000004105
+Condition,Diabetes mellitus,Postpartum gestational diabetes mellitus,45757789,SNOMED,40791000119105
+Condition,Diabetes mellitus,Posttransplant diabetes mellitus,40482883,SNOMED,445260006
+Condition,Diabetes mellitus,Pre-existing diabetes mellitus,44793114,SNOMED,385051000000106
+Condition,Diabetes mellitus,Pre-existing diabetes mellitus in mother complicating childbirth,45757079,SNOMED,106281000119103
+Condition,Diabetes mellitus,Pre-existing diabetes mellitus in pregnancy,43531007,SNOMED,609563008
+Condition,Diabetes mellitus,Pre-existing malnutrition-related diabetes mellitus,4062687,SNOMED,199231005
+Condition,Diabetes mellitus,Pre-existing type 1 diabetes mellitus,4063042,SNOMED,199229001
+Condition,Diabetes mellitus,Pre-existing type 1 diabetes mellitus in pregnancy,43531008,SNOMED,609564002
+Condition,Diabetes mellitus,Pre-existing type 2 diabetes mellitus,4063043,SNOMED,199230006
+Condition,Diabetes mellitus,Pre-existing type 2 diabetes mellitus in pregnancy,43531010,SNOMED,609567009
+Condition,Diabetes mellitus,Pregnancy and type 1 diabetes mellitus,43531009,SNOMED,609566000
+Condition,Diabetes mellitus,Pregnancy and type 2 diabetes mellitus,4129519,SNOMED,237627000
+Condition,Diabetes mellitus,"Primary microcephaly, epilepsy, permanent neonatal diabetes syndrome",37204277,SNOMED,782825008
+Condition,Diabetes mellitus,"Primary microcephaly, mild intellectual disability, young-onset diabetes syndrome",37204232,SNOMED,782755007
+Condition,Diabetes mellitus,Protein-deficient diabetes mellitus,4212631,SNOMED,57886004
+Condition,Diabetes mellitus,Rabson-Mendenhall syndrome,4140808,SNOMED,33559001
+Condition,Diabetes mellitus,Secondary diabetes mellitus,195771,SNOMED,8801005
+Condition,Diabetes mellitus,Secondary endocrine diabetes mellitus,4034960,SNOMED,237601000
+Condition,Diabetes mellitus,Steroid-induced diabetes,4099334,SNOMED,190447002
+Condition,Diabetes mellitus,Steroid-induced diabetes mellitus without complication,4099653,SNOMED,190416008
+Condition,Diabetes mellitus,Stimmler syndrome,37116379,SNOMED,733072002
+Condition,Diabetes mellitus,Transient neonatal diabetes mellitus,4129378,SNOMED,237603002
+Condition,Diabetes mellitus,Type 1 diabetes mellitus,201254,SNOMED,46635009
+Condition,Diabetes mellitus,Type 1 diabetes mellitus maturity onset,4099215,SNOMED,190372001
+Condition,Diabetes mellitus,Type 1 diabetes mellitus with ulcer,4099214,SNOMED,190368000
+Condition,Diabetes mellitus,Type 1 diabetes mellitus without complication,443412,SNOMED,313435000
+Condition,Diabetes mellitus,Type 2 diabetes mellitus,201826,SNOMED,44054006
+Condition,Diabetes mellitus,Type 2 diabetes mellitus in nonobese,4230254,SNOMED,359642000
+Condition,Diabetes mellitus,Type 2 diabetes mellitus in obese,4304377,SNOMED,81531005
+Condition,Diabetes mellitus,Type 2 diabetes mellitus with ulcer,4099651,SNOMED,190389009
+Condition,Diabetes mellitus,Type 2 diabetes mellitus without complication,4193704,SNOMED,313436004
+Condition,Diabetes mellitus,Type I diabetes mellitus in remission,45766051,SNOMED,703137001
+Condition,Diabetes mellitus,Type II diabetes mellitus in remission,45766052,SNOMED,703138006
+Condition,Diabetes mellitus,Wolfram-like syndrome,37116960,SNOMED,734022008
+Condition,Diabetes mellitus,Woodhouse Sakati syndrome,37311329,SNOMED,816067005
+Condition,Human immunodeficiency virus infection,Acquired hemolytic anemia co-occurrent with human immunodeficiency virus infection,37017285,SNOMED,713533000
+Condition,Human immunodeficiency virus infection,Acquired immune deficiency syndrome-related nephropathy,4128060,SNOMED,236406007
+Condition,Human immunodeficiency virus infection,Acquired immune deficiency syndrome complicating childbirth,45757102,SNOMED,10746341000119109
+Condition,Human immunodeficiency virus infection,Acute endocarditis co-occurrent with human immunodeficiency virus infection,37017266,SNOMED,713511002
+Condition,Human immunodeficiency virus infection,Acute HIV infection,4008081,SNOMED,111880001
+Condition,Human immunodeficiency virus infection,Agranulocytosis co-occurrent with human immunodeficiency virus infection,37017282,SNOMED,713530002
+Condition,Human immunodeficiency virus infection,AIDS,4267414,SNOMED,62479008
+Condition,Human immunodeficiency virus infection,Anemia co-occurrent with human immunodeficiency virus infection,37017132,SNOMED,713349004
+Condition,Human immunodeficiency virus infection,Aplastic anemia co-occurrent with human immunodeficiency virus infection,37019055,SNOMED,713508003
+Condition,Human immunodeficiency virus infection,Aspergillosis co-occurrent with human immunodeficiency virus infection,37017456,SNOMED,713732008
+Condition,Human immunodeficiency virus infection,Asymptomatic human immunodeficiency virus A1 infection,42538959,SNOMED,90681000119107
+Condition,Human immunodeficiency virus infection,Asymptomatic human immunodeficiency virus A2 infection,42538960,SNOMED,90691000119105
+Condition,Human immunodeficiency virus infection,Asymptomatic human immunodeficiency virus infection,4241530,SNOMED,91947003
+Condition,Human immunodeficiency virus infection,Asymptomatic human immunodeficiency virus infection in pregnancy,4239722,SNOMED,91948008
+Condition,Human immunodeficiency virus infection,Bacterial pneumonia co-occurrent with human immunodeficiency virus infection,37019058,SNOMED,713544008
+Condition,Human immunodeficiency virus infection,Burkitt lymphoma co-occurrent with human immunodeficiency virus infection,37017595,SNOMED,713897006
+Condition,Human immunodeficiency virus infection,Candidiasis of esophagus co-occurrent with human immunodeficiency virus infection,37017092,SNOMED,713297001
+Condition,Human immunodeficiency virus infection,Candidiasis of mouth co-occurrent with human immunodeficiency virus infection,37017254,SNOMED,713497004
+Condition,Human immunodeficiency virus infection,Candidiasis of upper respiratory tract co-occurrent with human immunodeficiency virus infection,36714339,SNOMED,719522009
+Condition,Human immunodeficiency virus infection,Cardiomyopathy co-occurrent with human immunodeficiency virus infection,37017276,SNOMED,713523008
+Condition,Human immunodeficiency virus infection,Chronic hepatitis C co-occurrent with human immunodeficiency virus infection,3654682,SNOMED,838377003
+Condition,Human immunodeficiency virus infection,Chronic infection caused by herpes simplex virus co-occurrent with human immunodeficiency virus infection,37017210,SNOMED,713446007
+Condition,Human immunodeficiency virus infection,Coccidiosis co-occurrent with human immunodeficiency virus infection,37017453,SNOMED,713729005
+Condition,Human immunodeficiency virus infection,Congenital acquired immune deficiency syndrome,4171124,SNOMED,276665006
+Condition,Human immunodeficiency virus infection,Congenital human immunodeficiency virus infection,4180254,SNOMED,52079000
+Condition,Human immunodeficiency virus infection,Congenital human immunodeficiency virus positive status syndrome,4171125,SNOMED,276666007
+Condition,Human immunodeficiency virus infection,Dementia co-occurrent with human immunodeficiency virus infection,37017549,SNOMED,713844000
+Condition,Human immunodeficiency virus infection,Demyelinating disease of central nervous system co-occurrent with human immunodeficiency virus infection,37017294,SNOMED,713543002
+Condition,Human immunodeficiency virus infection,Dermatophytosis co-occurrent with human immunodeficiency virus infection,37018935,SNOMED,713734009
+Condition,Human immunodeficiency virus infection,Diffuse non-Hodgkin immunoblastic lymphoma co-occurrent with human immunodeficiency virus infection,37017442,SNOMED,713718006
+Condition,Human immunodeficiency virus infection,Disorder of central nervous system co-occurrent with human immunodeficiency virus infection,37017319,SNOMED,713571008
+Condition,Human immunodeficiency virus infection,Disorder of eye proper co-occurrent with human immunodeficiency virus infection,37018711,SNOMED,713299003
+Condition,Human immunodeficiency virus infection,Disorder of gastrointestinal tract co-occurrent with human immunodeficiency virus infection,37017094,SNOMED,713300006
+Condition,Human immunodeficiency virus infection,Disorder of kidney co-occurrent with human immunodeficiency virus infection,37017260,SNOMED,713504001
+Condition,Human immunodeficiency virus infection,Disorder of peripheral nervous system co-occurrent with human immunodeficiency virus infection,37017279,SNOMED,713527009
+Condition,Human immunodeficiency virus infection,Disorder of respiratory system co-occurrent with human immunodeficiency virus infection,37017244,SNOMED,713484001
+Condition,Human immunodeficiency virus infection,Disorder of skin co-occurrent with human immunodeficiency virus infection,37017125,SNOMED,713340000
+Condition,Human immunodeficiency virus infection,Disorder of spinal cord co-occurrent with human immunodeficiency virus infection,37017259,SNOMED,713503007
+Condition,Human immunodeficiency virus infection,Disseminated atypical infection caused by Mycobacterium co-occurrent with human immunodeficiency virus infection,37017655,SNOMED,713967004
+Condition,Human immunodeficiency virus infection,Disseminated infection caused by Strongyloides co-occurrent with human immunodeficiency virus infection,37019052,SNOMED,713445006
+Condition,Human immunodeficiency virus infection,Encephalitis caused by human immunodeficiency virus type 1,3654950,SNOMED,840498003
+Condition,Human immunodeficiency virus infection,Encephalitis caused by human immunodeficiency virus type 2,3654900,SNOMED,840442003
+Condition,Human immunodeficiency virus infection,Enlargement of liver co-occurrent with human immunodeficiency virus infection,37017265,SNOMED,713510001
+Condition,Human immunodeficiency virus infection,Eruption of skin co-occurrent with human immunodeficiency virus infection,37017106,SNOMED,713316008
+Condition,Human immunodeficiency virus infection,Extrapulmonary tuberculosis co-occurrent with human immunodeficiency virus infection,37116831,SNOMED,733835007
+Condition,Human immunodeficiency virus infection,Focal segmental glomerulosclerosis co-occurrent with human immunodeficiency virus infection,37017586,SNOMED,713887002
+Condition,Human immunodeficiency virus infection,Gastrointestinal malabsorption syndrome co-occurrent with human immunodeficiency virus infection,37017261,SNOMED,713505000
+Condition,Human immunodeficiency virus infection,Heart disease co-occurrent with human immunodeficiency virus infection,37017093,SNOMED,713298006
+Condition,Human immunodeficiency virus infection,Hemophagocytic syndrome co-occurrent with human immunodeficiency virus infection,37017209,SNOMED,713444005
+Condition,Human immunodeficiency virus infection,HIV (human immunodeficiency virus) disease resulting in haematological and immunological abnormalities,46284256,SNOMED,943041000000105
+Condition,Human immunodeficiency virus infection,HIV infection with acute lymphadenitis,4314426,SNOMED,87117006
+Condition,Human immunodeficiency virus infection,HIV infection with aseptic meningitis,4201627,SNOMED,315019000
+Condition,Human immunodeficiency virus infection,HIV infection with infectious mononucleosis-like syndrome,4172009,SNOMED,48794007
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus-associated periodontitis,4124361,SNOMED,235009000
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus (HIV) II infection category B1,45769839,SNOMED,72621000119104
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus (HIV) II infection category B2,45773072,SNOMED,72631000119101
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus (HIV) infection category B1,45769855,SNOMED,76981000119106
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus (HIV) infection category B2,45769856,SNOMED,76991000119109
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus complicating pregnancy childbirth and the puerperium,36715476,SNOMED,721166000
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus encephalitis,4161950,SNOMED,398329009
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus encephalopathy,4262297,SNOMED,397763006
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus enteropathy,4340791,SNOMED,235726002
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus I infection,4253472,SNOMED,40780007
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus II infection,432554,SNOMED,79019005
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus in mother complicating childbirth,45757132,SNOMED,10755671000119100
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus infection,439727,SNOMED,86406008
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus infection constitutional disease,4087603,SNOMED,186706006
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus infection with cognitive impairment,36687122,SNOMED,15928141000119107
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus infection with neurological disease,4087604,SNOMED,186707002
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus infection with secondary clinical infectious disease,4092686,SNOMED,186708007
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus leukoencephalopathy,4047624,SNOMED,230180003
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus myopathy,4347288,SNOMED,240103002
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 1 co-occurrent with malaria,42536591,SNOMED,735522008
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 1 co-occurrent with tuberculosis,42536590,SNOMED,735521001
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 2 co-occurrent with malaria,42536593,SNOMED,735524009
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 2 co-occurrent with tuberculosis,42536592,SNOMED,735523003
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 3 co-occurrent with malaria,42536594,SNOMED,735526006
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 3 co-occurrent with tuberculosis,42539031,SNOMED,735525005
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 4 co-occurrent with malaria,42536596,SNOMED,735528007
+Condition,Human immunodeficiency virus infection,Human immunodeficiency virus World Health Organization 2007 stage 4 co-occurrent with tuberculosis,42536595,SNOMED,735527002
+Condition,Human immunodeficiency virus infection,Immune reconstitution inflammatory syndrome caused by human immunodeficiency virus infection,37018063,SNOMED,714464009
+Condition,Human immunodeficiency virus infection,Infection caused by Coccidia co-occurrent with acquired immunodeficiency syndrome,36674252,SNOMED,771119002
+Condition,Human immunodeficiency virus infection,Infection caused by Cryptosporidium co-occurrent with human immunodeficiency virus infection,37017550,SNOMED,713845004
+Condition,Human immunodeficiency virus infection,Infection caused by Cytomegalovirus co-occurrent with human immunodeficiency virus infection,37017446,SNOMED,713722001
+Condition,Human immunodeficiency virus infection,Infection caused by herpes simplex virus co-occurrent with human immunodeficiency virus infection,37017454,SNOMED,713730000
+Condition,Human immunodeficiency virus infection,Infection caused by herpes zoster virus co-occurrent with human immunodeficiency virus infection,37017457,SNOMED,713733003
+Condition,Human immunodeficiency virus infection,Infection caused by Isospora co-occurrent with acquired immunodeficiency syndrome,36674254,SNOMED,771127006
+Condition,Human immunodeficiency virus infection,Infection caused by Nocardia co-occurrent with human immunodeficiency virus infection,37017295,SNOMED,713545009
+Condition,Human immunodeficiency virus infection,Infection caused by Pneumocystis co-occurrent with human immunodeficiency virus infection,37017248,SNOMED,713490002
+Condition,Human immunodeficiency virus infection,Infection caused by Salmonella co-occurrent with human immunodeficiency virus infection,37019042,SNOMED,713342008
+Condition,Human immunodeficiency virus infection,Infection caused by Strongyloides co-occurrent with human immunodeficiency virus infection,37017124,SNOMED,713339002
+Condition,Human immunodeficiency virus infection,Infection caused by Toxoplasma gondii co-occurrent with acquired immunodeficiency syndrome,36674253,SNOMED,771126002
+Condition,Human immunodeficiency virus infection,Infectious gastroenteritis co-occurrent with human immunodeficiency virus infection,37017318,SNOMED,713570009
+Condition,Human immunodeficiency virus infection,Infective arthritis co-occurrent with human immunodeficiency virus infection,37017284,SNOMED,713532005
+Condition,Human immunodeficiency virus infection,Invasive carcinoma of uterine cervix co-occurrent with human immunodeficiency virus infection,37116830,SNOMED,733834006
+Condition,Human immunodeficiency virus infection,Isosporiasis co-occurrent with human immunodeficiency virus infection,37017296,SNOMED,713546005
+Condition,Human immunodeficiency virus infection,Lymphadenopathy co-occurrent with human immunodeficiency virus infection,37017263,SNOMED,713507008
+Condition,Human immunodeficiency virus infection,Malignant neoplastic disease co-occurrent with human immunodeficiency virus infection,37017320,SNOMED,713572001
+Condition,Human immunodeficiency virus infection,Microsporidiosis associated with acquired immunodeficiency syndrome,4225193,SNOMED,421020000
+Condition,Human immunodeficiency virus infection,Microsporidiosis co-occurrent with human immunodeficiency virus infection,37017580,SNOMED,713881001
+Condition,Human immunodeficiency virus infection,Multidermatomal infection caused by Herpes zoster co-occurrent with human immunodeficiency virus infection,37017652,SNOMED,713964006
+Condition,Human immunodeficiency virus infection,Myelitis co-occurrent with human immunodeficiency virus infection,37017126,SNOMED,713341001
+Condition,Human immunodeficiency virus infection,Myocarditis co-occurrent with human immunodeficiency virus infection,37017108,SNOMED,713318009
+Condition,Human immunodeficiency virus infection,Nephrotic syndrome co-occurrent with human immunodeficiency virus infection,37017424,SNOMED,713695001
+Condition,Human immunodeficiency virus infection,Neuralgia co-occurrent with human immunodeficiency virus infection,37019034,SNOMED,713278001
+Condition,Human immunodeficiency virus infection,Neuritis co-occurrent with human immunodeficiency virus infection,37017262,SNOMED,713506004
+Condition,Human immunodeficiency virus infection,Neuropathy due to human immunodeficiency virus,4048033,SNOMED,230598008
+Condition,Human immunodeficiency virus infection,Opportunistic mycosis co-occurrent with human immunodeficiency virus infection,37017579,SNOMED,713880000
+Condition,Human immunodeficiency virus infection,Organic brain syndrome co-occurrent with human immunodeficiency virus infection,37017249,SNOMED,713491003
+Condition,Human immunodeficiency virus infection,Parkinsonism due to human immunodeficiency virus infection,36716524,SNOMED,722557007
+Condition,Human immunodeficiency virus infection,Pediatric human immunodeficiency virus infection,4236860,SNOMED,405631006
+Condition,Human immunodeficiency virus infection,Persistent generalized lymphadenopathy,4320032,SNOMED,95892003
+Condition,Human immunodeficiency virus infection,Polyneuropathy co-occurrent with human immunodeficiency virus infection,37018721,SNOMED,713489006
+Condition,Human immunodeficiency virus infection,Presenile dementia co-occurrent with human immunodeficiency virus infection,37017247,SNOMED,713488003
+Condition,Human immunodeficiency virus infection,Primary cerebral lymphoma co-occurrent with human immunodeficiency virus infection,37017112,SNOMED,713325002
+Condition,Human immunodeficiency virus infection,Progressive multifocal leukoencephalopathy co-occurrent with human immunodeficiency virus infection,37017246,SNOMED,713487008
+Condition,Human immunodeficiency virus infection,Pyrexia of unknown origin co-occurrent with human immunodeficiency virus infection,37017455,SNOMED,713731001
+Condition,Human immunodeficiency virus infection,Radiculitis co-occurrent with human immunodeficiency virus infection,37018714,SNOMED,713320007
+Condition,Human immunodeficiency virus infection,Recurrent bacterial pneumonia co-occurrent with human immunodeficiency virus infection,37017278,SNOMED,713526000
+Condition,Human immunodeficiency virus infection,Recurrent salmonella sepsis co-occurrent with human immunodeficiency virus infection,37018755,SNOMED,714083007
+Condition,Human immunodeficiency virus infection,Renal failure syndrome co-occurrent with human immunodeficiency virus infection,37017425,SNOMED,713696000
+Condition,Human immunodeficiency virus infection,Reticulosarcoma co-occurrent with human immunodeficiency virus infection,37017243,SNOMED,713483007
+Condition,Human immunodeficiency virus infection,Splenomegaly co-occurrent with human immunodeficiency virus infection,37017082,SNOMED,713275003
+Condition,Human immunodeficiency virus infection,Subacute adenoviral encephalitis co-occurrent with human immunodeficiency virus infection,37017071,SNOMED,713260006
+Condition,Human immunodeficiency virus infection,Symptomatic human immunodeficiency virus (HIV) I infection,45769864,SNOMED,80191000119101
+Condition,Human immunodeficiency virus infection,Symptomatic human immunodeficiency virus infection,43531586,SNOMED,81000119104
+Condition,Human immunodeficiency virus infection,Visual impairment co-occurrent with human immunodeficiency virus infection,37017283,SNOMED,713531003
+Condition,Hypertensive disorder,Benign essential hypertension,312648,SNOMED,1201005
+Condition,Hypertensive disorder,Benign essential hypertension complicating AND/OR reason for care during childbirth,4215640,SNOMED,71874008
+Condition,Hypertensive disorder,Benign essential hypertension complicating AND/OR reason for care during pregnancy,4034031,SNOMED,23717007
+Condition,Hypertensive disorder,Benign essential hypertension complicating AND/OR reason for care during puerperium,4148205,SNOMED,35303009
+Condition,Hypertensive disorder,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium",321638,SNOMED,198942000
+Condition,Hypertensive disorder,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - delivered",314103,SNOMED,198944004
+Condition,Hypertensive disorder,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - delivered with postnatal complication",320456,SNOMED,198945003
+Condition,Hypertensive disorder,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - not delivered",314423,SNOMED,198946002
+Condition,Hypertensive disorder,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium with postnatal complication",4062811,SNOMED,198947006
+Condition,Hypertensive disorder,Benign essential hypertension in obstetric context,4269358,SNOMED,63287004
+Condition,Hypertensive disorder,Benign hypertension,4028741,SNOMED,10725009
+Condition,Hypertensive disorder,Benign secondary hypertension,314958,SNOMED,194785008
+Condition,Hypertensive disorder,Benign secondary renovascular hypertension,4249016,SNOMED,73410007
+Condition,Hypertensive disorder,Brachydactyly and arterial hypertension syndrome,36715087,SNOMED,720568003
+Condition,Hypertensive disorder,Chronic hypertension complicating AND/OR reason for care during childbirth,4304837,SNOMED,8218002
+Condition,Hypertensive disorder,Chronic hypertension complicating AND/OR reason for care during pregnancy,4291933,SNOMED,37618003
+Condition,Hypertensive disorder,Chronic hypertension complicating AND/OR reason for care during puerperium,4080325,SNOMED,24042004
+Condition,Hypertensive disorder,Chronic hypertension in obstetric context,4227607,SNOMED,8762007
+Condition,Hypertensive disorder,Diastolic hypertension,4167358,SNOMED,48146000
+Condition,Hypertensive disorder,Diastolic hypertension and systolic hypertension,42538697,SNOMED,762463000
+Condition,Hypertensive disorder,Eclampsia added to pre-existing hypertension,4289142,SNOMED,69909000
+Condition,Hypertensive disorder,Eclampsia with pre-existing hypertension in childbirth,45757119,SNOMED,10752641000119102
+Condition,Hypertensive disorder,Essential hypertension,320128,SNOMED,59621000
+Condition,Hypertensive disorder,Essential hypertension complicating AND/OR reason for care during childbirth,4083723,SNOMED,18416000
+Condition,Hypertensive disorder,Essential hypertension complicating AND/OR reason for care during pregnancy,4302591,SNOMED,78808002
+Condition,Hypertensive disorder,Essential hypertension complicating AND/OR reason for care during puerperium,4321603,SNOMED,9901000
+Condition,Hypertensive disorder,Essential hypertension in obstetric context,4217486,SNOMED,72022006
+Condition,Hypertensive disorder,Exertional hypertension,4179379,SNOMED,429198000
+Condition,Hypertensive disorder,Goldblatt hypertension,4048212,SNOMED,123800009
+Condition,Hypertensive disorder,HELLP syndrome,4316372,SNOMED,95605009
+Condition,Hypertensive disorder,High-renin essential hypertension,4058987,SNOMED,19769006
+Condition,Hypertensive disorder,Hypertension associated with transplantation,4322735,SNOMED,427889009
+Condition,Hypertensive disorder,Hypertension complicating pregnancy,42538946,SNOMED,82771000119102
+Condition,Hypertensive disorder,"Hypertension complicating pregnancy, childbirth and the puerperium",321080,SNOMED,198941007
+Condition,Hypertensive disorder,"Hypertension complicating pregnancy, childbirth and the puerperium, antepartum",42873163,SNOMED,541000119105
+Condition,Hypertensive disorder,Hypertension due to aortic arch obstruction,3656115,SNOMED,871642009
+Condition,Hypertensive disorder,Hypertension due to gain-of-function mutation in mineralocorticoid receptor,35624277,SNOMED,766937004
+Condition,Hypertensive disorder,Hypertension in chronic kidney disease due to type 1 diabetes mellitus,45771067,SNOMED,71701000119105
+Condition,Hypertensive disorder,Hypertension in chronic kidney disease due to type 2 diabetes mellitus,45771064,SNOMED,71421000119105
+Condition,Hypertensive disorder,Hypertension in chronic kidney disease stage 2 due to type 2 diabetes mellitus,45757447,SNOMED,140131000119102
+Condition,Hypertensive disorder,Hypertension in chronic kidney disease stage 3 due to type 2 diabetes mellitus,45757446,SNOMED,140121000119100
+Condition,Hypertensive disorder,Hypertension in chronic kidney disease stage 4 due to type 2 diabetes mellitus,45757445,SNOMED,140111000119107
+Condition,Hypertensive disorder,Hypertension in chronic kidney disease stage 5 due to type 2 diabetes mellitus,45757444,SNOMED,140101000119109
+Condition,Hypertensive disorder,Hypertension in the obstetric context,4279525,SNOMED,367390009
+Condition,Hypertensive disorder,Hypertension in the puerperium with pulmonary edema,44784484,SNOMED,698640000
+Condition,Hypertensive disorder,Hypertension induced by oral contraceptive pill,4061667,SNOMED,169465000
+Condition,Hypertensive disorder,Hypertension resistant to drug therapy,44809548,SNOMED,845891000000103
+Condition,Hypertensive disorder,Hypertension secondary to drug,4108213,SNOMED,194791005
+Condition,Hypertensive disorder,Hypertension secondary to endocrine disorder,4110948,SNOMED,194788005
+Condition,Hypertensive disorder,Hypertension secondary to kidney transplant,4178312,SNOMED,428575007
+Condition,Hypertensive disorder,Hypertension secondary to renal disease complicating AND/OR reason for care during childbirth,4094374,SNOMED,26078007
+Condition,Hypertensive disorder,Hypertension secondary to renal disease complicating AND/OR reason for care during pregnancy,4174979,SNOMED,48552006
+Condition,Hypertensive disorder,Hypertension secondary to renal disease complicating AND/OR reason for care during puerperium,4219323,SNOMED,39727004
+Condition,Hypertensive disorder,Hypertension secondary to renal disease in obstetric context,4006325,SNOMED,111438007
+Condition,Hypertensive disorder,Hypertension with albuminuria,4262182,SNOMED,397748008
+Condition,Hypertensive disorder,Hypertension with apparent mineralocorticoid excess,3169253,Nebraska Lexicon,6400001000004100
+Condition,Hypertensive disorder,Hypertension with hyperadrenergic findings,3191244,Nebraska Lexicon,7160001000004104
+Condition,Hypertensive disorder,Hypertensive crisis,45768449,SNOMED,706882009
+Condition,Hypertensive disorder,Hypertensive disorder,316866,SNOMED,38341003
+Condition,Hypertensive disorder,Hypertensive emergency,43020424,SNOMED,132721000119104
+Condition,Hypertensive disorder,Hypertensive urgency,40481896,SNOMED,443482000
+Condition,Hypertensive disorder,Impending eclampsia,4034095,SNOMED,237282002
+Condition,Hypertensive disorder,Intermittent hypertension,44783643,SNOMED,697929007
+Condition,Hypertensive disorder,Labile diastolic hypertension,4276511,SNOMED,65518004
+Condition,Hypertensive disorder,Labile essential hypertension,4159755,SNOMED,371125006
+Condition,Hypertensive disorder,Labile hypertension due to being in a clinical environment,44783644,SNOMED,697930002
+Condition,Hypertensive disorder,Labile systemic arterial hypertension,36713024,SNOMED,16229371000119106
+Condition,Hypertensive disorder,Low-renin essential hypertension,4263067,SNOMED,46481004
+Condition,Hypertensive disorder,Malignant essential hypertension,317898,SNOMED,78975002
+Condition,Hypertensive disorder,Malignant hypertension,4289933,SNOMED,70272006
+Condition,Hypertensive disorder,Malignant hypertension complicating AND/OR reason for care during childbirth,4023318,SNOMED,10562009
+Condition,Hypertensive disorder,Malignant hypertension complicating AND/OR reason for care during pregnancy,4162306,SNOMED,29259002
+Condition,Hypertensive disorder,Malignant hypertension complicating AND/OR reason for care during puerperium,4028951,SNOMED,23786008
+Condition,Hypertensive disorder,Malignant hypertension in obstetric context,4218088,SNOMED,81626002
+Condition,Hypertensive disorder,Malignant secondary hypertension,318437,SNOMED,89242004
+Condition,Hypertensive disorder,Malignant secondary renovascular hypertension,4110947,SNOMED,194783001
+Condition,Hypertensive disorder,Maternal hypertension,4118910,SNOMED,288250001
+Condition,Hypertensive disorder,Mild pre-eclampsia,314090,SNOMED,41114007
+Condition,Hypertensive disorder,Moderate proteinuric hypertension of pregnancy,4034094,SNOMED,237281009
+Condition,Hypertensive disorder,Neonatal hypertension,4071202,SNOMED,206596003
+Condition,Hypertensive disorder,Nocturnal hypertension,44811110,SNOMED,863191000000102
+Condition,Hypertensive disorder,Non-proteinuric hypertension of pregnancy,4146627,SNOMED,307632004
+Condition,Hypertensive disorder,Parenchymal renal hypertension,4212496,SNOMED,57684003
+Condition,Hypertensive disorder,Paroxysmal hypertension,4049389,SNOMED,23130000
+Condition,Hypertensive disorder,Perioperative hypertension,762994,SNOMED,434711000124103
+Condition,Hypertensive disorder,Postoperative hypertension,43021830,SNOMED,5501000119106
+Condition,Hypertensive disorder,Postpartum pre-eclampsia,35622939,SNOMED,765182005
+Condition,Hypertensive disorder,Postpartum pre-existing essential hypertension,45757787,SNOMED,40511000119107
+Condition,Hypertensive disorder,Postpartum pregnancy-induced hypertension,45757788,SNOMED,40521000119100
+Condition,Hypertensive disorder,Pre-eclampsia,439393,SNOMED,398254007
+Condition,Hypertensive disorder,Pre-eclampsia added to pre-existing hypertension,4283352,SNOMED,67359005
+Condition,Hypertensive disorder,Pre-eclampsia or eclampsia with pre-existing hypertension,141084,SNOMED,198997005
+Condition,Hypertensive disorder,Pre-eclampsia or eclampsia with pre-existing hypertension - delivered,135601,SNOMED,198999008
+Condition,Hypertensive disorder,Pre-eclampsia or eclampsia with pre-existing hypertension - delivered with postnatal complication,134414,SNOMED,199000005
+Condition,Hypertensive disorder,Pre-eclampsia or eclampsia with pre-existing hypertension - not delivered,136743,SNOMED,199002002
+Condition,Hypertensive disorder,Pre-eclampsia or eclampsia with pre-existing hypertension with postnatal complication,4062550,SNOMED,199003007
+Condition,Hypertensive disorder,Pre-existing hypertension complicating AND/OR reason for care during childbirth,4146816,SNOMED,34694006
+Condition,Hypertensive disorder,Pre-existing hypertension complicating AND/OR reason for care during pregnancy,4277110,SNOMED,65402008
+Condition,Hypertensive disorder,Pre-existing hypertension complicating AND/OR reason for care during puerperium,4151903,SNOMED,31407004
+Condition,Hypertensive disorder,"Pre-existing hypertension complicating pregnancy, childbirth and puerperium",321074,SNOMED,199005000
+Condition,Hypertensive disorder,Pre-existing hypertension in obstetric context,4311246,SNOMED,86041002
+Condition,Hypertensive disorder,Pre-existing hypertensive chronic kidney disease in mother complicating pregnancy,45757356,SNOMED,118781000119108
+Condition,Hypertensive disorder,Pre-existing hypertensive heart and chronic kidney disease in mother complicating childbirth,45757137,SNOMED,10757401000119104
+Condition,Hypertensive disorder,"Pre-existing hypertensive heart and renal disease complicating pregnancy, childbirth and the puerperium",4057978,SNOMED,199007008
+Condition,Hypertensive disorder,"Pre-existing secondary hypertension complicating pregnancy, childbirth and puerperium",4057979,SNOMED,199008003
+Condition,Hypertensive disorder,Pregnancy-induced hypertension,4167493,SNOMED,48194001
+Condition,Hypertensive disorder,Pregnancy induced hypertension with pulmonary edema,44784483,SNOMED,698638005
+Condition,Hypertensive disorder,Rebound hypertension,4221991,SNOMED,84094009
+Condition,Hypertensive disorder,Renal arterial hypertension,4305599,SNOMED,39018007
+Condition,Hypertensive disorder,Renal hypertension,443771,SNOMED,28119000
+Condition,Hypertensive disorder,"Renal hypertension complicating pregnancy, childbirth and the puerperium",197930,SNOMED,198949009
+Condition,Hypertensive disorder,"Renal hypertension complicating pregnancy, childbirth and the puerperium - delivered",200157,SNOMED,198951008
+Condition,Hypertensive disorder,"Renal hypertension complicating pregnancy, childbirth and the puerperium - delivered with postnatal complication",201912,SNOMED,198952001
+Condition,Hypertensive disorder,"Renal hypertension complicating pregnancy, childbirth and the puerperium - not delivered",192684,SNOMED,198953006
+Condition,Hypertensive disorder,Renal sclerosis with hypertension,4032952,SNOMED,14973001
+Condition,Hypertensive disorder,Renovascular hypertension,317895,SNOMED,123799005
+Condition,Hypertensive disorder,Resistant hypertensive disorder,37208172,SNOMED,461301000124109
+Condition,Hypertensive disorder,Secondary diastolic hypertension,4253928,SNOMED,74451002
+Condition,Hypertensive disorder,Secondary hypertension,319826,SNOMED,31992008
+Condition,Hypertensive disorder,Severe hypertension (NICE - National Institute for Health and Clinical Excellence 2011),44809027,SNOMED,843841000000109
+Condition,Hypertensive disorder,Severe pre-eclampsia,433536,SNOMED,46764007
+Condition,Hypertensive disorder,Severe pre-eclampsia - delivered,438490,SNOMED,198983002
+Condition,Hypertensive disorder,Severe pre-eclampsia - delivered with postnatal complication,439077,SNOMED,198984008
+Condition,Hypertensive disorder,Severe pre-eclampsia - not delivered,132685,SNOMED,198985009
+Condition,Hypertensive disorder,Severe pre-eclampsia with postnatal complication,4057976,SNOMED,198986005
+Condition,Hypertensive disorder,Stage 1 hypertension (NICE - National Institute for Health and Clinical Excellence 2011),44809026,SNOMED,843821000000102
+Condition,Hypertensive disorder,Stage 1 hypertension (NICE 2011) with evidence of end organ damage,44811933,SNOMED,908651000000101
+Condition,Hypertensive disorder,Stage 1 hypertension (NICE 2011) without evidence of end organ damage,44811932,SNOMED,908631000000108
+Condition,Hypertensive disorder,Stage 2 hypertension (NICE - National Institute for Health and Clinical Excellence 2011),44809569,SNOMED,846371000000103
+Condition,Hypertensive disorder,Supine hypertension,37016726,SNOMED,712832005
+Condition,Hypertensive disorder,Sustained diastolic hypertension,4242878,SNOMED,59720008
+Condition,Hypertensive disorder,Systolic essential hypertension,4180283,SNOMED,429457004
+Condition,Hypertensive disorder,Systolic hypertension,4209293,SNOMED,56218007
+Condition,Hypertensive disorder,Toxemia of pregnancy,4035655,SNOMED,15394000
+Condition,Hypertensive disorder,Transient hypertension,4199306,SNOMED,52698002
+Condition,Hypertensive disorder,Transient hypertension of pregnancy,441922,SNOMED,237279007
+Condition,Hypertensive disorder,Transient hypertension of pregnancy - delivered,137940,SNOMED,198965005
+Condition,Hypertensive disorder,Transient hypertension of pregnancy - delivered with postnatal complication,141639,SNOMED,198966006
+Condition,Hypertensive disorder,Transient hypertension of pregnancy - not delivered,136760,SNOMED,198967002
+Condition,Hypertensive disorder,Transient hypertension of pregnancy with postnatal complication,4062906,SNOMED,198968007
+Condition,Pregnant,Combined tubal and intrauterine pregnancy,40483581,SNOMED,442478007
+Condition,Pregnant,Complcated pregnancy due to surgical history: uterine myomectomy,3170656,Nebraska Lexicon,6980001000004103
+Condition,Pregnant,Extra-amniotic pregnancy,4244660,SNOMED,9279009
+Condition,Pregnant,Extrachorial pregnancy,4163701,SNOMED,45307008
+Condition,Pregnant,Finding of ovarian cyst in woman currently pregnant,3178184,Nebraska Lexicon,7960001000004102
+Condition,Pregnant,Gestational diabetes during pregnancy,3183244,Nebraska Lexicon,5620001000004106
+Condition,Pregnant,High risk pregnancy,4188598,SNOMED,47200007
+Condition,Pregnant,High risk pregnancy due to history of preterm labor,40480278,SNOMED,444661007
+Condition,Pregnant,High risk pregnancy due to recurrent pregnancy loss,37018878,SNOMED,134781000119106
+Condition,Pregnant,High risk pregnancy: history of abortion,3168925,Nebraska Lexicon,9930001000004100
+Condition,Pregnant,Intends to continue pregnancy,4231507,SNOMED,439311009
+Condition,Pregnant,Intrauterine pregnancy,197031,SNOMED,65727000
+Condition,Pregnant,Normal first pregnancy,3173485,Nebraska Lexicon,27310001000004105
+Condition,Pregnant,Normal pregnancy,4217975,SNOMED,72892002
+Condition,Pregnant,Normal pregnancy in primigravida,36684864,SNOMED,457811000124103
+Condition,Pregnant,"Number of pregnancies, currently pregnant",4132562,SNOMED,127363001
+Condition,Pregnant,Precocious pregnancy,4031512,SNOMED,14418008
+Condition,Pregnant,Pregnancy complicated by history of child with Mobius syndrome,3186698,Nebraska Lexicon,7000001000004106
+Condition,Pregnant,Pregnancy complicated by history of child with Turners syndrome,3177459,Nebraska Lexicon,7020001000004100
+Condition,Pregnant,Pregnancy complicated by history of ectopic pregnancy,3180298,Nebraska Lexicon,7400001000004101
+Condition,Pregnant,Pregnancy unplanned and unwanted,4061785,SNOMED,169567006
+Condition,Pregnant,Pregnancy unplanned but wanted,4060237,SNOMED,169566002
+Condition,Pregnant,Pregnancy with history neonatal death,3184093,Nebraska Lexicon,6690001000004100
+Condition,Pregnant,Pregnant,4299535,SNOMED,77386006
+Condition,Pregnant,Pregnant - blood test confirms,4059982,SNOMED,169561007
+Condition,Pregnant,Pregnant - on abdominal palpation,4061784,SNOMED,169564004
+Condition,Pregnant,Pregnant - on history,4061686,SNOMED,169563005
+Condition,Pregnant,Pregnant - urine test confirms,4059981,SNOMED,169560008
+Condition,Pregnant,Pregnant - V.E. confirms,4059983,SNOMED,169562000
+Condition,Pregnant,Surrogate pregnancy,4012559,SNOMED,102875003
+Condition,Pregnant,Unplanned pregnancy,4307820,SNOMED,83074005
+Condition,Pregnant,Unplanned pregnancy unknown if child is wanted,4059985,SNOMED,169568001
+Condition,Pregnant,Unwanted pregnancy,4239301,SNOMED,58532003
+Device,Face tent oxygen delivery device,Face tent oxygen delivery device,4138487,SNOMED,426294006
+Device,Oxygen mask,Aerosol oxygen mask,4145694,SNOMED,426851007
+Device,Oxygen mask,Blow by oxygen mask,4137849,SNOMED,425478008
+Device,Oxygen mask,Capnography oxygen mask,36714464,SNOMED,719705009
+Device,Oxygen mask,Continuous positive airway pressure/Bilevel positive airway pressure mask,45768222,SNOMED,706226000
+Device,Oxygen mask,"CPAP/BPAP face mask, reusable",45767333,SNOMED,704714006
+Device,Oxygen mask,"CPAP/BPAP face mask, single-use",45767334,SNOMED,704715007
+Device,Oxygen mask,"CPAP/BPAP nasal mask, reusable",45767335,SNOMED,704716008
+Device,Oxygen mask,"CPAP/BPAP nasal mask, single-use",45767336,SNOMED,704717004
+Device,Oxygen mask,CPAP/BPAP oral mask,45767337,SNOMED,704718009
+Device,Oxygen mask,High-altitude sleep mask,36676809,SNOMED,774000009
+Device,Oxygen mask,Non-rebreathing oxygen face mask,45771595,SNOMED,463225005
+Device,Oxygen mask,Nonrebreather oxygen mask,4145528,SNOMED,427591007
+Device,Oxygen mask,Oxygen mask,4222966,SNOMED,336602003
+Device,Oxygen mask,Partial-rebreathing oxygen face mask,45759146,SNOMED,464233000
+Device,Oxygen mask,Partial rebreather oxygen mask,4138748,SNOMED,425926003
+Device,Oxygen mask,Rebreathing oxygen face mask,45772392,SNOMED,463587004
+Device,Oxygen mask,"Resuscitator face mask, reusable",45760053,SNOMED,465594004
+Device,Oxygen mask,"Resuscitator face mask, single-use",45760350,SNOMED,466033006
+Device,Oxygen mask,Sleep apnea mask,45768221,SNOMED,706225001
+Device,Oxygen mask,"Tracheostomy mask, oxygen",45760219,SNOMED,465839001
+Device,Oxygen mask,Venturi mask,4322904,SNOMED,428285009
+Device,Oxygen mask,Venturi oxygen face mask,45759930,SNOMED,465433006
+Device,Oxygen mask,Vortex oxygen face mask,45773303,SNOMED,701582002
+Device,Oxygen nasal cannula,Basic nasal oxygen cannula,45760842,SNOMED,466713001
+Device,Oxygen nasal cannula,BiPAP oxygen nasal cannula,4138614,SNOMED,425826004
+Device,Oxygen nasal cannula,Carbon-dioxide-sampling nasal oxygen cannula,45761768,SNOMED,468049003
+Device,Oxygen nasal cannula,CPAP nasal oxygen cannula,45761494,SNOMED,467645007
+Device,Oxygen nasal cannula,High flow oxygen nasal cannula,4139525,SNOMED,426854004
+Device,Oxygen nasal cannula,Oxygen mustache cannula,36715214,SNOMED,720744009
+Device,Oxygen nasal cannula,Oxygen nasal cannula,4224038,SNOMED,336623009
+Device,Oxygen nasal cannula,Oxygen pendant cannula,36715213,SNOMED,720743003
+Device,Oxygen nasal cannula,Oxygen reservoir cannula,36715212,SNOMED,720742008
+Device,Ventilator,Anesthesia ventilator,45763257,SNOMED,470320000
+Device,Ventilator,Anesthesia workstation ventilator,45763336,SNOMED,470436002
+Device,Ventilator,General-purpose intensive-care ventilator,45764073,SNOMED,700657002
+Device,Ventilator,High-frequency ventilator,45768199,SNOMED,706174006
+Device,Ventilator,Intensive-care ventilator,45768198,SNOMED,706173000
+Device,Ventilator,Negative-pressure ventilator,45758195,SNOMED,462756009
+Device,Ventilator,Neonatal intensive-care ventilator,45764556,SNOMED,701265003
+Device,Ventilator,Neonatal/adult intensive-care ventilator,45764072,SNOMED,700656006
+Device,Ventilator,Portable pneumatic high-frequency ventilator,45765049,SNOMED,701878008
+Device,Ventilator,Portable pneumatic ventilator,45771119,SNOMED,700790005
+Device,Ventilator,"Portable ventilator, electric",45759002,SNOMED,464002006
+Device,Ventilator,Stationary electric high-frequency ventilator,45764052,SNOMED,700631000
+Device,Ventilator,Stationary pneumatic high-frequency ventilator,45765048,SNOMED,701877003
+Device,Ventilator,Therapeutic positive pressure breathing ventilator,45761109,SNOMED,467084001
+Device,Ventilator,Transport electric ventilator,45764253,SNOMED,700886002
+Device,Ventilator,Transport pneumatic high-frequency ventilator,45765050,SNOMED,701879000
+Device,Ventilator,Ventilator,45768197,SNOMED,706172005
+Device,Ventilator,"Ventilator IMV supplemental circuit, reusable",45760386,SNOMED,466084007
+Device,Ventilator,"Ventilator IMV supplemental circuit, single-use",45760156,SNOMED,465749007
+Ethnicity,Hispanic or Latino,Hispanic or Latino,38003563,Ethnicity,Hispanic
+Ethnicity,Not Hispanic or Latino,Not Hispanic or Latino,38003564,Ethnicity,Not Hispanic
+Gender,AMBIGUOUS,AMBIGUOUS,8570,Gender,A
+Gender,FEMALE,FEMALE,8532,Gender,F
+Gender,MALE,MALE,8507,Gender,M
+Gender,OTHER,OTHER,8521,Gender,O
+Gender,UNKNOWN,UNKNOWN,8551,Gender,U
+Measurement,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,Alanine aminotransferase [Enzymatic activity/volume] in Blood,46235106,LOINC,76625-3
+Measurement,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma,3006923,LOINC,1742-6
+Measurement,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma by No addition of P-5'-P,3027388,LOINC,1744-2
+Measurement,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma by With P-5'-P,3005755,LOINC,1743-4
+Measurement,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,"Alanine aminotransferase [Enzymatic activity/volume] in Serum, Plasma or Blood",46236949,LOINC,77144-4
+Measurement,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,Alanine aminotransferase|CCnc|Pt|ANYBldSerPl,40652525,LOINC,LG5272-2
+Measurement,aPTT | Platelet poor plasma | Coagulation,Activated partial thromboplastin time (aPTT) in Platelet poor plasma by Coagulation assay -- after addition of protein C activator/Activated partial thromboplastin time (aPTT),3041944,LOINC,52767-1
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT | Platelet poor plasma | Coagulation,37041593,LOINC,LP393946-1
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation 1:1 saline,3045961,LOINC,43734-3
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay,3018677,LOINC,14979-9
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay -- after addition of protein C activator + Factor V depleted plasma/aPTT,3041974,LOINC,52766-3
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --1 day post XXX challenge,3038668,LOINC,40110-9
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --1 hour post XXX challenge,3038547,LOINC,40102-6
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --1.5 hours post XXX challenge,3040681,LOINC,40103-4
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --12 hours post XXX challenge,3042449,LOINC,40109-1
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --18 hours post XXX challenge,3042634,LOINC,40111-7
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --2 hours post XXX challenge,3042294,LOINC,40104-2
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --2 hours pre XXX challenge,3039283,LOINC,40099-4
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --2nd specimen,3004144,LOINC,13058-3
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --3 hours post XXX challenge,3040598,LOINC,40105-9
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --30 minutes post XXX challenge,3038425,LOINC,40101-8
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --3rd specimen,3007328,LOINC,13059-1
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --4 hours post XXX challenge,3040750,LOINC,40106-7
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --4th specimen,3008791,LOINC,13060-9
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --6 hours post XXX challenge,3040623,LOINC,40107-5
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --8 hours post XXX challenge,3040743,LOINC,40108-3
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --after addition of APC,3052968,LOINC,48590-4
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --baseline,3042436,LOINC,40100-0
+Measurement,aPTT | Platelet poor plasma | Coagulation,aPTT in Platelet poor plasma by Coagulation assay --post heparin neutralization,3041232,LOINC,52123-7
+Measurement,aPTT in Platelet poor plasma by Coagulation assay,aPTT in Platelet poor plasma by Coagulation assay,3018677,LOINC,14979-9
+Measurement,Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma,Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma,3013721,LOINC,1920-8
+Measurement,Aspartate aminotransferase/Alanine aminotransferase [Enzymatic activity ratio] in Serum or Plasma,Aspartate aminotransferase/Alanine aminotransferase [Enzymatic activity ratio] in Serum or Plasma,3022893,LOINC,1916-6
+Measurement,Basophils [#/volume] in Blood,Basophils [#/volume] in Blood,3006315,LOINC,26444-0
+Measurement,Basophils | Blood | Hematology and Cell counts,Basophils [#/volume] in Blood,3006315,LOINC,26444-0
+Measurement,Basophils | Blood | Hematology and Cell counts,Basophils [#/volume] in Blood by Automated count,3013429,LOINC,704-7
+Measurement,Basophils | Blood | Hematology and Cell counts,Basophils [#/volume] in Blood by Manual count,3027651,LOINC,705-4
+Measurement,Basophils | Blood | Hematology and Cell counts,Basophils | Blood | Hematology and Cell counts,37042222,LOINC,LP392736-7
+Measurement,Bilirubin direct and total panel [Mass/volume] - Serum or Plasma,Bilirubin direct and total panel [Mass/volume] - Serum or Plasma,3045524,LOINC,34543-9
+Measurement,Bilirubin|MCnc|Pt|ANYBldSerPl,Bilirubin.total [Mass/volume] in Arterial blood,40762888,LOINC,59827-6
+Measurement,Bilirubin|MCnc|Pt|ANYBldSerPl,Bilirubin.total [Mass/volume] in Blood,3028833,LOINC,42719-5
+Measurement,Bilirubin|MCnc|Pt|ANYBldSerPl,Bilirubin.total [Mass/volume] in Serum or Plasma,3024128,LOINC,1975-2
+Measurement,Bilirubin|MCnc|Pt|ANYBldSerPl,Bilirubin.total [Mass/volume] in Venous blood,40762889,LOINC,59828-4
+Measurement,Bilirubin|MCnc|Pt|ANYBldSerPl,Bilirubin|MCnc|Pt|ANYBldSerPl,40652709,LOINC,LG6199-6
+Measurement,Body height,Body height,3036277,LOINC,8302-2
+Measurement,Body mass index (BMI) [Ratio],Body mass index (BMI) [Ratio],3038553,LOINC,39156-5
+Measurement,Body temperature,Body temperature,3020891,LOINC,8310-5
+Measurement,Body weight,Body weight,3025315,LOINC,29463-7
+Measurement,C reactive protein [Mass/volume] in Serum or Plasma,C reactive protein [Mass/volume] in Serum or Plasma,3020460,LOINC,1988-5
+Measurement,COVID-19 severity scale,COVID-19 severity scale,703443,SNOMED,1300671000000104
+Measurement,Creatine kinase [Enzymatic activity/volume] in Serum or Plasma,Creatine kinase [Enzymatic activity/volume] in Serum or Plasma,3007220,LOINC,2157-6
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood",Creatinine [Mass/volume] in Serum or Plasma,3016723,LOINC,2160-0
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood",3045262,LOINC,45066-8
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)",40764999,LOINC,62238-1
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)",36306178,LOINC,88293-6
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",3053283,LOINC,48643-1
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",3029829,LOINC,50044-7
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)",36303797,LOINC,88294-4
+Measurement,"Creatinine and Glomerular filtration rate.predicted panel - Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)",3049187,LOINC,48642-3
+Measurement,Creatinine|MCnc|Pt|ANYBldSerPl,Creatinine [Mass/volume] in Arterial blood,3007760,LOINC,21232-4
+Measurement,Creatinine|MCnc|Pt|ANYBldSerPl,Creatinine [Mass/volume] in Blood,3051825,LOINC,38483-4
+Measurement,Creatinine|MCnc|Pt|ANYBldSerPl,Creatinine [Mass/volume] in Serum or Plasma,3016723,LOINC,2160-0
+Measurement,Creatinine|MCnc|Pt|ANYBldSerPl,Creatinine|MCnc|Pt|ANYBldSerPl,40652870,LOINC,LG6657-3
+Measurement,Delivered oxygen flow rate,Delivered oxygen flow rate,4141684,SNOMED,427081008
+Measurement,Delivered oxygen flow rate,Delivered oxygen flow rate to non ventilated lung,44782836,SNOMED,698833004
+Measurement,Diastolic blood pressure,Diastolic blood pressure,3012888,LOINC,8462-4
+Measurement,Eosinophils|NCnc|Pt|Bld,Eosinophils [#/volume] in Blood,3013115,LOINC,26449-9
+Measurement,Eosinophils|NCnc|Pt|Bld,Eosinophils [#/volume] in Blood by Automated count,3028615,LOINC,711-2
+Measurement,Eosinophils|NCnc|Pt|Bld,Eosinophils [#/volume] in Blood by Manual count,3009932,LOINC,712-0
+Measurement,Eosinophils|NCnc|Pt|Bld,Eosinophils|NCnc|Pt|Bld,40653994,LOINC,LG32849-8
+Measurement,Erythrocyte distribution width [Ratio],Erythrocyte distribution width [Ratio],3002385,LOINC,30385-9
+Measurement,Erythrocyte distribution width | Red Blood Cells | Hematology and Cell counts,Erythrocyte distribution width [Entitic volume],3002888,LOINC,30384-2
+Measurement,Erythrocyte distribution width | Red Blood Cells | Hematology and Cell counts,Erythrocyte distribution width [Entitic volume] by Automated count,3015182,LOINC,21000-5
+Measurement,Erythrocyte distribution width | Red Blood Cells | Hematology and Cell counts,Erythrocyte distribution width [Ratio],3002385,LOINC,30385-9
+Measurement,Erythrocyte distribution width | Red Blood Cells | Hematology and Cell counts,Erythrocyte distribution width [Ratio] by Automated count,3019897,LOINC,788-0
+Measurement,Erythrocyte distribution width | Red Blood Cells | Hematology and Cell counts,Erythrocyte distribution width | Red Blood Cells | Hematology and Cell counts,37041261,LOINC,LP393348-0
+Measurement,Ferritin | Serum or Plasma | Chemistry - non-challenge,Ferritin [Mass/volume] in Serum or Plasma,3001122,LOINC,2276-4
+Measurement,Ferritin | Serum or Plasma | Chemistry - non-challenge,Ferritin [Mass/volume] in Serum or Plasma by Immunoassay,3015242,LOINC,20567-4
+Measurement,Ferritin | Serum or Plasma | Chemistry - non-challenge,Ferritin | Serum or Plasma | Chemistry - non-challenge,37070654,LOINC,LP385083-3
+Measurement,Fibrin D-dimer [Units/volume] in Platelet poor plasma,Fibrin D-dimer [Units/volume] in Platelet poor plasma,3023361,LOINC,7799-0
+Measurement,Fibrin D-dimer FEU | Platelet poor plasma | Coagulation,Fibrin D-dimer FEU [Mass/volume] in Platelet poor plasma,3051714,LOINC,48065-7
+Measurement,Fibrin D-dimer FEU | Platelet poor plasma | Coagulation,Fibrin D-dimer FEU [Mass/volume] in Platelet poor plasma by Immunoassay,3052648,LOINC,48067-3
+Measurement,Fibrin D-dimer FEU | Platelet poor plasma | Coagulation,Fibrin D-dimer FEU | Platelet poor plasma | Coagulation,37051715,LOINC,LP394015-4
+Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Interpretation] in Platelet poor plasma,3008766,LOINC,21002-1
+Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Mass/volume] in Platelet poor plasma by Coagulation assay,3016407,LOINC,3255-7
+Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Mass/volume] in Platelet poor plasma by Coagulation.derived,3052964,LOINC,48664-7
+Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Mass/volume] in Platelet poor plasma by Heat denaturation,3018928,LOINC,30902-1
+Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Presence] in Platelet poor plasma,3002937,LOINC,16859-1
+Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen | Platelet poor plasma | Coagulation,37032427,LOINC,LP394019-6
+Measurement,Francisella tularensis IgG Ab [Presence] in Serum,Francisella tularensis IgG Ab [Presence] in Serum,3018198,LOINC,7889-9
+Measurement,"Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood",40771922,LOINC,69405-9
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Arterial blood,3031266,LOINC,41651-1
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Blood,3000483,LOINC,2339-0
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Blood by Automated test strip,3011424,LOINC,2340-8
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Blood by Test strip manual,3014053,LOINC,2341-6
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Capillary blood,3004077,LOINC,32016-8
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Capillary blood by Glucometer,3034962,LOINC,41653-7
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Serum or Plasma,3004501,LOINC,2345-7
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,"Glucose [Mass/volume] in Serum, Plasma or Blood",44816672,LOINC,74774-1
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Venous blood,3033408,LOINC,41652-9
+Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose|MCnc|Pt|ANYBldSerPl,40653085,LOINC,LG7967-5
+Measurement,Heart rate,Heart rate,3027018,LOINC,8867-4
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit [Pure volume fraction] of Blood by Automated count,42869588,LOINC,71833-8
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit [Volume Fraction] of Blood,3009542,LOINC,20570-8
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit [Volume Fraction] of Blood by Automated count,3023314,LOINC,4544-3
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit [Volume Fraction] of Blood by Centrifugation,3019909,LOINC,4545-0
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit [Volume Fraction] of Blood by Estimated,3050746,LOINC,48703-3
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit [Volume Fraction] of Blood by Impedance,3013752,LOINC,31100-1
+Measurement,Hematocrit | Blood | Hematology and Cell counts,Hematocrit | Blood | Hematology and Cell counts,37070108,LOINC,LP392479-4
+Measurement,Hemoglobin [Mass/volume] in Blood,Hemoglobin [Mass/volume] in Blood,3000963,LOINC,718-7
+Measurement,Inhaled oxygen flow rate,Inhaled oxygen flow rate,3005629,LOINC,3151-8
+Measurement,INR in Platelet poor plasma by Coagulation assay,INR in Platelet poor plasma by Coagulation assay,3022217,LOINC,6301-6
+Measurement,Inspired oxygen concentration,Inspired oxygen concentration,4353936,SNOMED,250774007
+Measurement,Interleukin 6 [Mass/volume] in Serum or Plasma,Interleukin 6 [Mass/volume] in Serum or Plasma,3023091,LOINC,26881-3
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction,3022250,LOINC,14804-9
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Pyruvate to lactate reaction,3005225,LOINC,14805-6
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase 1/Lactate dehydrogenase.total in Serum or Plasma by Electrophoresis,3006898,LOINC,2536-1
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase 2/Lactate dehydrogenase.total in Serum or Plasma by Electrophoresis,3023919,LOINC,2539-5
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase 3/Lactate dehydrogenase.total in Serum or Plasma by Electrophoresis,3007858,LOINC,2542-9
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase 4/Lactate dehydrogenase.total in Serum or Plasma by Electrophoresis,3024830,LOINC,2545-2
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase 5/Lactate dehydrogenase.total in Serum or Plasma by Electrophoresis,3012481,LOINC,2548-6
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase isoenzymes [Interpretation] in Serum or Plasma,3009347,LOINC,5910-5
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase isoenzymes [Interpretation] in Serum or Plasma Narrative,3049516,LOINC,49279-3
+Measurement,Lactate dehydrogenase panel - Serum or Plasma,Lactate dehydrogenase panel - Serum or Plasma,3034022,LOINC,42929-0
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate [Moles/volume] in Arterial blood,3018405,LOINC,2518-9
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate [Moles/volume] in Blood,3047181,LOINC,32693-4
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate [Moles/volume] in Capillary blood,3028271,LOINC,19239-3
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate [Moles/volume] in Mixed venous blood,3005949,LOINC,19240-1
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate [Moles/volume] in Serum or Plasma,3014111,LOINC,2524-7
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate [Moles/volume] in Venous blood,3008037,LOINC,2519-7
+Measurement,Lactate|SCnc|Pt|ANYBldSerPl,Lactate|SCnc|Pt|ANYBldSerPl,40653238,LOINC,LG6039-4
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes [#/volume] corrected for nucleated erythrocytes in Blood,3001657,LOINC,12227-5
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes [#/volume] corrected for nucleated erythrocytes in Blood by Automated count,3046900,LOINC,33256-9
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes [#/volume] in Blood,3010813,LOINC,26464-8
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes [#/volume] in Blood by Automated count,3000905,LOINC,6690-2
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes [#/volume] in Blood by Estimate,3032393,LOINC,49498-9
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes [#/volume] in Blood by Manual count,3003282,LOINC,804-5
+Measurement,Leukocytes | Blood | Hematology and Cell counts,Leukocytes | Blood | Hematology and Cell counts,37043992,LOINC,LP392599-9
+Measurement,Lymphocytes|NCnc|Pt|Bld,Lymphocytes [#/volume] in Blood,3019198,LOINC,26474-7
+Measurement,Lymphocytes|NCnc|Pt|Bld,Lymphocytes [#/volume] in Blood by Automated count,3004327,LOINC,731-0
+Measurement,Lymphocytes|NCnc|Pt|Bld,Lymphocytes [#/volume] in Blood by Manual count,3003215,LOINC,732-8
+Measurement,Lymphocytes|NCnc|Pt|Bld,Lymphocytes|NCnc|Pt|Bld,40654045,LOINC,LG32863-9
+Measurement,Monocytes|NCnc|Pt|Bld,Monocytes [#/volume] in Blood,3001604,LOINC,26484-6
+Measurement,Monocytes|NCnc|Pt|Bld,Monocytes [#/volume] in Blood by Automated count,3033575,LOINC,742-7
+Measurement,Monocytes|NCnc|Pt|Bld,Monocytes [#/volume] in Blood by Manual count,3034107,LOINC,743-5
+Measurement,Monocytes|NCnc|Pt|Bld,Monocytes|NCnc|Pt|Bld,40654069,LOINC,LG32885-2
+Measurement,Neutrophils|NCnc|Pt|Bld,Neutrophils [#/volume] in Blood,3017732,LOINC,26499-4
+Measurement,Neutrophils|NCnc|Pt|Bld,Neutrophils [#/volume] in Blood by Automated count,3013650,LOINC,751-8
+Measurement,Neutrophils|NCnc|Pt|Bld,Neutrophils [#/volume] in Blood by Manual count,3017501,LOINC,753-4
+Measurement,Neutrophils|NCnc|Pt|Bld,Neutrophils|NCnc|Pt|Bld,40654088,LOINC,LG32886-0
+Measurement,Oxygen [Partial pressure] in Arterial blood,Oxygen [Partial pressure] in Arterial blood,3027801,LOINC,2703-7
+Measurement,Oxygen saturation in Arterial blood,Oxygen saturation in Arterial blood,3016502,LOINC,2708-6
+Measurement,Oxygen saturation in Arterial blood by Pulse oximetry,Oxygen saturation in Arterial blood by Pulse oximetry,40762499,LOINC,59408-5
+Measurement,Oxygen/Inspired gas Respiratory system --on ventilator,Oxygen/Inspired gas Respiratory system --on ventilator,3026238,LOINC,19996-8
+Measurement,Platelets [#/volume] in Blood,Platelets [#/volume] in Blood,3007461,LOINC,26515-7
+Measurement,Platelets [#/volume] in Blood by Automated count,Platelets [#/volume] in Blood by Automated count,3024929,LOINC,777-3
+Measurement,Platelets [#/volume] in Blood by Manual count,Platelets [#/volume] in Blood by Manual count,3010834,LOINC,778-1
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium [Moles/volume] in Arterial blood,3043409,LOINC,32713-0
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium [Moles/volume] in Blood,3005456,LOINC,6298-4
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium [Moles/volume] in Capillary blood,3040893,LOINC,39790-1
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium [Moles/volume] in Mixed venous blood,3031219,LOINC,41656-0
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium [Moles/volume] in Serum or Plasma,3023103,LOINC,2823-3
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,"Potassium [Moles/volume] in Serum, Plasma or Blood",46235078,LOINC,77142-8
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium [Moles/volume] in Venous blood,3041354,LOINC,39789-3
+Measurement,Potassium|SCnc|Pt|ANYBldSerPl,Potassium|SCnc|Pt|ANYBldSerPl,40653596,LOINC,LG10990-6
+Measurement,Procalcitonin [Mass/volume] in Serum or Plasma,Procalcitonin [Mass/volume] in Serum or Plasma,3046279,LOINC,33959-8
+Measurement,Prothrombin time (PT),Prothrombin time (PT),3034426,LOINC,5902-2
+Measurement,Respiratory rate,Respiratory rate,3024171,LOINC,9279-1
+Measurement,SARS coronavirus 2 (COVID-19) immunization status,SARS coronavirus 2 (COVID-19) immunization status,36033639,LOINC,97155-6
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium [Moles/volume] in Arterial blood,3043706,LOINC,32717-1
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium [Moles/volume] in Blood,3000285,LOINC,2947-0
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium [Moles/volume] in Capillary blood,3038702,LOINC,39792-7
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium [Moles/volume] in Mixed venous blood,3031579,LOINC,41657-8
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium [Moles/volume] in Serum or Plasma,3019550,LOINC,2951-2
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,"Sodium [Moles/volume] in Serum, Plasma or Blood",46235784,LOINC,77139-4
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium [Moles/volume] in Venous blood,3041473,LOINC,39791-9
+Measurement,Sodium|SCnc|Pt|ANYBldSerPl,Sodium|SCnc|Pt|ANYBldSerPl,40653762,LOINC,LG11363-5
+Measurement,Systolic blood pressure,Systolic blood pressure,3004249,LOINC,8480-6
+Measurement,Troponin I.cardiac | Serum or Plasma | Chemistry - non-challenge,Troponin I.cardiac [Interpretation] in Serum or Plasma Qualitative by High sensitivity method,36304114,LOINC,89578-9
+Measurement,Troponin I.cardiac | Serum or Plasma | Chemistry - non-challenge,Troponin I.cardiac [Mass/volume] in Serum or Plasma,3021337,LOINC,10839-9
+Measurement,Troponin I.cardiac | Serum or Plasma | Chemistry - non-challenge,Troponin I.cardiac [Mass/volume] in Serum or Plasma by Detection limit <= 0.01 ng/mL,3032971,LOINC,49563-0
+Measurement,Troponin I.cardiac | Serum or Plasma | Chemistry - non-challenge,Troponin I.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method,36306105,LOINC,89579-7
+Measurement,Troponin I.cardiac | Serum or Plasma | Chemistry - non-challenge,Troponin I.cardiac | Serum or Plasma | Chemistry - non-challenge,37063873,LOINC,LP385942-0
+Measurement,Urea nitrogen|MCnc|Pt|ANYBldSerPl,Urea nitrogen [Mass/volume] in Arterial blood,3026617,LOINC,12961-9
+Measurement,Urea nitrogen|MCnc|Pt|ANYBldSerPl,Urea nitrogen [Mass/volume] in Blood,3004295,LOINC,6299-2
+Measurement,Urea nitrogen|MCnc|Pt|ANYBldSerPl,Urea nitrogen [Mass/volume] in Peripheral blood,3010335,LOINC,12963-5
+Measurement,Urea nitrogen|MCnc|Pt|ANYBldSerPl,Urea nitrogen [Mass/volume] in Serum or Plasma,3013682,LOINC,3094-0
+Measurement,Urea nitrogen|MCnc|Pt|ANYBldSerPl,Urea nitrogen [Mass/volume] in Venous blood,3027219,LOINC,12962-7
+Measurement,Urea nitrogen|MCnc|Pt|ANYBldSerPl,Urea nitrogen|MCnc|Pt|ANYBldSerPl,40653900,LOINC,LG1314-6
+Observation,Asthma,Drug-induced asthma,4244339,SNOMED,93432008
+Observation,Gender identity,Gender identity,46235215,LOINC,76691-5
+Observation,Hypertensive disorder,Multiple drug intolerant hypertension,37208293,SNOMED,1078301000112109
+Observation,Positive pressure therapy,Biphasic positive airway pressure via facial mask,3197551,Nebraska Lexicon,17560001000004108
+Observation,Positive pressure therapy,Continuous positive airway pressure to nonventilated lung,40488414,SNOMED,448134000
+Observation,Positive pressure therapy,Continuous positive airway pressure ventilation treatment,4165535,SNOMED,47545007
+Observation,Positive pressure therapy,Dual pressure spontaneous ventilation support,4055262,SNOMED,243142003
+Observation,Positive pressure therapy,Home nasal BIPAP use,3196459,Nebraska Lexicon,12950001000004107
+Observation,Positive pressure therapy,Intermittent CPAP,4042360,SNOMED,229308003
+Observation,Positive pressure therapy,Intermittent positive pressure breathing treatment,4306204,SNOMED,387727008
+Observation,Positive pressure therapy,Intermittent positive pressure breathing treatment with nebulized medication,4061066,SNOMED,19861002
+Observation,Positive pressure therapy,Intermittent positive pressure breathing treatment without nebulized medication,4302668,SNOMED,387726004
+Observation,Positive pressure therapy,Nasal ventilation therapy,4039924,SNOMED,229312009
+Observation,Positive pressure therapy,Nocturnal continuous positive airway pressure,3661882,SNOMED,34281000175105
+Observation,Positive pressure therapy,Nocturnal dual pressure spontaneous ventilation support,3661883,SNOMED,34291000175108
+Observation,Positive pressure therapy,Positive expiratory pressure mask physiotherapy,4132745,SNOMED,127778006
+Observation,Positive pressure therapy,Positive pressure therapy,4039922,SNOMED,229306004
+Observation,Pregnant,Antepartum elder primigravida,3192256,Nebraska Lexicon,5860001000004109
+Observation,Pregnant,Combined oral contraceptive pill failure,4060126,SNOMED,169470007
+Observation,Pregnant,Contraception failure,4011629,SNOMED,102955006
+Observation,Pregnant,Contraceptive sponge failure,4061415,SNOMED,169533001
+Observation,Pregnant,Depot contraceptive failure,4060231,SNOMED,169524003
+Observation,Pregnant,Female sterilization failure,4061420,SNOMED,169550004
+Observation,Pregnant,Gravida 10,4133724,SNOMED,127373004
+Observation,Pregnant,Gravida 2,4132563,SNOMED,127365008
+Observation,Pregnant,Gravida 3,4132099,SNOMED,127366009
+Observation,Pregnant,Gravida 4,4132100,SNOMED,127367000
+Observation,Pregnant,Gravida 5,4133030,SNOMED,127368005
+Observation,Pregnant,Gravida 6,4132101,SNOMED,127369002
+Observation,Pregnant,Gravida 7,4132564,SNOMED,127370001
+Observation,Pregnant,Gravida 8,4133032,SNOMED,127371002
+Observation,Pregnant,Gravida 9,4133033,SNOMED,127372009
+Observation,Pregnant,Gravida more than 10,4132565,SNOMED,127374005
+Observation,Pregnant,IUD failure - pregnant,4061672,SNOMED,169488004
+Observation,Pregnant,Multigravida,4012560,SNOMED,102876002
+Observation,Pregnant,Multigravida of advanced maternal age,40481872,SNOMED,443460007
+Observation,Pregnant,Normal pregnancy in multigravida,36684865,SNOMED,457821000124106
+Observation,Pregnant,Postcoital IUCD failure,4059977,SNOMED,169545005
+Observation,Pregnant,Postcoital OCP failure,4061683,SNOMED,169544009
+Observation,Pregnant,Pregnancy on oral contraceptive,4012089,SNOMED,102872000
+Observation,Pregnant,"Pregnant, diaphragm failure",4061676,SNOMED,169501005
+Observation,Pregnant,"Pregnant, sheath failure",4061411,SNOMED,169508004
+Observation,Pregnant,Previous pregnancies 10,4221287,SNOMED,82634006
+Observation,Pregnant,Previous pregnancies 8,4214878,SNOMED,80856001
+Observation,Pregnant,Previous pregnancies 9,4069849,SNOMED,17618008
+Observation,Pregnant,Previous pregnancies more than 10,4288592,SNOMED,6867004
+Observation,Pregnant,Progestogen-only pill failure,4060127,SNOMED,169471006
+Observation,Pregnant,Symptothermal contraception failure,4061418,SNOMED,169539002
+Observation,Pregnant,Vasectomy failure,4060235,SNOMED,169548007
+Observation,Race,Race,3046853,LOINC,32624-9
+Observation,Smoker,Chain smoker,4044778,SNOMED,230065006
+Observation,Smoker,Cigar smoker,4246415,SNOMED,59978006
+Observation,Smoker,Cigarette smoker,4276526,SNOMED,65568007
+Observation,Smoker,Cigarette smoker (1-4 cigarettes/day),764104,SNOMED,450821000124107
+Observation,Smoker,Cigarette smoker (5-9 cigarettes/day),764103,SNOMED,450811000124104
+Observation,Smoker,Heavy cigarette smoker,4041511,SNOMED,230063004
+Observation,Smoker,Heavy cigarette smoker (20-39 cigs/day),4052947,SNOMED,160605003
+Observation,Smoker,Heavy smoker (over 20 per day),4209006,SNOMED,56771006
+Observation,Smoker,Heavy tobacco smoker,762499,SNOMED,428071000124103
+Observation,Smoker,Light cigarette smoker,4042037,SNOMED,230060001
+Observation,Smoker,Light cigarette smoker (1-9 cigs/day),4052029,SNOMED,160603005
+Observation,Smoker,Light tobacco smoker,762498,SNOMED,428061000124105
+Observation,Smoker,Moderate cigarette smoker,4044776,SNOMED,230062009
+Observation,Smoker,Moderate cigarette smoker (10-19 cigs/day),4052030,SNOMED,160604004
+Observation,Smoker,Moderate smoker (20 or less per day),4209585,SNOMED,56578002
+Observation,Smoker,Occasional cigarette smoker,4044775,SNOMED,230059006
+Observation,Smoker,Occasional tobacco smoker,37395605,SNOMED,428041000124106
+Observation,Smoker,Pipe smoker,4218917,SNOMED,82302008
+Observation,Smoker,Rolls own cigarettes,4058138,SNOMED,160619003
+Observation,Smoker,Smoker,4298794,SNOMED,77176002
+Observation,Smoker,Smoking restarted,4204653,SNOMED,308438006
+Observation,Smoker,Smoking started,4141787,SNOMED,266929003
+Observation,Smoker,Trivial cigarette smoker (less than one cigarette/day),4144273,SNOMED,266920004
+Observation,Smoker,Very heavy cigarette smoker,4044777,SNOMED,230064005
+Observation,Smoker,Very heavy cigarette smoker (40+ cigs/day),4058136,SNOMED,160606002
+Procedure,Artificial respiration,Artificial respiration,4230167,SNOMED,40617009
+Procedure,Continuous renal replacement therapy,Continuous renal replacement therapy,37018292,SNOMED,714749008
+Procedure,Emergent dialysis,Emergent dialysis,3171077,Nebraska Lexicon,28690001000004105
+Procedure,Extracorporeal membrane oxygenation,Arteriovenous extracorporeal membrane oxygenation,37206602,SNOMED,786452006
+Procedure,Extracorporeal membrane oxygenation,Extracorporeal membrane oxygenation,4052536,SNOMED,233573008
+Procedure,Extracorporeal membrane oxygenation,"Extracorporeal Oxygenation, Membrane, Central",1531632,ICD10PCS,5A1522F
+Procedure,Extracorporeal membrane oxygenation,"Extracorporeal Oxygenation, Membrane, Central, Intraoperative",1524105,ICD10PCS,5A15A2F
+Procedure,Extracorporeal membrane oxygenation,"Extracorporeal Oxygenation, Membrane, Peripheral Veno-arterial",1531631,ICD10PCS,5A1522G
+Procedure,Extracorporeal membrane oxygenation,"Extracorporeal Oxygenation, Membrane, Peripheral Veno-arterial, Intraoperative",1524104,ICD10PCS,5A15A2G
+Procedure,Extracorporeal membrane oxygenation,"Extracorporeal Oxygenation, Membrane, Peripheral Veno-venous",1531630,ICD10PCS,5A1522H
+Procedure,Extracorporeal membrane oxygenation,"Extracorporeal Oxygenation, Membrane, Peripheral Veno-venous, Intraoperative",1524103,ICD10PCS,5A15A2H
+Procedure,Extracorporeal membrane oxygenation,Venoarterial extracorporeal membrane oxygenation,37206601,SNOMED,786451004
+Procedure,Extracorporeal membrane oxygenation,Venovenous extracorporeal membrane oxygenation,37206603,SNOMED,786453001
+Procedure,Heated and humidified high flow oxygen therapy,Heated and humidified high flow oxygen therapy,3655950,SNOMED,870533002
+Procedure,Heated and humidified high flow oxygen therapy,Heated and humidified high flow oxygen therapy,3655950,SNOMED,870533002
+Procedure,Hemodialysis,Hemodialysis,4120120,SNOMED,302497006
+Procedure,Hemodialysis procedure requiring repeated evaluation(s) with or without substantial revision of dialysis prescription,Hemodialysis procedure requiring repeated evaluation(s) with or without substantial revision of dialysis prescription,2213573,CPT4,90937
+Procedure,Hemodialysis procedure with single evaluation by a physician or other qualified health care professional,Hemodialysis procedure with single evaluation by a physician or other qualified health care professional,2213572,CPT4,90935
+Procedure,High concentration oxygen therapy,High concentration oxygen therapy,4201025,SNOMED,315041000
+Procedure,Humidified oxygen therapy,Humidified oxygen therapy,4119964,SNOMED,304577004
+Procedure,Intermittent positive pressure ventilation via endotracheal tube,"Insertion of Endotracheal Airway into Trachea, Percutaneous Approach",2745440,ICD10PCS,0BH13EZ
+Procedure,Intermittent positive pressure ventilation via endotracheal tube,"Insertion of Endotracheal Airway into Trachea, Via Natural or Artificial Opening",2745444,ICD10PCS,0BH17EZ
+Procedure,Intermittent positive pressure ventilation via endotracheal tube,"Insertion of Endotracheal Airway into Trachea, Via Natural or Artificial Opening Endoscopic",2745447,ICD10PCS,0BH18EZ
+Procedure,Intermittent positive pressure ventilation via endotracheal tube,Intermittent positive pressure ventilation via endotracheal tube,4237460,SNOMED,408853006
+Procedure,Intranasal oxygen therapy,Intranasal oxygen therapy,4216695,SNOMED,71786000
+Procedure,Noninvasive positive pressure ventilation,Noninvasive positive pressure ventilation,40486624,SNOMED,447837008
+Procedure,Noninvasive ventilation,Noninvasive ventilation,4177224,SNOMED,428311008
+Procedure,Oxygen administration by mask,Oxygen administration by mask,4162736,SNOMED,371908008
+Procedure,Oxygen administration by nasal cannula,Oxygen administration by nasal cannula,4155151,SNOMED,371907003
+Procedure,Oxygen administration by non rebreather mask,Oxygen administration by non rebreather mask,44790731,SNOMED,240051000000102
+Procedure,Oxygenator therapy,Oxygenator therapy,4082249,SNOMED,182714002
+Procedure,Peritoneal dialysis,Peritoneal dialysis,4324124,SNOMED,71192002
+Procedure,Positive pressure therapy,"Assistance with Respiratory Ventilation, 24-96 Consecutive Hours, Continuous Positive Airway Pressure",2788019,ICD10PCS,5A09457
+Procedure,Positive pressure therapy,"Assistance with Respiratory Ventilation, Greater than 96 Consecutive Hours, Continuous Positive Airway Pressure",2788024,ICD10PCS,5A09557
+Procedure,Positive pressure therapy,"Assistance with Respiratory Ventilation, Less than 24 Consecutive Hours, Continuous Positive Airway Pressure",2787823,ICD10PCS,5A09357
+Procedure,Positive pressure therapy,"Continuous positive airway pressure ventilation (CPAP), initiation and management",2314035,CPT4,94660
+Procedure,Positive pressure therapy,Nocturnal nasal ventilation therapy,738834,OMOP Extension,OMOP5117477
+Procedure,Renal dialysis,Renal dialysis,4146536,SNOMED,265764009
+Procedure,Vasopressor therapy,Vasopressor therapy,3655896,SNOMED,870386000
+Race,American Indian or Alaska Native,American Indian or Alaska Native,8657,Race,1
+Race,Asian,Asian,8515,Race,2
+Race,Black or African American,Black or African American,8516,Race,3
+Race,Native Hawaiian or Other Pacific Islander,Native Hawaiian or Other Pacific Islander,8557,Race,4
+Race,White,White,8527,Race,5
