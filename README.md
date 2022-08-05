@@ -17,3 +17,5 @@ Explanation of the scripts:
 4. Make an intermediary table "inpat_intermed" which is all patients with a positive lab result, who were flagged as inpatient treatment
 5. Join the positive-lab-result, "inpat_intermed" and "comb" tables to get the criteria of the cohort (sans edge cases)
 
+In summary the cohort contains patients who: tested positive for COVID, experienced weak or strong symptoms, who started in-patient care 7 days before through 21 days after a positive test, and their symptoms started witin 2 weeks before or after their in-patient period. If the patient was hospitalized more than once, we prioritize
+the earliest occurrence. 
