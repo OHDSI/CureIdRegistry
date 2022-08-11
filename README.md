@@ -18,3 +18,22 @@ Explanation of the scripts:
 5. Join the positive-lab-result, "inpat_intermed" and "comb" tables to get the criteria of the cohort (sans edge cases)
 
 In summary the cohort contains patients who were hospitalized with COVID, and experienced symptoms that suggest COVID played a significant role in their hospitalization. They tested positive for COVID,  who started in-patient care 7 days before through 21 days after a positive test, and experienced COVID-symptoms around 2 weeks before or after their in-patient period. If the patient was hospitalized more than once, we prioritize the earliest occurrence. 
+
+02 All Tables
+1. Get all person_id's that are in the cohort, as identified in the first script. 
+2. Get the measurements for each person for the duration of their in-patient stay. This is limited to a hardcoded list of measurements that is relevant to the topic of COVID inpatient stay, so any measurements not on the list are not exposed. 
+3. Repeat Step 2, except get the drug concept, death, observations, procedure occurrence, condition occurrence, visit occurrence, and device exposure.
+
+03 CDM Tables
+
+1. Defines the ddl for generating the empty OMOP CDM tables.
+2. These tables are blank, and will be filled with the 04th script.
+
+04 DE ID 
+1. Load the data from the 02 script. 
+2. Parse the data so that it fits into the OMOP CDM tables. 
+3. Table by table, insert the parsed data into the CDM
+
+05 Quality Checks
+1. Read the count, min, and max for various columns and tables.
+2. Comments say what results are expected, if the script succeeded (more documentation is needed here)
