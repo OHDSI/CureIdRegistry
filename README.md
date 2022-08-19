@@ -1,4 +1,4 @@
-CureIdRegistry
+# CureIdRegistry
 
 The Cure Id Registry is a clinical registry leveraging OMOP and EHR automation.  CURE ID is a collaboration between the FDA and the National Center for Advancing Translational Sciences (NCATS), part of the National Institutes of Health (NIH).
 
@@ -6,9 +6,11 @@ This Github repository is the migrated documentation from the FDA Cure ID projec
 
 The cohorts extract the anonymized person_id, birthdate, and first date of a positive COVID test from the OMOP CDM. 
 
+## NOTICE: It is currently rather difficult to make edits directly to the repo. We are working on streamlining the process of approving users to the organization, so that they may make pull requests/direct edits
+
 --------------------------------------------------------------------------------------------------
 
-Explanation of the scripts:
+## Explanation of the Curation Script Files:
 
 01 Cohort Creation: 
 1. Identify all patients with a positive lab result measurement (get patient_id, first positive result)
@@ -37,3 +39,13 @@ In summary the cohort contains patients who were hospitalized with COVID, and ex
 05 Quality Checks
 1. Read the count, min, and max for various columns and tables.
 2. Comments say what results are expected, if the script succeeded (more documentation is needed here)
+
+--------------------------------------------------------------------------------------------------
+
+## Explanation of the Concept Files
+
+Parent Only: A csv that contains only the parent (highest in the hierarchy) concepts used within the registry. When adding concepts, check 1) is the concept a parent concept and 2) if not, is the parent concept already included within the file
+
+Concept All: All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
+
+Conditions, Device Exposure, Measurements, Observations, Person, Procedures: JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
