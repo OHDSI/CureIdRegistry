@@ -49,3 +49,15 @@ Parent Only: A csv that contains only the parent (highest in the hierarchy) conc
 Concept All: All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
 
 Conditions, Device Exposure, Measurements, Observations, Person, Procedures: JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
+
+--------------------------------------------------------------------------------------------------
+
+## Example of Adding a Concept
+
+Say we want to add a concept into the registry. The steps to take would be:
+
+1. Look up the concept code in ATLAS Search. Get the name, concept code, vocabulary etc.
+2. Check the hierarchy of the code in the Hierarchy tab. Check to see if it is a parent concept, and if it has any children concept. Append the highest concept of the hierarchy into the "parent_only" csv file, if not already present. Typically this can be done just using line edits.
+3. If there are children concepts uder the one you are adding, click the "CSV" button in ATLAS to generate an Excel file. We need to edit this csv so that we keep only the domain, parent_concept name, and child name, in that order. 
+4. Once these three columns are correctly edited, append them to the "all concepts" csv file.
+5. Add the main concept you wanted to add into its corresponding domain file csv. This can also be done relatively quickly with just a line edit.
