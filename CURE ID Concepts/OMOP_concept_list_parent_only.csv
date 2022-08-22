@@ -114,6 +114,10 @@ OMOP concept_ID,Concept code,Concept name,OMOP domain,Vocabulary,Standard,Descen
 1507835,11149,vasopressin (USP),Drug,RxNorm,S,FALSE
 21600280,C01CA,Adrenergic and dopaminergic agents,Drug,ATC,C,TRUE
 3655950,870533002,Heated and humidified high flow oxygen therapy,Procedure,SNOMED,S,FALSE
+46257585,1022227,Extracorporeal membrane oxygenation,Procedure,CPT4,S,TRUE
+45889034,1012752,Hemodialysis procedure,Procedure,CPT4,S,TRUE
+45889365,1012740,Dialysis Services and Procedures,Procedure,CPT4,S,TRUE
+2213576,90945,Dialysis procedure other than hemodialysis (eg, peritoneal dialysis, hemofiltration, or other continuous renal replacement therapies),Procedure,CPT4,S,TRUE
 ,,,,,,
 ,,,,,,
 ,,,,,,
