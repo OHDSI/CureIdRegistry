@@ -2,11 +2,11 @@
 
 The Cure Id Registry is a clinical registry leveraging OMOP and EHR automation.  CURE ID is a collaboration between the FDA and the National Center for Advancing Translational Sciences (NCATS), part of the National Institutes of Health (NIH).
 
-This Github repository is the migrated documentation from the FDA Cure ID project. This move was motivated by the inconsistencies of the current storage method, in Microsoft Teams. This repository takes the Concept list from the Cure-ID Registry group, within the Health Special Interests Teams group, and combines it with the Cohort Creation scripts from the Cure**S** ID Registry group, also within the same Teams environment. 
+This Github repository is the migrated documentation from the FDA Cure ID project. This move was motivated by the inconsistencies of the current storage method, in Microsoft Teams. This repository takes the Concept list from the Cure-ID Registry group, within the Health Special Interests Teams group, and combines it with the Cohort Creation scripts from the Cure**S** ID Registry group, also within the same Teams environment. Essentially, it is meant to be the central authority of the definition of the registry- what concepts to include, how to generate the cohort, who is included, etc.
 
-The cohorts extract the anonymized person_id, birthdate, and first date of a positive COVID test from the OMOP CDM. 
+The cohort is comprised of the anonymized person_id, birthdate, and first date of a positive COVID test from the OMOP CDM. 
 
-## NOTICE: It is currently rather difficult to make edits directly to the repo. We are working on streamlining the process of approving users to the organization, so that they may make pull requests/direct edits
+## NOTICE: It is currently rather difficult to make edits directly to the repo. We are working on streamlining the process of approving users to the organization, so that they may make pull requests/direct edits.
 
 --------------------------------------------------------------------------------------------------
 
@@ -46,6 +46,10 @@ In summary the cohort contains patients who were hospitalized with COVID, and ex
 
 Parent Only: A csv that contains only the parent (highest in the hierarchy) concepts used within the registry. When adding concepts, check 1) is the concept a parent concept and 2) if not, is the parent concept already included within the file
 
+Parent Only, with Descendants: A list of all parent concepts, where we track and include all descendants. This is primarily used for ATLAS concept set creation.
+
+Parent Only, no Descendants: A list of all parent concepts, where we do not track descendants. This is primarily used for ATLAS concept set creation.
+
 Concept All: All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
 
 Conditions, Device Exposure, Measurements, Observations, Person, Procedures: JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
@@ -54,9 +58,9 @@ Conditions, Device Exposure, Measurements, Observations, Person, Procedures: JSO
 
 ## Example of Adding a Concept
 
-Say we want to add a concept into the registry. The steps to take would be:
+Say we want to add a concept X into the registry. The steps to take would be:
 
-1. Look up the concept code in ATLAS Search. Get the name, concept code, vocabulary etc.
+1. Look up X in ATLAS Search. Get the name, concept code, vocabulary etc.
 2. Check the hierarchy of the code in the Hierarchy tab. Check to see if it is a parent concept, and if it has any children concept. Append the highest concept of the hierarchy into the "parent_only" csv file, if not already present. Typically this can be done just using line edits.
 3. If there are children concepts uder the one you are adding, click the "CSV" button in ATLAS to generate an Excel file. We need to edit this csv so that we keep only the domain, parent_concept name, child name, concept id, vocab id, and concept code, in that order. 
 4. Once these three columns are correctly edited, append them to the "all concepts" csv file.
