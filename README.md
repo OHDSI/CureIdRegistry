@@ -56,12 +56,26 @@ Conditions, Device Exposure, Measurements, Observations, Person, Procedures: JSO
 
 --------------------------------------------------------------------------------------------------
 
-## Example of Adding a Concept
+## Workflow of Adding a Concept (Having ATLAS set up extremely recommended)
 
-Say we want to add a concept X into the registry. The steps to take would be:
+### Section 1: I Do Not See/Have Access to the CURE ID Concept Set in ATLAS (if you do, skip to Section 2)
 
-1. Look up X in ATLAS Search. Get the name, concept code, vocabulary etc.
-2. Check the hierarchy of the code in the Hierarchy tab. Check to see if it is a parent concept, and if it has any children concept. Append the highest concept of the hierarchy into the "parent_only" csv file, if not already present. Typically this can be done just using line edits.
-3. If there are children concepts uder the one you are adding, click the "CSV" button in ATLAS to generate an Excel file. We need to edit this csv so that we keep only the domain, parent_concept name, child name, concept id, vocab id, and concept code, in that order. 
-4. Once these three columns are correctly edited, append them to the "all concepts" csv file.
-5. Add the main concept you wanted to add into its corresponding domain file csv. This can also be done relatively quickly with just a line edit.
+If you do not see the pre-existing concept set, you will need to create a version yourself first.
+1. In ATLAS, click the "Concept Sets" tab on the sidebar.
+2. In the upper right corner, click "New Concept Set".
+3. Click the "Import Tab"
+4. Copy and paste the contents of the "OMOP_concepts_parent_with_descendants.txt" folder, and click the "Descendants" button. Add these to the concept set.
+5. Copy and paste the contents of the "OMOP_concepts_parent_without_descendants.txt" folder, making sure NOT to tick the "Descendants" button. Add these to the concept set.
+
+### Section 2: I Have Access to the CURE ID Concept Set in ATLAS
+
+Say we want to add a concept X into the set. 
+
+1. Consider if X is a parent concept, or if it is a child concept of a pre-existing one.
+2. Append it to the corresponding file: "OMOP_concepts_parent" with or without. 
+3. Go to the Cure ID Concept Set.
+4. Click Import, and paste X. Click the "Descendants" button, if you are including descendants.
+5. Click the "Included Concepts" tab. Depending on what X's domain is (Drug, Condition, etc) filter to see just those concepts.
+6. Click the "CSV" button. This will download these concepts to a CSV file. 
+7. Override the corresponding "cure_id_{domain}.csv" file in the repo.
+8. Save the concept set in ATLAS, push changes to repo.
