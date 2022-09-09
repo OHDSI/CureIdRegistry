@@ -193,7 +193,7 @@ SELECT v.person_id
 INTO #inpat_intermed
 FROM visit_occurrence v
 INNER JOIN #first_pos p ON v.person_id = p.person_id
-WHERE visit_concept_id = 9201; --Inpatient visit
+WHERE visit_concept_id in(262,9201); --Inpatient,ER visit
 
 --Intermediate count of Covid-positive patients with inpatient encounters
 select count(distinct person_id) "covid_pos_inpatients_count" from #inpat_intermed;
@@ -229,7 +229,7 @@ INNER JOIN #dx_comb ON v.person_id = #dx_comb.person_id
       DATEDIFF(day, #dx_comb.condition_start_date, v.visit_start_date) > -14
       AND DATEDIFF(day, #dx_comb.condition_start_date, v.visit_start_date) < 14
       )
-WHERE visit_concept_id = 9201 --Inpatient visit
+WHERE visit_concept_id in(262,9201) --Inpatient,ER visit
    AND v.visit_start_date >= '2020-01-01'
    AND (
       DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) > - 7
