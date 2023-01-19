@@ -15,9 +15,7 @@ DROP TABLE IF EXISTS #covid_lab_pos;
 DROP TABLE IF EXISTS #first_pos;
 DROP TABLE IF EXISTS #dx_strong;
 DROP TABLE IF EXISTS #dx_weak;
-DROP TABLE IF EXISTS #dx_comb;
 DROP TABLE IF EXISTS #inpat_intermed;
-DROP TABLE IF EXISTS #inpat_intermed_temporal;
 DROP TABLE IF EXISTS #inpat;
 DROP TABLE IF EXISTS #inpat_closest_vis;
 DROP TABLE IF EXISTS #inpat_first_vis;
@@ -27,8 +25,8 @@ DROP TABLE IF EXISTS #Vis_Occ;
 CREATE TABLE [Results].[CURE_ID_Cohort] (
    [person_id] [int] NOT NULL, [visit_occurrence_id] [int] NOT NULL, [visit_start_date] [date] NOT NULL, 
    [visit_end_date] [date] NOT NULL, [First_Pos_Date] [date] NULL, [Days_From_First_Pos] [int] NULL, 
-   [Abs_Days_From_First_Pos] [int] NULL, [Before_Or_After] [int] NOT NULL, 
-   [birth_datetime] [datetime2](7) NULL, [death_datetime] [datetime2](7) NULL
+   [Abs_Days_From_First_Pos] [int] NULL, [Before_Or_After] [int] NOT NULL, [dx_strong] [int] NOT NULL, 
+   [dx_weak] [int] NOT NULL, [birth_datetime] [datetime2](7) NULL, [death_datetime] [datetime2](7) NULL
    ) ON [PRIMARY];
 
 
@@ -93,7 +91,7 @@ select count(distinct person_id) "covid_positive_lab_person_count" from #first_p
 
 --Phenotype Entry Criteria: visits with ONE or more of the Strong Positive diagnosis codes from the ICD-10 or SNOMED tables
 --Strong diagnoses are codes that indicate symptomatic COVID-19
-SELECT DISTINCT person_id, condition_start_date, condition_end_date
+SELECT DISTINCT visit_occurrence_id
 INTO #dx_strong
 FROM dbo.CONDITION_OCCURRENCE
 WHERE condition_concept_id IN (
@@ -107,7 +105,7 @@ WHERE condition_concept_id IN (
 
 UNION
 
-SELECT DISTINCT person_id, condition_start_date, condition_end_date
+SELECT DISTINCT visit_occurrence_id
 FROM dbo.CONDITION_OCCURRENCE
 WHERE condition_concept_id IN (
       SELECT concept_id
@@ -135,10 +133,10 @@ select count(*) "covid_enc_strong_count" from #dx_strong;
 
 --Phenotype Entry Criteria: visits with ONE or more of the Weak diagnosis codes from the ICD-10 or SNOMED tables
 --weak diagnoses are codes that indicate symptoms such as fever and cough that, in combination with a positive SARS-COV-2 test, indicate symptomatic covid
-SELECT DISTINCT person_id, condition_start_date, condition_end_date
+SELECT DISTINCT visit_occurrence_id
 INTO #dx_weak
 FROM (
-   SELECT person_id, condition_start_date, condition_end_date
+   SELECT visit_occurrence_id
    FROM dbo.CONDITION_OCCURRENCE
    WHERE condition_concept_id IN (
          SELECT concept_id
@@ -167,23 +165,14 @@ FROM (
                   )
          )
       AND condition_start_date >= DATEFROMPARTS(2020, 04, 01)
+   GROUP BY person_id
+      ,visit_occurrence_id
    ) dx_same_encounter
 
  --number of encounters with weak diagnoses (independent of Covid testing status)
 select count(*) "covid_weak_enc_count" from #dx_weak;
 
---Combine dx_strong and dx_weak tables
-SELECT t.*
-INTO #dx_comb
-FROM (
-   SELECT *,'dx_strong' "src"
-   FROM #dx_strong
-   UNION
-   SELECT *,'dx_weak' "src"
-   FROM #dx_weak
-   ) t
-
---Covid-positive patients with inpatient encounters (intermediate table)
+--Covid-positive patients with inpatient encounters (intermediate table for debugging)
 SELECT v.person_id
    ,v.visit_occurrence_id
    ,visit_start_date
@@ -194,14 +183,13 @@ SELECT v.person_id
 INTO #inpat_intermed
 FROM visit_occurrence v
 INNER JOIN #first_pos p ON v.person_id = p.person_id
-WHERE visit_concept_id in(262,9201); --Inpatient, ER visit
+WHERE visit_concept_id in (9201,262); --Inpatient visit/ED and inpt visit
 
 --Intermediate count of Covid-positive patients with inpatient encounters
 select count(distinct person_id) "covid_pos_inpatients_count" from #inpat_intermed;
 
---Intermedite Table with Temporal constraints
-Select *
-into #inpat_intermed_temporal
+--Count of patients after temporal constraints applied
+Select count(distinct person_id) "covid_pos_inpatients_date_filtered_count"
 from #inpat_intermed
 WHERE visit_start_date >= '2020-01-01'
    AND (
@@ -209,16 +197,11 @@ WHERE visit_start_date >= '2020-01-01'
       AND DATEDIFF(day, First_Pos_Date, visit_start_date) < 21
       )
 
---Count of patients after temporal constraints applied
-Select count(distinct person_id) "covid_pos_inpatients_date_filtered_count"
-from #inpat_intermed_temporal
-
-
 --Apply all incl/excl criteria to identify all patients hospitalized with symptomatic covid-19 up to 21 days after a positive SARS-CoV-2 test or up to 7 days prior to a positive SARS-CoV-2 test
 SELECT v.person_id
    ,v.visit_occurrence_id
-   ,v.visit_start_date
-   ,v.visit_end_date
+   ,visit_start_date
+   ,visit_end_date
    ,p.First_Pos_Date
    ,DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) "Days_From_First_Pos"
    ,ABS(DATEDIFF(day, p.First_Pos_Date, v.visit_start_date)) "Abs_Days_From_First_Pos"
@@ -227,15 +210,31 @@ SELECT v.person_id
          THEN - 1
       ELSE 1
       END AS Before_Or_After
-   --,#dx_comb.src "dx_source"
+   ,CASE 
+      WHEN #dx_strong.visit_occurrence_id IS NOT NULL
+         THEN 1
+      ELSE 0
+      END AS dx_strong
+   ,CASE 
+      WHEN #dx_weak.visit_occurrence_id IS NOT NULL
+         THEN 1
+      ELSE 0
+      END AS dx_weak
 INTO #inpat
 FROM visit_occurrence v
-INNER JOIN #inpat_intermed_temporal p ON v.visit_occurrence_id = p.visit_occurrence_id
-INNER JOIN #dx_comb ON v.person_id = #dx_comb.person_id
-	AND (
-      DATEDIFF(day, #dx_comb.condition_start_date, v.visit_start_date) > -14
-      AND DATEDIFF(day, #dx_comb.condition_start_date, v.visit_start_date) < 14
+INNER JOIN #first_pos p ON v.person_id = p.person_id
+LEFT JOIN #dx_strong ON v.visit_occurrence_id = #dx_strong.visit_occurrence_id
+LEFT JOIN #dx_weak ON v.visit_occurrence_id = #dx_weak.visit_occurrence_id
+WHERE visit_concept_id in (9201,262) --Inpatient visit/ED and inpt visit
+   AND v.visit_start_date >= '2020-01-01'
+   AND (
+      DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) > - 7
+      AND DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) < 21
       )
+   AND (
+      #dx_strong.visit_occurrence_id IS NOT NULL
+      OR #dx_weak.visit_occurrence_id IS NOT NULL
+      );
 
 --Count of patients and encounters that meet the criteria
 select count(distinct person_id) "covid_pos_inpatients",
@@ -272,7 +271,7 @@ INNER JOIN #inpat_first_vis v ON i.person_id = v.person_id
 INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
    (
    [person_id], [visit_occurrence_id], [visit_start_date], [visit_end_date], [First_Pos_Date], 
-   [Days_From_First_Pos], [Abs_Days_From_First_Pos], [Before_Or_After], 
+   [Days_From_First_Pos], [Abs_Days_From_First_Pos], [Before_Or_After], [dx_strong], [dx_weak], 
    [birth_datetime], [death_datetime]
    )
 SELECT v.*, p.birth_datetime, d.death_datetime
