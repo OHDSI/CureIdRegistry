@@ -107,6 +107,8 @@ OMOP concept_ID,Concept code,Concept name,OMOP domain,Vocabulary,Standard,Descen
 45768197,706172005,Ventilator,Device,SNOMED,S,TRUE
 4222966,336602003,Oxygen mask,Device,SNOMED,S,TRUE
 4138487,426294006,Face tent oxygen delivery device,Device,SNOMED,S,FALSE
+4281167,36965003,Hemodialysis machine,Device,SNOMED,S,TRUE
+4164918,45633005,Peritoneal dialyzer,Device,SNOMED,S,FALSE
 1321341,7512,norepinephrine,Drug,RxNorm,S,FALSE
 1343916,3992,epinephrine,Drug,RxNorm,S,FALSE
 1135766,8163,phenylephrine,Drug,RxNorm,S,FALSE
