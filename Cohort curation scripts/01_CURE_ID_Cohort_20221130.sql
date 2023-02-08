@@ -89,89 +89,6 @@ GROUP BY person_id;
 --Show count of unique patients so far
 select count(distinct person_id) "covid_positive_lab_person_count" from #first_pos;
 
---Phenotype Entry Criteria: visits with ONE or more of the Strong Positive diagnosis codes from the ICD-10 or SNOMED tables
---Strong diagnoses are codes that indicate symptomatic COVID-19
-SELECT DISTINCT visit_occurrence_id
-INTO #dx_strong
-FROM dbo.CONDITION_OCCURRENCE
-WHERE condition_concept_id IN (
-      SELECT concept_id
-      FROM dbo.CONCEPT
-      -- The list of ICD-10 codes in the Phenotype Wiki
-      -- This is the list of standard concepts that represent those terms
-      WHERE concept_id IN (3661405, 3661406, 3662381, 756031, 37311061, 3663281, 3661408, 756039, 320651
-            )
-      )
-
-UNION
-
-SELECT DISTINCT visit_occurrence_id
-FROM dbo.CONDITION_OCCURRENCE
-WHERE condition_concept_id IN (
-      SELECT concept_id
-      FROM dbo.CONCEPT
-      -- The list of ICD-10 codes in the Phenotype Wiki were translated into OMOP standard concepts
-      -- This is the list of standard concepts that represent those terms
-      WHERE concept_id IN (37311061, 3661405, 756031, 756039, 3661406, 3662381, 3663281, 3661408)
-      
-      UNION
-      
-      SELECT concept_id
-      FROM dbo.CONCEPT c
-      INNER JOIN dbo.CONCEPT_ANCESTOR ca ON c.concept_id = ca.descendant_concept_id
-         -- Here we pull the descendants (aka terms that are more specific than the concepts selected above)
-         AND ca.ancestor_concept_id IN (
-            3661406, 3661408, 37310283, 3662381, 3663281, 37310287, 3661405, 756031, 37310286, 37311061, 
-            37310284, 756039, 37310254
-            )
-         AND c.invalid_reason IS NULL
-      )
-   AND condition_start_date >= DATEFROMPARTS(2020, 04, 01);
-
---number of encounters with strong diagnoses
-select count(*) "covid_enc_strong_count" from #dx_strong;
-
---Phenotype Entry Criteria: visits with ONE or more of the Weak diagnosis codes from the ICD-10 or SNOMED tables
---weak diagnoses are codes that indicate symptoms such as fever and cough that, in combination with a positive SARS-COV-2 test, indicate symptomatic covid
-SELECT DISTINCT visit_occurrence_id
-INTO #dx_weak
-FROM (
-   SELECT visit_occurrence_id
-   FROM dbo.CONDITION_OCCURRENCE
-   WHERE condition_concept_id IN (
-         SELECT concept_id
-         FROM dbo.CONCEPT
-         -- The list of ICD-10 codes in the Phenotype Wiki (https://github.com/National-COVID-Cohort-Collaborative/Phenotype_Data_Acquisition/wiki/Latest-Phenotype) were translated into OMOP standard concepts
-         -- It also includes the OMOP only codes that are on the Phenotype Wiki
-         -- This is the list of standard concepts that represent those terms
-         WHERE 
-				--N3C Before 4/1/2020
-				concept_id IN (
-                  260125, 260139, 46271075, 4307774, 4195694, 257011, 442555, 4059022, 4059021, 256451, 
-                  4059003, 4168213, 434490, 439676, 254761, 4048098, 37311061, 4100065, 320136, 4038519, 
-                  312437, 4060052, 4263848, 37311059, 37016200, 4011766, 437663, 4141062, 4164645, 4047610, 
-                  4260205, 4185711, 4289517, 4140453, 4090569, 4109381, 4330445, 255848, 4102774, 436235, 
-                  261326, 436145, 40482061, 439857, 254677, 40479642, 256722, 4133224, 4310964, 4051332, 
-                  4112521, 4110484, 4112015, 4110023, 4112359, 4110483, 4110485, 254058, 40482069, 4256228, 
-                  37016114, 46273719, 312940, 36716978, 37395564, 4140438, 46271074, 319049, 314971, 320651
-                  )
-				--N3C After 4/1/2020
-				or concept_id IN (
-                  260125, 260139, 46271075, 4307774, 4195694, 257011, 442555, 4059022, 4059021, 256451, 
-                  4059003, 4168213, 434490, 439676, 254761, 4048098, 37311061, 4100065, 320136, 4038519, 
-                  312437, 4060052, 4263848, 37311059, 37016200, 4011766, 437663, 4141062, 4164645, 4047610, 
-                  4260205, 4185711, 4289517, 4140453, 4090569, 4109381, 4330445, 255848, 4102774, 436235, 
-                  261326, 320651
-                  )
-         )
-      AND condition_start_date >= DATEFROMPARTS(2020, 04, 01)
-   GROUP BY person_id
-      ,visit_occurrence_id
-   ) dx_same_encounter
-
- --number of encounters with weak diagnoses (independent of Covid testing status)
-select count(*) "covid_weak_enc_count" from #dx_weak;
-
 --Covid-positive patients with inpatient encounters (intermediate table for debugging)
 SELECT v.person_id
    ,v.visit_occurrence_id
@@ -210,30 +127,14 @@ SELECT v.person_id
          THEN - 1
       ELSE 1
       END AS Before_Or_After
-   ,CASE 
-      WHEN #dx_strong.visit_occurrence_id IS NOT NULL
-         THEN 1
-      ELSE 0
-      END AS dx_strong
-   ,CASE 
-      WHEN #dx_weak.visit_occurrence_id IS NOT NULL
-         THEN 1
-      ELSE 0
-      END AS dx_weak
 INTO #inpat
 FROM visit_occurrence v
 INNER JOIN #first_pos p ON v.person_id = p.person_id
-LEFT JOIN #dx_strong ON v.visit_occurrence_id = #dx_strong.visit_occurrence_id
-LEFT JOIN #dx_weak ON v.visit_occurrence_id = #dx_weak.visit_occurrence_id
 WHERE visit_concept_id in (9201,262) --Inpatient visit/ED and inpt visit
    AND v.visit_start_date >= '2020-01-01'
    AND (
       DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) > - 7
       AND DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) < 21
-      )
-   AND (
-      #dx_strong.visit_occurrence_id IS NOT NULL
-      OR #dx_weak.visit_occurrence_id IS NOT NULL
       );
 
 --Count of patients and encounters that meet the criteria
@@ -271,7 +172,7 @@ INNER JOIN #inpat_first_vis v ON i.person_id = v.person_id
 INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
    (
    [person_id], [visit_occurrence_id], [visit_start_date], [visit_end_date], [First_Pos_Date], 
-   [Days_From_First_Pos], [Abs_Days_From_First_Pos], [Before_Or_After], [dx_strong], [dx_weak], 
+   [Days_From_First_Pos], [Abs_Days_From_First_Pos], [Before_Or_After], 
    [birth_datetime], [death_datetime]
    )
 SELECT v.*, p.birth_datetime, d.death_datetime
