@@ -49,7 +49,7 @@ implementation time and effort further.
 
 ## Ways to deploy the software
 
-### 1. Cloud vendors can deploy the software configured for use.
+### 1. Cloud vendor software configured for use.
 
 - https://github.com/microsoft/OHDSIonAzure
 - - Includes Perseus, Atlas, and Hades
