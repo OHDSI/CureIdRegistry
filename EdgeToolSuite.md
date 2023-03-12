@@ -1,7 +1,7 @@
 # Edge Tool Suite
 
-The Edge Tool Suite are the set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM.  
-Those are a bundle of OHDSI open source software configured for deployment and include
+The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM.  
+The OHDSI open source software configured for deployment include:
 - The Atlas data science platform
 - The WebAPI backed for Atlas
 - The HADES statistical analysis packages
@@ -46,3 +46,28 @@ allowing for even easier deployment. Current use of the Edge Tool has proven pro
 while limitations still exist - e.g., not currently capable of extracting data from unstructured fields 
 such as notes or loose text - further process optimization and tool development will reduce this 
 implementation time and effort further.
+
+## Ways to deploy the software
+
+### 1. Cloud vendors can deploy the software configured for use.
+
+### 2. Broadsea provides a set of docker containers that easy the cost of implementation
+
+### 3. Sites can compile the tools from the source repositories
+OHDSI Specific
+• https://github.com/OHDSI/CommonDataModel
+• https://github.com/OHDSI/Broadsea
+• https://github.com/OHDSI/Athena
+Perseus and the ETL Process
+• https://github.com/OHDSI/Perseus
+• https://github.com/OHDSI/WhiteRabbit
+• https://github.com/OHDSI/Usagi
+ATLAS and Cohort Discovery
+• https://github.com/OHDSI/Atlas
+• https://github.com/OHDSI/WebAPI
+Data Analysis
+• https://github.com/OHDSI/Achilles
+• https://github.com/OHDSI/Hades
+• https://github.com/OHDSI/PatientLevelPrediction
+• https://github.com/OHDSI/DataQualityDashboar
+5. 
