@@ -1,6 +1,7 @@
 # Edge Tool Suite
 
-The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM.  
+The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM.  This work was funed by the Cure ID initiative  https://cure.ncats.io 
+
 The OHDSI open source software configured for deployment include:
 - The Atlas data science platform
 - The WebAPI backed for Atlas
