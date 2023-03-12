@@ -51,7 +51,15 @@ implementation time and effort further.
 
 ### 1. Cloud vendors can deploy the software configured for use.
 
+- https://github.com/microsoft/OHDSIonAzure
+- - Includes Perseus, Atlas, and Hades
+- https://github.com/OHDSI/OHDSIonAWS
+- - Includes Atlas and Hades
+
 ### 2. Broadsea provides a set of docker containers that easy the cost of implementation
+
+- https://github.com/OHDSI/Broadsea
+- - Includes Atlas and Hades
 
 ### 3. Sites can compile the tools from the source repositories
 #### OHDSI Specific
