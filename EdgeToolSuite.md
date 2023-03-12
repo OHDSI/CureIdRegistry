@@ -54,20 +54,18 @@ implementation time and effort further.
 ### 2. Broadsea provides a set of docker containers that easy the cost of implementation
 
 ### 3. Sites can compile the tools from the source repositories
-OHDSI Specific
-• https://github.com/OHDSI/CommonDataModel
-• https://github.com/OHDSI/Broadsea
-• https://github.com/OHDSI/Athena
-Perseus and the ETL Process
-• https://github.com/OHDSI/Perseus
-• https://github.com/OHDSI/WhiteRabbit
-• https://github.com/OHDSI/Usagi
-ATLAS and Cohort Discovery
-• https://github.com/OHDSI/Atlas
-• https://github.com/OHDSI/WebAPI
-Data Analysis
-• https://github.com/OHDSI/Achilles
-• https://github.com/OHDSI/Hades
-• https://github.com/OHDSI/PatientLevelPrediction
-• https://github.com/OHDSI/DataQualityDashboar
-5. 
+#### OHDSI Specific
+- https://github.com/OHDSI/CommonDataModel
+- https://github.com/OHDSI/Broadsea
+- https://github.com/OHDSI/Athena
+#### Perseus and the ETL Process
+- https://github.com/OHDSI/Perseus
+- https://github.com/OHDSI/WhiteRabbit
+- https://github.com/OHDSI/Usagi
+#### ATLAS and Cohort Discovery
+- https://github.com/OHDSI/Atlas
+- https://github.com/OHDSI/WebAPI
+#### Data Analysis
+- https://github.com/OHDSI/Achilles
+- https://github.com/OHDSI/Hades
+- https://github.com/OHDSI/DataQualityDashboard 
