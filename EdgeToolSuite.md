@@ -1,6 +1,6 @@
 # Edge Tool Suite
 
-The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM.  This work was funed by the Cure ID initiative  https://cure.ncats.io 
+The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM.  This work was funded by the Cure ID initiative  https://cure.ncats.io 
 
 The OHDSI open source software configured for deployment include:
 - The Atlas data science platform
@@ -57,7 +57,7 @@ implementation time and effort further.
 - https://github.com/OHDSI/OHDSIonAWS
 - - Includes Atlas and Hades
 
-### 2. Broadsea provides a set of docker containers that easy the cost of implementation
+### 2. Broadsea provides a set of docker containers that ease the cost of implementation
 
 - https://github.com/OHDSI/Broadsea
 - - Includes Atlas and Hades
