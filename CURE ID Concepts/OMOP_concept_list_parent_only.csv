@@ -86,7 +86,6 @@ OMOP concept_ID,Concept code,Concept name,OMOP domain,Vocabulary,Standard,Descen
 3018677,14979-9,aPTT in Platelet poor plasma by Coagulation assay,Measurement,LOINC,S,FALSE
 3006315,26444-0,Basophils [#/volume] in Blood,Measurement,LOINC,S,FALSE
 3002385,30385-9,Erythrocyte distribution width [Ratio],Measurement,LOINC,S,FALSE
-3018198,7889-9,Francisella tularensis IgG Ab [Presence] in Serum,Measurement,LOINC,S,FALSE
 3000963,718-7,Hemoglobin [Mass/volume] in Blood,Measurement,LOINC,S,FALSE
 3007461,26515-7,Platelets [#/volume] in Blood,Measurement,LOINC,S,FALSE
 3024929,777-3,Platelets [#/volume] in Blood by Automated count,Measurement,LOINC,S,FALSE
