@@ -1213,7 +1213,6 @@ Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Mass/vol
 Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Mass/volume] in Platelet poor plasma by Heat denaturation,3018928,LOINC,30902-1
 Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen [Presence] in Platelet poor plasma,3002937,LOINC,16859-1
 Measurement,Fibrinogen | Platelet poor plasma | Coagulation,Fibrinogen | Platelet poor plasma | Coagulation,37032427,LOINC,LP394019-6
-Measurement,Francisella tularensis IgG Ab [Presence] in Serum,Francisella tularensis IgG Ab [Presence] in Serum,3018198,LOINC,7889-9
 Measurement,"Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood","Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood",40771922,LOINC,69405-9
 Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Arterial blood,3031266,LOINC,41651-1
 Measurement,Glucose|MCnc|Pt|ANYBldSerPl,Glucose [Mass/volume] in Blood,3000483,LOINC,2339-0
