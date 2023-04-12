@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS #inpat_first_vis;
 DROP TABLE IF EXISTS #los;
 DROP TABLE IF EXISTS #closest_vis;
 DROP TABLE IF EXISTS #first_vis;
-DROP TABLE IF EXISTS
+DROP TABLE IF EXISTS #los_max;
 DROP TABLE IF EXISTS #Vis_Occ;
 
 --Create cohort table (again specify schema as appropriate)
