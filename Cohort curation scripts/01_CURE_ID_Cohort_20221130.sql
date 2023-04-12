@@ -1,10 +1,7 @@
 /*
 FDA CURE ID Cohort Script
-
 This script creates a cohort of covid-positive, hospitalized patients.
-
 Run this script first, then create your subsetted tables using the CURE_ID_All_Tables.sql script
-
 Will need to designate the name of your own OMOP database, and schema you want results to be loaded into.
 */
 USE [JHCrown_OMOP] --Change database name as appropriate
@@ -19,6 +16,10 @@ DROP TABLE IF EXISTS #inpat_intermed;
 DROP TABLE IF EXISTS #inpat;
 DROP TABLE IF EXISTS #inpat_closest_vis;
 DROP TABLE IF EXISTS #inpat_first_vis;
+DROP TABLE IF EXISTS #los;
+DROP TABLE IF EXISTS #closest_vis;
+DROP TABLE IF EXISTS #first_vis;
+DROP TABLE IF EXISTS
 DROP TABLE IF EXISTS #Vis_Occ;
 
 --Create cohort table (again specify schema as appropriate)
@@ -120,6 +121,7 @@ SELECT v.person_id
    ,visit_start_date
    ,visit_end_date
    ,p.First_Pos_Date
+   ,DATEDIFF(MINUTE, v.visit_start_datetime, v.visit_end_datetime) "Length_Of_Stay"
    ,DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) "Days_From_First_Pos"
    ,ABS(DATEDIFF(day, p.First_Pos_Date, v.visit_start_date)) "Abs_Days_From_First_Pos"
    ,CASE 
@@ -138,9 +140,9 @@ WHERE visit_concept_id in (9201,262) --Inpatient visit/ED and inpt visit
       );
 
 --Count of patients and encounters that meet the criteria
-select count(distinct person_id) "covid_pos_inpatients",
-count(distinct visit_occurrence_id) "covid_pos_inpatient_visits"
-from #inpat;
+SELECT count(DISTINCT person_id) "covid_pos_inpatients", 
+count(DISTINCT visit_occurrence_id) "covid_pos_inpatient_visits"
+FROM #inpat;
 
 --Finds closest encounter to first positive SARS-COV-2 test (for patients hospitalized more than once)
 SELECT person_id
@@ -159,14 +161,39 @@ INNER JOIN #inpat_closest_vis v ON i.person_id = v.person_id
    AND i.Abs_Days_From_First_Pos = v.Closest_Vis
 GROUP BY i.person_id;
 
---Applies previous two criteria
-SELECT DISTINCT i.* --, c.Closest_Vis, v.Flag
-INTO #Vis_Occ
+--Create flag for longest LOs per person per visit_start_date
+SELECT i.person_id, visit_start_date
+   ,max(Length_Of_Stay) "max_los"
+INTO #los
+FROM #inpat i
+GROUP BY i.person_id, i.visit_start_date;
+
+--Apply criteria in sequence
+SELECT i.*
+INTO #closest_vis
 FROM #inpat i
 INNER JOIN #inpat_closest_vis c ON i.person_id = c.person_id
-   AND i.Abs_Days_From_First_Pos = c.Closest_Vis
+   AND i.Abs_Days_From_First_Pos = c.Closest_Vis;
+
+SELECT i.*
+INTO #first_vis
+FROM #closest_vis i
 INNER JOIN #inpat_first_vis v ON i.person_id = v.person_id
    AND i.Before_Or_After = v.Flag;
+
+SELECT i.*
+INTO #los_max
+FROM #first_vis i
+INNER JOIN #los los ON i.person_id = los.person_id
+   AND i.visit_start_date = los.visit_start_date
+   AND i.Length_Of_Stay = los.max_los;
+
+--Make cohort table
+SELECT v.*, p.birth_datetime, d.death_datetime
+INTO #Vis_Occ
+FROM #los_max v
+INNER JOIN person p ON v.person_id = p.person_id
+LEFT JOIN death d ON v.person_id = d.person_id;
 
 --Creates cohort by adding on birth date and death date
 INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
@@ -175,10 +202,8 @@ INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
    [Days_From_First_Pos], [Abs_Days_From_First_Pos], [Before_Or_After], 
    [birth_datetime], [death_datetime]
    )
-SELECT v.*, p.birth_datetime, d.death_datetime
-FROM #Vis_Occ v
-INNER JOIN person p ON v.person_id = p.person_id
-LEFT JOIN death d ON v.person_id = d.person_id;
+SELECT v.*
+FROM #Vis_Occ v;
 
 --Final count of patients
 Select count(distinct person_id) "Final_patient_count" from #Vis_Occ;
