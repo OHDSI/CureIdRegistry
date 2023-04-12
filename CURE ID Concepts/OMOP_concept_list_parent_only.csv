@@ -7,6 +7,7 @@ OMOP concept_ID,Concept code,Concept name,OMOP domain,Vocabulary,Standard,Descen
 4063381,17097001,Chronic disease of respiratory system,Condition,SNOMED,S,TRUE
 316866,38341003,Hypertensive disorder,Condition,SNOMED,S,TRUE
 4028244,128292002,Chronic disease of cardiovascular system,Condition,SNOMED,S,TRUE
+438112,55342001,Neoplastic disease,SNOMED,S,TRUE
 38003563,Hispanic,Hispanic or Latino,Ethnicity,Ethnicity,S,FALSE
 38003564,Not Hispanic,Not Hispanic or Latino,Ethnicity,Ethnicity,S,FALSE
 8570,A,AMBIGUOUS,Gender,Gender,N,FALSE
