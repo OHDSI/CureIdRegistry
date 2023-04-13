@@ -274,6 +274,7 @@ INTO results.CURE_ID_Visit_Occurrence
 FROM visit_occurrence v
 INNER JOIN Results.CURE_ID_Cohort coh
 	ON v.person_id = coh.person_id
+	AND v.visit_occurrence_id = coh.visit_occurrence_id
 WHERE v.visit_start_date >= '2020-03-01'
 
 --Load Device Exposure table
