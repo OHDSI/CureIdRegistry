@@ -26,7 +26,7 @@ DECLARE @END_DATE DATE = CAST('2029-12-31' AS DATE)
 insert into [JHM_OMOP_TEST].[deident].[source_id_person]
 select 
 person_id as sourceKey, 
-row_number() over(order by p.gender_concept_id, person_id desc) as new_id, 
+row_number() over(order by p.gender_concept_id, person_id desc) as id, 
 (FLOOR(RAND(convert(varbinary,newid()))*367))-183 as date_shift,
 CAST((DATEPART(YEAR,GETDATE()) - 90 - (FLOOR(RAND(convert(varbinary,newid()))*10))) AS INT) as over_89_birth_year --If a person is > 89, then assign them a random age between 90 - 99
 from [JHM_OMOP_20220203].[dbo].[person] p
