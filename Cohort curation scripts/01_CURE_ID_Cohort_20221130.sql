@@ -10,8 +10,6 @@ USE [JHCrown_OMOP] --Change database name as appropriate
 DROP TABLE IF EXISTS results.CURE_ID_Cohort; --Change schema as appropriate
 DROP TABLE IF EXISTS #covid_lab_pos;
 DROP TABLE IF EXISTS #first_pos;
-DROP TABLE IF EXISTS #dx_strong;
-DROP TABLE IF EXISTS #dx_weak;
 DROP TABLE IF EXISTS #inpat_intermed;
 DROP TABLE IF EXISTS #inpat;
 DROP TABLE IF EXISTS #inpat_closest_vis;
@@ -26,8 +24,8 @@ DROP TABLE IF EXISTS #Vis_Occ;
 CREATE TABLE [Results].[CURE_ID_Cohort] (
    [person_id] [int] NOT NULL, [visit_occurrence_id] [int] NOT NULL, [visit_start_date] [date] NOT NULL, 
    [visit_end_date] [date] NOT NULL, [First_Pos_Date] [date] NULL, [Days_From_First_Pos] [int] NULL, 
-   [Abs_Days_From_First_Pos] [int] NULL, [Before_Or_After] [int] NOT NULL, [dx_strong] [int] NOT NULL, 
-   [dx_weak] [int] NOT NULL, [birth_datetime] [datetime2](7) NULL, [death_datetime] [datetime2](7) NULL
+   [Abs_Days_From_First_Pos] [int] NULL, [Before_Or_After] [int] NOT NULL,
+   [birth_datetime] [datetime2](7) NULL, [death_datetime] [datetime2](7) NULL
    ) ON [PRIMARY];
 
 
