@@ -109,6 +109,11 @@ OMOP concept_ID,Concept code,Concept name,OMOP domain,Vocabulary,Standard,Descen
 4138487,426294006,Face tent oxygen delivery device,Device,SNOMED,S,FALSE
 4281167,36965003,Hemodialysis machine,Device,SNOMED,S,TRUE
 4164918,45633005,Peritoneal dialyzer,Device,SNOMED,S,FALSE
+2004208004,NA,Other oxygen device,Devcice,Custom,,FALSE
+2004208005,NA,Room air (in the context of a device),Devcice,Custom,,FALSE
+2004208006,NA,CPAP (continuous positive airway pressure),Devcice,Custom,,FALSE
+2004208007,NA,BiPAP (bilevel positive airway pressure),Devcice,Custom,,FALSE
+2004208008,NA,NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation),Devcice,Custom,,FALSE
 1321341,7512,norepinephrine,Drug,RxNorm,S,FALSE
 1343916,3992,epinephrine,Drug,RxNorm,S,FALSE
 1135766,8163,phenylephrine,Drug,RxNorm,S,FALSE
