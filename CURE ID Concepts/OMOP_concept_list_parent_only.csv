@@ -21,6 +21,7 @@ OMOP concept_ID,Concept code,Concept name,OMOP domain,Vocabulary,Standard,Descen
 8557,4,Native Hawaiian or Other Pacific Islander,Race,Race,S,FALSE
 8527,5,White,Race,Race,S,FALSE
 4298794,77176002,Smoker,Observation,SNOMED,S,TRUE
+4275495,365981007,Tobacco smoking behavior - finding,Observation,SNOMED,S,TRUE
 3046853,32624-9,Race,Observation,LOINC,S,TRUE
 46235215,76691-5,Gender identity,Observation,LOINC,S,TRUE
 4039922,229306004,Positive pressure therapy,Observation,SNOMED,S,TRUE
