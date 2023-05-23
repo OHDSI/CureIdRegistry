@@ -201,7 +201,9 @@ INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
    [Days_From_First_Pos], [Abs_Days_From_First_Pos], [Before_Or_After], 
    [birth_datetime], [death_datetime]
    )
-SELECT v.*
+SELECT v.[person_id], v.[visit_occurrence_id], v.[visit_start_date], v.[visit_end_date], v.[First_Pos_Date], 
+   v.[Days_From_First_Pos], v.[Abs_Days_From_First_Pos], v.[Before_Or_After], 
+   v.[birth_datetime], v.[death_datetime]
 FROM #Vis_Occ v;
 
 --Final count of patients
