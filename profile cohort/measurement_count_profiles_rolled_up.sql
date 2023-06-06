@@ -27,25 +27,21 @@ order by concept_name
 DROP TABLE IF EXISTS #measurement_count_temp;
 select 
     coh.person_id
-    ,coh.visit_occurrence_id
     ,mpci.ancestor_concept_id as concept_id
     ,mpci.concept_name
     ,count(case when m.measurement_concept_id is not null then 1 else NULL end) as concept_count
 into #measurement_count_temp
 from 
-    Results.CURE_ID_Cohort coh
+    #measurement_parent_concepts_of_interest mpci
+cross join
+    Results.CURE_ID_Cohort coh
 left join
-    #measurement_parent_concepts_of_interest mpci
-on 1=1
-left join 
-    measurement m 
+    Results.CURE_ID_Measurement m 
 on
     mpci.concept_id = m.measurement_concept_id 
     and m.person_id = coh.person_id
-    and m.visit_occurrence_id = coh.visit_occurrence_id
 group by 
     coh.person_id
-    ,coh.visit_occurrence_id
     ,mpci.ancestor_concept_id
     ,mpci.concept_name
 
