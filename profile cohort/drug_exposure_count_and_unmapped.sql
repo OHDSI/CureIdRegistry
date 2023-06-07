@@ -11,11 +11,7 @@ select distinct
 into 
     #drug_concepts_of_interest
 FROM
-    results.CURE_ID_Cohort 
-left join 
-    DRUG_EXPOSURE on
-        DRUG_EXPOSURE.person_id = results.CURE_ID_Cohort.person_id  AND
-        DRUG_EXPOSURE.visit_occurrence_id = results.CURE_ID_Cohort.visit_occurrence_id
+    results.CURE_ID_Drug_Exposure
     left join 
         concept 
     on
@@ -26,17 +22,17 @@ left join 
 ---Roll up drugs into ingredients
 drop table if exists #ingredients_of_interest
 select 
-    #drug_concepts_of_interest.concept_id as drug_concept_id,
-    #drug_concepts_of_interest.concept_name as drug_concept_name,
+    dci.concept_id as drug_concept_id,
+    dci.concept_name as drug_concept_name,
     CONCEPT.concept_id as ingredient_concept_id,
     CONCEPT.concept_name as ingredient_name
 into 
     #ingredients_of_interest
 from 
-    #drug_concepts_of_interest
+    #drug_concepts_of_interest dci
 left join
     CONCEPT_ancestor on
-        descendant_concept_id = #drug_concepts_of_interest.concept_id
+        descendant_concept_id = dci.concept_id
 left join 
     CONCEPT on CONCEPT.concept_id = ancestor_concept_id 
 where 
@@ -49,22 +45,16 @@ drop table if exists #drug_exposure_by_ingredient
 select
     ingredient_name
     ,ingredient_concept_id
-    ,DRUG_EXPOSURE.drug_concept_id
-    ,results.CURE_ID_Cohort.person_id
-    ,results.CURE_ID_Cohort.visit_occurrence_id
+    ,d.drug_concept_id
+    ,person_id
 into 
     #drug_exposure_by_ingredient
 from
-    results.CURE_ID_Cohort
+    Results.CURE_ID_Drug_Exposure d
 left join 
-    DRUG_EXPOSURE
+    #ingredients_of_interest i
     on
-        DRUG_EXPOSURE.person_id = results.CURE_ID_Cohort.person_id  AND
-        DRUG_EXPOSURE.visit_occurrence_id = results.CURE_ID_Cohort.visit_occurrence_id
-left join
-    #ingredients_of_interest
-    on
-        #ingredients_of_interest.drug_concept_id =DRUG_EXPOSURE.drug_concept_id
+        i.drug_concept_id = d.drug_concept_id
 
  
 
@@ -81,7 +71,6 @@ into #ingredient_use_by_person
 from
 (select distinct 
     person_id
-    ,visit_occurrence_id
     ,ingredient_concept_id
     ,ingredient_name
 from 
@@ -144,15 +133,12 @@ select 
     drug_source_value
     ,count(drug_source_value) as unmapped_drug_count
 FROM
-    results.CURE_ID_Cohort 
+    results.CURE_ID_Cohort coh
 left join 
-    DRUG_EXPOSURE on
-        DRUG_EXPOSURE.person_id = results.CURE_ID_Cohort.person_id  AND
-        DRUG_EXPOSURE.visit_occurrence_id = results.CURE_ID_Cohort.visit_occurrence_id
-    left join 
-        concept 
-    on
-        concept_id = drug_concept_id
+    DRUG_EXPOSURE de on
+        de.person_id = coh.person_id  AND
+        de.drug_exposure_start_date >= coh.visit_start_date AND
+        de.drug_exposure_start_date <= coh.visit_end_date
 where
     drug_concept_id = 0
 group by drug_source_value
