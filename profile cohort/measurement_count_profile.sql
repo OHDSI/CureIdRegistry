@@ -31,14 +31,13 @@ where
 DROP TABLE IF EXISTS #concept_person;
 select 
     person_id, 
-    visit_occurrence_id,
     concept_id,
     concept_name
 into #concept_person
 from 
     #measurement_concepts_of_interest 
-left join
-    results.CURE_ID_Cohort on 1=1
+cross join
+    results.CURE_ID_Cohort 
 
 --The measurement_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 --Because this count is left joined onto the #concept_person table, if no records for the patient of that concept are present, a record of 0 will be present
@@ -52,8 +51,8 @@ into #measurement_count_temp
 from 
     #concept_person 
 left join
-    measurement on measurement_concept_id = concept_id and 
-    measurement.visit_occurrence_id = #concept_person.visit_occurrence_id
+    Results.CURE_ID_Measurement m on measurement_concept_id = concept_id and 
+    m.person_id = #concept_person.person_id
 group by #concept_person.person_id, measurement_concept_id, concept_id, concept_name
 
 --This orders patients by how frequently the record occurs and does so for each individual concept
