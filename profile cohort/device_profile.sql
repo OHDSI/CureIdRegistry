@@ -1,19 +1,24 @@
 --Create table which includes the device concepts included in the cohort and their names
 DROP TABLE IF EXISTS #device_concepts_of_interest;
-select descendant_concept_id as concept_id, ancestor_concept_id, concept_name
+select 
+  descendant_concept_id as concept_id
+  ,ancestor_concept_id
+  ,concept_name
 into #device_concepts_of_interest
 from 
-CONCEPT_ancestor
-left join concept on
-concept.concept_id = CONCEPT_ancestor.descendant_concept_id
+  CONCEPT_ancestor
+left join 
+  concept 
+    on
+    concept.concept_id = CONCEPT_ancestor.descendant_concept_id
 where 
 --With descendants
 ancestor_concept_id in (4224038, 45768197, 4222966, 4281167)  
 union  (
-select concept_id, concept_id as ancestor_concept_id, concept_name
-from 
---No descendants
-concept where concept_id in (4138487, 4164918)
+  select concept_id, concept_id as ancestor_concept_id, concept_name
+  from 
+  --No descendants
+  concept where concept_id in (4138487, 4164918)
 ) 
 order by concept_name
 
@@ -22,25 +27,21 @@ order by concept_name
 DROP TABLE IF EXISTS #device_count_temp;
 select 
     coh.person_id
-    ,coh.visit_occurrence_id
     ,dci.concept_id as concept_id
     ,dci.concept_name
     ,count(case when d.device_concept_id is not null then 1 else NULL end) as concept_count
 into #device_count_temp
 from 
     Results.CURE_ID_Cohort coh
-left join
+cross join
     #device_concepts_of_interest dci
-on 1=1
 left join 
-    DEVICE_EXPOSURE d
+    Results.CURE_ID_Device_Exposure d
 on
     dci.concept_id = d.device_concept_id 
     and d.person_id = coh.person_id
-    and d.visit_occurrence_id = coh.visit_occurrence_id
 group by 
     coh.person_id
-    ,coh.visit_occurrence_id
     ,dci.concept_id
     ,dci.concept_name
 
@@ -49,22 +50,17 @@ drop table if exists #device_use_by_person
 select
     concept_name
     ,concept_id
-    ,count(distinct coh.person_id) as person_count    
-    ,(100 * count(distinct coh.person_id) / 
+    ,count(distinct d.person_id) as person_count    
+    ,(100 * count(distinct d.person_id) / 
         (select count(distinct person_id) from Results.CURE_ID_Cohort)
     ) as person_perc
 into #device_use_by_person
 from
     #device_concepts_of_interest dci
 left join
-    DEVICE_EXPOSURE d
+    Results.CURE_ID_Device_Exposure d
 on 
     d.device_concept_id = dci.concept_id
-left join
-    Results.CURE_ID_Cohort coh
-on 
-    coh.person_id = d.person_id and
-    coh.visit_occurrence_id = d.visit_occurrence_id
 group by
     concept_id,
     concept_name
