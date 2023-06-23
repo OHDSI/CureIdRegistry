@@ -55,14 +55,18 @@ select s.id as person_id
 	DATEPART(MONTH,DATEADD(DAY,s.date_shift, p.birth_datetime))
 	,1
 ) as birth_datetime 
-,race_concept_id, ethnicity_concept_id, 1 as location_id, 1 as provider_id, 1 as care_site_id 
-,person_source_value 
-,gender_source_value 
-,gender_source_concept_id 
-,race_source_value 
-,race_source_concept_id 
-,ethnicity_source_value 
-,ethnicity_source_concept_id 
+,race_concept_id
+,ethnicity_concept_id
+,1 as location_id
+,1 as provider_id
+,1 as care_site_id 
+,0 as person_source_value 
+,0 as gender_source_value 
+,0 as gender_source_concept_id 
+,0 as race_source_value 
+,0 as race_source_concept_id 
+,0 as ethnicity_source_value 
+,0 as ethnicity_source_concept_id 
 from [Your_source_db].Results.[CURE_ID_Person] p
 inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id
 ;
