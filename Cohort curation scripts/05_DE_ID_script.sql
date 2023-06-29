@@ -6,10 +6,8 @@
 --Step 5) Run the DE ID Quality Checks (Optional)
 
 /******* VARIABLES *******/
---SOURCE_DB: [Your_source_db]
 --SOURCE_SCHEMA: Results
---TARGET_DB: [Your_target_db]
---TARGET_SCHEMA: [deident]
+--TARGET_SCHEMA: [Results]
 DECLARE @START_DATE DATE = CAST('2016-01-01' AS DATE)
 DECLARE @END_DATE DATE = CAST('2029-12-31' AS DATE)
 
@@ -19,29 +17,29 @@ DECLARE @END_DATE DATE = CAST('2029-12-31' AS DATE)
 --Tables are dropped and created in a separate script.
 --Please run that script first.
 
-
+USE YOUR_DATABASE;
 
 
 /******* GENERATE MAP TABLES *******/
-insert into [Your_target_db].[deident].[source_id_person]
+insert into [Results].[source_id_person]
 select 
 person_id as sourceKey, 
 row_number() over(order by p.gender_concept_id, person_id desc) as id, 
 (FLOOR(RAND(convert(varbinary,newid()))*367))-183 as date_shift,
 CAST((DATEPART(YEAR,GETDATE()) - 90 - (FLOOR(RAND(convert(varbinary,newid()))*10))) AS INT) as over_89_birth_year --If a person is > 89, then assign them a random age between 90 - 99
-from [Your_source_db].Results.[CURE_ID_Person] p
+from [Results].[CURE_ID_Person] p
 ;
-insert into [Your_target_db].[deident].[source_id_visit] 
+insert into [Results].[source_id_visit] 
 select visit_occurrence_id as sourceKey, row_number() over(order by p.visit_occurrence_id) as new_id
-from [Your_source_db].Results.[CURE_ID_Visit_Occurrence] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
+from [Results].[CURE_ID_Visit_Occurrence] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id --Ask Ben about this self join?
 where v.new_id is null and (DATEADD(DAY, s.date_shift, visit_start_date) >= @START_DATE 
 and DATEADD(DAY, s.date_shift, visit_end_date) <= @END_DATE) order by p.person_id, p.visit_start_date
 ;
 
 /******* PERSON *******/
-insert into [Your_target_db].[deident].[CURE_ID_Person]
+insert into [Results].[deident_CURE_ID_Person]
 select s.id as person_id 
 ,gender_concept_id 
 ,CASE 
@@ -67,11 +65,11 @@ select s.id as person_id
 ,0 as race_source_concept_id 
 ,0 as ethnicity_source_value 
 ,0 as ethnicity_source_concept_id 
-from [Your_source_db].Results.[CURE_ID_Person] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id
+from [Results].[CURE_ID_Person] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id
 ;
 /******* VISIT *******/
-insert into [Your_target_db].[deident].[CURE_ID_Visit_Occurrence]
+insert into [Results].[deident_CURE_ID_Visit_Occurrence]
 select 
 v.new_id as visit_occurrence_id
 ,s.id as person_id
@@ -90,13 +88,13 @@ v.new_id as visit_occurrence_id
 ,discharge_to_concept_id
 ,discharge_to_source_value
 ,preceding_visit_occurrence_id
-from [Your_source_db].Results.[CURE_ID_Visit_Occurrence] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
+from [Results].[CURE_ID_Visit_Occurrence] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
 where (DATEADD(DAY, s.date_shift, visit_start_date) >= @START_DATE and DATEADD(DAY, s.date_shift, visit_end_date) <= @END_DATE) 
 ;
 /******* CONDITION OCCURENCE *******/
-insert into [Your_target_db].[deident].[CURE_ID_Condition_Occurrence]
+insert into [Results].[deident_CURE_ID_Condition_Occurrence]
 select condition_occurrence_id
 ,s.id as person_id
 ,condition_concept_id
@@ -113,14 +111,14 @@ select condition_occurrence_id
 ,condition_source_concept_id
 ,condition_status_source_value
 ,condition_status_concept_id
-from [Your_source_db].Results.[CURE_ID_Condition_Occurrence_Rare_Removed] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
+from [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, condition_start_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, condition_end_date) > @START_DATE)
 ;
 /******* PROCEDURE OCCURENCE *******/
-insert into [Your_target_db].[deident].[CURE_ID_Procedure_Occurrence]
+insert into [Results].[deident_CURE_ID_Procedure_Occurrence]
 SELECT procedure_occurrence_id
       ,s.id as person_id
       ,procedure_concept_id
@@ -135,15 +133,15 @@ SELECT procedure_occurrence_id
       ,procedure_source_value
       ,procedure_source_concept_id
       ,modifier_source_value
-from [Your_source_db].Results.[CURE_ID_Procedure_Occurrence] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
+from [Results].[CURE_ID_Procedure_Occurrence] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, procedure_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, procedure_date) > @START_DATE) 
 ;
 
 /******* DRUG EXPOSURE *******/
-insert into [Your_target_db].[deident].[CURE_ID_Drug_Exposure]
+insert into [Results].[deident_CURE_ID_Drug_Exposure]
 SELECT  drug_exposure_id
       ,s.id as person_id
       ,drug_concept_id
@@ -167,14 +165,14 @@ SELECT  drug_exposure_id
       ,drug_source_concept_id
       ,route_source_value
       ,dose_unit_source_value
-from [Your_source_db].Results.[CURE_ID_Drug_Exposure] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
+from [Results].[CURE_ID_Drug_Exposure] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, drug_exposure_start_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, drug_exposure_end_date) > @START_DATE)
 ;
 /******* OBSERVATION *******/
-insert into [Your_target_db].[deident].[CURE_ID_Observation]
+insert into [Results].[deident_CURE_ID_Observation]
 SELECT observation_id
       ,s.id as person_id
       ,observation_concept_id
@@ -193,14 +191,14 @@ SELECT observation_id
       ,observation_source_concept_id
       ,unit_source_value
       ,qualifier_source_value
-from [Your_source_db].Results.[CURE_ID_Observation] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
+from [Results].[CURE_ID_Observation] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, observation_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, observation_date) > @START_DATE) 
 ;
 /******* DEATH *******/
-insert into [Your_target_db].[deident].[CURE_ID_Death]
+insert into [Results].[deident_CURE_ID_Death]
 select s.id as person_id
       ,DATEADD(DAY, s.date_shift, death_date) as death_date
       ,DATEADD(DAY, s.date_shift, death_date) as death_datetime
@@ -208,11 +206,11 @@ select s.id as person_id
       ,cause_concept_id
       ,cause_source_value
       ,cause_source_concept_id
-from [Your_source_db].Results.[CURE_ID_Death] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
+from [Results].[CURE_ID_Death] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 ;
 /******* DEVICE EXPOSURE *******/
-insert into [Your_target_db].[deident].[CURE_ID_Device_Exposure]
+insert into [Results].[deident_CURE_ID_Device_Exposure]
 SELECT device_exposure_id
       ,s.id as person_id
       ,device_concept_id
@@ -228,15 +226,15 @@ SELECT device_exposure_id
       ,visit_detail_id
       ,device_source_value
       ,device_source_concept_id
-from [Your_source_db].Results.[CURE_ID_Device_Exposure] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
+from [Results].[CURE_ID_Device_Exposure] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, device_exposure_start_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, device_exposure_end_date) > @START_DATE)
 ;
 
 /******* MEASUREMENT *******/
-insert into [Your_target_db].[deident].[CURE_ID_Measurement]
+insert into [Results].[deident_CURE_ID_Measurement]
 select measurement_id
       ,s.id as person_id
       ,measurement_concept_id
@@ -257,9 +255,9 @@ select measurement_id
       ,measurement_source_concept_id
       ,unit_source_value
       ,value_source_value
-from [Your_source_db].Results.[CURE_ID_Measurement] p
-inner join [Your_target_db].[deident].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Your_target_db].[deident].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
+from [Results].[CURE_ID_Measurement] p
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, measurement_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, measurement_date) > @START_DATE) 
 ;

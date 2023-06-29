@@ -36,38 +36,38 @@ Authors:  Patrick Ryan, Christian Reich, Clair Blacketer
 *************************/
 
 
-USE JHM_OMOP_Test;
+USE YOUR_DATABASE; 
 
 /******* TABLE CLEANUP *******/
-DROP TABLE IF EXISTS [deident].[source_id_person];
-DROP TABLE IF EXISTS [deident].[source_id_visit];
-DROP TABLE IF EXISTS [deident].[condition_occurrence];
-DROP TABLE IF EXISTS [deident].[death];
-DROP TABLE IF EXISTS [deident].[drug_exposure];
-DROP TABLE IF EXISTS [deident].[device_exposure];
-DROP TABLE IF EXISTS [deident].[measurement];
-DROP TABLE IF EXISTS [deident].[observation];
-DROP TABLE IF EXISTS [deident].[person];
-DROP TABLE IF EXISTS [deident].[procedure_occurrence];
-DROP TABLE IF EXISTS [deident].[visit_occurrence];
+DROP TABLE IF EXISTS [Results].[source_id_person];
+DROP TABLE IF EXISTS [Results].[source_id_visit];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_condition_occurrence];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_death];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_drug_exposure];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_device_exposure];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_measurement];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_observation];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_person];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_procedure_occurrence];
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_visit_occurrence];
 
 
 /******* TABLE CREATION *******/
 
-create table [deident].[source_id_person]
+create table [Results].[source_id_person]
 (sourceKey int not null,
 id int not null,
 date_shift int,
 over_89_birth_year int)
 ;
 
-create table [deident].[source_id_visit]
+create table [Results].[source_id_visit]
 (sourceKey int not null,
 new_id int not null)
 ;
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.person
+CREATE TABLE Results.deident_CURE_ID_person
 (
   person_id						        INTEGER	  	NOT NULL ,
   gender_concept_id				    INTEGER	  	NOT NULL ,
@@ -92,7 +92,7 @@ CREATE TABLE deident.person
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.death
+CREATE TABLE Results.deident_CURE_ID_death
 (
   person_id							  INTEGER			NOT NULL ,
   death_date							DATE			  NOT NULL ,
@@ -106,7 +106,7 @@ CREATE TABLE deident.death
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.visit_occurrence
+CREATE TABLE Results.deident_CURE_ID_visit_occurrence
 (
   visit_occurrence_id			      INTEGER			NOT NULL ,
   person_id						          INTEGER			NOT NULL ,
@@ -130,7 +130,7 @@ CREATE TABLE deident.visit_occurrence
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.procedure_occurrence
+CREATE TABLE Results.deident_CURE_ID_procedure_occurrence
 (
   procedure_occurrence_id		  INTEGER			NOT NULL ,
   person_id						        INTEGER			NOT NULL ,
@@ -151,7 +151,7 @@ CREATE TABLE deident.procedure_occurrence
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.drug_exposure
+CREATE TABLE Results.deident_CURE_ID_drug_exposure
 (
   drug_exposure_id				      INTEGER			  NOT NULL ,
   person_id						          INTEGER			  NOT NULL ,
@@ -181,7 +181,7 @@ CREATE TABLE deident.drug_exposure
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.device_exposure
+CREATE TABLE Results.deident_CURE_ID_device_exposure
 (
   device_exposure_id			        INTEGER		  	NOT NULL ,
   person_id						            INTEGER			  NOT NULL ,
@@ -203,7 +203,7 @@ CREATE TABLE deident.device_exposure
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.condition_occurrence
+CREATE TABLE Results.deident_CURE_ID_condition_occurrence
 (
   condition_occurrence_id		    INTEGER			NOT NULL ,
   person_id						          INTEGER			NOT NULL ,
@@ -226,7 +226,7 @@ CREATE TABLE deident.condition_occurrence
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.measurement
+CREATE TABLE Results.deident_CURE_ID_measurement
 (
   measurement_id				        INTEGER			NOT NULL ,
   person_id						          INTEGER			NOT NULL ,
@@ -253,7 +253,7 @@ CREATE TABLE deident.measurement
 
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE deident.observation
+CREATE TABLE Results.deident_CURE_ID_observation
 (
   observation_id					      INTEGER			NOT NULL ,
   person_id						          INTEGER			NOT NULL ,

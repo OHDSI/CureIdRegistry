@@ -3,7 +3,7 @@
 -------------------------------------
 
  
-
+USE YOUR_DATABASE;
 
 ---Condition roll up
 drop table if exists #condition_rollup
