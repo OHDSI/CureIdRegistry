@@ -4,7 +4,7 @@ This script creates a cohort of covid-positive, hospitalized patients.
 Run this script first, then create your subsetted tables using the CURE_ID_All_Tables.sql script
 Will need to designate the name of your own OMOP database, and schema you want results to be loaded into.
 */
-USE [JHCrown_OMOP] --Change database name as appropriate
+USE YOUR_DATABASE; 
 
 --Drop all tables
 DROP TABLE IF EXISTS results.CURE_ID_Cohort; --Change schema as appropriate
