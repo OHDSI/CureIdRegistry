@@ -5,10 +5,12 @@
  
 USE YOUR_DATABASE;
 
+ DROP TABLE IF EXISTS Results.CURE_ID_Condition_Occurrence_Rare_Removed
+
 ---Condition roll up
 drop table if exists #condition_rollup
 select distinct
-    Results.CURE_ID_Cohort.person_id
+    person_id
     ,condition_concept_id as original_concept_id
     ,concept_name as ancestor_concept_name
     ,ancestor_concept_id
@@ -16,13 +18,10 @@ select distinct
 into 
     #condition_rollup
 from 
-    Results.CURE_ID_Cohort
-left join
-    CONDITION_OCCURRENCE on
-        CONDITION_OCCURRENCE.person_id = Results.CURE_ID_Cohort.person_id
+    Results.CURE_ID_Condition_Occurrence
 left join
     CONCEPT_ancestor on
-        descendant_concept_id = CONDITION_OCCURRENCE.condition_concept_id
+        descendant_concept_id = Results.CURE_ID_Condition_Occurrence.condition_concept_id
 left join 
     concept on concept.concept_id = CONCEPT_ancestor.ancestor_concept_id
 
@@ -54,12 +53,9 @@ select distinct
     ,condition_concept_id
     ,concept_name
 from
-    Results.CURE_ID_Cohort
-left join
-    CONDITION_OCCURRENCE on
-        CONDITION_OCCURRENCE.person_id = Results.CURE_ID_Cohort.person_id
+    Results.CURE_ID_Condition_Occurrence
 left join 
-    concept on concept.concept_id = CONDITION_OCCURRENCE.condition_concept_id 
+    concept on concept.concept_id = Results.CURE_ID_Condition_Occurrence.condition_concept_id 
 ) as x1
 group by condition_concept_id, concept_name
 
@@ -140,7 +136,8 @@ where
 
 drop table if exists #condition_rollup_morethan10_min_counts_and_levels_forced_unique
 select 
-    x1.original_concept_id
+    x1.person_id
+    ,x1.original_concept_id
     ,#original_condition_counts.original_concept_name
     ,#original_condition_counts.original_concept_count
     ,x1.revised_concept_id
@@ -167,9 +164,11 @@ SELECT c.condition_occurrence_id, c.person_id,rare.revised_concept_id as conditi
    condition_type_concept_id, c.condition_status_concept_id, c.stop_reason, c.provider_id, c.
    visit_occurrence_id, c.visit_detail_id, c.condition_source_value, c.condition_source_concept_id,
    c.condition_status_source_value
-   INTO results.CURE_ID_Condition_Occurrence_Rare_Removed
-   FROM results.CURE_ID_Condition_Occurrence c
-   INNER JOIN #condition_rollup_morethan10_min_counts_and_levels_forced_unique rare on c.condition_concept_id = rare.original_concept_id;
+   INTO Results.CURE_ID_Condition_Occurrence_Rare_Removed
+   FROM Results.CURE_ID_Condition_Occurrence c
+   INNER JOIN #condition_rollup_morethan10_min_counts_and_levels_forced_unique rare on 
+   c.condition_concept_id = rare.original_concept_id
+   and c.person_id = rare.person_id;
 
-   DROP TABLE IF EXISTS results.CURE_ID_Condition_Occurrence;
+   DROP TABLE IF EXISTS Results.CURE_ID_Condition_Occurrence;
 
