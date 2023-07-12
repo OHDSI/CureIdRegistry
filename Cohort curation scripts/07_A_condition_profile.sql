@@ -1,6 +1,9 @@
 ---------------------------
 --Profile conditions
 ---------------------------
+
+USE YOUR_DATABASE;
+
 ---Profile condition prevalence in cohort by individual low-level condition concept
 select 
     concept_name as condition_name
@@ -8,7 +11,7 @@ select 
     ,count(distinct c.person_id) as persons_with_condition
     ,100 * count(distinct c.person_id) / (select count(distinct person_id) from results.CURE_ID_Cohort) as percent_persons_with_condition
 from 
-    Results.CURE_ID_Condition_Occurrence c
+    [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] c
 left join 
     CONCEPT on concept.concept_id = c.condition_concept_id 
 group by
@@ -25,7 +28,7 @@ select 
     ,count(distinct c.person_id) as persons_with_condition
     ,100 * count(distinct c.person_id) / (select count(distinct person_id) from results.CURE_ID_Cohort) as percent_persons_with_condition
 from 
-   Results.CURE_ID_Condition_Occurrence c
+   [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] c
 left join
     CONCEPT_ancestor on
         descendant_concept_id = c.condition_concept_id
