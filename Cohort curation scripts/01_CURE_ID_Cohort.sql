@@ -7,7 +7,7 @@ Will need to designate the name of your own OMOP database, and schema you want r
 USE YOUR_DATABASE; 
 
 --Drop all tables
-DROP TABLE IF EXISTS results.CURE_ID_Cohort; --Change schema as appropriate
+DROP TABLE IF EXISTS [Results].[CURE_ID_Cohort]; --Change schema as appropriate
 DROP TABLE IF EXISTS #covid_lab_pos;
 DROP TABLE IF EXISTS #first_pos;
 DROP TABLE IF EXISTS #inpat_intermed;
@@ -211,4 +211,4 @@ Select count(distinct person_id) "Final_patient_count" from #Vis_Occ;
 
 --View data
 SELECT TOP 100 *
-FROM Results.CURE_ID_Cohort
+FROM [Results].[CURE_ID_Cohort]
