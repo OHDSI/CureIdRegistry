@@ -49,7 +49,7 @@ into 
     #original_condition_counts
 from (
 select distinct
-    Results.CURE_ID_Cohort.person_id
+    person_id
     ,condition_concept_id
     ,concept_name
 from
