@@ -81,12 +81,12 @@ v.new_id as visit_occurrence_id
 ,visit_type_concept_id
 ,1 as provider_id
 ,1 as care_site_id
-,visit_source_value
+,NULL as visit_source_value
 ,visit_source_concept_id
-,admitting_source_concept_id
-,admitting_source_value
-,discharge_to_concept_id
-,discharge_to_source_value
+,admitted_from_concept_id
+,NULL as admitted_from_source_value
+,discharged_to_concept_id
+,NULL as discharged_to_source_value
 ,preceding_visit_occurrence_id
 from [Results].[CURE_ID_Visit_Occurrence] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
