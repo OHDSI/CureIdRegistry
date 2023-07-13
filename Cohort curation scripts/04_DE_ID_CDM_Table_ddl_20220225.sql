@@ -120,10 +120,10 @@ CREATE TABLE Results.deident_CURE_ID_visit_occurrence
   care_site_id					        INTEGER			NULL,
   visit_source_value				    VARCHAR(50)	NULL,
   visit_source_concept_id		    INTEGER			NULL ,
-  admitting_source_concept_id	  INTEGER			NULL ,
-  admitting_source_value		    VARCHAR(50)	NULL ,
-  discharge_to_concept_id		    INTEGER   	NULL ,
-  discharge_to_source_value		  VARCHAR(50)	NULL ,
+  admitted_from_concept_id	  INTEGER			NULL ,
+  admitted_from_source_value		    VARCHAR(50)	NULL ,
+  discharged_to_concept_id		    INTEGER   	NULL ,
+  discharged_to_source_value		  VARCHAR(50)	NULL ,
   preceding_visit_occurrence_id	INTEGER			NULL
 )
 ;
