@@ -83,7 +83,7 @@ v.new_id as visit_occurrence_id
 ,1 as care_site_id
 ,NULL as visit_source_value
 ,visit_source_concept_id
-,admitted_from_source_concept_id
+,admitted_from_concept_id
 ,NULL as admitted_from_source_value
 ,discharged_to_concept_id
 ,NULL as discharged_to_source_value
