@@ -1,22 +1,35 @@
 --Create table which includes the measurement concepts included in the cohort and their names
 DROP TABLE IF EXISTS #measurement_parent_concepts_of_interest;
-select descendant_concept_id as concept_id, ancestor_concept_id, concept_name
+select 
+    descendant_concept_id as concept_id
+    ,ancestor_concept_id
+    ,concept_name
 into #measurement_parent_concepts_of_interest
 from 
-CONCEPT_ancestor
-left join concept on
-concept.concept_id = CONCEPT_ancestor.ancestor_concept_id
+    CONCEPT_ANCESTOR
+left join 
+    CONCEPT 
+on
+    CONCEPT.concept_id = CONCEPT_ANCESTOR.ancestor_concept_id
 where 
 --With descendants
-ancestor_concept_id in (3007220, 3045262, 40771922, 37032427, 3023091, 37070654, 3023361, 37051715, 3012888, 37063873, 
-3034022, 40653596, 40653762, 40652870, 40653238, 40653900, 40653085, 40652709, 40652525, 40653994, 37043992, 
-37041593, 37041261, 37042222, 40654069, 37070108, 40654088, 40654045, 36033639, 3020891, 4141684)  
+    ancestor_concept_id in 
+    (3007220, 3045262, 40771922, 37032427, 3023091, 37070654, 3023361, 37051715, 3012888, 37063873, 
+    3034022, 40653596, 40653762, 40652870, 40653238, 40653900, 40653085, 40652709, 40652525, 40653994, 37043992, 
+    37041593, 37041261, 37042222, 40654069, 37070108, 40654088, 40654045, 36033639, 3020891, 4141684)  
 union  (
-select concept_id, concept_id as ancestor_concept_id, concept_name
-from 
---No descendants
-concept where concept_id in (3013176, 3038553, 3024171, 3025315, 3036277, 3027018, 3004249, 3020460, 3046279, 3022893, 3013721, 3045524, 4353936, 3010834, 3027801, 3016502, 3026238, 3022217, 3034426, 3018677, 3006315, 3002385, 3000963, 3007461, 3024929, 40762499, 703443, 3005629)
-) 
+    select 
+        concept_id
+        ,concept_id as ancestor_concept_id
+        ,concept_name
+    from 
+    --No descendants
+        CONCEPT 
+        where concept_id in 
+        (3013176, 3038553, 3024171, 3025315, 3036277, 3027018, 3004249, 3020460, 3046279, 3022893, 3013721, 3045524,
+        4353936, 3010834, 3027801, 3016502, 3026238, 3022217, 3034426, 3018677, 3006315, 3002385, 3000963, 3007461,
+        3024929, 40762499, 703443, 3005629)
+    ) 
 order by concept_name
 
  
@@ -26,7 +39,7 @@ order by concept_name
 --If no records for the patient of that concept are present, a record of 0 will be present 
 DROP TABLE IF EXISTS #measurement_count_temp;
 select 
-    coh.person_id
+    p.person_id
     ,mpci.ancestor_concept_id as concept_id
     ,mpci.concept_name
     ,count(case when m.measurement_concept_id is not null then 1 else NULL end) as concept_count
@@ -34,14 +47,14 @@ into #measurement_count_temp
 from 
     #measurement_parent_concepts_of_interest mpci
 cross join
-    Results.CURE_ID_Cohort coh
+    [Results].[deident_CURE_ID_person] p
 left join
-    Results.CURE_ID_Measurement m 
+    [Results].[deident_CURE_ID_measurement] m 
 on
     mpci.concept_id = m.measurement_concept_id 
-    and m.person_id = coh.person_id
+    and m.person_id = p.person_id
 group by 
-    coh.person_id
+    p.person_id
     ,mpci.ancestor_concept_id
     ,mpci.concept_name
 
@@ -78,25 +91,25 @@ from
 full join 
     (select concept_id, concept_count as percentile_25
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.25 * (select count(person_id) from Results.CURE_ID_Cohort))
+        where rownumber = floor(0.25 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
     ) as p25
     on p25.concept_id = x1.concept_id
 full join 
     (select concept_id, concept_count as median
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.50 * (select count(person_id) from Results.CURE_ID_Cohort))
+        where rownumber = floor(0.50 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
     ) as p50
     on p50.concept_id =x1.concept_id
 full join 
     (select concept_id, concept_count as percentile_75
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.75 * (select count(person_id) from Results.CURE_ID_Cohort))
+        where rownumber = floor(0.75 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
     ) as p75
     on p75.concept_id = x1.concept_id
 full join 
     (select concept_id, concept_count as percentile_95
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.95 * (select count(person_id) from Results.CURE_ID_Cohort))
+        where rownumber = floor(0.95 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
     ) as p95
     on p95.concept_id =x1.concept_id
 order by median desc, 
