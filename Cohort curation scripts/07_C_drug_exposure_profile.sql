@@ -11,9 +11,9 @@ select distinct
 into 
     #drug_concepts_of_interest
 FROM
-    results.CURE_ID_Drug_Exposure
+     [Results].[deident_CURE_ID_drug_exposure]
     left join 
-        concept 
+        CONCEPT 
     on
         concept_id = drug_concept_id
 
@@ -31,7 +31,7 @@ into 
 from 
     #drug_concepts_of_interest dci
 left join
-    CONCEPT_ancestor on
+    CONCEPT_ANCESTOR on
         descendant_concept_id = dci.concept_id
 left join 
     CONCEPT on CONCEPT.concept_id = ancestor_concept_id 
@@ -50,7 +50,7 @@ select
 into 
     #drug_exposure_by_ingredient
 from
-    Results.CURE_ID_Drug_Exposure d
+    [Results].[deident_CURE_ID_drug_exposure] d
 left join 
     #ingredients_of_interest i
     on
@@ -69,12 +69,12 @@ select
     ) as person_perc
 into #ingredient_use_by_person
 from
-(select distinct 
-    person_id
-    ,ingredient_concept_id
-    ,ingredient_name
-from 
-    #drug_exposure_by_ingredient) as x1
+        (select distinct 
+            person_id
+            ,ingredient_concept_id
+            ,ingredient_name
+        from 
+            #drug_exposure_by_ingredient) as x1
 group by 
     ingredient_concept_id
     ,ingredient_name
@@ -124,24 +124,3 @@ left join
 on
     #ingredient_use_by_person.ingredient_concept_id = #ingredient_count_by_person.ingredient_concept_id
 order by person_count desc
-
- 
-
---Review source values for unmapped drugs identified as those that have a drug_concept_id of 0 that occur more than 20 times in the dataset
-select * from (
-select 
-    drug_source_value
-    ,count(drug_source_value) as unmapped_drug_count
-FROM
-    results.CURE_ID_Cohort coh
-left join 
-    DRUG_EXPOSURE de on
-        de.person_id = coh.person_id  AND
-        de.drug_exposure_start_date >= coh.visit_start_date AND
-        de.drug_exposure_start_date <= coh.visit_end_date
-where
-    drug_concept_id = 0
-group by drug_source_value
-) as x1
-where unmapped_drug_count >20
-order by unmapped_drug_count desc
