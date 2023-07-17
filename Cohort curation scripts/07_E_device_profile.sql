@@ -6,11 +6,11 @@ select
   ,concept_name
 into #device_concepts_of_interest
 from 
-  CONCEPT_ancestor
+  CONCEPT_ANCESTOR
 left join 
-  concept 
+  CONCEPT 
     on
-    concept.concept_id = CONCEPT_ancestor.descendant_concept_id
+    CONCEPT.concept_id = CONCEPT_ANCESTOR.descendant_concept_id
 where 
 --With descendants
 ancestor_concept_id in (4224038, 45768197, 4222966, 4281167)  
@@ -26,39 +26,39 @@ order by concept_name
 --The #device_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 DROP TABLE IF EXISTS #device_count_temp;
 select 
-    coh.person_id
+    p.person_id
     ,dci.concept_id as concept_id
     ,dci.concept_name
     ,count(case when d.device_concept_id is not null then 1 else NULL end) as concept_count
 into #device_count_temp
 from 
-    Results.CURE_ID_Cohort coh
+    [Results].[deident_CURE_ID_person] p
 cross join
     #device_concepts_of_interest dci
 left join 
-    Results.CURE_ID_Device_Exposure d
+    [Results].[deident_CURE_ID_device_exposure] d
 on
     dci.concept_id = d.device_concept_id 
-    and d.person_id = coh.person_id
+    and d.person_id = p.person_id
 group by 
-    coh.person_id
+    p.person_id
     ,dci.concept_id
     ,dci.concept_name
 
 --Device use by person
-drop table if exists #device_use_by_person
+DROP TABLE IF EXISTS #device_use_by_person
 select
     concept_name
     ,concept_id
     ,count(distinct d.person_id) as person_count    
     ,(100 * count(distinct d.person_id) / 
-        (select count(distinct person_id) from Results.CURE_ID_Cohort)
+        (select count(distinct person_id) from [Results].[deident_CURE_ID_person])
     ) as person_perc
 into #device_use_by_person
 from
     #device_concepts_of_interest dci
 left join
-    Results.CURE_ID_Device_Exposure d
+    [Results].[deident_CURE_ID_device_exposure] d
 on 
     d.device_concept_id = dci.concept_id
 group by
@@ -67,7 +67,7 @@ group by
 order by person_count desc
 
 
-drop table if exists #device_count_by_person
+DROP TABLE IF EXISTS #device_count_by_person
 select
     concept_name
     ,concept_id
