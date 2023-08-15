@@ -37,10 +37,11 @@ from 
 left join
     CONCEPT_ANCESTOR on
         descendant_concept_id = c.condition_concept_id
-left join 
-    concept on concept.concept_id = CONCEPT_ANCESTOR.ancestor_concept_id 
-where
-    ancestor_concept_id IN (317009, 4299535, 439727, 201820, 255573, 4063381, 316866, 4028244, 438112)
+INNER JOIN [Results].[cure_id_concepts]
+	on ancestor_concept_id = concept_id
+where 
+	domain  = 'Condition' 
+	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
 group by
     ancestor_concept_id 
     ,concept_name
