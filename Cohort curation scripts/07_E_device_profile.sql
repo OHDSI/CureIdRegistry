@@ -10,7 +10,7 @@ from 
 INNER JOIN [Results].[cure_id_concepts]
 	on ancestor_concept_id = concept_id
 where 
-	domain  = 'Measurement' 
+	domain  = 'Device' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
 order by concept_name
 
