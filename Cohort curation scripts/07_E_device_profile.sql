@@ -7,19 +7,11 @@ select
 into #device_concepts_of_interest
 from 
   CONCEPT_ANCESTOR
-left join 
-  CONCEPT 
-    on
-    CONCEPT.concept_id = CONCEPT_ANCESTOR.descendant_concept_id
-where 
---With descendants
-ancestor_concept_id in (4224038, 45768197, 4222966, 4281167)  
-union  (
-  select concept_id, concept_id as ancestor_concept_id, concept_name
-  from 
-  --No descendants
-  concept where concept_id in (4138487, 4164918)
-) 
+INNER JOIN [Results].[cure_id_concepts]
+	on ancestor_concept_id = concept_id
+where 
+	domain  = 'Measurement' 
+	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
 order by concept_name
 
 
