@@ -3,16 +3,19 @@ DROP TABLE IF EXISTS #device_concepts_of_interest;
 select 
   descendant_concept_id as concept_id
   ,ancestor_concept_id
-  ,concept_name
+  ,CONCEPT.concept_name
 into #device_concepts_of_interest
 from 
   CONCEPT_ANCESTOR
 INNER JOIN [Results].[cure_id_concepts]
 	on ancestor_concept_id = concept_id
+INNER JOIN
+	CONCEPT
+	on CONCEPT.concept_id =  descendant_concept_id
 where 
 	domain  = 'Device' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-order by concept_name
+order by CONCEPT.concept_name
 
 
 --The #device_count_temp table counts the number of times that each concept is present for each patient in the cohort.
