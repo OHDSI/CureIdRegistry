@@ -7,29 +7,11 @@ select
 into #measurement_parent_concepts_of_interest
 from 
     CONCEPT_ANCESTOR
-left join 
-    CONCEPT 
-on
-    CONCEPT.concept_id = CONCEPT_ANCESTOR.ancestor_concept_id
-where 
---With descendants
-    ancestor_concept_id in 
-    (3007220, 3045262, 40771922, 37032427, 3023091, 37070654, 3023361, 37051715, 3012888, 37063873, 
-    3034022, 40653596, 40653762, 40652870, 40653238, 40653900, 40653085, 40652709, 40652525, 40653994, 37043992, 
-    37041593, 37041261, 37042222, 40654069, 37070108, 40654088, 40654045, 36033639, 3020891, 4141684)  
-union  (
-    select 
-        concept_id
-        ,concept_id as ancestor_concept_id
-        ,concept_name
-    from 
-    --No descendants
-        CONCEPT 
-        where concept_id in 
-        (3013176, 3038553, 3024171, 3025315, 3036277, 3027018, 3004249, 3020460, 3046279, 3022893, 3013721, 3045524,
-        4353936, 3010834, 3027801, 3016502, 3026238, 3022217, 3034426, 3018677, 3006315, 3002385, 3000963, 3007461,
-        3024929, 40762499, 703443, 3005629)
-    ) 
+INNER JOIN [Results].[cure_id_concepts]
+	on ancestor_concept_id = concept_id
+where 
+	domain  = 'Measurement' 
+	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
 order by concept_name
 
  
