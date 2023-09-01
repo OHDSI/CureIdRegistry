@@ -6,8 +6,6 @@ This Github repository is the migrated documentation from the FDA Cure ID projec
 
 The cohort is comprised of the anonymized person_id, birthdate, and first date of a positive COVID test from the OMOP CDM. 
 
-## NOTICE: It is currently rather difficult to make edits directly to the repo. We are working on streamlining the process of approving users to the organization, so that they may make pull requests/direct edits.
-
 --------------------------------------------------------------------------------------------------
 
 ## Explanation of the Curation Script Files:
