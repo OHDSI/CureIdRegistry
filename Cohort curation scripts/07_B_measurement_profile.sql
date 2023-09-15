@@ -5,28 +5,14 @@ select
     ,ancestor_concept_id
     ,concept_name
 into #measurement_parent_concepts_of_interest
-from 
-    CONCEPT_ANCESTOR
-INNER JOIN [Results].[cure_id_concepts]
-	on ancestor_concept_id = concept_id
+from [Results.[cure_id_concepts]
+INNER JOIN CONCEPT_ANCESTOR 
+	ON ancestor_concept_id =concept_id
 where 
---With descendants
-	domain  = 'Measurement'  
-union  (
-    select 
-        concept_id
-        ,concept_id as ancestor_concept_id
-        ,concept_name
-    from 
---No descendants
-	[Results].[cure_id_concepts] 
-	where 
-domain  = 'Measurement' 
-and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-    ) 
+	domain  = 'Measurement' 
+	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
 order by concept_name
 
- 
 
 --The measurement_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 --It is rolled up into ancestor concepts grouped as above
