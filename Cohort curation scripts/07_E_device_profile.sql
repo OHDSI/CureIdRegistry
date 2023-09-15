@@ -5,22 +5,12 @@ select
   ,ancestor_concept_id
   ,concept_name
 into #device_concepts_of_interest
-from 
-  CONCEPT_ANCESTOR
-left join 
-  [Results].[cure_id_concepts] 
-    on
-    cure_id_concepts.concept_id = CONCEPT_ANCESTOR.descendant_concept_id
-where 
---With descendants
-domain  = 'Device' 
-union  (
-  select concept_id, concept_id as ancestor_concept_id, concept_name
-  from 
-  --No descendants
-  domain  = 'Device' 
+from  [Results].[cure_id_concepts]
+INNER JOIN CONCEPT_ANCESTOR 
+	ON ancestor_concept_id =concept_id
+where 
+	domain  = 'Device' 
   and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-)  
 order by concept_name
 
 
