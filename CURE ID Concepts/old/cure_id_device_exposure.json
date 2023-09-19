@@ -1,0 +1,72 @@
+{
+  "items": [
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Physical Object",
+        "CONCEPT_CODE": "336623009",
+        "CONCEPT_ID": 4224038,
+        "CONCEPT_NAME": "Oxygen nasal cannula",
+        "DOMAIN_ID": "Device",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Physical Object",
+        "CONCEPT_CODE": "706172005",
+        "CONCEPT_ID": 45768197,
+        "CONCEPT_NAME": "Ventilator",
+        "DOMAIN_ID": "Device",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Physical Object",
+        "CONCEPT_CODE": "336602003",
+        "CONCEPT_ID": 4222966,
+        "CONCEPT_NAME": "Oxygen mask",
+        "DOMAIN_ID": "Device",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Physical Object",
+        "CONCEPT_CODE": "426294006",
+        "CONCEPT_ID": 4138487,
+        "CONCEPT_NAME": "Face tent oxygen delivery device",
+        "DOMAIN_ID": "Device",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    }
+  ]
+}
