@@ -5,6 +5,7 @@ select
     ,ancestor_concept_id
     ,concept_name
 into #measurement_parent_concepts_of_interest
+
 from [Results].[cure_id_concepts]
 INNER JOIN CONCEPT_ANCESTOR 
 	ON ancestor_concept_id =concept_id

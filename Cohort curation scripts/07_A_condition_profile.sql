@@ -37,6 +37,7 @@ from 
 left join
     CONCEPT_ANCESTOR on
         descendant_concept_id = c.condition_concept_id
+
 INNER JOIN [Results].[cure_id_concepts]
 	on ancestor_concept_id = concept_id
 where 
