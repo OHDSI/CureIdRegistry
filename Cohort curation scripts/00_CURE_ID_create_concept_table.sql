@@ -25,6 +25,8 @@ values
 ('4222966','336602003','Oxygen mask','Device','SNOMED','S','TRUE'),
 ('4224038','336623009','Oxygen nasal cannula','Device','SNOMED','S','TRUE'),
 ('45768197','706172005','Ventilator','Device','SNOMED','S','TRUE'),
+('40493026','449071006','Mechanical ventilator','Device','SNOMED','S','TRUE'),	
+('4138916','426160001','Oxygen ventilator','Device','SNOMED','S','TRUE'),	
 ('4138487','426294006','Face tent oxygen delivery device','Device','SNOMED','S','FALSE'),
 ('4164918','45633005','Peritoneal dialyzer','Device','SNOMED','S','FALSE'),
 ('21600280','C01CA','Adrenergic and dopaminergic agents','Drug','ATC','C','TRUE'),
