@@ -66,7 +66,22 @@ select 
     percentile_25, 
     median,
     percentile_75,
-    percentile_95
+    percentile_95,
+	CASE 
+	WHEN median = 0 
+		THEN 'For half of patients, there were no records of this measurement. 5% of patients had ' + 
+		CAST(percentile_95 AS VARCHAR(10)) + 
+		' or more records.'
+	ELSE 
+		'For half of patients, there were at least ' + 
+		CAST(median AS VARCHAR(10)) + 
+		' records. Most patients (25th-75th percentile) had '  +
+		CAST(percentile_25 AS VARCHAR(10)) + '-' + 
+		CAST(percentile_75 AS VARCHAR(10)) + 
+		' records. 5% of patients had ' + 
+		CAST(percentile_95 AS VARCHAR(10)) + 
+		' or more records.'
+   END AS interpretation
 from
     (select distinct ancestor_concept_id as concept_id, concept_name from #measurement_parent_concepts_of_interest) x1
 full join 
