@@ -2,405 +2,6 @@
   "items": [
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Procedure",
-        "CONCEPT_CODE": "714749008",
-        "CONCEPT_ID": 37018292,
-        "CONCEPT_NAME": "Continuous renal replacement therapy",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2016-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Staging / Scales",
-        "CONCEPT_CODE": "1300671000000104",
-        "CONCEPT_ID": 703443,
-        "CONCEPT_NAME": "COVID-19 severity scale",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2020-03-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "52448006",
-        "CONCEPT_ID": 4182210,
-        "CONCEPT_NAME": "Dementia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "67406007",
-        "CONCEPT_ID": 436093,
-        "CONCEPT_NAME": "Disseminated intravascular coagulation",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Ingredient",
-        "CONCEPT_CODE": "3616",
-        "CONCEPT_ID": 1337720,
-        "CONCEPT_NAME": "dobutamine",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Procedure",
-        "CONCEPT_CODE": "28690001000004105",
-        "CONCEPT_ID": 3171077,
-        "CONCEPT_NAME": "Emergent dialysis",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "Nebraska Lexicon",
-        "VALID_START_DATE": "2016-01-27",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "56819008",
-        "CONCEPT_ID": 441589,
-        "CONCEPT_NAME": "Endocarditis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Ingredient",
-        "CONCEPT_CODE": "3992",
-        "CONCEPT_ID": 1343916,
-        "CONCEPT_NAME": "epinephrine",
-        "DOMAIN_ID": "Drug",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "RxNorm",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Lab Test",
-        "CONCEPT_CODE": "30385-9",
-        "CONCEPT_ID": 3002385,
-        "CONCEPT_NAME": "Erythrocyte distribution width [Ratio]",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Physical Object",
-        "CONCEPT_CODE": "426294006",
-        "CONCEPT_ID": 4138487,
-        "CONCEPT_NAME": "Face tent oxygen delivery device",
-        "DOMAIN_ID": "Device",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2007-07-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Gender",
-        "CONCEPT_CODE": "F",
-        "CONCEPT_ID": 8532,
-        "CONCEPT_NAME": "FEMALE",
-        "DOMAIN_ID": "Gender",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "Gender",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP260072-6",
-        "CONCEPT_ID": 36205488,
-        "CONCEPT_NAME": "Galactomannan | Bronchoalveolar lavage",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "D",
-        "INVALID_REASON_CAPTION": "Invalid",
-        "STANDARD_CONCEPT": "N",
-        "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2019-12-11"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP376244-2",
-        "CONCEPT_ID": 37033649,
-        "CONCEPT_NAME": "Galactomannan Ag | Serum or Plasma | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "74474003",
-        "CONCEPT_ID": 192671,
-        "CONCEPT_NAME": "Gastrointestinal hemorrhage",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Observation",
-        "CONCEPT_CODE": "8867-4",
-        "CONCEPT_ID": 3027018,
-        "CONCEPT_NAME": "Heart rate",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Procedure",
-        "CONCEPT_CODE": "870533002",
-        "CONCEPT_ID": 3655950,
-        "CONCEPT_NAME": "Heated and humidified high flow oxygen therapy",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2020-07-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Procedure",
-        "CONCEPT_CODE": "302497006",
-        "CONCEPT_ID": 4120120,
-        "CONCEPT_NAME": "Hemodialysis",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "CPT4",
-        "CONCEPT_CODE": "90937",
-        "CONCEPT_ID": 2213573,
-        "CONCEPT_NAME": "Hemodialysis procedure requiring repeated evaluation(s) with or without substantial revision of dialysis prescription",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "CPT4",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "CPT4",
-        "CONCEPT_CODE": "90935",
-        "CONCEPT_ID": 2213572,
-        "CONCEPT_NAME": "Hemodialysis procedure with single evaluation by a physician or other qualified health care professional",
-        "DOMAIN_ID": "Procedure",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "CPT4",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Lab Test",
-        "CONCEPT_CODE": "718-7",
-        "CONCEPT_ID": 3000963,
-        "CONCEPT_NAME": "Hemoglobin [Mass/volume] in Blood",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP380002-8",
-        "CONCEPT_ID": 37024723,
-        "CONCEPT_NAME": "Herpes virus 6 DNA panel | XXX | Microbiology Panels",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "ATC 4th",
         "CONCEPT_CODE": "C01CA",
         "CONCEPT_ID": 21600280,
@@ -1484,139 +1085,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "205614001",
-        "CONCEPT_ID": 40401938,
-        "CONCEPT_NAME": "(Down's syndrome - trisomy 21) or (mongolism) or (trisomy 21) or (trisomy 22)",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "U",
-        "INVALID_REASON_CAPTION": "Invalid",
-        "STANDARD_CONCEPT": "N",
-        "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2022-01-26"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP379721-6",
-        "CONCEPT_ID": 37075814,
-        "CONCEPT_NAME": "1,3 beta glucan | Serum | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "651000119108",
-        "CONCEPT_ID": 43531681,
-        "CONCEPT_NAME": "Acute deep vein thrombosis of lower limb",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2013-07-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "14669001",
-        "CONCEPT_ID": 197320,
-        "CONCEPT_NAME": "Acute renal failure syndrome",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "67782005",
-        "CONCEPT_ID": 4195694,
-        "CONCEPT_NAME": "Acute respiratory distress syndrome",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP377083-3",
-        "CONCEPT_ID": 37050195,
-        "CONCEPT_NAME": "Adenovirus DNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP382722-9",
-        "CONCEPT_ID": 37049794,
-        "CONCEPT_NAME": "Alkaline phosphatase | Serum or Plasma | Chemistry - non-challenge",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Gender",
         "CONCEPT_CODE": "A",
         "CONCEPT_ID": 8570,
@@ -1746,63 +1214,6 @@
       },
       "isExcluded": false,
       "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "35919005",
-        "CONCEPT_ID": 439776,
-        "CONCEPT_NAME": "Autism spectrum disorder",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "5758002",
-        "CONCEPT_ID": 132736,
-        "CONCEPT_NAME": "Bacteremia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "53084003",
-        "CONCEPT_ID": 257315,
-        "CONCEPT_NAME": "Bacterial pneumonia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
       "includeMapped": false
     },
     {
@@ -1940,56 +1351,18 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "410429000",
-        "CONCEPT_ID": 321042,
-        "CONCEPT_NAME": "Cardiac arrest",
-        "DOMAIN_ID": "Condition",
+        "CONCEPT_CLASS_ID": "Procedure",
+        "CONCEPT_CODE": "714749008",
+        "CONCEPT_ID": 37018292,
+        "CONCEPT_NAME": "Continuous renal replacement therapy",
+        "DOMAIN_ID": "Procedure",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
         "STANDARD_CONCEPT": "S",
         "STANDARD_CONCEPT_CAPTION": "Standard",
         "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2004-07-30",
+        "VALID_START_DATE": "2016-01-30",
         "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "698247007",
-        "CONCEPT_ID": 44784217,
-        "CONCEPT_NAME": "Cardiac arrhythmia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2014-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP43012-1",
-        "CONCEPT_ID": 40773382,
-        "CONCEPT_NAME": "Coccidioides immitis IgG | Bld-Ser-Plas",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "D",
-        "INVALID_REASON_CAPTION": "Invalid",
-        "STANDARD_CONCEPT": "N",
-        "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2019-12-11"
       },
       "isExcluded": false,
       "includeDescendants": false,
@@ -1997,18 +1370,18 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP43013-9",
-        "CONCEPT_ID": 40796545,
-        "CONCEPT_NAME": "Coccidioides immitis IgM | Bld-Ser-Plas",
+        "CONCEPT_CLASS_ID": "Staging / Scales",
+        "CONCEPT_CODE": "1300671000000104",
+        "CONCEPT_ID": 703443,
+        "CONCEPT_NAME": "COVID-19 severity scale",
         "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "D",
-        "INVALID_REASON_CAPTION": "Invalid",
-        "STANDARD_CONCEPT": "N",
-        "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2019-12-11"
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED",
+        "VALID_START_DATE": "2020-03-31",
+        "VALID_END_DATE": "2099-12-30"
       },
       "isExcluded": false,
       "includeDescendants": false,
@@ -2016,11 +1389,163 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "42343007",
-        "CONCEPT_ID": 319835,
-        "CONCEPT_NAME": "Congestive heart failure",
-        "DOMAIN_ID": "Condition",
+        "CONCEPT_CLASS_ID": "Ingredient",
+        "CONCEPT_CODE": "3616",
+        "CONCEPT_ID": 1337720,
+        "CONCEPT_NAME": "dobutamine",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Procedure",
+        "CONCEPT_CODE": "28690001000004105",
+        "CONCEPT_ID": 3171077,
+        "CONCEPT_NAME": "Emergent dialysis",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "Nebraska Lexicon",
+        "VALID_START_DATE": "2016-01-27",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Ingredient",
+        "CONCEPT_CODE": "3992",
+        "CONCEPT_ID": 1343916,
+        "CONCEPT_NAME": "epinephrine",
+        "DOMAIN_ID": "Drug",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "RxNorm",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Lab Test",
+        "CONCEPT_CODE": "30385-9",
+        "CONCEPT_ID": 3002385,
+        "CONCEPT_NAME": "Erythrocyte distribution width [Ratio]",
+        "DOMAIN_ID": "Measurement",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "LOINC",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Physical Object",
+        "CONCEPT_CODE": "426294006",
+        "CONCEPT_ID": 4138487,
+        "CONCEPT_NAME": "Face tent oxygen delivery device",
+        "DOMAIN_ID": "Device",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED",
+        "VALID_START_DATE": "2007-07-30",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Gender",
+        "CONCEPT_CODE": "F",
+        "CONCEPT_ID": 8532,
+        "CONCEPT_NAME": "FEMALE",
+        "DOMAIN_ID": "Gender",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "Gender",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Clinical Observation",
+        "CONCEPT_CODE": "8867-4",
+        "CONCEPT_ID": 3027018,
+        "CONCEPT_NAME": "Heart rate",
+        "DOMAIN_ID": "Measurement",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "LOINC",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Procedure",
+        "CONCEPT_CODE": "870533002",
+        "CONCEPT_ID": 3655950,
+        "CONCEPT_NAME": "Heated and humidified high flow oxygen therapy",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "SNOMED",
+        "VALID_START_DATE": "2020-07-30",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Procedure",
+        "CONCEPT_CODE": "302497006",
+        "CONCEPT_ID": 4120120,
+        "CONCEPT_NAME": "Hemodialysis",
+        "DOMAIN_ID": "Procedure",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
         "STANDARD_CONCEPT": "S",
@@ -2030,7 +1555,64 @@
         "VALID_END_DATE": "2099-12-30"
       },
       "isExcluded": false,
-      "includeDescendants": true,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "CPT4",
+        "CONCEPT_CODE": "90937",
+        "CONCEPT_ID": 2213573,
+        "CONCEPT_NAME": "Hemodialysis procedure requiring repeated evaluation(s) with or without substantial revision of dialysis prescription",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "CPT4",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "CPT4",
+        "CONCEPT_CODE": "90935",
+        "CONCEPT_ID": 2213572,
+        "CONCEPT_NAME": "Hemodialysis procedure with single evaluation by a physician or other qualified health care professional",
+        "DOMAIN_ID": "Procedure",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "CPT4",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "Lab Test",
+        "CONCEPT_CODE": "718-7",
+        "CONCEPT_ID": 3000963,
+        "CONCEPT_NAME": "Hemoglobin [Mass/volume] in Blood",
+        "DOMAIN_ID": "Measurement",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "S",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "VOCABULARY_ID": "LOINC",
+        "VALID_START_DATE": "1969-12-31",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": false,
       "includeMapped": false
     },
     {
@@ -2073,82 +1655,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP256485-6",
-        "CONCEPT_ID": 36207253,
-        "CONCEPT_NAME": "Histoplasma capsulatum | Urine",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "D",
-        "INVALID_REASON_CAPTION": "Invalid",
-        "STANDARD_CONCEPT": "N",
-        "STANDARD_CONCEPT_CAPTION": "Non-Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2019-12-11"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP376381-2",
-        "CONCEPT_ID": 37069484,
-        "CONCEPT_NAME": "Histoplasma capsulatum Ag | Serum | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP377195-5",
-        "CONCEPT_ID": 37025945,
-        "CONCEPT_NAME": "Human coronavirus RNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP378241-6",
-        "CONCEPT_ID": 37068812,
-        "CONCEPT_NAME": "Human metapneumovirus RNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Procedure",
         "CONCEPT_CODE": "304577004",
         "CONCEPT_ID": 4119964,
@@ -2160,44 +1666,6 @@
         "STANDARD_CONCEPT_CAPTION": "Standard",
         "VOCABULARY_ID": "SNOMED",
         "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP378502-1",
-        "CONCEPT_ID": 37050664,
-        "CONCEPT_NAME": "Influenza virus A RNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP378559-1",
-        "CONCEPT_ID": 37024394,
-        "CONCEPT_NAME": "Influenza virus B RNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
         "VALID_END_DATE": "2099-12-30"
       },
       "isExcluded": false,
@@ -2297,63 +1765,6 @@
       },
       "isExcluded": false,
       "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "7180009",
-        "CONCEPT_ID": 435785,
-        "CONCEPT_NAME": "Meningitis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "22298006",
-        "CONCEPT_ID": 4329847,
-        "CONCEPT_NAME": "Myocardial infarction",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "50920009",
-        "CONCEPT_ID": 314383,
-        "CONCEPT_NAME": "Myocarditis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
       "includeMapped": false
     },
     {
@@ -2624,25 +2035,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Lab Test",
-        "CONCEPT_CODE": "29908-1",
-        "CONCEPT_ID": 3025634,
-        "CONCEPT_NAME": "Parainfluenza virus 1 RNA [Presence] in Specimen by NAA with probe detection",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Procedure",
         "CONCEPT_CODE": "71192002",
         "CONCEPT_ID": 4324124,
@@ -2757,44 +2149,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "60046008",
-        "CONCEPT_ID": 254061,
-        "CONCEPT_NAME": "Pleural effusion",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "36118008",
-        "CONCEPT_ID": 253796,
-        "CONCEPT_NAME": "Pneumothorax",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Lab Test",
         "CONCEPT_CODE": "33959-8",
         "CONCEPT_ID": 3046279,
@@ -2829,25 +2183,6 @@
       },
       "isExcluded": false,
       "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "59282003",
-        "CONCEPT_ID": 440417,
-        "CONCEPT_NAME": "Pulmonary embolism",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
       "includeMapped": false
     },
     {
@@ -2890,82 +2225,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP378960-1",
-        "CONCEPT_ID": 37065137,
-        "CONCEPT_NAME": "Respiratory syncytial virus RNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
-        "CONCEPT_CODE": "LP378971-8",
-        "CONCEPT_ID": 37055446,
-        "CONCEPT_NAME": "Rhinovirus RNA | XXX | Microbiology",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "C",
-        "STANDARD_CONCEPT_CAPTION": "Classification",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "91175000",
-        "CONCEPT_ID": 377091,
-        "CONCEPT_NAME": "Seizure",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "1131000119105",
-        "CONCEPT_ID": 43530623,
-        "CONCEPT_NAME": "Sequela of cerebrovascular accident",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2012-08-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Clinical Observation",
         "CONCEPT_CODE": "8480-6",
         "CONCEPT_ID": 3004249,
@@ -2981,25 +2240,6 @@
       },
       "isExcluded": false,
       "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "66071002",
-        "CONCEPT_ID": 4281232,
-        "CONCEPT_NAME": "Type B viral hepatitis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
       "includeMapped": false
     },
     {
@@ -3042,44 +2282,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "50711007",
-        "CONCEPT_ID": 197494,
-        "CONCEPT_NAME": "Viral hepatitis C",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "75570004",
-        "CONCEPT_ID": 261326,
-        "CONCEPT_NAME": "Viral pneumonia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Race",
         "CONCEPT_CODE": "5",
         "CONCEPT_ID": 8527,
@@ -3099,549 +2301,17 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "62914000",
-        "CONCEPT_ID": 381591,
-        "CONCEPT_NAME": "Cerebrovascular disease",
-        "DOMAIN_ID": "Condition",
+        "CONCEPT_CLASS_ID": "Physical Object",
+        "CONCEPT_CODE": "449071006",
+        "CONCEPT_ID": 40493026,
+        "CONCEPT_NAME": "Mechanical ventilator",
+        "DOMAIN_ID": "Device",
         "INVALID_REASON": "V",
         "INVALID_REASON_CAPTION": "Valid",
         "STANDARD_CONCEPT": "S",
         "STANDARD_CONCEPT_CAPTION": "Standard",
         "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "17097001",
-        "CONCEPT_ID": 4063381,
-        "CONCEPT_NAME": "Chronic disease of respiratory system",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "328383001",
-        "CONCEPT_ID": 4212540,
-        "CONCEPT_NAME": "Chronic liver disease",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "19943007",
-        "CONCEPT_ID": 4064161,
-        "CONCEPT_NAME": "Cirrhosis of liver",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "74627003",
-        "CONCEPT_ID": 442793,
-        "CONCEPT_NAME": "Complication due to diabetes mellitus",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "52448006",
-        "CONCEPT_ID": 4182210,
-        "CONCEPT_NAME": "Dementia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "73211009",
-        "CONCEPT_ID": 201820,
-        "CONCEPT_NAME": "Diabetes mellitus",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "25093002",
-        "CONCEPT_ID": 443767,
-        "CONCEPT_NAME": "Disorder of eye due to diabetes mellitus",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "28670008",
-        "CONCEPT_ID": 24966,
-        "CONCEPT_NAME": "Esophageal varices",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "40845000",
-        "CONCEPT_ID": 4247120,
-        "CONCEPT_NAME": "Gastrointestinal ulcer",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "84114007",
-        "CONCEPT_ID": 316139,
-        "CONCEPT_NAME": "Heart failure",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "50582007",
-        "CONCEPT_ID": 374022,
-        "CONCEPT_NAME": "Hemiplegia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "13920009",
-        "CONCEPT_ID": 4029488,
-        "CONCEPT_NAME": "Hepatic encephalopathy",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "59927004",
-        "CONCEPT_ID": 4245975,
-        "CONCEPT_NAME": "Hepatic failure",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "86406008",
-        "CONCEPT_ID": 439727,
-        "CONCEPT_NAME": "Human immunodeficiency virus infection",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "195239002",
-        "CONCEPT_ID": 434056,
-        "CONCEPT_NAME": "Late effects of cerebrovascular disease",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "363346000",
-        "CONCEPT_ID": 443392,
-        "CONCEPT_NAME": "Malignant neoplastic disease",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "22298006",
-        "CONCEPT_ID": 4329847,
-        "CONCEPT_NAME": "Myocardial infarction",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "60389000",
-        "CONCEPT_ID": 192606,
-        "CONCEPT_NAME": "Paraplegia",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "400047006",
-        "CONCEPT_ID": 321052,
-        "CONCEPT_NAME": "Peripheral vascular disease",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2003-07-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "65323003",
-        "CONCEPT_ID": 255348,
-        "CONCEPT_NAME": "Polymyalgia rheumatica",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "31384009",
-        "CONCEPT_ID": 80800,
-        "CONCEPT_NAME": "Polymyositis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "34742003",
-        "CONCEPT_ID": 192680,
-        "CONCEPT_NAME": "Portal hypertension",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "236423003",
-        "CONCEPT_ID": 4030518,
-        "CONCEPT_NAME": "Renal impairment",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "69896004",
-        "CONCEPT_ID": 80809,
-        "CONCEPT_NAME": "Rheumatoid arthritis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "398726004",
-        "CONCEPT_ID": 256197,
-        "CONCEPT_NAME": "Rheumatoid lung disease",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2003-07-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "128462008",
-        "CONCEPT_ID": 432851,
-        "CONCEPT_NAME": "Secondary malignant neoplastic disease",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "55464009",
-        "CONCEPT_ID": 257628,
-        "CONCEPT_NAME": "Systemic lupus erythematosus",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": true,
-      "includeMapped": false
-    },
-    {
-      "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Finding",
-        "CONCEPT_CODE": "89155008",
-        "CONCEPT_ID": 134442,
-        "CONCEPT_NAME": "Systemic sclerosis",
-        "DOMAIN_ID": "Condition",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "SNOMED",
-        "VALID_START_DATE": "2002-01-30",
+        "VALID_START_DATE": "2011-07-30",
         "VALID_END_DATE": "2099-12-30"
       },
       "isExcluded": false,
