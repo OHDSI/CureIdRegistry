@@ -1,0 +1,6 @@
+concept_id ,concept_code ,concept_name ,domain ,vocabulary ,is_standard ,include_descendants 
+2004208004,NA,Other oxygen device,Device,Custom,C,FALSE
+2004208005,NA,Room air (in the context of a device),Device,Custom,C,FALSE
+2004208006,NA,CPAP (continuous positive airway pressure),Device,Custom,C,FALSE
+2004208007,NA,BiPAP (bilevel positive airway pressure),Device,Custom,C,FALSE
+2004208008,NA,NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation),Device,Custom,C,FALSE
