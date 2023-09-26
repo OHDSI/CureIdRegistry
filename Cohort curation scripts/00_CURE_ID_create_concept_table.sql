@@ -31,7 +31,7 @@ values
 ('316866','38341003','Hypertensive disorder','Condition','SNOMED','S','TRUE'),
 ('438112','55342001','Neoplastic disease','Condition','SNOMED','S','TRUE'),
 ('4299535','77386006','Pregnant','Condition','SNOMED','S','TRUE'),
-('40401938','205614001','(Down's syndrome - trisomy 21) or (mongolism) or (trisomy 21) or (trisomy 22)','Condition','SNOMED','N','TRUE'),
+('40401938','205614001','(Downs syndrome - trisomy 21) or (mongolism) or (trisomy 21) or (trisomy 22)','Condition','SNOMED','N','TRUE'),
 ('43531681','651000119108','Acute deep vein thrombosis of lower limb','Condition','SNOMED','S','TRUE'),
 ('197320','14669001','Acute renal failure syndrome','Condition','SNOMED','S','TRUE'),
 ('4195694','67782005','Acute respiratory distress syndrome','Condition','SNOMED','S','TRUE'),
