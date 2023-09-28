@@ -149,8 +149,8 @@ where
 --Load Visit Occurrence table
 SELECT DISTINCT v.visit_occurrence_id, v.person_id, v.visit_concept_id, v.visit_start_date, v.visit_start_datetime, v.
    visit_end_date, v.visit_end_datetime, v.visit_type_concept_id, v.provider_id, v.care_site_id,
-   NULL as visit_source_value, v.visit_source_concept_id, v.admitted_from_concept_id,
-   NULL as admitted_from_source_value, v.discharged_to_concept_id, NULL as discharged_to_source_value,
+   NULL as visit_source_value, v.visit_source_concept_id, v.admitting_source_concept_id,
+   NULL as admitting_source_value, v.discharge_to_concept_id, NULL as discharge_to_source_value,
    v.preceding_visit_occurrence_id
 INTO [Results].[CURE_ID_Visit_Occurrence]
 FROM visit_occurrence v
