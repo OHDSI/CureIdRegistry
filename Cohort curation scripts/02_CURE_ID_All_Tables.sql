@@ -46,7 +46,6 @@ SELECT distinct
 	,NULL as measurement_source_value
 	,m.measurement_source_concept_id
 	,NULL as unit_source_value
-	,m.unit_source_concept_id
 	,NULL as value_source_value
 INTO [Results].[CURE_ID_Measurement]
 FROM measurement m
@@ -88,7 +87,7 @@ INNER JOIN [Results].[CURE_ID_Cohort] coh
 SELECT DISTINCT o.observation_id, o.person_id, o.observation_concept_id, o.observation_date, o.observation_datetime, o.
    observation_type_concept_id, o.value_as_number, o.value_as_string, o.value_as_concept_id, o.
    qualifier_concept_id, o.unit_concept_id, o.provider_id, o.visit_occurrence_id, o.visit_detail_id, NULL as observation_source_value, o.observation_source_concept_id,
-   NULL as unit_source_value, NULL as qualifier_source_value, NULL as value_source_value, o.observation_event_id, o.obs_event_field_concept_id
+   NULL as unit_source_value, NULL as qualifier_source_value
 INTO [Results].[CURE_ID_Observation]
 FROM observation o
 INNER JOIN [Results].[CURE_ID_Cohort] coh
@@ -104,8 +103,8 @@ where
 
 
 --Load Procedure Occurrence Table
-SELECT p.procedure_occurrence_id, p.person_id, p.procedure_concept_id, p.procedure_date, p.procedure_datetime, p
-   .procedure_end_date, p.procedure_end_datetime, p.procedure_type_concept_id, p.modifier_concept_id, p.
+SELECT p.procedure_occurrence_id, p.person_id, p.procedure_concept_id, p.procedure_date, p.procedure_datetime, 
+	p.procedure_type_concept_id, p.modifier_concept_id, p.
    quantity, p.provider_id, p.visit_occurrence_id, p.visit_detail_id, NULL as procedure_source_value, p.
    procedure_source_concept_id, NULL as modifier_source_value
 INTO [Results].[CURE_ID_Procedure_Occurrence]
@@ -160,9 +159,8 @@ WHERE v.visit_start_date >= '2020-03-01'
 --Load Device Exposure table
 SELECT dev.device_exposure_id, dev.person_id, dev.device_concept_id, dev.device_exposure_start_date, dev.
    device_exposure_start_datetime, dev.device_exposure_end_date, dev.device_exposure_end_datetime, dev.
-   device_type_concept_id, dev.unique_device_id, dev.production_id, dev.quantity, dev.provider_id, dev.
-   visit_occurrence_id, dev.visit_detail_id, NULL as device_source_value, dev.device_source_concept_id, dev.
-   unit_concept_id, NULL as unit_source_value, dev.unit_source_concept_id
+   device_type_concept_id, dev.unique_device_id, dev.quantity, dev.provider_id, dev.
+   visit_occurrence_id, dev.visit_detail_id, NULL as device_source_value, dev.device_source_concept_id 
 INTO [Results].[CURE_ID_Device_Exposure]
 FROM device_exposure dev
 INNER JOIN [Results].[CURE_ID_Cohort] coh
