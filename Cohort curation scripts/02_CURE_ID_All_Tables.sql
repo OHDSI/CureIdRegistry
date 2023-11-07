@@ -48,8 +48,6 @@ SELECT distinct
 	,NULL as unit_source_value
 	,m.unit_source_concept_id
 	,NULL as value_source_value
-	,m.measurement_event_id
-	,m.meas_event_field_concept_id
 INTO [Results].[CURE_ID_Measurement]
 FROM measurement m
 INNER JOIN [Results].[CURE_ID_Cohort] coh
