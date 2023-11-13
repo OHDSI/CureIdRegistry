@@ -17,20 +17,11 @@
 
 /************************
 
- ####### #     # ####### ######      #####  ######  #     #           #######      #####
- #     # ##   ## #     # #     #    #     # #     # ##   ##    #    # #           #     #
- #     # # # # # #     # #     #    #       #     # # # # #    #    # #                 #
- #     # #  #  # #     # ######     #       #     # #  #  #    #    # ######       #####
- #     # #     # #     # #          #       #     # #     #    #    #       # ###       #
- #     # #     # #     # #          #     # #     # #     #     #  #  #     # ### #     #
- ####### #     # ####### #           #####  ######  #     #      ##    #####  ###  #####
-
-
-sql server script to create OMOP common data model version 5.3
+sql server script to create OMOP common data model version 5.4
 
 last revised: 14-June-2018
 
-Authors:  Patrick Ryan, Christian Reich, Clair Blacketer
+Original Authors:  Patrick Ryan, Christian Reich, Clair Blacketer
 
 
 *************************/
