@@ -171,9 +171,10 @@ INNER JOIN [Results].[CURE_ID_Cohort] coh
 	ON dev.person_id = coh.person_id
 	AND dev.device_exposure_start_date BETWEEN DATEADD(day, -1, coh.visit_start_date) AND DATEADD(day, 1, coh.visit_end_date)
 INNER JOIN CONCEPT_ANCESTOR 
-	ON descendant_concept_id = dev.device_exposure_id
+	ON descendant_concept_id = dev.device_concept_id
 INNER JOIN [Results].[cure_id_concepts]
 	on ancestor_concept_id = concept_id
 where 
 	domain  = 'Device' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
+
