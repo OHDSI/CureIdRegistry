@@ -141,22 +141,22 @@
 "140","3045524","34543-9","Bilirubin direct and total panel [Mass/volume] - Serum or Plasma","Measurement","LOINC","S",FALSE
 "141","3036277","8302-2","Body height","Measurement","LOINC","S",FALSE
 "142","3038553","39156-5","Body mass index (BMI) [Ratio]","Measurement","LOINC","S",FALSE
-"143","3025315","29463-7","Body weight","Measurement","LOINC","S",FALSE
-"144","3020460","1988-5","C reactive protein [Mass/volume] in Serum or Plasma","Measurement","LOINC","S",FALSE
-"145","3027801","2703-7","Oxygen [Partial pressure] in Arterial blood","Measurement","LOINC","S",FALSE
-"146","3016502","2708-6","Oxygen saturation in Arterial blood","Measurement","LOINC","S",FALSE
-"147","40762499","59408-5","Oxygen saturation in Arterial blood by Pulse oximetry","Measurement","LOINC","S",FALSE
-"148","3026238","19996-8","Oxygen/Inspired gas Respiratory system --on ventilator","Measurement","LOINC","S",FALSE
-"149","3025634","29908-1","Parainfluenza virus 1 RNA [Presence] in Specimen by NAA with probe detection","Measurement","LOINC","S",FALSE
-"150","3007461","26515-7","Platelets [#/volume] in Blood","Measurement","LOINC","S",FALSE
-"151","3024929","777-3","Platelets [#/volume] in Blood by Automated count","Measurement","LOINC","S",FALSE
-"152","3010834","778-1","Platelets [#/volume] in Blood by Manual count","Measurement","LOINC","S",FALSE
-"153","3046279","33959-8","Procalcitonin [Mass/volume] in Serum or Plasma","Measurement","LOINC","S",FALSE
-"154","3034426","5902-2","Prothrombin time (PT)","Measurement","LOINC","S",FALSE
-"155","3024171","9279-1","Respiratory rate","Measurement","LOINC","S",FALSE
-"156","37065137","LP378960-1","Respiratory syncytial virus RNA | XXX | Microbiology","Measurement","LOINC","C",FALSE
-"157","37055446","LP378971-8","Rhinovirus RNA | XXX | Microbiology","Measurement","LOINC","C",FALSE
-"158","3004249","8480-6","Systolic blood pressure","Measurement","LOINC","S",FALSE
+"143","3020460","1988-5","C reactive protein [Mass/volume] in Serum or Plasma","Measurement","LOINC","S",FALSE
+"144","3027801","2703-7","Oxygen [Partial pressure] in Arterial blood","Measurement","LOINC","S",FALSE
+"145","3016502","2708-6","Oxygen saturation in Arterial blood","Measurement","LOINC","S",FALSE
+"146","40762499","59408-5","Oxygen saturation in Arterial blood by Pulse oximetry","Measurement","LOINC","S",FALSE
+"147","3026238","19996-8","Oxygen/Inspired gas Respiratory system --on ventilator","Measurement","LOINC","S",FALSE
+"148","3025634","29908-1","Parainfluenza virus 1 RNA [Presence] in Specimen by NAA with probe detection","Measurement","LOINC","S",FALSE
+"149","3007461","26515-7","Platelets [#/volume] in Blood","Measurement","LOINC","S",FALSE
+"150","3024929","777-3","Platelets [#/volume] in Blood by Automated count","Measurement","LOINC","S",FALSE
+"151","3010834","778-1","Platelets [#/volume] in Blood by Manual count","Measurement","LOINC","S",FALSE
+"152","3046279","33959-8","Procalcitonin [Mass/volume] in Serum or Plasma","Measurement","LOINC","S",FALSE
+"153","3034426","5902-2","Prothrombin time (PT)","Measurement","LOINC","S",FALSE
+"154","3024171","9279-1","Respiratory rate","Measurement","LOINC","S",FALSE
+"155","37065137","LP378960-1","Respiratory syncytial virus RNA | XXX | Microbiology","Measurement","LOINC","C",FALSE
+"156","37055446","LP378971-8","Rhinovirus RNA | XXX | Microbiology","Measurement","LOINC","C",FALSE
+"157","3004249","8480-6","Systolic blood pressure","Measurement","LOINC","S",FALSE
+"158","1004141","LP415675-0","Body weight | Patient | General body weight","Measurement","LOINC","C",TRUE
 "159","45889365","1012740","Dialysis Services and Procedures","Observation","CPT4","C",TRUE
 "160","46235215","76691-5","Gender identity","Observation","LOINC","S",TRUE
 "161","4039922","229306004","Positive pressure therapy","Observation","SNOMED","S",TRUE

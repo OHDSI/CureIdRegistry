@@ -2396,25 +2396,6 @@
     },
     {
       "concept": {
-        "CONCEPT_CLASS_ID": "Clinical Observation",
-        "CONCEPT_CODE": "29463-7",
-        "CONCEPT_ID": 3025315,
-        "CONCEPT_NAME": "Body weight",
-        "DOMAIN_ID": "Measurement",
-        "INVALID_REASON": "V",
-        "INVALID_REASON_CAPTION": "Valid",
-        "STANDARD_CONCEPT": "S",
-        "STANDARD_CONCEPT_CAPTION": "Standard",
-        "VOCABULARY_ID": "LOINC",
-        "VALID_START_DATE": "1969-12-31",
-        "VALID_END_DATE": "2099-12-30"
-      },
-      "isExcluded": false,
-      "includeDescendants": false,
-      "includeMapped": false
-    },
-    {
-      "concept": {
         "CONCEPT_CLASS_ID": "Lab Test",
         "CONCEPT_CODE": "1988-5",
         "CONCEPT_ID": 3020460,
@@ -3703,6 +3684,25 @@
       },
       "isExcluded": false,
       "includeDescendants": false,
+      "includeMapped": false
+    },
+    {
+      "concept": {
+        "CONCEPT_CLASS_ID": "LOINC Hierarchy",
+        "CONCEPT_CODE": "LP415675-0",
+        "CONCEPT_ID": 1004141,
+        "CONCEPT_NAME": "Body weight | Patient | General body weight",
+        "DOMAIN_ID": "Measurement",
+        "INVALID_REASON": "V",
+        "INVALID_REASON_CAPTION": "Valid",
+        "STANDARD_CONCEPT": "C",
+        "STANDARD_CONCEPT_CAPTION": "Classification",
+        "VOCABULARY_ID": "LOINC",
+        "VALID_START_DATE": "2019-12-12",
+        "VALID_END_DATE": "2099-12-30"
+      },
+      "isExcluded": false,
+      "includeDescendants": true,
       "includeMapped": false
     }
   ]
