@@ -22,27 +22,27 @@ USE YOUR_DATABASE;
 
 /******* GENERATE MAP TABLES *******/
 insert into [Results].[source_id_person]
-select 
-person_id as sourceKey, 
-row_number() over(order by p.gender_concept_id, person_id desc) as id, 
+select
+person_id as sourceKey,
+row_number() over(order by p.gender_concept_id, person_id desc) as id,
 (FLOOR(RAND(convert(varbinary,newid()))*367))-183 as date_shift,
 CAST((DATEPART(YEAR,GETDATE()) - 90 - (FLOOR(RAND(convert(varbinary,newid()))*10))) AS INT) as over_89_birth_year --If a person is > 89, then assign them a random age between 90 - 99
 from [Results].[CURE_ID_Person] p
 ;
-insert into [Results].[source_id_visit] 
+insert into [Results].[source_id_visit]
 select visit_occurrence_id as sourceKey, row_number() over(order by p.visit_occurrence_id) as new_id
 from [Results].[CURE_ID_Visit_Occurrence] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id --Ask Ben about this self join?
-where v.new_id is null and (DATEADD(DAY, s.date_shift, visit_start_date) >= @START_DATE 
+where v.new_id is null and (DATEADD(DAY, s.date_shift, visit_start_date) >= @START_DATE
 and DATEADD(DAY, s.date_shift, visit_end_date) <= @END_DATE) order by p.person_id, p.visit_start_date
 ;
 
 /******* PERSON *******/
 insert into [Results].[deident_CURE_ID_Person]
-select s.id as person_id 
-,gender_concept_id 
-,CASE 
+select s.id as person_id
+,gender_concept_id
+,CASE
 	WHEN DATEDIFF(DAY,p.birth_datetime,GETDATE())/365.25 > 89 THEN s.over_89_birth_year
 	ELSE DATEPART(YEAR,DATEADD(DAY,s.date_shift, p.birth_datetime)) 
  END AS year_of_birth
@@ -115,7 +115,7 @@ from [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, condition_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, condition_end_date) > @START_DATE)
+and DATEADD(DAY, s.date_shift, coalesce(condition_end_date, condition_start_date)) > @START_DATE)
 ;
 /******* PROCEDURE OCCURENCE *******/
 insert into [Results].[deident_CURE_ID_Procedure_Occurrence]
@@ -230,7 +230,7 @@ from [Results].[CURE_ID_Device_Exposure] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, device_exposure_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, device_exposure_end_date) > @START_DATE)
+and DATEADD(DAY, s.date_shift, coalesce(device_exposure_end_date, device_exposure_start_date)) > @START_DATE)
 ;
 
 /******* MEASUREMENT *******/
