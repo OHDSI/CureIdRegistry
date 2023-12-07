@@ -115,7 +115,7 @@ from [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, condition_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, condition_end_date) > @START_DATE)
+and DATEADD(DAY, s.date_shift, coalesce(condition_end_date,condition_start_date)) > @START_DATE)
 ;
 /******* PROCEDURE OCCURENCE *******/
 insert into [Results].[deident_CURE_ID_Procedure_Occurrence]
@@ -230,7 +230,7 @@ from [Results].[CURE_ID_Device_Exposure] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, device_exposure_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, device_exposure_end_date) > @START_DATE)
+and DATEADD(DAY, s.date_shift, coalesce(device_exposure_end_date, device_exposure_start_date)) > @START_DATE)
 ;
 
 /******* MEASUREMENT *******/
