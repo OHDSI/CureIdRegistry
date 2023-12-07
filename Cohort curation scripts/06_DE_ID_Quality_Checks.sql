@@ -58,7 +58,7 @@ USE YOUR_DATABASE;
   group by condition_concept_id
 
   SELECT
-  MAX([condition_end_date]) [Max Condition Date], -- Should fall within target range
+  MAX(coalesce([condition_end_date],[condition_start_date])) [Max Condition Date], -- Should fall within target range
   MIN([condition_start_date]) [Min Condition Date] -- Should fall within target range
   from [Results].[deident_CURE_ID_condition_occurrence]
 
@@ -84,8 +84,8 @@ USE YOUR_DATABASE;
   group by device_concept_id
 
   SELECT
-  MAX([device_exposure_end_date]) [Max Condition Date], -- Should fall within target range
-  MIN([device_exposure_start_date]) [Min Condition Date] -- Should fall within target range
+  MAX(coalesce([device_exposure_end_date],[device_exposure_start_date])) [Max Device Date], -- Should fall within target range
+  MIN([device_exposure_start_date]) [Min Device Date] -- Should fall within target range
   from [Results].[deident_CURE_ID_device_exposure]
 
 /******* DRUG EXPOSURE *******/
