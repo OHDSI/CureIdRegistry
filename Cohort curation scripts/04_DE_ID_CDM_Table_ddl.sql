@@ -268,6 +268,29 @@ CREATE TABLE Results.deident_CURE_ID_observation
 ;
 
 
+ --HINT DISTRIBUTE ON KEY (person_id)
+CREATE TABLE Results.deident_CURE_ID_payer_plan_period 
+ (
+			payer_plan_period_id integer NOT NULL,
+			person_id integer NOT NULL,
+			payer_plan_period_start_date date NOT NULL,
+			payer_plan_period_end_date date NOT NULL,
+			payer_concept_id integer NULL,
+			payer_source_value varchar(50) NULL,
+			payer_source_concept_id integer NULL,
+			plan_concept_id integer NULL,
+			plan_source_value varchar(50) NULL,
+			plan_source_concept_id integer NULL,
+			sponsor_concept_id integer NULL,
+			sponsor_source_value varchar(50) NULL,
+			sponsor_source_concept_id integer NULL,
+			family_source_value varchar(50) NULL,
+			stop_reason_concept_id integer NULL,
+			stop_reason_source_value varchar(50) NULL,
+			stop_reason_source_concept_id integer NULL 
+ )
+ ;
+
 
 
 
