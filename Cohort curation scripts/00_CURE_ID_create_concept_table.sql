@@ -173,6 +173,7 @@ values
 ('4298794','77176002','Smoker','Observation','SNOMED','S','TRUE'),
 ('4275495','365981007','Tobacco smoking behavior - finding','Observation','SNOMED','S','TRUE'),
 ('4203942','52870002','Admitting diagnosis','Observation','SNOMED','S','FALSE'),
+('2000000999','NA','Area deprivation index','Observation','Custom','C','FALSE'),	
 ('4201025','315041000','High concentration oxygen therapy','Procedure','SNOMED','S','FALSE'),
 ('4119964','304577004','Humidified oxygen therapy','Procedure','SNOMED','S','FALSE'),
 ('4216695','71786000','Intranasal oxygen therapy','Procedure','SNOMED','S','FALSE'),
