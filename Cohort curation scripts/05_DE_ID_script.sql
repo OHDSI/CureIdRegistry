@@ -93,7 +93,7 @@ inner join [Results].[source_id_person] s on s.sourceKey = p.person_id
 join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
 where (DATEADD(DAY, s.date_shift, visit_start_date) >= @START_DATE and DATEADD(DAY, s.date_shift, visit_end_date) <= @END_DATE) 
 ;
-/******* CONDITION OCCURENCE *******/
+/******* CONDITION OCCURRENCE *******/
 insert into [Results].[deident_CURE_ID_Condition_Occurrence]
 select condition_occurrence_id
 ,s.id as person_id
@@ -115,9 +115,9 @@ from [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, condition_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, coalesce(condition_end_date,condition_start_date)) > @START_DATE)
+and DATEADD(DAY, s.date_shift, coalesce(condition_end_date, condition_start_date)) > @START_DATE)
 ;
-/******* PROCEDURE OCCURENCE *******/
+/******* PROCEDURE OCCURRENCE *******/
 insert into [Results].[deident_CURE_ID_Procedure_Occurrence]
 SELECT procedure_occurrence_id
       ,s.id as person_id
