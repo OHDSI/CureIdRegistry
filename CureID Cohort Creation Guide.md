@@ -122,8 +122,7 @@ Replace the database name and schema in each of these scripts with your own, the
 **Purpose**: This script creates a copy of the Cohort and removes identifying characteristics to prepare the data for sharing with the VIRUS registry.
 
 **Description**: Run this script to generate a deidentified copy of your target data. The following actions are performed:
-- Reassignment of Person IDs
-Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.
+- Reassignment of Person IDs: Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.
 
 - Date Shifting: Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.
      
