@@ -47,20 +47,15 @@ In summary, the Cohort contains patients who were hospitalized with COVID, and e
 
 ## Explanation of the Concept Files
 
-**Parent Only**
-A csv that contains only the parent (highest in the hierarchy) concepts used within the registry. When adding concepts, check 1) is the concept a parent concept and 2) if not, is the parent concept already included within the file
+**Parent Only**: A csv that contains only the parent (highest in the hierarchy) concepts used within the registry. When adding concepts, check 1) is the concept a parent concept and 2) if not, is the parent concept already included within the file
 
-**Parent Only with Descendants**
-A list of all parent concepts, where we track and include all descendants. This is primarily used for ATLAS concept set creation.
+**Parent Only with Descendants**: A list of all parent concepts, where we track and include all descendants. This is primarily used for ATLAS concept set creation.
 
-**Parent Only no Descendants**
-A list of all parent concepts, where we do not track descendants. This is primarily used for ATLAS concept set creation.
+**Parent Only no Descendants**: A list of all parent concepts, where we do not track descendants. This is primarily used for ATLAS concept set creation.
 
-**Concept All**
-All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
+**Concept All**: All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
 
-**Conditions, Device Exposure, Measurements, Observations, Person, Procedures**
-JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
+**Conditions, Device Exposure, Measurements, Observations, Person, Procedures** :JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
 
 --------------------------------------------------------------------------------------------------
 
