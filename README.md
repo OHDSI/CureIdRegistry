@@ -1,62 +1,75 @@
 # CureIdRegistry
 
-The Cure Id Registry is a clinical registry leveraging OMOP and EHR automation.  CURE ID is a collaboration between the FDA and the National Center for Advancing Translational Sciences (NCATS), part of the National Institutes of Health (NIH).
+The Cure-ID Registry is a clinical registry leveraging OMOP and EHR automation.  Cure-ID is a collaboration between the FDA and the National Center for Advancing Translational Sciences (NCATS), part of the National Institutes of Health (NIH).
 
-This Github repository is the migrated documentation from the FDA Cure ID project. This move was motivated by the inconsistencies of the current storage method, in Microsoft Teams. This repository takes the Concept list from the Cure-ID Registry group, within the Health Special Interests Teams group, and combines it with the Cohort Creation scripts from the Cure**S** ID Registry group, also within the same Teams environment. Essentially, it is meant to be the central authority of the definition of the registry- what concepts to include, how to generate the cohort, who is included, etc.
+This Github repository is the migrated documentation from the FDA Cure ID project. This move was motivated by the inconsistencies of the current storage method in Microsoft Teams. This repository takes the Concept list from the Cure-ID Registry group, within the Health Special Interests Teams group, and combines it with the Cohort Creation scripts from the Cure-ID Registry group, also within the same Teams environment. Essentially, it is meant to be the central authority of the definition of the registry, e.g. what concepts to include, how to generate the cohort, who is included, etc.
 
-The cohort is comprised of the anonymized person_id, birthdate, and first date of a positive COVID test from the OMOP CDM. 
+The Cohort is comprised of the anonymized person_id, birthdate, and first date of a positive COVID test from the OMOP CDM. 
 
 --------------------------------------------------------------------------------------------------
 
 ## Explanation of the Curation Script Files:
 
-01 Cohort Creation: 
-1. Identify all patients with a positive lab result measurement (get patient_id, first positive result)
-2. Separately, identify all patients with a "strong" or "weak" COVID diagnosis based on condition codes
-3. Combine these "strong" and "weak" tables into a "comb" table
-4. Make an intermediary table "inpat_intermed" which is all patients with a positive lab result, who were flagged as inpatient treatment
-5. Join the positive-lab-result, "inpat_intermed" and "comb" tables to get the criteria of the cohort (sans edge cases)
+**01 - Create Cohort**
+- Identifies all patients with a positive lab result measurement, patient_id and first positive lab result
+- Identifies all patients with a "strong" or "weak" COVID diagnosis based on condition codes
+- Combines the "strong" and "weak" results into a "comb" table
+- Creates an intermediary table "inpat_intermed" for all patients with a positive lab result, who were flagged as inpatient treatment
+- Joins the positive lab result, "inpat_intermed" and "comb" tables to get the criteria of the Cohort (sans edge cases)
 
-In summary the cohort contains patients who were hospitalized with COVID, and experienced symptoms that suggest COVID played a significant role in their hospitalization. They tested positive for COVID,  who started in-patient care 7 days before through 21 days after a positive test, and experienced COVID-symptoms around 2 weeks before or after their in-patient period. If the patient was hospitalized more than once, we prioritize the earliest occurrence. 
+In summary, the Cohort contains patients who were hospitalized with COVID, and experienced symptoms that suggest COVID played a significant role in their hospitalization. These patients tested positive for COVID, started in-patient care 7 days before through 21 days after a positive test, and experienced COVID-symptoms around 2 weeks before or after their in-patient period. If the patient was hospitalized more than once, we prioritize the earliest occurrence. 
 
-02 All Tables
-1. Get all person_id's that are in the cohort, as identified in the first script. 
-2. Get the measurements for each person for the duration of their in-patient stay. This is limited to a hardcoded list of measurements that is relevant to the topic of COVID inpatient stay, so any measurements not on the list are not exposed. 
-3. Repeat Step 2, except get the drug concept, death, observations, procedure occurrence, condition occurrence, visit occurrence, and device exposure.
+**02 - Load All Tables**
+- From the Cohort created in 01, create tables for Person, Measurement, Drug Exposure, Death, Observation, Procedure, Condition, Visit Occurrence and Device Exposure
+- This is limited to a hardcoded list of measurements that is relevant to the topic of COVID inpatient stay. Any measurements not on the list are not exposed. 
 
-03 CDM Tables
+**03 - Replace Rare Conditions**
+- Uses the Conditions table from 02.
+- Find and replace conditions occurring 10 or less times with parent concepts that have at least 10 counts
 
-1. Defines the ddl for generating the empty OMOP CDM tables.
-2. These tables are blank, and will be filled with the 04th script.
+**04 - Create Deidentification CDM Tables**
+- Defines the DDL for generating the empty OMOP CDM tables to hold your deidentified data.
+- The tables are blank and will be loaded with data in 04.
 
-04 DE ID 
-1. Load the data from the 02 script. 
-2. Parse the data so that it fits into the OMOP CDM tables. 
-3. Table by table, insert the parsed data into the CDM
+**05 - Perform Deidentification**
+- Table by table, loads the data from 02 script, parses and deidentifies it.
+- The results are inserted into the OMOP CDM tables from 03.
 
-05 Quality Checks
-1. Read the count, min, and max for various columns and tables.
-2. Comments say what results are expected, if the script succeeded (more documentation is needed here)
+**06 - Perform Quality Checks**
+- Read the count, min, and max for various columns and tables.
+- Comments say what results are expected, if the script succeeded (more documentation is needed here)
+
+**07 - Utilize Profile Scripts**
+- Five different scripts to create different profiles from the Cohort created in previous steps.
+- Condition, Measurement, Drug Exposure, Unmapped Drugs, Device
 
 --------------------------------------------------------------------------------------------------
 
 ## Explanation of the Concept Files
 
-Parent Only: A csv that contains only the parent (highest in the hierarchy) concepts used within the registry. When adding concepts, check 1) is the concept a parent concept and 2) if not, is the parent concept already included within the file
+**Parent Only**
+A csv that contains only the parent (highest in the hierarchy) concepts used within the registry. When adding concepts, check 1) is the concept a parent concept and 2) if not, is the parent concept already included within the file
 
-Parent Only, with Descendants: A list of all parent concepts, where we track and include all descendants. This is primarily used for ATLAS concept set creation.
+**Parent Only with Descendants**
+A list of all parent concepts, where we track and include all descendants. This is primarily used for ATLAS concept set creation.
 
-Parent Only, no Descendants: A list of all parent concepts, where we do not track descendants. This is primarily used for ATLAS concept set creation.
+**Parent Only no Descendants**
+A list of all parent concepts, where we do not track descendants. This is primarily used for ATLAS concept set creation.
 
-Concept All: All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
+**Concept All**
+All concepts, parents or descendents. When adding concepts, check if you wish to include or exclude specific descendent concepts.
 
-Conditions, Device Exposure, Measurements, Observations, Person, Procedures: JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
+**Conditions, Device Exposure, Measurements, Observations, Person, Procedures**
+JSON representations of each of the parent concepts, separated by OMOP domain. You can use this JSON format to directly import/export as concept sets within ATLAS. When changing concepts, it may be easier to create the respective concept set already within ATLAS, make the edits there, export as JSON and overwrite this file. 
 
 --------------------------------------------------------------------------------------------------
 
-## Workflow of Adding a Concept (Having ATLAS set up extremely recommended)
-
-### Section 1: I Do Not See/Have Access to the CURE ID Concept Set in ATLAS (if you do, skip to Section 2)
+## Workflow of Adding a Concept 
+##### (Having ATLAS set up extremely recommended)
+#
+#
+#
+#### Section 1: I Do Not See/Have Access to the CURE ID Concept Set in ATLAS (if you do, skip to Section 2)
 
 If you do not see the pre-existing concept set, you will need to create a version yourself first.
 1. In ATLAS, click the "Concept Sets" tab on the sidebar.
