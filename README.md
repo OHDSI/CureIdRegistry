@@ -61,9 +61,9 @@ In summary, the Cohort contains patients who were hospitalized with COVID, and e
 
 ## Workflow of Adding a Concept 
 ##### (Having ATLAS set up extremely recommended)
-#
-#
-#
+
+
+
 #### Section 1: I Do Not See/Have Access to the CURE ID Concept Set in ATLAS (if you do, skip to Section 2)
 
 If you do not see the pre-existing concept set, you will need to create a version yourself first.
@@ -73,7 +73,7 @@ If you do not see the pre-existing concept set, you will need to create a versio
 4. Copy and paste the contents of the "OMOP_concepts_parent_with_descendants.txt" folder, and click the "Descendants" button. Add these to the concept set.
 5. Copy and paste the contents of the "OMOP_concepts_parent_without_descendants.txt" folder, making sure NOT to tick the "Descendants" button. Add these to the concept set.
 
-### Section 2: I Have Access to the CURE ID Concept Set in ATLAS
+#### Section 2: I Have Access to the CURE ID Concept Set in ATLAS
 
 Say we want to add a concept X into the set. 
 
