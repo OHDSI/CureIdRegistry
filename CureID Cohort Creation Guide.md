@@ -195,35 +195,49 @@ Other potentially identifying datapoints are removed from the dataset such as lo
     ##### 07-A – Condition Profile
 
     **Filename**: 07_A_condition_profile.sql
+
     **Purpose**: Generate a profile of condition prevalence in the final cohort.
+
     **Description**: Condition counts are calculated per patient and are aggregated by parent concepts for each condition concept present in the final OMOP Condition Occurrence table.
     **Dependencies**:
 
     ##### 07-B – Measurement Profile
 
     **Filename**: 07_B_measurement_profile.sql
+
     **Purpose**: Generate a profile of measurement prevalence in the final cohort.
+
     **Description**: Measurement counts are calculated per patient and are aggregated by parent concepts for each measurement concept present in the final OMOP Measurement table.
+
     **Dependencies**:
 
     ##### 07-C – Drug Exposure Profile
 
     **Filename**: 07_C_drug_exposure_profile.sql
+
     **Purpose**: Generate a profile of drug prevalence in the final cohort.
+
     **Description**: Drug counts are calculated per patient and are aggregated by ingredient for each drug concept present in the final OMOP Drug Exposure table.
+
     **Dependencies**:
 
     ##### 07-D – Unmapped Drugs Profile
 
     **Filename**: 07_D_review_unmapped_drugs.sql
+
     **Purpose**: Generate a profile of drugs that are not mapped to drug_concept_ids in the final cohort.
+
     **Description**: This file filters drugs that were unsuccessfully mapped to a drug_concept_id when running the 02_CURE_ID_All_Tables.sql script. Drug source values for which the drug_concept_id is “0” and have at least 20 instances in the final cohort are aggregated for manual review.
     \*\* Drug source values can contain PHI. Please review the output for PHI before sharing.
+
     **Dependencies**:
 
     ##### 07-E – Device Profile
 
     **Filename**: 07_E_device_profile.sql
+
     **Purpose**: Generate a profile of device prevalence in the final cohort.
+
     **Description**: Device counts are calculated per patient and are aggregated by parent concepts for each device concept present in the final OMOP Device Exposure table.
+
     **Dependencies**:
