@@ -125,13 +125,13 @@ Replace the database name and schema in each of these scripts with your own, the
 - Reassignment of Person IDs
 Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.
 
-- **Date Shifting**: Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.
+- Date Shifting: Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.
      
-- **Birthdays**: After date shifting a person’s birthday, the day is then set to the first of the new birth month. If the person would be \> 89 years old then they are assigned a random birth year that would make them 90-99 years old.
+- Birthdays: After date shifting a person’s birthday, the day is then set to the first of the new birth month. If the person would be \> 89 years old then they are assigned a random birth year that would make them 90-99 years old.
 
-- **Date Truncation**: A user-defined Start and End date are used to exclude any date shifted data that falls outside of the target date range (e.g. procedures, conditions occurrences, etc.). Does not include Birthdates.
+- Date Truncation: A user-defined Start and End date are used to exclude any date shifted data that falls outside of the target date range (e.g. procedures, conditions occurrences, etc.). Does not include Birthdates.
 
-- **Removal of other identifiers**: Other potentially identifying datapoints are removed from the dataset such as location_id, provider_id, and care_site_id
+- Removal of Other Identifiers: Other potentially identifying datapoints are removed from the dataset such as location_id, provider_id, and care_site_id
 
 **Dependencies**:
 - 01_CURE_ID_Cohort.sql
