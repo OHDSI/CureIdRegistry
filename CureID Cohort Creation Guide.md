@@ -121,7 +121,21 @@ Replace the database name and schema in each of these scripts with your own, the
 
 **Purpose**: This script creates a copy of the Cohort and removes identifying characteristics to prepare the data for sharing with the VIRUS registry.
 
-**Description**: Run this file to generate a deidentified copy of your target data. Insert your data into the OMOP tables, and de-identify person_id, and date fields using date.shift. (\*If a person is 90 years of age or older, assign a random age between 90-99 years.)
+**Description**: Run this script to generate a deidentified copy of your target data. The following actions are performed:
+- Reassignment of Person IDs
+Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.
+
+- Date Shifting
+Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.
+     
+- Birthdays
+After date shifting a person’s birthday, the day is then set to the first of the new birth month. If the person would be \> 89 years old then they are assigned a random birth year that would make them 90-99 years old.
+
+- Date Truncation
+A user-defined Start and End date are used to exclude any date shifted data that falls outside of the target date range (e.g. procedures, conditions occurrences, etc.). Does not include Birthdates.
+
+- Removal of other identifiers
+Other potentially identifying datapoints are removed from the dataset such as location_id, provider_id, and care_site_id
 
 **Dependencies**:
 - 01_CURE_ID_Cohort.sql
@@ -141,26 +155,6 @@ Replace the database name and schema in each of these scripts with your own, the
 8.  Load the OMOP Death table, and de-identify
 9.  Load the OMOP Device Exposure table, and de-identify
 10. Load the OMOP Measurement table, and de-identify
-
-    ##### Reassignment of Person IDs
-
-    Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.
-
-    ##### Date Shifting
-
-     Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.
-     
-    ##### Birthdays
-    
-    After date shifting a person’s birthday, the day is then set to the first of the new birth month. If the person would be \> 89 years old then they are assigned a random birth year that would make them 90-99 years old.
-
-    ##### Date Truncation
-
-    A user-defined Start and End date are used to exclude any date shifted data that falls outside of the target date range (e.g. procedures, conditions occurrences, etc.). Does not include Birthdates.
-
-    ##### Removal of other identifiers
-
-    Other potentially identifying datapoints are removed from the dataset such as location_id, provider_id, and care_site_id
 
 ### 6. Quality Checks Script (optional)
 
