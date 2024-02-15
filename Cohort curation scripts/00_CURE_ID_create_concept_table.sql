@@ -138,4 +138,7 @@ values
 ('2004208005','NA','Room air (in the context of a device)','Device','Custom','C','FALSE'),
 ('2004208006','NA','CPAP (continuous positive airway pressure)','Device','Custom','C','FALSE'),
 ('2004208007','NA','BiPAP (bilevel positive airway pressure)','Device','Custom','C','FALSE'),
-('2004208008','NA','NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation)','Device','Custom','C','FALSE');
+('2004208008','NA','NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation)','Device','Custom','C','FALSE'),
+('4152194', '271649006', 'Systolic blood pressure', 'Measurement', 'SNOMED', 'S', 'FALSE'),
+('4154790', '271650006', 'Diastolic blood pressure', 'Measurement', 'SNOMED', 'S', 'FALSE')
+;
