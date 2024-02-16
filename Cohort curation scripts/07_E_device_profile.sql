@@ -14,99 +14,85 @@ Dependencies:
 
 --Create table which includes the device concepts included in the cohort and their names
 DROP TABLE IF EXISTS #device_concepts_of_interest;
-select
-    descendant_concept_id as concept_id,
+SELECT
+    descendant_concept_id AS concept_id,
     ancestor_concept_id,
     concept_name
-into #device_concepts_of_interest
-from [Results].[cure_id_concepts]
+INTO #device_concepts_of_interest
+FROM [Results].[cure_id_concepts]
 INNER JOIN CONCEPT_ANCESTOR
     ON ancestor_concept_id = concept_id
-where
+WHERE
     domain = 'Device'
-    and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-order by concept_name
-
+    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+ORDER BY concept_name
 
 --The #device_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 DROP TABLE IF EXISTS #device_count_temp;
-select
+SELECT
     p.person_id,
-    dci.concept_id as concept_id,
+    dci.concept_id AS concept_id,
     dci.concept_name,
-    count(case when d.device_concept_id is not null then 1 else NULL end) as concept_count
-into #device_count_temp
-from
-    [Results].[deident_CURE_ID_person] p
-cross join
-    #device_concepts_of_interest dci
-left join
-    [Results].[deident_CURE_ID_device_exposure] d
-    on
+    COUNT(CASE WHEN d.device_concept_id IS NOT NULL THEN 1 ELSE NULL END) AS concept_count
+INTO #device_count_temp
+FROM [Results].[deident_CURE_ID_person] AS p
+CROSS JOIN #device_concepts_of_interest AS dci
+LEFT JOIN [Results].[deident_CURE_ID_device_exposure] AS d
+    ON
         dci.concept_id = d.device_concept_id
-        and d.person_id = p.person_id
-group by
+        AND d.person_id = p.person_id
+GROUP BY
     p.person_id,
     dci.concept_id,
     dci.concept_name
 
 --Device use by person
 DROP TABLE IF EXISTS #device_use_by_person
-select
+SELECT
     concept_name,
     concept_id,
-    count(distinct d.person_id) as person_count,
+    COUNT(DISTINCT d.person_id) AS person_count,
     (
-        100 * count(distinct d.person_id)
-        / (select count(distinct person_id) from [Results].[deident_CURE_ID_person])
-    ) as person_perc
-into #device_use_by_person
-from
-    #device_concepts_of_interest dci
-left join
-    [Results].[deident_CURE_ID_device_exposure] d
-    on
-        d.device_concept_id = dci.concept_id
-group by
+        100 * COUNT(DISTINCT d.person_id)
+        / (SELECT COUNT(DISTINCT person_id) FROM [Results].[deident_CURE_ID_person])
+    ) AS person_perc
+INTO #device_use_by_person
+FROM #device_concepts_of_interest AS dci
+LEFT JOIN [Results].[deident_CURE_ID_device_exposure] AS d
+    ON d.device_concept_id = dci.concept_id
+GROUP BY
     concept_id,
     concept_name
-order by person_count desc
+ORDER BY person_count DESC
 
 
 DROP TABLE IF EXISTS #device_count_by_person
-select
+SELECT
     concept_name,
     concept_id,
-    avg(concept_count) as average_entries_per_person,
-    max(concept_count) as max_entries_per_person
-into #device_count_by_person
-from
-    #device_count_temp
-where
-    concept_count > 0
-group by
+    AVG(concept_count) AS average_entries_per_person,
+    MAX(concept_count) AS max_entries_per_person
+INTO #device_count_by_person
+FROM #device_count_temp
+WHERE concept_count > 0
+GROUP BY
     concept_id,
     concept_name
+    
+    -- Display summary table for each device:
+    -- the number of persons who used the device
+    -- percent of persons who  used the device
+    -- average entries of the device per person who used the device
+    -- maximum entries of the device per person who used the device
 
-
-
-    --Display summary table for each device:
-    ----the number of persons who used the device
-    ----percent of persons who  used the device
-    ----average entries of the device per person who used the device
-    ----maximum entries of the device per person who used the device
-
-    select
+    SELECT
         du.concept_name,
         du.concept_id,
         du.person_count,
         du.person_perc,
         dc.average_entries_per_person,
         dc.max_entries_per_person
-    from
-        #device_use_by_person du
-    left join
-        #device_count_by_person dc
-        on
-            du.concept_id = dc.concept_id
-    order by person_count desc
+    FROM #device_use_by_person AS du
+    LEFT JOIN #device_count_by_person AS dc
+        ON du.concept_id = dc.concept_id
+    ORDER BY person_count DESC
