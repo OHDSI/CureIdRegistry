@@ -59,26 +59,20 @@ DROP TABLE IF EXISTS [Results].[deident_CURE_ID_visit_occurrence];
 
 
 /******* TABLE CREATION *******/
+CREATE TABLE [Results].[source_id_person] (
+    sourceKey INT NOT NULL,
+    id INT NOT NULL,
+    date_shift INT,
+    over_89_birth_year INT
+);
 
-create table [Results].[source_id_person]
-(
-    sourceKey int not null,
-    id int not null,
-    date_shift int,
-    over_89_birth_year int
-)
-;
-
-create table [Results].[source_id_visit]
-(
-    sourceKey int not null,
-    new_id int not null
-)
-;
+CREATE TABLE [Results].[source_id_visit] (
+    sourceKey INT NOT NULL,
+    new_id INT NOT NULL
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_person
-(
+CREATE TABLE Results.deident_CURE_ID_person (
     person_id INTEGER NOT NULL,
     gender_concept_id INTEGER NOT NULL,
     year_of_birth INTEGER NOT NULL,
@@ -97,13 +91,10 @@ CREATE TABLE Results.deident_CURE_ID_person
     race_source_concept_id INTEGER NULL,
     ethnicity_source_value VARCHAR(50) NULL,
     ethnicity_source_concept_id INTEGER NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_death
-(
+CREATE TABLE Results.deident_CURE_ID_death (
     person_id INTEGER NOT NULL,
     death_date DATE NOT NULL,
     death_datetime DATETIME2 NULL,
@@ -111,9 +102,7 @@ CREATE TABLE Results.deident_CURE_ID_death
     cause_concept_id INTEGER NULL,
     cause_source_value VARCHAR(50) NULL,
     cause_source_concept_id INTEGER NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
 CREATE TABLE Results.deident_CURE_ID_visit_occurrence
@@ -135,13 +124,10 @@ CREATE TABLE Results.deident_CURE_ID_visit_occurrence
     discharged_to_concept_id INTEGER NULL,
     discharged_to_source_value VARCHAR(50) NULL,
     preceding_visit_occurrence_id INTEGER NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_procedure_occurrence
-(
+CREATE TABLE Results.deident_CURE_ID_procedure_occurrence (
     procedure_occurrence_id INTEGER NOT NULL,
     person_id INTEGER NOT NULL,
     procedure_concept_id INTEGER NOT NULL,
@@ -156,13 +142,10 @@ CREATE TABLE Results.deident_CURE_ID_procedure_occurrence
     procedure_source_value VARCHAR(50) NULL,
     procedure_source_concept_id INTEGER NULL,
     modifier_source_value VARCHAR(50) NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_drug_exposure
-(
+CREATE TABLE Results.deident_CURE_ID_drug_exposure (
     drug_exposure_id INTEGER NOT NULL,
     person_id INTEGER NOT NULL,
     drug_concept_id INTEGER NOT NULL,
@@ -186,13 +169,10 @@ CREATE TABLE Results.deident_CURE_ID_drug_exposure
     drug_source_concept_id INTEGER NULL,
     route_source_value VARCHAR(50) NULL,
     dose_unit_source_value VARCHAR(50) NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_device_exposure
-(
+CREATE TABLE Results.deident_CURE_ID_device_exposure (
     device_exposure_id INTEGER NOT NULL,
     person_id INTEGER NOT NULL,
     device_concept_id INTEGER NOT NULL,
@@ -208,13 +188,10 @@ CREATE TABLE Results.deident_CURE_ID_device_exposure
     visit_detail_id INTEGER NULL,
     device_source_value VARCHAR(100) NULL,
     device_source_concept_id INTEGER NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_condition_occurrence
-(
+CREATE TABLE Results.deident_CURE_ID_condition_occurrence (
     condition_occurrence_id INTEGER NOT NULL,
     person_id INTEGER NOT NULL,
     condition_concept_id INTEGER NOT NULL,
@@ -231,13 +208,10 @@ CREATE TABLE Results.deident_CURE_ID_condition_occurrence
     condition_source_concept_id INTEGER NULL,
     condition_status_source_value VARCHAR(50) NULL,
     condition_status_concept_id INTEGER NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_measurement
-(
+CREATE TABLE Results.deident_CURE_ID_measurement (
     measurement_id INTEGER NOT NULL,
     person_id INTEGER NOT NULL,
     measurement_concept_id INTEGER NOT NULL,
@@ -258,13 +232,10 @@ CREATE TABLE Results.deident_CURE_ID_measurement
     measurement_source_concept_id INTEGER NULL,
     unit_source_value VARCHAR(50) NULL,
     value_source_value VARCHAR(50) NULL
-)
-;
-
+);
 
 --HINT DISTRIBUTE_ON_KEY(person_id)
-CREATE TABLE Results.deident_CURE_ID_observation
-(
+CREATE TABLE Results.deident_CURE_ID_observation (
     observation_id INTEGER NOT NULL,
     person_id INTEGER NOT NULL,
     observation_concept_id INTEGER NOT NULL,
@@ -283,5 +254,4 @@ CREATE TABLE Results.deident_CURE_ID_observation
     observation_source_concept_id INTEGER NULL,
     unit_source_value VARCHAR(50) NULL,
     qualifier_source_value VARCHAR(50) NULL
-)
-;
+);
