@@ -19,118 +19,102 @@ SELECT DISTINCT
     CONCEPT.concept_name
 INTO #drug_concepts_of_interest
 FROM [Results].[deident_CURE_ID_drug_exposure]
-LEFT JOIN
-    CONCEPT
-    ON
-        CONCEPT.concept_id = [Results].[deident_CURE_ID_drug_exposure].drug_concept_id;
+LEFT JOIN CONCEPT
+    ON CONCEPT.concept_id = [Results].[deident_CURE_ID_drug_exposure].drug_concept_id;
 
----Roll up drugs into ingredients
-drop table if exists #ingredients_of_interest
-select
-    dci.concept_id as drug_concept_id,
-    dci.concept_name as drug_concept_name,
-    CONCEPT.concept_id as ingredient_concept_id,
-    CONCEPT.concept_name as ingredient_name
-into
-#ingredients_of_interest
-from
-    #drug_concepts_of_interest dci
-left join
+--Roll up drugs into ingredients
+DROP TABLE IF EXISTS #ingredients_of_interest
+SELECT
+    dci.concept_id AS drug_concept_id,
+    dci.concept_name AS drug_concept_name,
+    CONCEPT.concept_id AS ingredient_concept_id,
+    CONCEPT.concept_name AS ingredient_name
+INTO #ingredients_of_interest
+FROM #drug_concepts_of_interest AS dci
+LEFT JOIN
     CONCEPT_ANCESTOR
-    on
+    ON
         descendant_concept_id = dci.concept_id
-left join
-    CONCEPT on CONCEPT.concept_id = ancestor_concept_id
-where
+LEFT JOIN CONCEPT
+  ON CONCEPT.concept_id = ancestor_concept_id
+WHERE
     concept_class_id = 'Ingredient'
 
-
-
 --Create table of drug exposures by ingredient
-drop table if exists #drug_exposure_by_ingredient
-select
+DROP TABLE IF EXISTS #drug_exposure_by_ingredient
+SELECT
     ingredient_name,
     ingredient_concept_id,
     d.drug_concept_id,
     person_id
-into
-#drug_exposure_by_ingredient
-from
-    [Results].[deident_CURE_ID_drug_exposure] d
-left join
-    #ingredients_of_interest i
-    on
-        i.drug_concept_id = d.drug_concept_id
-
-
+INTO #drug_exposure_by_ingredient
+FROM [Results].[deident_CURE_ID_drug_exposure] AS d
+LEFT JOIN #ingredients_of_interest AS i
+    ON i.drug_concept_id = d.drug_concept_id
 
 --Ingredient use by person
-drop table if exists #ingredient_use_by_person
-select
+DROP TABLE IF EXISTS #ingredient_use_by_person;
+SELECT
     ingredient_name,
     ingredient_concept_id,
-    count(person_id) as person_count,
+    COUNT(person_id) AS person_count,
     (
-        100 * count(person_id)
-        / (select count(distinct person_id) from #drug_exposure_by_ingredient)
-    ) as person_perc
-into #ingredient_use_by_person
-from
+        100 * COUNT(person_id)
+        / (SELECT COUNT(DISTINCT person_id) FROM #drug_exposure_by_ingredient)
+    ) AS person_perc
+INTO #ingredient_use_by_person
+FROM
     (
-        select distinct
+        SELECT DISTINCT
             person_id,
             ingredient_concept_id,
             ingredient_name
-        from
+        FROM
             #drug_exposure_by_ingredient
-    ) as x1
-group by
+    ) AS x1
+GROUP BY
     ingredient_concept_id,
     ingredient_name
-order by
-    person_count desc
+ORDER BY
+    person_count DESC
 
-
-
-drop table if exists #ingredient_count_by_person
-select
+DROP TABLE IF EXISTS #ingredient_count_by_person
+SELECT
     ingredient_name,
     ingredient_concept_id,
-    avg(ingredient_admin_count_per_person) as average_admin_per_person,
-    max(ingredient_admin_count_per_person) as max_admin_per_person
-into #ingredient_count_by_person
-from
+    AVG(ingredient_admin_count_per_person) AS average_admin_per_person,
+    MAX(ingredient_admin_count_per_person) AS max_admin_per_person
+INTO #ingredient_count_by_person
+FROM
     (
-        select
+        SELECT
             ingredient_name,
             ingredient_concept_id,
             person_id,
-            count(ingredient_concept_id) as ingredient_admin_count_per_person
-        from #drug_exposure_by_ingredient
-        group by person_id, ingredient_concept_id, ingredient_name
-    ) as x1
-group by
+            COUNT(ingredient_concept_id) AS ingredient_admin_count_per_person
+        FROM #drug_exposure_by_ingredient
+        GROUP BY person_id, ingredient_concept_id, ingredient_name
+    ) AS x1
+GROUP BY
     ingredient_concept_id,
     ingredient_name
-
-
 
     --Display summary table for each drug ingredient:
     ----the number of persons who took the drug ingredient
     ----percent of persons who took the drug ingredient
     ----average administrations of the drug ingredient per person who took the drug
     ----maximum administrations of the drug ingredient per person
-    select
+    SELECT
         #ingredient_use_by_person.ingredient_name,
         #ingredient_use_by_person.ingredient_concept_id,
         #ingredient_use_by_person.person_count,
         #ingredient_use_by_person.person_perc,
         #ingredient_count_by_person.average_admin_per_person,
         #ingredient_count_by_person.max_admin_per_person
-    from
+    FROM
         #ingredient_use_by_person
-    left join
+    LEFT JOIN
         #ingredient_count_by_person
-        on
+        ON
             #ingredient_use_by_person.ingredient_concept_id = #ingredient_count_by_person.ingredient_concept_id
-    order by person_count desc
+    ORDER BY person_count DESC
