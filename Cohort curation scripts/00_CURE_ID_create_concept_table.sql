@@ -13,7 +13,7 @@ None
 */
 
 DROP TABLE IF EXISTS [Results].[cure_id_concepts];
-create table [Results].[cure_id_concepts]
+CREATE TABLE [Results].[cure_id_concepts]
 (
     concept_id INTEGER NOT NULL,
     concept_code VARCHAR(50) NULL,
@@ -23,8 +23,8 @@ create table [Results].[cure_id_concepts]
     is_standard VARCHAR(50) NULL,
     include_descendants VARCHAR(50) NULL
 )
-insert into [Results].[cure_id_concepts]
-values
+INSERT INTO [Results].[cure_id_concepts]
+VALUES
 ('317009', '195967001', 'Asthma', 'Condition', 'SNOMED', 'S', 'TRUE'),
 ('4028244', '128292002', 'Chronic disease of cardiovascular system', 'Condition', 'SNOMED', 'S', 'TRUE'),
 ('4063381', '17097001', 'Chronic disease of respiratory system', 'Condition', 'SNOMED', 'S', 'TRUE'),
