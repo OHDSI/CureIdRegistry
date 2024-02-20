@@ -113,15 +113,15 @@ SELECT COUNT(DISTINCT person_id) AS "covid_positive_lab_person_count" FROM #firs
 SELECT
     v.person_id,
     v.visit_occurrence_id,
-    visit_start_date,
-    visit_end_date,
+    v.visit_start_date,
+    v.visit_end_date,
     p.First_Pos_Date,
     DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) AS "Days_From_First_Pos",
     ABS(DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date)) AS "Abs_Days_From_First_Pos"
 INTO #inpat_intermed
 FROM visit_occurrence AS v
 INNER JOIN #first_pos AS p ON v.person_id = p.person_id
-WHERE visit_concept_id IN (9201, 262); --Inpatient visit/ED and inpt visit
+WHERE v.visit_concept_id IN (9201, 262); --Inpatient visit/ED and inpt visit
 
 --Intermediate count of Covid-positive patients with inpatient encounters
 SELECT COUNT(DISTINCT person_id) AS "covid_pos_inpatients_count" FROM #inpat_intermed;
@@ -140,8 +140,8 @@ WHERE
 SELECT
     v.person_id,
     v.visit_occurrence_id,
-    visit_start_date,
-    visit_end_date,
+    v.visit_start_date,
+    v.visit_end_date,
     p.First_Pos_Date,
     DATEDIFF(MINUTE, v.visit_start_datetime, v.visit_end_datetime) AS "Length_Of_Stay",
     DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) AS "Days_From_First_Pos",
@@ -154,7 +154,7 @@ INTO #inpat
 FROM visit_occurrence AS v
 INNER JOIN #first_pos AS p ON v.person_id = p.person_id
 WHERE
-    visit_concept_id IN (9201, 262) --Inpatient visit/ED and inpt visit
+    v.visit_concept_id IN (9201, 262) --Inpatient visit/ED and inpt visit
     AND v.visit_start_date >= '2020-01-01'
     AND (
         DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) > -7
@@ -179,7 +179,7 @@ GROUP BY person_id;
 --Ex: Patient hospitalized separately 3 days before and 3 days after SARS-COV-2 test
 SELECT
     i.person_id,
-    MAX(Before_Or_After) AS "Flag"
+    MAX(i.Before_Or_After) AS "Flag"
 INTO #inpat_first_vis
 FROM #inpat AS i
 INNER JOIN #inpat_closest_vis AS v
@@ -191,8 +191,8 @@ GROUP BY i.person_id;
 --Create flag for longest LOs per person per visit_start_date
 SELECT
     i.person_id,
-    visit_start_date,
-    MAX(Length_Of_Stay) AS "max_los"
+    i.visit_start_date,
+    MAX(i.Length_Of_Stay) AS "max_los"
 INTO #los
 FROM #inpat AS i
 GROUP BY i.person_id, i.visit_start_date;
