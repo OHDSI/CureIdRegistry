@@ -16,67 +16,60 @@ Dependencies:
 -- Create table which includes the measurement concepts included in the cohort and their names
 
 DROP TABLE IF EXISTS #measurement_parent_concepts_of_interest;
-select
-    descendant_concept_id as concept_id,
+SELECT
+    descendant_concept_id AS concept_id,
     ancestor_concept_id,
     concept_name
-into #measurement_parent_concepts_of_interest
-
-from [Results].[cure_id_concepts]
+INTO #measurement_parent_concepts_of_interest
+FROM [Results].[cure_id_concepts]
 INNER JOIN CONCEPT_ANCESTOR
     ON ancestor_concept_id = concept_id
-where
+WHERE
     domain = 'Measurement'
-    and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-order by concept_name
+    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+ORDER BY concept_name
 
 
 --The measurement_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 --It is rolled up into ancestor concepts grouped as above
 --If no records for the patient of that concept are present, a record of 0 will be present 
 DROP TABLE IF EXISTS #measurement_count_temp;
-select
+SELECT
     p.person_id,
-    mpci.ancestor_concept_id as concept_id,
+    mpci.ancestor_concept_id AS concept_id,
     mpci.concept_name,
-    count(case when m.measurement_concept_id is not null then 1 else NULL end) as concept_count
-into #measurement_count_temp
-from
-    #measurement_parent_concepts_of_interest mpci
-cross join
-    [Results].[deident_CURE_ID_person] p
-left join
-    [Results].[deident_CURE_ID_measurement] m
-    on
+    COUNT(CASE WHEN m.measurement_concept_id IS NOT NULL THEN 1 ELSE NULL END) AS concept_count
+INTO #measurement_count_temp
+FROM
+    #measurement_parent_concepts_of_interest AS mpci
+CROSS JOIN
+    [Results].[deident_CURE_ID_person] AS p
+LEFT JOIN
+    [Results].[deident_CURE_ID_measurement] AS m
+    ON
         mpci.concept_id = m.measurement_concept_id
-        and m.person_id = p.person_id
-group by
+        AND m.person_id = p.person_id
+GROUP BY
     p.person_id,
     mpci.ancestor_concept_id,
     mpci.concept_name
 
-
-
 --This orders patients by how frequently the record occurs and does so for each individual concept
 DROP TABLE IF EXISTS #measurment_concept_count_rank;
-select
+SELECT
     concept_name,
     concept_id,
     concept_count,
-    row_number() over (partition by concept_id order by concept_count) as rownumber
-into
-#measurment_concept_count_rank
-from
-    #measurement_count_temp
+    ROW_NUMBER() OVER (PARTITION BY concept_id ORDER BY concept_count) AS rownumber
+INTO #measurment_concept_count_rank
+FROM #measurement_count_temp;
 
-
-
---This summary table aims to show how many measurement records are present per patient. 
---Because the clinical course for patients varies considerably, some patients have very few records; others have many.
---The summary table has a row for each ancestor concept included in the measurement table
---For each measurement, each patient in the cohort is ranked according to how many records of the measurement are present during the defined visit
---The columns show how many measurement records are present per patient per measurement concept for the 25th percentile, median, 75th percentile, and 95th percentile of patients
-select
+-- This summary table aims to show how many measurement records are present per patient. 
+-- Because the clinical course for patients varies considerably, some patients have very few records; others have many.
+-- The summary table has a row for each ancestor concept included in the measurement table
+-- For each measurement, each patient in the cohort is ranked according to how many records of the measurement are present during the defined visit
+-- The columns show how many measurement records are present per patient per measurement concept for the 25th percentile, median, 75th percentile, and 95th percentile of patients
+SELECT
     concept_name,
     x1.concept_id,
     percentile_25,
@@ -99,37 +92,48 @@ select
             + CAST(percentile_95 AS VARCHAR(10))
             + ' or more records.'
     END AS interpretation
-from
-    (select distinct ancestor_concept_id as concept_id, concept_name from #measurement_parent_concepts_of_interest) x1
-full join
+FROM
+    (SELECT DISTINCT
+        ancestor_concept_id AS concept_id,
+        concept_name
+    FROM #measurement_parent_concepts_of_interest) AS x1
+FULL JOIN
     (
-        select concept_id, concept_count as percentile_25
+        SELECT
+            concept_id,
+            concept_count AS percentile_25
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.25 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
-    ) as p25
-    on p25.concept_id = x1.concept_id
-full join
+        WHERE rownumber = FLOOR(0.25 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
+    ) AS p25
+    ON p25.concept_id = x1.concept_id
+FULL JOIN
     (
-        select concept_id, concept_count as median
+        SELECT
+            concept_id,
+            concept_count AS median
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.50 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
-    ) as p50
-    on p50.concept_id = x1.concept_id
-full join
+        WHERE rownumber = FLOOR(0.50 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
+    ) AS p50
+    ON p50.concept_id = x1.concept_id
+FULL JOIN
     (
-        select concept_id, concept_count as percentile_75
+        SELECT
+            concept_id,
+            concept_count AS percentile_75
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.75 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
-    ) as p75
-    on p75.concept_id = x1.concept_id
-full join
+        WHERE rownumber = FLOOR(0.75 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
+    ) AS p75
+    ON p75.concept_id = x1.concept_id
+FULL JOIN
     (
-        select concept_id, concept_count as percentile_95
+        SELECT
+            concept_id,
+            concept_count AS percentile_95
         FROM #measurment_concept_count_rank
-        where rownumber = floor(0.95 * (select count(person_id) from [Results].[deident_CURE_ID_person]))
-    ) as p95
-    on p95.concept_id = x1.concept_id
-order by
-    median desc,
-    percentile_75 desc,
-    percentile_95 desc
+        WHERE rownumber = FLOOR(0.95 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
+    ) AS p95
+    ON p95.concept_id = x1.concept_id
+ORDER BY
+    median DESC,
+    percentile_75 DESC,
+    percentile_95 DESC

@@ -36,10 +36,16 @@ DROP TABLE IF EXISTS #Vis_Occ;
 
 --Create cohort table (again specify schema as appropriate)
 CREATE TABLE [Results].[CURE_ID_Cohort] (
-    [person_id] [int] NOT NULL, [visit_occurrence_id] [int] NOT NULL, [visit_start_date] [date] NOT NULL,
-    [visit_end_date] [date] NOT NULL, [First_Pos_Date] [date] NULL, [Days_From_First_Pos] [int] NULL,
-    [Abs_Days_From_First_Pos] [int] NULL, [Before_Or_After] [int] NOT NULL,
-    [birth_datetime] [datetime2](7) NULL, [death_datetime] [datetime2](7) NULL
+    [person_id] [int] NOT NULL,
+    [visit_occurrence_id] [int] NOT NULL,
+    [visit_start_date] [date] NOT NULL,
+    [visit_end_date] [date] NOT NULL,
+    [First_Pos_Date] [date] NULL,
+    [Days_From_First_Pos] [int] NULL,
+    [Abs_Days_From_First_Pos] [int] NULL,
+    [Before_Or_After] [int] NOT NULL,
+    [birth_datetime] [datetime2](7) NULL,
+    [death_datetime] [datetime2](7) NULL
 ) ON [PRIMARY];
 
 
@@ -62,12 +68,10 @@ WHERE measurement_concept_id IN (
             '715260', '757677', '757678', '36661377', '36661378', '36661370', '36661371', '36031238',
             '36031213', '36031506', '36032061', '36031944', '36032174', '36031652', '36031453', '36032258'
         )
-
     UNION
-
     SELECT c.concept_id
-    FROM dbo.CONCEPT c
-    INNER JOIN dbo.CONCEPT_ANCESTOR ca ON c.concept_id = ca.descendant_concept_id
+    FROM dbo.CONCEPT AS c
+    INNER JOIN dbo.CONCEPT_ANCESTOR AS ca ON c.concept_id = ca.descendant_concept_id
     -- Most of the LOINC codes do not have descendants but there is one OMOP Extension code (765055) in use that has descendants which we want to pull
     -- This statement pulls the descendants of that specific code
     AND ca.ancestor_concept_id IN (756055)
@@ -82,7 +86,7 @@ AND (
         4126681, -- Detected
         45877985, -- Detected
         45884084, -- Positive
-        9191, --- Positive 
+        9191, --- Positive
         4181412, -- Present
         45879438, -- Present
         45881802 -- Reactive
@@ -92,18 +96,18 @@ AND (
 );
 
 --Show counts of unique covid-positive labs (not unique patients)
-select count(*) "covid_positive_lab_count" from #covid_lab_pos;
+SELECT COUNT(*) AS "covid_positive_lab_count" FROM #covid_lab_pos;
 
 --First positive test per patient
 SELECT
     person_id,
-    min(measurement_date) "First_Pos_Date"
+    MIN(measurement_date) AS "First_Pos_Date"
 INTO #first_pos
 FROM #covid_lab_pos
 GROUP BY person_id;
 
 --Show count of unique patients so far
-select count(distinct person_id) "covid_positive_lab_person_count" from #first_pos;
+SELECT COUNT(DISTINCT person_id) AS "covid_positive_lab_person_count" FROM #first_pos;
 
 --Covid-positive patients with inpatient encounters (intermediate table for debugging)
 SELECT
@@ -112,24 +116,24 @@ SELECT
     visit_start_date,
     visit_end_date,
     p.First_Pos_Date,
-    DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) "Days_From_First_Pos",
-    ABS(DATEDIFF(day, p.First_Pos_Date, v.visit_start_date)) "Abs_Days_From_First_Pos"
+    DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) AS "Days_From_First_Pos",
+    ABS(DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date)) AS "Abs_Days_From_First_Pos"
 INTO #inpat_intermed
-FROM visit_occurrence v
-INNER JOIN #first_pos p ON v.person_id = p.person_id
-WHERE visit_concept_id in (9201, 262); --Inpatient visit/ED and inpt visit
+FROM visit_occurrence AS v
+INNER JOIN #first_pos AS p ON v.person_id = p.person_id
+WHERE visit_concept_id IN (9201, 262); --Inpatient visit/ED and inpt visit
 
 --Intermediate count of Covid-positive patients with inpatient encounters
-select count(distinct person_id) "covid_pos_inpatients_count" from #inpat_intermed;
+SELECT COUNT(DISTINCT person_id) AS "covid_pos_inpatients_count" FROM #inpat_intermed;
 
 --Count of patients after temporal constraints applied
-Select count(distinct person_id) "covid_pos_inpatients_date_filtered_count"
-from #inpat_intermed
+SELECT COUNT(DISTINCT person_id) AS "covid_pos_inpatients_date_filtered_count"
+FROM #inpat_intermed
 WHERE
     visit_start_date >= '2020-01-01'
     AND (
-        DATEDIFF(day, First_Pos_Date, visit_start_date) > -7
-        AND DATEDIFF(day, First_Pos_Date, visit_start_date) < 21
+        DATEDIFF(DAY, First_Pos_Date, visit_start_date) > -7
+        AND DATEDIFF(DAY, First_Pos_Date, visit_start_date) < 21
     )
 
 --Apply all incl/excl criteria to identify all patients hospitalized with symptomatic covid-19 up to 21 days after a positive SARS-CoV-2 test or up to 7 days prior to a positive SARS-CoV-2 test
@@ -139,35 +143,34 @@ SELECT
     visit_start_date,
     visit_end_date,
     p.First_Pos_Date,
-    DATEDIFF(MINUTE, v.visit_start_datetime, v.visit_end_datetime) "Length_Of_Stay",
-    DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) "Days_From_First_Pos",
-    ABS(DATEDIFF(day, p.First_Pos_Date, v.visit_start_date)) "Abs_Days_From_First_Pos",
+    DATEDIFF(MINUTE, v.visit_start_datetime, v.visit_end_datetime) AS "Length_Of_Stay",
+    DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) AS "Days_From_First_Pos",
+    ABS(DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date)) AS "Abs_Days_From_First_Pos",
     CASE
-        WHEN DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) < 0
-            THEN -1
+        WHEN DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) < 0 THEN -1
         ELSE 1
     END AS Before_Or_After
 INTO #inpat
-FROM visit_occurrence v
-INNER JOIN #first_pos p ON v.person_id = p.person_id
+FROM visit_occurrence AS v
+INNER JOIN #first_pos AS p ON v.person_id = p.person_id
 WHERE
-    visit_concept_id in (9201, 262) --Inpatient visit/ED and inpt visit
+    visit_concept_id IN (9201, 262) --Inpatient visit/ED and inpt visit
     AND v.visit_start_date >= '2020-01-01'
     AND (
-        DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) > -7
-        AND DATEDIFF(day, p.First_Pos_Date, v.visit_start_date) < 21
+        DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) > -7
+        AND DATEDIFF(DAY, p.First_Pos_Date, v.visit_start_date) < 21
     );
 
 --Count of patients and encounters that meet the criteria
 SELECT
-    count(DISTINCT person_id) "covid_pos_inpatients",
-    count(DISTINCT visit_occurrence_id) "covid_pos_inpatient_visits"
+    COUNT(DISTINCT person_id) AS "covid_pos_inpatients",
+    COUNT(DISTINCT visit_occurrence_id) AS "covid_pos_inpatient_visits"
 FROM #inpat;
 
 --Finds closest encounter to first positive SARS-COV-2 test (for patients hospitalized more than once)
 SELECT
     person_id,
-    min(Abs_Days_From_First_Pos) "Closest_Vis"
+    MIN(Abs_Days_From_First_Pos) AS "Closest_Vis"
 INTO #inpat_closest_vis
 FROM #inpat
 GROUP BY person_id;
@@ -176,10 +179,10 @@ GROUP BY person_id;
 --Ex: Patient hospitalized separately 3 days before and 3 days after SARS-COV-2 test
 SELECT
     i.person_id,
-    max(Before_Or_After) "Flag"
+    MAX(Before_Or_After) AS "Flag"
 INTO #inpat_first_vis
-FROM #inpat i
-INNER JOIN #inpat_closest_vis v
+FROM #inpat AS i
+INNER JOIN #inpat_closest_vis AS v
     ON
         i.person_id = v.person_id
         AND i.Abs_Days_From_First_Pos = v.Closest_Vis
@@ -187,41 +190,45 @@ GROUP BY i.person_id;
 
 --Create flag for longest LOs per person per visit_start_date
 SELECT
-    i.person_id, visit_start_date,
-    max(Length_Of_Stay) "max_los"
+    i.person_id,
+    visit_start_date,
+    MAX(Length_Of_Stay) AS "max_los"
 INTO #los
-FROM #inpat i
+FROM #inpat AS i
 GROUP BY i.person_id, i.visit_start_date;
 
 --Apply criteria in sequence
 SELECT i.*
 INTO #closest_vis
-FROM #inpat i
+FROM #inpat AS i
 INNER JOIN #inpat_closest_vis
-    c ON i.person_id = c.person_id
+    AS c ON i.person_id = c.person_id
 AND i.Abs_Days_From_First_Pos = c.Closest_Vis;
 
 SELECT i.*
 INTO #first_vis
-FROM #closest_vis i
+FROM #closest_vis AS i
 INNER JOIN #inpat_first_vis
-    v ON i.person_id = v.person_id
+    AS v ON i.person_id = v.person_id
 AND i.Before_Or_After = v.Flag;
 
 SELECT i.*
 INTO #los_max
-FROM #first_vis i
+FROM #first_vis AS i
 INNER JOIN #los
-    los ON i.person_id = los.person_id
+    AS los ON i.person_id = los.person_id
 AND i.visit_start_date = los.visit_start_date
 AND i.Length_Of_Stay = los.max_los;
 
 --Make cohort table
-SELECT v.*, p.birth_datetime, d.death_datetime
+SELECT
+    v.*,
+    p.birth_datetime,
+    d.death_datetime
 INTO #Vis_Occ
-FROM #los_max v
-INNER JOIN person p ON v.person_id = p.person_id
-LEFT JOIN death d ON v.person_id = d.person_id;
+FROM #los_max AS v
+INNER JOIN person AS p ON v.person_id = p.person_id
+LEFT JOIN death AS d ON v.person_id = d.person_id;
 
 --Creates cohort by adding on birth date and death date
 INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
@@ -231,13 +238,20 @@ INSERT INTO [Results].[CURE_ID_Cohort] --Change schema if not using Results
     [birth_datetime], [death_datetime]
 )
 SELECT
-    v.[person_id], v.[visit_occurrence_id], v.[visit_start_date], v.[visit_end_date], v.[First_Pos_Date],
-    v.[Days_From_First_Pos], v.[Abs_Days_From_First_Pos], v.[Before_Or_After],
-    v.[birth_datetime], v.[death_datetime]
-FROM #Vis_Occ v;
+    v.[person_id],
+    v.[visit_occurrence_id],
+    v.[visit_start_date],
+    v.[visit_end_date],
+    v.[First_Pos_Date],
+    v.[Days_From_First_Pos],
+    v.[Abs_Days_From_First_Pos],
+    v.[Before_Or_After],
+    v.[birth_datetime],
+    v.[death_datetime]
+FROM #Vis_Occ AS v;
 
 --Final count of patients
-Select count(distinct person_id) "Final_patient_count" from #Vis_Occ;
+SELECT COUNT(DISTINCT person_id) AS "Final_patient_count" FROM #Vis_Occ;
 
 --View data
 SELECT TOP 100 *
