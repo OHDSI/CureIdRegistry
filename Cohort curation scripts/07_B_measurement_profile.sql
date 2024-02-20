@@ -17,18 +17,20 @@ Dependencies:
 
 DROP TABLE IF EXISTS #measurement_parent_concepts_of_interest;
 SELECT
-    descendant_concept_id AS concept_id,
-    ancestor_concept_id,
-    concept_name
+    CONCEPT_ANCESTOR.descendant_concept_id AS concept_id,
+    CONCEPT_ANCESTOR.ancestor_concept_id,
+    [Results].[cure_id_concepts].concept_name
 INTO #measurement_parent_concepts_of_interest
 FROM [Results].[cure_id_concepts]
 INNER JOIN CONCEPT_ANCESTOR
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Measurement'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
-ORDER BY concept_name
-
+    [Results].[cure_id_concepts].domain = 'Measurement'
+    AND (
+        [Results].[cure_id_concepts].include_descendants = 'TRUE'
+        OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id
+    )
+ORDER BY [Results].[cure_id_concepts].concept_name
 
 --The measurement_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 --It is rolled up into ancestor concepts grouped as above
@@ -38,7 +40,7 @@ SELECT
     p.person_id,
     mpci.ancestor_concept_id AS concept_id,
     mpci.concept_name,
-    COUNT(CASE WHEN m.measurement_concept_id IS NOT NULL THEN 1 ELSE NULL END) AS concept_count
+    COUNT(CASE WHEN m.measurement_concept_id IS NOT NULL THEN 1 END) AS concept_count
 INTO #measurement_count_temp
 FROM
     #measurement_parent_concepts_of_interest AS mpci
@@ -69,71 +71,85 @@ FROM #measurement_count_temp;
 -- The summary table has a row for each ancestor concept included in the measurement table
 -- For each measurement, each patient in the cohort is ranked according to how many records of the measurement are present during the defined visit
 -- The columns show how many measurement records are present per patient per measurement concept for the 25th percentile, median, 75th percentile, and 95th percentile of patients
+WITH p25 AS (
+    SELECT
+        concept_id,
+        concept_count AS percentile_25
+    FROM #measurment_concept_count_rank
+    WHERE rownumber = FLOOR(0.25 * (
+        SELECT COUNT(person_id)
+        FROM [Results].[deident_CURE_ID_person]
+    ))
+),
+
+p50 AS (
+    SELECT
+        concept_id,
+        concept_count AS median
+    FROM #measurment_concept_count_rank
+    WHERE rownumber = FLOOR(0.50 * (
+        SELECT COUNT(person_id)
+        FROM [Results].[deident_CURE_ID_person]
+    ))
+),
+
+p75 AS (
+    SELECT
+        concept_id,
+        concept_count AS percentile_75
+    FROM #measurment_concept_count_rank
+    WHERE rownumber = FLOOR(0.75 * (
+        SELECT COUNT(person_id)
+        FROM [Results].[deident_CURE_ID_person]
+    ))
+),
+
+p95 AS (
+    SELECT
+        concept_id,
+        concept_count AS percentile_95
+    FROM #measurment_concept_count_rank
+    WHERE rownumber = FLOOR(0.95 * (
+        SELECT COUNT(person_id)
+        FROM [Results].[deident_CURE_ID_person]
+    ))
+)
+
 SELECT
-    concept_name,
+    x1.concept_name,
     x1.concept_id,
-    percentile_25,
-    median,
-    percentile_75,
-    percentile_95,
+    p25.percentile_25,
+    p50.median,
+    p75.percentile_75,
+    p95.percentile_95,
     CASE
-        WHEN median = 0
+        WHEN p50.median = 0
             THEN
                 'For half of patients, there were no records of this measurement. 5% of patients had '
-                + CAST(percentile_95 AS VARCHAR(10))
+                + CAST(p95.percentile_95 AS VARCHAR(10))
                 + ' or more records.'
         ELSE
             'For half of patients, there were at least '
-            + CAST(median AS VARCHAR(10))
+            + CAST(p50.median AS VARCHAR(10))
             + ' records. Most patients (25th-75th percentile) had '
-            + CAST(percentile_25 AS VARCHAR(10)) + '-'
-            + CAST(percentile_75 AS VARCHAR(10))
+            + CAST(p25.percentile_25 AS VARCHAR(10)) + '-'
+            + CAST(p75.percentile_75 AS VARCHAR(10))
             + ' records. 5% of patients had '
-            + CAST(percentile_95 AS VARCHAR(10))
+            + CAST(p95.percentile_95 AS VARCHAR(10))
             + ' or more records.'
     END AS interpretation
-FROM
-    (SELECT DISTINCT
+FROM (
+    SELECT DISTINCT
         ancestor_concept_id AS concept_id,
         concept_name
-    FROM #measurement_parent_concepts_of_interest) AS x1
-FULL JOIN
-    (
-        SELECT
-            concept_id,
-            concept_count AS percentile_25
-        FROM #measurment_concept_count_rank
-        WHERE rownumber = FLOOR(0.25 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
-    ) AS p25
-    ON p25.concept_id = x1.concept_id
-FULL JOIN
-    (
-        SELECT
-            concept_id,
-            concept_count AS median
-        FROM #measurment_concept_count_rank
-        WHERE rownumber = FLOOR(0.50 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
-    ) AS p50
-    ON p50.concept_id = x1.concept_id
-FULL JOIN
-    (
-        SELECT
-            concept_id,
-            concept_count AS percentile_75
-        FROM #measurment_concept_count_rank
-        WHERE rownumber = FLOOR(0.75 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
-    ) AS p75
-    ON p75.concept_id = x1.concept_id
-FULL JOIN
-    (
-        SELECT
-            concept_id,
-            concept_count AS percentile_95
-        FROM #measurment_concept_count_rank
-        WHERE rownumber = FLOOR(0.95 * (SELECT COUNT(person_id) FROM [Results].[deident_CURE_ID_person]))
-    ) AS p95
-    ON p95.concept_id = x1.concept_id
-ORDER BY
-    median DESC,
-    percentile_75 DESC,
-    percentile_95 DESC
+    FROM #measurement_parent_concepts_of_interest
+) AS x1
+FULL JOIN p25
+    ON x1.concept_id = p25.concept_id
+FULL JOIN p50
+    ON x1.concept_id = p50.concept_id
+FULL JOIN p75
+    ON x1.concept_id = p75.concept_id
+FULL JOIN p95
+    ON x1.concept_id = p95.concept_id
+ORDER BY p50.median DESC, p75.percentile_75 DESC, p95.percentile_95 DESC;
