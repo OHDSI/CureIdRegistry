@@ -15,17 +15,17 @@ Dependencies:
 --Create table which includes the device concepts included in the cohort and their names
 DROP TABLE IF EXISTS #device_concepts_of_interest;
 SELECT
-    descendant_concept_id AS concept_id,
-    ancestor_concept_id,
-    concept_name
+    CONCEPT_ANCESTOR.descendant_concept_id AS concept_id,
+    CONCEPT_ANCESTOR.ancestor_concept_id,
+    [Results].[cure_id_concepts].concept_name
 INTO #device_concepts_of_interest
 FROM [Results].[cure_id_concepts]
 INNER JOIN CONCEPT_ANCESTOR
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Device'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
-ORDER BY concept_name
+    [Results].[cure_id_concepts].domain = 'Device'
+    AND ([Results].[cure_id_concepts].include_descendants = 'TRUE' OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id)
+ORDER BY [Results].[cure_id_concepts].concept_name
 
 --The #device_count_temp table counts the number of times that each concept is present for each patient in the cohort.
 DROP TABLE IF EXISTS #device_count_temp;
@@ -33,7 +33,11 @@ SELECT
     p.person_id,
     dci.concept_id AS concept_id,
     dci.concept_name,
-    COUNT(CASE WHEN d.device_concept_id IS NOT NULL THEN 1 ELSE NULL END) AS concept_count
+    COUNT(
+        CASE
+            WHEN d.device_concept_id IS NOT NULL THEN 1
+        END
+    ) AS concept_count
 INTO #device_count_temp
 FROM [Results].[deident_CURE_ID_person] AS p
 CROSS JOIN #device_concepts_of_interest AS dci
@@ -49,8 +53,8 @@ GROUP BY
 --Device use by person
 DROP TABLE IF EXISTS #device_use_by_person
 SELECT
-    concept_name,
-    concept_id,
+    dci.concept_name,
+    dci.concept_id,
     COUNT(DISTINCT d.person_id) AS person_count,
     (
         100 * COUNT(DISTINCT d.person_id)
@@ -61,8 +65,8 @@ FROM #device_concepts_of_interest AS dci
 LEFT JOIN [Results].[deident_CURE_ID_device_exposure] AS d
     ON d.device_concept_id = dci.concept_id
 GROUP BY
-    concept_id,
-    concept_name
+    dci.concept_id,
+    dci.concept_name
 ORDER BY person_count DESC
 
 
@@ -95,4 +99,4 @@ GROUP BY
     FROM #device_use_by_person AS du
     LEFT JOIN #device_count_by_person AS dc
         ON du.concept_id = dc.concept_id
-    ORDER BY person_count DESC
+    ORDER BY du.person_count DESC;
