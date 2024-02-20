@@ -83,12 +83,12 @@ INNER JOIN [Results].[CURE_ID_Cohort] AS coh
         m.person_id = coh.person_id
         AND m.measurement_date BETWEEN DATEADD(DAY, -1, coh.visit_start_date) AND DATEADD(DAY, 1, coh.visit_end_date)
 INNER JOIN CONCEPT_ANCESTOR
-    ON descendant_concept_id = m.measurement_concept_id
+    ON CONCEPT_ANCESTOR.descendant_concept_id = m.measurement_concept_id
 INNER JOIN [Results].[cure_id_concepts]
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Measurement'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+    [Results].[cure_id_concepts].domain = 'Measurement'
+    AND ([Results].[cure_id_concepts]include_descendants = 'TRUE' OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id)
 
 --Load drug_exposure table
 SELECT
@@ -171,12 +171,12 @@ INNER JOIN [Results].[CURE_ID_Cohort] AS coh
         o.person_id = coh.person_id
         AND o.observation_date BETWEEN DATEADD(YEAR, -1, coh.visit_start_date) AND DATEADD(YEAR, 1, coh.visit_end_date)
 INNER JOIN CONCEPT_ANCESTOR
-    ON descendant_concept_id = o.observation_concept_id
+    ON CONCEPT_ANCESTOR.descendant_concept_id = o.observation_concept_id
 INNER JOIN [Results].[cure_id_concepts]
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Observation'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+    [Results].[cure_id_concepts].domain = 'Observation'
+    AND ([Results].[cure_id_concepts].include_descendants = 'TRUE' OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id)
 
 --Load Procedure Occurrence Table
 SELECT
@@ -203,12 +203,12 @@ INNER JOIN [Results].[CURE_ID_Cohort] AS coh
         p.person_id = coh.person_id
         AND p.procedure_date BETWEEN DATEADD(DAY, -1, coh.visit_start_date) AND DATEADD(DAY, 1, coh.visit_end_date)
 INNER JOIN CONCEPT_ANCESTOR
-    ON descendant_concept_id = p.procedure_concept_id
+    ON CONCEPT_ANCESTOR.descendant_concept_id = p.procedure_concept_id
 INNER JOIN [Results].[cure_id_concepts]
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Procedure'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+    [Results].[cure_id_concepts].domain = 'Procedure'
+    AND ([Results].[cure_id_concepts].include_descendants = 'TRUE' OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id)
 
 --Load Condition Occurrence table
 SELECT
@@ -239,12 +239,12 @@ INNER JOIN [Results].[CURE_ID_Cohort] AS coh
             OR c.condition_end_date IS NULL
         )
 INNER JOIN CONCEPT_ANCESTOR
-    ON descendant_concept_id = c.condition_concept_id
+    ON CONCEPT_ANCESTOR.descendant_concept_id = c.condition_concept_id
 INNER JOIN [Results].[cure_id_concepts]
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Condition'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+    [Results].[cure_id_concepts].domain = 'Condition'
+    AND ([Results].[cure_id_concepts].include_descendants = 'TRUE' OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id)
 
 --Load Visit Occurrence table
 SELECT DISTINCT
@@ -301,9 +301,9 @@ INNER JOIN [Results].[CURE_ID_Cohort] AS coh
         dev.person_id = coh.person_id
         AND dev.device_exposure_start_date BETWEEN DATEADD(DAY, -1, coh.visit_start_date) AND DATEADD(DAY, 1, coh.visit_end_date)
 INNER JOIN CONCEPT_ANCESTOR
-    ON descendant_concept_id = dev.device_concept_id
+    ON CONCEPT_ANCESTOR.descendant_concept_id = dev.device_concept_id
 INNER JOIN [Results].[cure_id_concepts]
-    ON ancestor_concept_id = concept_id
+    ON CONCEPT_ANCESTOR.ancestor_concept_id = [Results].[cure_id_concepts].concept_id
 WHERE
-    domain = 'Device'
-    AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+    [Results].[cure_id_concepts].domain = 'Device'
+    AND ([Results].[cure_id_concepts].include_descendants = 'TRUE' OR CONCEPT_ANCESTOR.ancestor_concept_id = CONCEPT_ANCESTOR.descendant_concept_id)

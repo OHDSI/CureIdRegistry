@@ -20,15 +20,15 @@ DROP TABLE IF EXISTS Results.CURE_ID_Condition_Occurrence_Rare_Removed
 ---Condition roll up
 DROP TABLE IF EXISTS #condition_rollup
 SELECT DISTINCT
-    person_id,
-    condition_concept_id AS original_concept_id,
-    concept_name AS ancestor_concept_name,
-    ancestor_concept_id,
-    min_levels_of_separation
+    cond.person_id,
+    cond.condition_concept_id AS original_concept_id,
+    concept.concept_name AS ancestor_concept_name,
+    CONCEPT_ancestor.ancestor_concept_id,
+    CONCEPT_ancestor.min_levels_of_separation
 INTO #condition_rollup
-FROM Results.CURE_ID_Condition_Occurrence
+FROM Results.CURE_ID_Condition_Occurrence AS cond
 LEFT JOIN CONCEPT_ancestor
-    ON descendant_concept_id = Results.CURE_ID_Condition_Occurrence.condition_concept_id
+    ON CONCEPT_ancestor.descendant_concept_id = cond.condition_concept_id
 LEFT JOIN concept
     ON concept.concept_id = CONCEPT_ancestor.ancestor_concept_id
 
@@ -51,19 +51,19 @@ SELECT
 INTO #original_condition_counts
 FROM (
     SELECT DISTINCT
-        person_id,
-        condition_concept_id,
-        concept_name
-    FROM Results.CURE_ID_Condition_Occurrence
+        cond.person_id,
+        cond.condition_concept_id,
+        concept.concept_name
+    FROM Results.CURE_ID_Condition_Occurrence AS cond
     LEFT JOIN concept
-        ON concept.concept_id = Results.CURE_ID_Condition_Occurrence.condition_concept_id
+        ON concept.concept_id = cond.condition_concept_id
 ) AS x1
 GROUP BY condition_concept_id, concept_name
 
 --Limit to conditions to those that have more than 10 counts
 DROP TABLE IF EXISTS #condition_rollup_morethan10
 SELECT
-    person_id,
+    #condition_rollup.person_id,
     #condition_rollup.original_concept_id,
     #condition_rollup.ancestor_concept_id,
     #condition_rollup.ancestor_concept_name,
@@ -74,10 +74,19 @@ FROM #condition_rollup
 LEFT JOIN #condition_rollup_counts
     ON #condition_rollup_counts.ancestor_concept_id = #condition_rollup.ancestor_concept_id
 WHERE
-    ancestor_concept_count > 10
+    #condition_rollup_counts.ancestor_concept_count > 10;
 
 --Get just the most specfic condition in the ancestor-descendent hierarchy
 DROP TABLE IF EXISTS #condition_rollup_morethan10_min_counts
+WITH tb1 AS (
+    SELECT DISTINCT
+        #condition_rollup_morethan10.person_id,
+        #condition_rollup_morethan10.original_concept_id,
+        MIN(#condition_rollup_morethan10.ancestor_concept_count) AS min_ancestor_concept_count
+    FROM #condition_rollup_morethan10
+    --GROUP BY person_id, original_concept_id
+)
+
 SELECT DISTINCT
     #condition_rollup_morethan10.person_id,
     #condition_rollup_morethan10.original_concept_id,
@@ -87,15 +96,7 @@ SELECT DISTINCT
     #condition_rollup_morethan10.min_levels_of_separation
 INTO #condition_rollup_morethan10_min_counts
 FROM #condition_rollup_morethan10
-INNER JOIN
-    (
-        SELECT DISTINCT
-            #condition_rollup_morethan10.person_id,
-            #condition_rollup_morethan10.original_concept_id,
-            min(ancestor_concept_count) AS min_ancestor_concept_count
-        FROM #condition_rollup_morethan10
-        GROUP BY person_id, original_concept_id
-    ) AS tb1
+INNER JOIN tb1
     ON
         #condition_rollup_morethan10.person_id = tb1.person_id
         AND #condition_rollup_morethan10.original_concept_id = tb1.original_concept_id
@@ -103,6 +104,15 @@ WHERE
     #condition_rollup_morethan10.ancestor_concept_count = tb1.min_ancestor_concept_count
 
 DROP TABLE IF EXISTS #condition_rollup_morethan10_min_counts_and_levels
+WITH tb1 AS (
+    SELECT DISTINCT
+        person_id,
+        original_concept_id,
+        MIN(min_levels_of_separation) AS min_min_levels_of_separation
+    FROM #condition_rollup_morethan10_min_counts
+    --GROUP BY person_id, original_concept_id
+)
+
 SELECT DISTINCT
     #condition_rollup_morethan10_min_counts.person_id,
     #condition_rollup_morethan10_min_counts.original_concept_id,
@@ -112,15 +122,7 @@ SELECT DISTINCT
     #condition_rollup_morethan10_min_counts.min_levels_of_separation
 INTO #condition_rollup_morethan10_min_counts_and_levels
 FROM #condition_rollup_morethan10_min_counts
-INNER JOIN
-    (
-        SELECT DISTINCT
-            person_id,
-            original_concept_id,
-            min(min_levels_of_separation) AS min_min_levels_of_separation
-        FROM #condition_rollup_morethan10_min_counts
-        GROUP BY person_id, original_concept_id
-    ) AS tb1
+INNER JOIN tb1
     ON
         #condition_rollup_morethan10_min_counts.person_id = tb1.person_id
         AND #condition_rollup_morethan10_min_counts.original_concept_id = tb1.original_concept_id
@@ -141,12 +143,12 @@ INTO #condition_rollup_morethan10_min_counts_and_levels_forced_unique
 FROM (
     SELECT
         *,
-        ROW_NUMBER() OVER (PARTITION BY person_id, original_concept_id ORDER BY revised_concept_id DESC) AS row_number
+        ROW_NUMBER() OVER (PARTITION BY person_id, original_concept_id ORDER BY revised_concept_id DESC) AS row_num
     FROM #condition_rollup_morethan10_min_counts_and_levels
 ) AS x1
 LEFT JOIN #original_condition_counts
     ON x1.original_concept_id = #original_condition_counts.original_concept_id
-WHERE row_number = 1;
+WHERE x1.row_num = 1;
 
 --SELECT top 10 * FROM #condition_rollup_morethan10_min_counts_and_levels_forced_unique where original_concept_id != revised_concept_id;
 

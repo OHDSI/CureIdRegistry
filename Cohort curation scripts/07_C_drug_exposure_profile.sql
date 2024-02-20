@@ -23,7 +23,7 @@ LEFT JOIN CONCEPT
     ON CONCEPT.concept_id = [Results].[deident_CURE_ID_drug_exposure].drug_concept_id;
 
 --Roll up drugs into ingredients
-DROP TABLE IF EXISTS #ingredients_of_interest
+DROP TABLE IF EXISTS #ingredients_of_interest;
 SELECT
     dci.concept_id AS drug_concept_id,
     dci.concept_name AS drug_concept_name,
@@ -34,19 +34,19 @@ FROM #drug_concepts_of_interest AS dci
 LEFT JOIN
     CONCEPT_ANCESTOR
     ON
-        descendant_concept_id = dci.concept_id
+        CONCEPT_ANCESTOR.descendant_concept_id = dci.concept_id
 LEFT JOIN CONCEPT
-  ON CONCEPT.concept_id = ancestor_concept_id
+    ON CONCEPT.concept_id = CONCEPT_ANCESTOR.ancestor_concept_id
 WHERE
-    concept_class_id = 'Ingredient'
+    CONCEPT.concept_class_id = 'Ingredient'
 
 --Create table of drug exposures by ingredient
 DROP TABLE IF EXISTS #drug_exposure_by_ingredient
 SELECT
-    ingredient_name,
-    ingredient_concept_id,
+    i.ingredient_name,
+    i.ingredient_concept_id,
     d.drug_concept_id,
-    person_id
+    d.person_id
 INTO #drug_exposure_by_ingredient
 FROM [Results].[deident_CURE_ID_drug_exposure] AS d
 LEFT JOIN #ingredients_of_interest AS i
@@ -117,4 +117,4 @@ GROUP BY
         #ingredient_count_by_person
         ON
             #ingredient_use_by_person.ingredient_concept_id = #ingredient_count_by_person.ingredient_concept_id
-    ORDER BY person_count DESC
+    ORDER BY #ingredient_use_by_person.person_count DESC
