@@ -1,6 +1,6 @@
 /*
 Create CURE_ID tables based off generated CURE_ID cohort
-This script depends on CURE_ID_Cohort.sql, and must be run after that script compeltes
+This script depends on CURE_ID_Cohort.sql, and must be run after that script completes
 */
 USE YOUR_DATABASE;
 
