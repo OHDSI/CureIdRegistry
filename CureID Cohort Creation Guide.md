@@ -18,11 +18,11 @@ Replace the database name and schema in each of these scripts with your own, the
 6. Run Data Quality Checks (Filename: 06_DE_ID_Quality_Checks.sql)
 
 7. Profile Scripts
-    1. Profile Conditions (Filename: 07_A_condition_profile.sql)
-    2. Profile Measurements (Filename: 07_B_measurement_profile.sql)
-    3. Profile Drug Exposure (Filename: 07_C_drug_exposure_profile.sql)
-    4. Profile Unmapped Drugs (Filename: 07_D_review_unmapped_drugs.sql)
-    5. Profile Devices (Filename: 07_E_device_profile.sql)
+   -  Profile Conditions (Filename: 07_A_condition_profile.sql)
+   -  Profile Measurements (Filename: 07_B_measurement_profile.sql)
+   -  Profile Drug Exposure (Filename: 07_C_drug_exposure_profile.sql)
+   -  Profile Unmapped Drugs (Filename: 07_D_review_unmapped_drugs.sql)
+   -  Profile Devices (Filename: 07_E_device_profile.sql)
 
 ## OMOP Cohort Creation and Deidentification Process
 
@@ -78,7 +78,7 @@ Replace the database name and schema in each of these scripts with your own, the
 
 **Purpose**: Replace conditions occurring 10 or less times in the dataset with parent concepts that have at least 10 counts
 
-**Description**:
+**Description**: This script is run after scripts 01 and 02
 
 **Dependencies**:
 - 01_CURE_ID_Cohort.sql
@@ -86,8 +86,7 @@ Replace the database name and schema in each of these scripts with your own, the
 
 **Steps**:
 
-1.  Create Condition roll up
-    - Concepts are mapped to their corresponding ancestor concept(s)
+1.  Create Condition roll up: concepts are mapped to their corresponding ancestor concept(s)
 2.  Create table that counts the ancestor concepts for each original concept
 3.  Create table that counts the original concepts
 4.  Filter to only include conditions that have more than 10 counts
@@ -99,7 +98,7 @@ Replace the database name and schema in each of these scripts with your own, the
 
 **Purpose**: Generate the necessary tables for the de-identified version of the CURE ID Cohort
 
-**Description**: By default this script will create tables in a schema titled “deident,” however this can be set to whatever value you desire. The script performs the following transformations:
+**Description**: This script will create tables in the Results schema and preface the table names with 'deident.' However, the preface can be set to whatever value you desire.
 
 **Dependencies**: None
 
@@ -155,7 +154,7 @@ Replace the database name and schema in each of these scripts with your own, the
 
 **Filename**: 06_DE_ID_Quality_Checks.sql
 
-**Purpose**: This script checks basic metrics for each table in the deidentified dataset to ensure the previous scripts were successful. This does
+**Purpose**: This script checks basic metrics for each table in the deidentified dataset to ensure the previous scripts were successful.
 
 **Description**: This script runs a number of summary level quality checks for each table to audit basic data counts and date ranges.
 
@@ -181,11 +180,11 @@ Replace the database name and schema in each of these scripts with your own, the
 
 **Dependencies**: These scripts require the populated deidentified OMOP tables generated from the sequence of running scripts 1-5:
 
-1. 01_CURE_ID_Cohort.sql
-2. 02_CURE_ID_All_Tables.sql
-3. 03_CURE_ID_replace_rare_conditions_with_parents.sql
-4. 04_DE_ID_CDM_Table_ddl.sql
-5. 05_DE_ID_script.sql
+- 01_CURE_ID_Cohort.sql
+- 02_CURE_ID_All_Tables.sql
+- 03_CURE_ID_replace_rare_conditions_with_parents.sql
+- 04_DE_ID_CDM_Table_ddl.sql
+- 05_DE_ID_script.sql
 
     ##### 07-A – Condition Profile
 
@@ -194,8 +193,7 @@ Replace the database name and schema in each of these scripts with your own, the
     **Purpose**: Generate a profile of condition prevalence in the final cohort.
 
     **Description**: Condition counts are calculated per patient and are aggregated by parent concepts for each condition concept present in the final OMOP Condition Occurrence table.
-    **Dependencies**:
-
+    
     ##### 07-B – Measurement Profile
 
     **Filename**: 07_B_measurement_profile.sql
@@ -204,8 +202,6 @@ Replace the database name and schema in each of these scripts with your own, the
 
     **Description**: Measurement counts are calculated per patient and are aggregated by parent concepts for each measurement concept present in the final OMOP Measurement table.
 
-    **Dependencies**:
-
     ##### 07-C – Drug Exposure Profile
 
     **Filename**: 07_C_drug_exposure_profile.sql
@@ -213,8 +209,6 @@ Replace the database name and schema in each of these scripts with your own, the
     **Purpose**: Generate a profile of drug prevalence in the final cohort.
 
     **Description**: Drug counts are calculated per patient and are aggregated by ingredient for each drug concept present in the final OMOP Drug Exposure table.
-
-    **Dependencies**:
 
     ##### 07-D – Unmapped Drugs Profile
 
@@ -225,8 +219,6 @@ Replace the database name and schema in each of these scripts with your own, the
     **Description**: This file filters drugs that were unsuccessfully mapped to a drug_concept_id when running the 02_CURE_ID_All_Tables.sql script. Drug source values for which the drug_concept_id is “0” and have at least 20 instances in the final cohort are aggregated for manual review.
     \*\* Drug source values can contain PHI. Please review the output for PHI before sharing.
 
-    **Dependencies**:
-
     ##### 07-E – Device Profile
 
     **Filename**: 07_E_device_profile.sql
@@ -234,5 +226,3 @@ Replace the database name and schema in each of these scripts with your own, the
     **Purpose**: Generate a profile of device prevalence in the final cohort.
 
     **Description**: Device counts are calculated per patient and are aggregated by parent concepts for each device concept present in the final OMOP Device Exposure table.
-
-    **Dependencies**:
