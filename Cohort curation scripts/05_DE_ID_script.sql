@@ -288,3 +288,4 @@ inner join [Results].[source_id_person] s on s.sourceKey = ppp.person_id
 where (DATEADD(DAY, s.date_shift, ppp.payer_plan_period_start_date) < @END_DATE
 and DATEADD(DAY, s.date_shift, ppp.payer_plan_period_end_date) < @START_DATE)
 ;
+
