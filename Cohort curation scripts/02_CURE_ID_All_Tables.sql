@@ -14,6 +14,7 @@ DROP TABLE IF EXISTS [Results].[CURE_ID_Procedure_Occurrence];
 DROP TABLE IF EXISTS [Results].[CURE_ID_Condition_Occurrence];
 DROP TABLE IF EXISTS [Results].[CURE_ID_Visit_Occurrence];
 DROP TABLE IF EXISTS [Results].[CURE_ID_Device_Exposure];
+DROP TABLE IF EXISTS [Results].[CURE_ID_Payer_Plan_Period];
 	
 --Load person table
 SELECT pe.person_id, pe.gender_concept_id, pe.year_of_birth, pe.month_of_birth, pe.day_of_birth, pe.
@@ -24,6 +25,7 @@ INTO [Results].[CURE_ID_Person]
 FROM person pe
 INNER JOIN [Results].[CURE_ID_Cohort] coh
 	ON pe.person_id = coh.person_id
+;
 
 --Load measurements table
 SELECT distinct
@@ -62,6 +64,7 @@ INNER JOIN [Results].[cure_id_concepts]
 where 
 	domain  = 'Measurement' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
+;
 
 --Load drug_exposure table
 SELECT d.drug_exposure_id, d.person_id, d.drug_concept_id, d.drug_exposure_start_date, d.
@@ -77,6 +80,7 @@ INNER JOIN concept con
 	ON con.concept_id = d.drug_concept_id
 ORDER BY coh.person_id,
 	d.drug_exposure_start_datetime
+;
 
 --Load Death table
 SELECT death.person_id, death.death_date, death.death_datetime, death.death_type_concept_id, death.
@@ -85,6 +89,7 @@ INTO [Results].[CURE_ID_Death]
 FROM death
 INNER JOIN [Results].[CURE_ID_Cohort] coh
 	ON death.person_id = coh.person_id
+;
 
 --Load Observation data
 SELECT DISTINCT o.observation_id, o.person_id, o.observation_concept_id, o.observation_date, o.observation_datetime, o.
@@ -103,7 +108,7 @@ INNER JOIN [Results].[cure_id_concepts]
 where 
 	domain  = 'Observation' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-
+;
 
 --Load Procedure Occurrence Table
 SELECT p.procedure_occurrence_id, p.person_id, p.procedure_concept_id, p.procedure_date, p.procedure_datetime, p
@@ -121,7 +126,7 @@ INNER JOIN [Results].[cure_id_concepts]
 	on ancestor_concept_id = concept_id
 where 
 	domain  = 'Procedure' 
-	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
+	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id);
 
 --Load Condition Occurrence table
 SELECT c.condition_occurrence_id, c.person_id, c.condition_concept_id, c.
@@ -144,7 +149,7 @@ INNER JOIN [Results].[cure_id_concepts]
 where 
 	domain  = 'Condition' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
-
+;
 	
 --Load Visit Occurrence table
 SELECT DISTINCT v.visit_occurrence_id, v.person_id, v.visit_concept_id, v.visit_start_date, v.visit_start_datetime, v.
@@ -158,6 +163,8 @@ INNER JOIN [Results].[CURE_ID_Cohort] coh
 	ON v.person_id = coh.person_id
 	AND v.visit_occurrence_id = coh.visit_occurrence_id
 WHERE v.visit_start_date >= '2020-03-01'
+;
+
 
 --Load Device Exposure table
 SELECT dev.device_exposure_id, dev.person_id, dev.device_concept_id, dev.device_exposure_start_date, dev.
@@ -177,3 +184,32 @@ INNER JOIN [Results].[cure_id_concepts]
 where 
 	domain  = 'Device' 
 	and (include_descendants = 'TRUE' or ancestor_concept_id = descendant_concept_id)
+;
+
+--Load Payer plan period Table
+select
+    ppp.payer_plan_period_id,
+    ppp.person_id,
+    ppp.payer_plan_period_start_date,
+    ppp.payer_plan_period_end_date,
+    ppp.payer_concept_id,
+    null as payer_source_value,
+    ppp.payer_source_concept_id,
+    ppp.plan_concept_id,
+    null as plan_source_value,
+    ppp.plan_source_concept_id,
+    ppp.sponsor_concept_id,
+    null as sponsor_source_value,
+    ppp.sponsor_source_concept_id,
+    null as family_source_value,
+    ppp.stop_reason_concept_id,
+    null as stop_reason_source_value,
+    ppp.stop_reason_source_concept_id
+into [Results].[CURE_ID_Payer_Plan_Period]
+from [Results].[CURE_ID_Cohort] coh
+    join results.CURE_ID_Visit_Occurrence vo on coh.person_id = vo.person_id
+        join payer_plan_period ppp
+    on vo.person_id = ppp.person_id and vo.visit_start_date between
+        ppp.payer_plan_period_start_date and payer_plan_period_end_date
+    join results.cure_id_concepts c on c.concept_id = ppp.payer_concept_id and c.domain = 'Payer'
+;

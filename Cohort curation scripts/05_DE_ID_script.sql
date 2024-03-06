@@ -261,3 +261,30 @@ left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
 where (DATEADD(DAY, s.date_shift, measurement_date) < @END_DATE 
 and DATEADD(DAY, s.date_shift, measurement_date) > @START_DATE) 
 ;
+
+
+/******* Payer Plan Period *******/
+insert into [Results].[deident_CURE_ID_payer_plan_period]
+SELECT
+        ppp.payer_plan_period_id,
+        s.id as person_id,
+        DATEADD(DAY, s.date_shift, ppp.payer_plan_period_start_date) as payer_plan_period_start_date,
+        DATEADD(DAY, s.date_shift, ppp.payer_plan_period_end_date) as payer_plan_period_end_date,
+        ppp.payer_concept_id,
+        ppp.payer_source_value,
+        ppp.payer_source_concept_id,
+        ppp.plan_concept_id,
+        ppp.plan_source_value,
+        ppp.plan_source_concept_id,
+        ppp.sponsor_concept_id,
+        ppp.sponsor_source_value,
+        ppp.sponsor_source_concept_id,
+        ppp.family_source_value,
+        ppp.stop_reason_concept_id,
+        ppp.stop_reason_source_value,
+        ppp.stop_reason_source_concept_id
+from [Results].[CURE_ID_Payer_Plan_Period] ppp
+inner join [Results].[source_id_person] s on s.sourceKey = ppp.person_id
+where (DATEADD(DAY, s.date_shift, ppp.payer_plan_period_start_date) < @END_DATE
+and DATEADD(DAY, s.date_shift, ppp.payer_plan_period_end_date) < @START_DATE)
+;
