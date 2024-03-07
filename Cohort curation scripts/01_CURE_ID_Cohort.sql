@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS #Vis_Occ;
 
 --Create cohort table (again specify schema as appropriate)
 CREATE TABLE [Results].[CURE_ID_Cohort] (
-   [person_id] [int] NOT NULL, [visit_occurrence_id] [int] NOT NULL, [visit_start_date] [date] NOT NULL, 
+   [person_id] [bigint] NOT NULL, [visit_occurrence_id] [bigint] NOT NULL, [visit_start_date] [date] NOT NULL,
    [visit_end_date] [date] NOT NULL, [First_Pos_Date] [date] NULL, [Days_From_First_Pos] [int] NULL, 
    [Abs_Days_From_First_Pos] [int] NULL, [Before_Or_After] [int] NOT NULL,
    [birth_datetime] [datetime2](7) NULL, [death_datetime] [datetime2](7) NULL

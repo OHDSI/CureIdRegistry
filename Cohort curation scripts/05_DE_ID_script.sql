@@ -17,7 +17,7 @@ DECLARE @END_DATE DATE = CAST('2029-12-31' AS DATE)
 --Tables are dropped and created in a separate script.
 --Please run that script first.
 
-USE YOUR_DATABASE;
+--USE YOUR_DATABASE;
 
 
 /******* GENERATE MAP TABLES *******/
@@ -112,10 +112,10 @@ select condition_occurrence_id
 ,condition_status_source_value
 ,condition_status_concept_id
 from [Results].[CURE_ID_Condition_Occurrence_Rare_Removed] p
-inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
-where (DATEADD(DAY, s.date_shift, condition_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, condition_end_date) > @START_DATE)
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
+where (DATEADD(DAY, s.date_shift, condition_start_date) < @END_DATE
+and DATEADD(DAY, s.date_shift, coalesce(condition_end_date, condition_start_date)) > @START_DATE)
 ;
 /******* PROCEDURE OCCURENCE *******/
 insert into [Results].[deident_CURE_ID_Procedure_Occurrence]
@@ -134,10 +134,10 @@ SELECT procedure_occurrence_id
       ,procedure_source_concept_id
       ,modifier_source_value
 from [Results].[CURE_ID_Procedure_Occurrence] p
-inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
-left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
-where (DATEADD(DAY, s.date_shift, procedure_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, procedure_date) > @START_DATE) 
+inner join [Results].[source_id_person] s on s.sourceKey = p.person_id
+left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id
+where (DATEADD(DAY, s.date_shift, procedure_date) < @END_DATE
+and DATEADD(DAY, s.date_shift, procedure_date) > @START_DATE)
 ;
 
 /******* DRUG EXPOSURE *******/
@@ -230,7 +230,7 @@ from [Results].[CURE_ID_Device_Exposure] p
 inner join [Results].[source_id_person] s on s.sourceKey = p.person_id 
 left join [Results].[source_id_visit] v on v.sourceKey = p.visit_occurrence_id 
 where (DATEADD(DAY, s.date_shift, device_exposure_start_date) < @END_DATE 
-and DATEADD(DAY, s.date_shift, device_exposure_end_date) > @START_DATE)
+and DATEADD(DAY, s.date_shift, coalesce(device_exposure_end_date, device_exposure_start_date)) > @START_DATE)
 ;
 
 /******* MEASUREMENT *******/
@@ -286,6 +286,6 @@ SELECT
 from [Results].[CURE_ID_Payer_Plan_Period] ppp
 inner join [Results].[source_id_person] s on s.sourceKey = ppp.person_id
 where (DATEADD(DAY, s.date_shift, ppp.payer_plan_period_start_date) < @END_DATE
-and DATEADD(DAY, s.date_shift, ppp.payer_plan_period_end_date) < @START_DATE)
+and DATEADD(DAY, s.date_shift, ppp.payer_plan_period_end_date) > @START_DATE)
 ;
 

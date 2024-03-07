@@ -13,7 +13,7 @@ CREATE TABLE [Results].[cure_id_concepts]
 
 INSERT INTO [Results].[cure_id_concepts]
 VALUES
-   (2000000999, NULL, NULL, NULL, NULL, NULL, 'FALSE'),  --Advance branch
+   (2000000999, NULL, NULL, 'Observation', NULL, NULL, 'FALSE'),  --Advance branch
    (24966, '28670008', 'Esophageal varices', 'Condition', 'SNOMED', 'S', 'TRUE'),  --Charlson
    (80800, '31384009', 'Polymyositis', 'Condition', 'SNOMED', 'S', 'TRUE'),  --Charlson
    (80809, '69896004', 'Rheumatoid arthritis', 'Condition', 'SNOMED', 'S', 'TRUE'),  --Charlson
