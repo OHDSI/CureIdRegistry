@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS [Results].[deident_CURE_ID_observation];
 DROP TABLE IF EXISTS [Results].[deident_CURE_ID_person];
 DROP TABLE IF EXISTS [Results].[deident_CURE_ID_procedure_occurrence];
 DROP TABLE IF EXISTS [Results].[deident_CURE_ID_visit_occurrence];
-
+DROP TABLE IF EXISTS [Results].[deident_CURE_ID_payer_plan_period];
 
 /******* TABLE CREATION *******/
 
@@ -268,7 +268,6 @@ CREATE TABLE Results.deident_CURE_ID_observation
 ;
 
 
- --HINT DISTRIBUTE ON KEY (person_id)
 CREATE TABLE Results.deident_CURE_ID_payer_plan_period 
  (
 			payer_plan_period_id integer NOT NULL,
@@ -290,8 +289,6 @@ CREATE TABLE Results.deident_CURE_ID_payer_plan_period
 			stop_reason_source_concept_id integer NULL 
  )
  ;
-
-
 
 
 
