@@ -127,3 +127,4 @@
 "126","2004208006",NA,"CPAP (continuous positive airway pressure)","Device","Custom","C",FALSE
 "127","2004208007",NA,"BiPAP (bilevel positive airway pressure)","Device","Custom","C",FALSE
 "128","2004208008",NA,"NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation)","Device","Custom","C",FALSE
+"129","4263457","NA","Aspartate aminotransferase measurement","Measurement","SNOMED","S",TRUE
