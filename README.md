@@ -107,3 +107,18 @@ Say we want to add a concept X into the set.
 6. Click the "CSV" button. This will download these concepts to a CSV file. 
 7. Override the corresponding "cure_id_{domain}.csv" file in the repo.
 8. Save the concept set in ATLAS, push changes to repo.
+
+--------------------------------------------------------------------------------------------------
+
+## Best Practices/Guidance
+
+Do install the Data Quality Dashboard early on in the process.
+
+Don’t include source values in your export - they might include PHI.
+
+Don’t forget to check GitHub for the most recent version of the script before you run it.
+
+Don’t send your data to the coordinating center until the tech team has a chance to review it with you in a live session.
+
+Duplicated results have been reported at some sites when running script 02_CURE_ID_ALL_Tables.sql. However, at this time no root cause has been found. There is some belief that adding DISTINCT to the various SELECT statements could resolve the issue, while there is some concern over the latest updates to script 00_CURE_ID_create_concept_table.sql as it has standard concepts as well as standard descendants. Be sure to review your data carefully and report any signs of duplication so that it can be investigated.
+
