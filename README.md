@@ -10,6 +10,28 @@ The Cohort is comprised of the anonymized person_id, birthdate, and first date o
 
 ## Explanation of the Curation Script Files:
 
+**00 - Create Concept Table**
+- Creates a table of standard concepts required for the CureID Registry project. 
+- It is used in conjunction with CONCEPT_ANCESTOR table in 02_CURE_ID_All_Tables.sql script
+- Fields particularly important to the process are "is_standard" and "include_descendants".
+  - "is_standard" determines the standardization of the concept, either: a "C", "S", or "N"
+    - C is for classification.  This concept will not be used, but it may have useable descendants
+    - S is for Standard.  These codes will be used.  They may or may not have descendants
+    - N is Non-standard. These codes will not be used. If they have descendants
+  - "include_descendants" determines whether the script should look for descendents
+    - Values are either TRUE or FALSE
+- These will be used in  02_CURE_ID_All_Tables.sql in the FROM clauses:
+Measurement example:
+	INNER JOIN omop.CONCEPT_ANCESTOR
+		ON descendant_concept_id = m.measurement_concept_id
+	INNER JOIN [Results].[cure_id_concepts]
+		ON ancestor_concept_id = concept_id
+	WHERE
+		domain = 'Measurement'
+		AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+- If "include_descendants" is either 'TRUE' or if the ancestor_concept_id is the same as descendant_concept_id,
+the concept will be used. The "is_standard" field is informational only and does not participate in the script.
+
 **01 - Create Cohort**
 - Identifies all patients with a positive lab result measurement, patient_id and first positive lab result
 - Identifies all patients with a "strong" or "weak" COVID diagnosis based on condition codes
@@ -85,3 +107,18 @@ Say we want to add a concept X into the set.
 6. Click the "CSV" button. This will download these concepts to a CSV file. 
 7. Override the corresponding "cure_id_{domain}.csv" file in the repo.
 8. Save the concept set in ATLAS, push changes to repo.
+
+--------------------------------------------------------------------------------------------------
+
+## Best Practices/Guidance
+
+Do install the Data Quality Dashboard early on in the process.
+
+Don’t include source values in your export - they might include PHI.
+
+Don’t forget to check GitHub for the most recent version of the script before you run it.
+
+Don’t send your data to the coordinating center until the tech team has a chance to review it with you in a live session.
+
+Duplicated results have been reported at some sites when running script 02_CURE_ID_ALL_Tables.sql. However, at this time no root cause has been found. There is some belief that adding DISTINCT to the various SELECT statements could resolve the issue, while there is some concern over the latest updates to script 00_CURE_ID_create_concept_table.sql as it has standard concepts as well as standard descendants. Be sure to review your data carefully and report any signs of duplication so that it can be investigated.
+

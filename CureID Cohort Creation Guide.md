@@ -5,6 +5,8 @@ The following scripts are to be run on a site’s full OMOP dataset in order to 
 ## Instructions
 Replace the database name and schema in each of these scripts with your own, then run the cohort creation and deidentification scripts in the following sequence:
 
+0. Create Concept Table (Filename: 00_CURE_ID_create_concept_table.sql)
+
 1. Cohort Creation (Filename: 01_CURE_ID_Cohort.sql)
 
 2. Generate CURE ID Tables (Filename: 02_CURE_ID_All_Tables.sql)
@@ -25,6 +27,37 @@ Replace the database name and schema in each of these scripts with your own, the
    -  Profile Devices (Filename: 07_E_device_profile.sql)
 
 ## OMOP Cohort Creation and Deidentification Process
+
+### 0. Create Concept Table Script
+
+**Filename**: 00_CURE_ID_create_concept_table.sql
+
+**Purpose**: This script creates a table of standard concepts required for the CureID Registry project. It is used in conjunction with CONCEPT_ANCESTOR table in 02_CURE_ID_All_Tables.sql script.
+
+**Description**: Fields particularly important to the process are "is_standard" and "include_descendants".
+
+"is_standard" determines the standardization of the concept, either: a "C", "S", or "N"
+-- C is for classification.  This concept will not be used, but it may have useable descendants
+-- S is for Standard.  These codes will be used.  They may or may not have descendants
+-- N is Non-standard. These codes will not be used. If they have descendants
+
+"include_descendants" determines whether the script should look for descendents
+-- Values are either TRUE or FALSE
+
+They will be used in  02_CURE_ID_All_Tables.sql in the FROM clauses:
+Measurement example:
+	INNER JOIN omop.CONCEPT_ANCESTOR
+		ON descendant_concept_id = m.measurement_concept_id
+	INNER JOIN [Results].[cure_id_concepts]
+		ON ancestor_concept_id = concept_id
+	WHERE
+		domain = 'Measurement'
+		AND (include_descendants = 'TRUE' OR ancestor_concept_id = descendant_concept_id)
+
+If "include_descendants" is either 'TRUE' or if the ancestor_concept_id is the same as descendant_concept_id,
+the concept will be used. The "is_standard" field is informational only and does not participate in the script.
+
+**Dependencies**: None
 
 ### 1. Cohort Creation Script
 
