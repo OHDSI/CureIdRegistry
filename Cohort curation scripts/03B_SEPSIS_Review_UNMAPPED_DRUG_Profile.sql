@@ -1,6 +1,6 @@
 /*
 Filename:
-03A_SEPSIS_Review_UNMAPPED_DRUG_Profile.sql
+03B_SEPSIS_Review_UNMAPPED_DRUG_Profile.sql
 
 Purpose:
 Generate a profile of drugs that are not mapped to drug_concept_ids in the final cohort
