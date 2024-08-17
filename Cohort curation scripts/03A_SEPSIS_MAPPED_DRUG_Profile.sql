@@ -1,6 +1,6 @@
 /*
 Filename:
-03_SEPSIS_drug_exposure_profile.sql
+03A_SEPSIS_drug_exposure_profile.sql
 
 Purpose:
 Generate a profile of drug prevalence in the final cohort
