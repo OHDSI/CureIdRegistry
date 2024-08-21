@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS #sepsis_diagnosis;
 DROP TABLE IF EXISTS #inpat;
 DROP TABLE IF EXISTS #Vis_Occ;
 
+
 -- Create cohort table (again specify schema as appropriate)
 CREATE TABLE [Results].[Sepsis_Cohort] (
     [person_id] [int] NOT NULL,
@@ -45,7 +46,7 @@ WHERE condition_concept_id IN (
     SELECT c.concept_id
     FROM dbo.CONCEPT AS c
     INNER JOIN dbo.CONCEPT_ANCESTOR AS ca ON c.concept_id = ca.descendant_concept_id
-    WHERE ca.ancestor_concept_id = 132797
+    WHERE ca.ancestor_concept_id IN (132797, 473083009) -- Added 473083009
     AND c.invalid_reason IS NULL
 )
 AND condition_start_date >= DATEFROMPARTS(2020, 01, 01);
