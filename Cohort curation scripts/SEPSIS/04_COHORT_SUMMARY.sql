@@ -3,11 +3,13 @@ Filename:
 04_COHORT_SUMMARY.sql
 
 Purpose:
-Generate a summary report for a cohort, including demographics, age distribution, race, ethnicity, and death information.
+Generate a summary report for a cohort, including demographics, age distribution, race, ethnicity, death information, 
+and the median and IQR of the length of stay (LOS) for the first visit per person_id.
 
 Description:
 This script calculates summary statistics for key demographic variables (age at first visit date, race, ethnicity), 
-and details about death occurrences, including the list of cause_source_value and concept_name from the death table.
+details about death occurrences, including the list of cause_source_value and concept_name from the death table, 
+and the median and IQR for the length of stay (LOS).
 
 Dependencies:
 Requires person, visit_occurrence, concept, and death tables in the specified schema.
@@ -58,50 +60,24 @@ death_info AS (
         your_schema_name.concept c
         ON d.cause_concept_id = c.concept_id
 ),
-age_summary AS (
+los_calculations AS (
     SELECT
-        COUNT(*) AS total_patients,
-        ROUND(AVG(age_at_first_visit)::numeric, 2) AS mean_age,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY age_at_first_visit) AS median_age,
-        MIN(age_at_first_visit) AS min_age,
-        MAX(age_at_first_visit) AS max_age,
-        ROUND(STDDEV(age_at_first_visit)::numeric, 2) AS age_sd
+        fv.person_id,
+        DATEDIFF(day, vo.visit_start_date, vo.visit_end_date) AS length_of_stay
     FROM
-        demographics
-),
-race_summary AS (
-    SELECT
-        c.concept_name AS race,
-        COUNT(*) AS count,
-        ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM demographics))::numeric, 2) AS percent
-    FROM
-        demographics d
+        first_visit fv
     JOIN
-        your_schema_name.concept c
-        ON d.race_concept_id = c.concept_id
-    GROUP BY
-        c.concept_name
+        your_schema_name.visit_occurrence vo
+        ON fv.person_id = vo.person_id
+        AND fv.first_visit_date = vo.visit_start_date
 ),
-ethnicity_summary AS (
+los_summary AS (
     SELECT
-        c.concept_name AS ethnicity,
-        COUNT(*) AS count,
-        ROUND((COUNT(*) * 100.0 / (SELECT COUNT(*) FROM demographics))::numeric, 2) AS percent
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY length_of_stay) AS median_los,
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY length_of_stay) AS iqr_los_25,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY length_of_stay) AS iqr_los_75
     FROM
-        demographics d
-    JOIN
-        your_schema_name.concept c
-        ON d.ethnicity_concept_id = c.concept_id
-    GROUP BY
-        c.concept_name
-),
-death_summary AS (
-    SELECT
-        COUNT(*) AS total_deaths,
-        STRING_AGG(DISTINCT cause_source_value, ', ') AS causes_source_value,
-        STRING_AGG(DISTINCT cause_of_death, ', ') AS causes_of_death
-    FROM
-        death_info
+        los_calculations
 )
 SELECT
     'Age Summary' AS section,
@@ -179,4 +155,17 @@ SELECT
     causes_source_value AS count,
     NULL::text AS percent
 FROM
-    death_summary;
+    death_summary
+UNION ALL
+SELECT
+    'Length of Stay Summary' AS section,
+    'Median Length of Stay (days)' AS category,
+    NULL::text AS mean,
+    los_summary.median_los::text AS median,
+    los_summary.iqr_los_25::text AS min,
+    los_summary.iqr_los_75::text AS max,
+    NULL::text AS standard_deviation,
+    NULL::text AS count,
+    NULL::text AS percent
+FROM
+    los_summary;
