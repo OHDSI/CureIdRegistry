@@ -9,7 +9,7 @@ and the median and IQR of the length of stay (LOS) for the first visit per perso
 Description:
 This script calculates summary statistics for key demographic variables (age at first visit date, race, ethnicity), 
 details about death occurrences, including the list of cause_source_value and concept_name from the death table, 
-and the median and IQR for the length of stay (LOS).
+and the median and IQR for the length of stay (LOS).  Per OMOP CDM documentation: "The Visit duration, or ‘length of stay’, is defined as VISIT_END_DATE - VISIT_START_DATE." 
 
 Dependencies:
 Requires person, visit_occurrence, concept, and death tables in the specified schema.
@@ -63,7 +63,7 @@ death_info AS (
 los_calculations AS (
     SELECT
         fv.person_id,
-        DATEDIFF(day, vo.visit_start_date, vo.visit_end_date) AS length_of_stay
+        DATEDIFF(day, vo.visit_start_date, vo.visit_end_date) AS length_of_stay  
     FROM
         first_visit fv
     JOIN
