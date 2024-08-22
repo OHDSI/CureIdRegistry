@@ -1,6 +1,6 @@
 /*
 Filename:
-01A_SEPSIS_Cohort.sql
+01A_SEPSIS_Cohort_V4.sql
 
 Purpose:
 This script creates a cohort of patients for the SEPSIS registry.
@@ -32,8 +32,8 @@ CREATE TABLE [Results].[Sepsis_Cohort] (
     [visit_occurrence_id] [int] NOT NULL,
     [visit_start_date] [date] NOT NULL,
     [visit_end_date] [date] NOT NULL,
-     NULL,
-     NULL
+    [birth_date] [date] NULL,
+    [death_date] [date] NULL
 ) ON [PRIMARY];
 
 -- First identify patients (inpatient and outpatient) with sepsis diagnosis
