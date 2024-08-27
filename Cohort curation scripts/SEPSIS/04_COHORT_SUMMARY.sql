@@ -3,7 +3,7 @@ Filename:
 04_COHORT_SUMMARY.sql
 
 Purpose:
-Generate a summary report for a cohort, including demographics, age distribution, race, ethnicity, death information, 
+Generate a summary report for YOUR SEPSIS COHORT, including demographics, age distribution, race, ethnicity, death information, 
 and the median and IQR of the length of stay (LOS) for the first visit per person_id.
 
 Description:
@@ -20,7 +20,7 @@ WITH first_visit AS (
         person_id,
         MIN(visit_start_date) AS first_visit_date
     FROM
-        your_schema_name.visit_occurrence
+        your_SEPSIS_schema_name.visit_occurrence
     GROUP BY
         person_id
 ),
@@ -29,7 +29,7 @@ age_calculations AS (
         p.person_id,
         EXTRACT(YEAR FROM fv.first_visit_date) - p.year_of_birth AS age_at_first_visit
     FROM
-        your_schema_name.person p
+        your_SEPSIS_schema_name.person p
     JOIN
         first_visit fv
         ON p.person_id = fv.person_id
@@ -43,7 +43,7 @@ demographics AS (
         p.year_of_birth,
         ac.age_at_first_visit
     FROM
-        your_schema_name.person p
+        your_SEPSIS_schema_name.person p
     JOIN
         age_calculations ac
         ON p.person_id = ac.person_id
@@ -55,9 +55,9 @@ death_info AS (
         d.cause_source_value,
         c.concept_name AS cause_of_death
     FROM
-        your_schema_name.death d
+        your_SEPSIS_schema_name.death d
     LEFT JOIN
-        your_schema_name.concept c
+        your_SEPSIS_schema_name.concept c
         ON d.cause_concept_id = c.concept_id
 ),
 los_calculations AS (
@@ -67,9 +67,53 @@ los_calculations AS (
     FROM
         first_visit fv
     JOIN
-        your_schema_name.visit_occurrence vo
+        your_SEPSIS_schema_name.visit_occurrence vo
         ON fv.person_id = vo.person_id
         AND fv.first_visit_date = vo.visit_start_date
+),
+age_summary AS (
+    SELECT
+        AVG(age_at_first_visit) AS mean_age,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY age_at_first_visit) AS median_age,
+        MIN(age_at_first_visit) AS min_age,
+        MAX(age_at_first_visit) AS max_age,
+        STDDEV(age_at_first_visit) AS age_sd
+    FROM
+        age_calculations
+),
+race_summary AS (
+    SELECT
+        c.concept_name AS race,
+        COUNT(*) AS count,
+        100.0 * COUNT(*) / SUM(COUNT(*)) OVER () AS percent
+    FROM
+        demographics d
+    JOIN
+        your_SEPSIS_schema_name.concept c
+        ON d.race_concept_id = c.concept_id
+    GROUP BY
+        c.concept_name
+),
+ethnicity_summary AS (
+    SELECT
+        c.concept_name AS ethnicity,
+        COUNT(*) AS count,
+        100.0 * COUNT(*) / SUM(COUNT(*)) OVER () AS percent
+    FROM
+        demographics d
+    JOIN
+        your_SEPSIS_schema_name.concept c
+        ON d.ethnicity_concept_id = c.concept_id
+    GROUP BY
+        c.concept_name
+),
+death_summary AS (
+    SELECT
+        COUNT(*) AS total_deaths,
+        COUNT(DISTINCT cause_of_death) AS causes_of_death,
+        COUNT(DISTINCT cause_source_value) AS causes_source_value
+    FROM
+        death_info
 ),
 los_summary AS (
     SELECT
