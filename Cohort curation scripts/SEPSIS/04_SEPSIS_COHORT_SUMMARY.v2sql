@@ -1,6 +1,6 @@
 /*
 Filename:
-04_SEPSIS_COHORT_SUMMARY.sql
+04_SEPSIS_COHORT_SUMMARYv2.sql
 
 Purpose:
 Generate a summary report for YOUR SEPSIS COHORT, including demographics, age distribution, race, ethnicity, death information, 
