@@ -76,10 +76,10 @@ los_calculations AS (
 age_summary AS (
     SELECT
         AVG(age_at_first_visit) AS mean_age,
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY age_at_first_visit) AS median_age,
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY age_at_first_visit) OVER () AS median_age,
         MIN(age_at_first_visit) AS min_age,
         MAX(age_at_first_visit) AS max_age,
-        STDDEV(age_at_first_visit) AS age_sd
+        STDEV(age_at_first_visit) AS age_sd
     FROM
         age_calculations
 ),
@@ -119,9 +119,9 @@ death_summary AS (
 ),
 los_summary AS (
     SELECT
-        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY length_of_stay) AS median_los,
-        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY length_of_stay) AS iqr_los_25,
-        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY length_of_stay) AS iqr_los_75
+        PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY length_of_stay) OVER () AS median_los,
+        PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY length_of_stay) OVER () AS iqr_los_25,
+        PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY length_of_stay) OVER () AS iqr_los_75
     FROM
         los_calculations
 )
