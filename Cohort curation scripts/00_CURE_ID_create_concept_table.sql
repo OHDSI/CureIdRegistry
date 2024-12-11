@@ -152,4 +152,13 @@ VALUES
 ('2004208005', 'NA', 'Room air (in the context of a device)', 'Device', 'Custom', 'C', 'FALSE'),
 ('2004208006', 'NA', 'CPAP (continuous positive airway pressure)', 'Device', 'Custom', 'C', 'FALSE'),
 ('2004208007', 'NA', 'BiPAP (bilevel positive airway pressure)', 'Device', 'Custom', 'C', 'FALSE'),
-('2004208008', 'NA', 'NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation)', 'Device', 'Custom', 'C', 'FALSE');
+('2004208008', 'NA', 'NIPPV (non-invasive positive pressure ventilation or nasal intermittent positive pressure ventilation)', 'Device', 'Custom', 'C', 'FALSE')
+('130', '3037256', '9095-1', 'Fluid balance 10 hour', 'Measurement', 'LOINC', 'S', 'TRUE'), 
+('131', '3037769', '9096-9', 'Fluid balance 12 hour', 'Measurement', 'LOINC', 'S', 'TRUE'), 
+('132', '4092647', '251992000', 'Fluid intake', 'Measurement', 'SNOMED', 'S', 'TRUE'), 
+('133', '4089845', '251846002', 'Fluid loss', 'Measurement', 'SNOMED', 'S', 'TRUE'), 
+('134', '4090192', '251840008', 'Fluid output', 'Measurement', 'SNOMED', 'S', 'TRUE'), 
+('135', '3038018', '9097-7', 'Fluid balance 24 hour', 'Measurement', 'LOINC', 'S', 'TRUE'), 
+('136', '3020997', '9094-4', 'Fluid balance 8 hour', 'Measurement', 'LOINC', 'S', 'TRUE'), 
+('137', '1259832', '104103-7', 'Cumulative fluid balance', 'Measurement', 'LOINC', 'S', 'TRUE'), 
+('138', '3002137', '9093-6', 'Fluid balance 1 hour', 'Measurement', 'LOINC', 'S', 'TRUE');
