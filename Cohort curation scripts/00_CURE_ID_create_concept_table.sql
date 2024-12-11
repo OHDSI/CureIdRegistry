@@ -55,6 +55,7 @@ VALUES
 ('8507', 'M', 'MALE', 'Gender', 'Gender', 'S', 'FALSE'),
 ('8521', 'O', 'OTHER', 'Gender', 'Gender', 'N', 'FALSE'),
 ('8551', 'U', 'UNKNOWN', 'Gender', 'Gender', 'N', 'FALSE'),
+('3032652', '35088-4', 'Glascow coma scale|GCS', 'Measurement', 'LOINC', 'S', 'TRUE'),
 ('40652525', 'LG5272-2', 'Alanine aminotransferase|CCnc|Pt|ANYBldSerPl', 'Measurement', 'LOINC', 'C', 'TRUE'),
 ('37041593', 'LP393946-1', 'aPTT | Platelet poor plasma | Coagulation', 'Measurement', 'LOINC', 'C', 'TRUE'),
 ('37042222', 'LP392736-7', 'Basophils | Blood | Hematology and Cell counts', 'Measurement', 'LOINC', 'C', 'TRUE'),
