@@ -46,7 +46,7 @@ WHERE condition_concept_id IN (
     SELECT c.concept_id
     FROM dbo.CONCEPT AS c
     INNER JOIN dbo.CONCEPT_ANCESTOR AS ca ON c.concept_id = ca.descendant_concept_id
-    WHERE ca.ancestor_concept_id IN (132797, 473083009) -- Added 473083009
+    WHERE ca.ancestor_concept_id IN (132797, 43021283)
     AND c.invalid_reason IS NULL
 )
 AND condition_start_date >= DATEFROMPARTS(2020, 01, 01);
@@ -96,7 +96,7 @@ LEFT JOIN death AS d ON i.person_id = d.person_id;
 INSERT INTO [Results].[Sepsis_Cohort] -- Change schema if not using Results
 (
     [person_id], [visit_occurrence_id], [visit_start_date], [visit_end_date],
-    [birth_datetime], [death_datetime]
+    [birth_date], [death_date]
 )
 SELECT
     v.[person_id],
