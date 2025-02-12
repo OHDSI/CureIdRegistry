@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS [Results].[CURE_ID_Visit_Occurrence];
 DROP TABLE IF EXISTS [Results].[CURE_ID_Device_Exposure];
 
 --Load person table
-SELECT
+SELECT DISTINCT
     pe.person_id,
     pe.gender_concept_id,
     pe.year_of_birth,
